@@ -1,0 +1,7 @@
+Read the file lumo-chat-export.md carefully. It contains a complete chat transcript where we built an Oregon Information website.
+
+Your task:
+1. First, list every file that was created in that chat (HTML, CSS, JavaScript, images references, etc.)
+2. Then I will ask you to create each file one at a time with its complete final code from the chat
+
+Start by telling me: "I found the following files in the chat:" and list them with their filenames.
