@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mattriedl.github.io/oregon-information/sitemap.xml
