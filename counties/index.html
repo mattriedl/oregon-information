@@ -141,183 +141,6 @@
     <div class="wrap">
       <h2 class="section-title">Browse by Letter</h2>
       <div class="alpha-nav">
-        <a href="#multnomah">M</a>
-        <a href="#wasco">W</a>
-        <a href="#lane">L</a>
-        <a href="#marion">R</a>
-        <a href="#douglas">D</a>
-        <a href="#deschutes">D</a>
-        <a href="#clackamas">C</a>
-        <a href="#yamhill">Y</a>
-        <a href="#benton">B</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BY REGION -->
-  <section>
-    <div class="wrap">
-      <h2 class="section-title">Counties by Region</h2>
-      <p class="section-sub">Oregon divides into distinct geographic regions. Each section lists counties from largest to smallest by population.</p>
-
-      <div class="regional-section">
-        <h3>🌆 Portland Metro Area</h3>
-        <div class="county-grid">
-          <a class="county-card" href="/oregon-information/counties/multnomah/">
-            <h3>Multnomah County</h3>
-            <div class="major-cities">Portland, Gresham, Troutdale</div>
-            <div class="pop">Pop. ~815,000 (Most populous)</div>
-          </a>
-          <a class="county-card" href="/oregon-information/counties/washington/">
-            <h3>Washington County</h3>
-            <div class="major-cities">Hillsboro, Beaverton, Tigard</div>
-            <div class="pop">Pop. ~615,000</div>
-          </a>
-did you finish this task?
-Thought this through
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Oregon Counties | Complete Directory of All 36 Counties with Cities & Links</title>
-  <meta name="description" content="Directory of all 36 Oregon counties with local government links, demographic data, and every incorporated city within each county." />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://mattriedl.github.io/oregon-information/counties/" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Oregon Counties | Complete 36-County Directory" />
-  <meta property="og:url" content="https://mattriedl.github.io/oregon-information/counties/" />
-  <meta property="og:description" content="Browse all 36 Oregon counties by region or alphabetical order. Find government links and city directories for each county." />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Oregon Counties",
-    "description": "Complete directory of Oregon's 36 counties with government links and city listings.",
-    "numberOfItems": 36,
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Multnomah County", "item": "/counties/multnomah/" },
-      { "@type": "ListItem", "position": 2, "name": "Washington County", "item": "/counties/washington/" },
-      { "@type": "ListItem", "position": 3, "name": "Lane County", "item": "/counties/lane/" },
-      { "@type": "ListItem", "position": 4, "name": "Marion County", "item": "/counties/marion/" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mattriedl.github.io/oregon-information/" },
-      { "@type": "ListItem", "position": 2, "name": "Counties" }
-    ]
-  }
-  </script>
-
-  <style>
-    :root { --green-dark: #14382a; --green: #1a5632; --gold: #c8a24b; --blue: #1f4e79; --gray-bg: #f6f8f7; --text: #22302b; --muted: #5c6b64; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.65; }
-    h1, h2, h3 { font-family: 'Merriweather', serif; }
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    header.site-header { background: var(--green-dark); color: #fff; padding: 18px 0; position: sticky; top: 0; z-index: 100; }
-    nav.main-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; }
-    .logo-badge { width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
-    .nav-links { list-style: none; display: flex; gap: 26px; flex-wrap: wrap; }
-    .nav-links a { color: #dbe7e0; text-decoration: none; font-weight: 600; font-size: .95rem; }
-    .nav-links a:hover { color: var(--gold); }
-    .page-header { background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 100%); color: #fff; padding: 70px 0 50px; }
-    .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); max-width: 800px; }
-    .page-header p.lead { font-size: 1.1rem; max-width: 700px; margin-top: 16px; color: #dceee3; }
-    section { padding: 60px 0; }
-    section.alt { background: var(--gray-bg); }
-    .section-title { font-size: 1.7rem; margin-bottom: 8px; color: var(--green-dark); }
-    .section-sub { color: var(--muted); margin-bottom: 36px; max-width: 720px; }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin: 28px 0; }
-    .stat-card { background: #fff; border-radius: 8px; padding: 24px; border: 1px solid #e3eae6; text-align: center; }
-    .stat-card .num { font-size: 2.2rem; font-weight: 800; color: var(--green); }
-    .stat-card .label { color: var(--muted); font-size: .9rem; margin-top: 4px; }
-    .county-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin: 36px 0; }
-    .county-card { background: #fff; border-radius: 10px; padding: 24px; border: 1px solid #e3eae6; text-decoration: none; color: var(--text); transition: transform .15s ease, box-shadow .15s ease; }
-    .county-card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(20,56,42,.12); }
-    .county-card h3 { font-size: 1.15rem; color: var(--green); margin-bottom: 8px; }
-    .county-card .major-cities { color: var(--blue); font-size: .9rem; margin-bottom: 8px; }
-    .county-card .pop { color: var(--muted); font-size: .85rem; }
-    .alpha-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
-    .alpha-nav a { background: var(--gray-bg); border: 1px solid #d7e2db; border-radius: 6px; padding: 8px 16px; text-decoration: none; color: var(--blue); font-weight: 600; }
-    .alpha-nav a:hover { background: var(--green); color: #fff; }
-    .regional-section { margin: 40px 0; }
-    .regional-section h3 { color: var(--green-dark); margin-bottom: 20px; font-size: 1.4rem; }
-    footer { background: var(--green-dark); color: #cfe0d6; padding: 50px 0 28px; margin-top: 40px; }
-    footer a { color: #cfe0d6; text-decoration: none; }
-    footer a:hover { color: var(--gold); }
-    .footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 34px; margin-bottom: 36px; }
-    .footer-cols h4 { color: #fff; margin-bottom: 12px; }
-    .footer-cols ul { list-style: none; }
-    .footer-cols li { padding: 4px 0; font-size: .92rem; }
-    .legal { border-top: 1px solid rgba(255,255,255,.15); padding-top: 22px; font-size: .85rem; }
-  </style>
-</head>
-<body>
-
-<header class="site-header">
-  <div class="wrap">
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a class="logo" href="/oregon-information/">
-        <span class="logo-badge">🌲</span> Oregon Information
-      </a>
-      <ul class="nav-links">
-        <li><a href="/oregon-information/">Oregon State</a></li>
-        <li><a href="/oregon-information/moving-to-oregon/">Moving</a></li>
-        <li><a href="/oregon-information/visit-oregon/">Visiting</a></li>
-        <li><a href="/oregon-information/counties/">Counties</a></li>
-        <li><a href="/oregon-information/cities/">Cities A–Z</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<div class="page-header">
-  <div class="wrap">
-    <h1>Oregon Counties</h1>
-    <p class="lead">Browse all 36 Oregon counties. Each county contains local government links and a directory of cities within its borders.</p>
-  </div>
-</div>
-
-<main>
-
-  <!-- QUICK STATS -->
-  <section>
-    <div class="wrap">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="num">36</div>
-          <div class="label">Total Counties</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">240+</div>
-          <div class="label">Incorporated Cities</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">4.27M</div>
-          <div class="label">State Population</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">98,379</div>
-          <div class="label">Square Miles</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ALPHABETICAL NAV -->
-  <section class="alt">
-    <div class="wrap">
-      <h2 class="section-title">Browse by Letter</h2>
-      <div class="alpha-nav">
         <a href="#a">A</a>
         <a href="#b">B</a>
         <a href="#c">C</a>
@@ -481,7 +304,213 @@ Thought this through
             <div class="major-cities">Klamath Falls, Chiloquin</div>
             <div class="pop">Pop. ~68,000</div>
           </a>
+          <a class="county-card" href="/oregon-information/counties/josephine/">
+            <h3>Josephine County</h3>
+            <div class="major-cities">Grants Pass, Cave Junction</div>
+            <div class="pop">Pop. ~89,000</div>
+          </a>
         </div>
       </div>
 
       <!-- EASTERN OREGON -->
+      <div class="regional-section" id="b">
+        <h3>🌵 Eastern Oregon</h3>
+        <div class="county-grid">
+          <a class="county-card" href="/oregon-information/counties/baker/">
+            <h3>Baker County</h3>
+            <div class="major-cities">Baker City, Halfway</div>
+            <div class="pop">Pop. ~17,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/union/">
+            <h3>Union County</h3>
+            <div class="major-cities">La Grande, Union</div>
+            <div class="pop">Pop. ~26,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/umatilla/">
+            <h3>Umatilla County</h3>
+            <div class="major-cities">Pendleton, Hermiston, Milton-Freewater</div>
+            <div class="pop">Pop. ~80,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/morrow/">
+            <h3>Morrow County</h3>
+            <div class="major-cities">Boardman, Heppner, Irrigon</div>
+            <div class="pop">Pop. ~12,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/wallowa/">
+            <h3>Wallowa County</h3>
+            <div class="major-cities">Enterprise, Joseph</div>
+            <div class="pop">Pop. ~8,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/grant/">
+            <h3>Grant County</h3>
+            <div class="major-cities">John Day, Canyon City</div>
+            <div class="pop">Pop. ~7,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/harney/">
+            <h3>Harney County</h3>
+            <div class="major-cities">Burns, Hines</div>
+            <div class="pop">Pop. ~7,000 (Largest by area)</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/malheur/">
+            <h3>Malheur County</h3>
+            <div class="major-cities">Ontario, Vale, Nyssa</div>
+            <div class="pop">Pop. ~31,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/lake/">
+            <h3>Lake County</h3>
+            <div class="major-cities">Lakeview, Plush</div>
+            <div class="pop">Pop. ~8,000 (Least populous)</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- NORTH CENTRAL / COLUMBIA RIVER -->
+      <div class="regional-section" id="g">
+        <h3>🌉 Columbia River & North Central</h3>
+        <div class="county-grid">
+          <a class="county-card" href="/oregon-information/counties/columbia/">
+            <h3>Columbia County</h3>
+            <div class="major-cities">St. Helens, Scappoose, Rainier</div>
+            <div class="pop">Pop. ~52,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/wasco/">
+            <h3>Wasco County</h3>
+            <div class="major-cities">The Dalles, Hood River border</div>
+            <div class="pop">Pop. ~26,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/gilliam/">
+            <h3>Gilliam County</h3>
+            <div class="major-cities">Condon, Heppner</div>
+            <div class="pop">Pop. ~2,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/sherman/">
+            <h3>Sherman County</h3>
+            <div class="major-cities">Moro, Goldendale</div>
+            <div class="pop">Pop. ~3,000</div>
+          </a>
+          <a class="county-card" href="/oregon-information/counties/wheeler/">
+            <h3>Wheeler County</h3>
+            <div class="major-cities">Fossil, Mitchell</div>
+            <div class="pop">Pop. ~1,400 (Second least populous)</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GOVERNMENT RESOURCES -->
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="section-title">Oregon County Government Resources</h2>
+      <p class="section-sub">Direct links to official county services and information.</p>
+
+      <div class="county-grid">
+        <div class="county-card">
+          <h3>🏛️ General County Services</h3>
+          <ul>
+            <li><a href="https://www.oregon.gov/osbd" target="_blank" rel="noopener">Oregon State Board of Health</a></li>
+            <li><a href="https://www.orcities.org" target="_blank" rel="noopener">League of Oregon Cities</a></li>
+            <li><a href="https://www.oregonyoung.com" target="_blank" rel="noopener">Association of Oregon Counties</a></li>
+            <li><a href="https://sos.oregon.gov/blue-book/government/pages/county-population.aspx" target="_blank" rel="noopener">Population Data</a></li>
+          </ul>
+        </div>
+        <div class="county-card">
+          <h3>📄 Common County Records</h3>
+          <ul>
+            <li>Vital Records (Birth/Death Certificates)</li>
+            <li>Property Deeds & Titles</li>
+            <li>Marriage Licenses</li>
+            <li>Business Licenses</li>
+            <li>Building Permits</li>
+            <li>Court Records</li>
+          </ul>
+        </div>
+        <div class="county-card">
+          <h3>🔍 Find Your County Clerk</h3>
+          <ul>
+            <li>Contact county offices directly via website</li>
+            <li>Hours vary by county (typically Mon-Fri 8am-5pm)</li>
+            <li>Many offer online services and appointments</li>
+            <li>Fees apply for certified copies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS TO ALL CITIES -->
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">Quick Jump to City Lists</h2>
+      <p class="section-sub">Navigate to city directories by first letter or view all cities at once.</p>
+      
+      <div class="alpha-nav">
+        <a href="/oregon-information/cities/a/">A</a>
+        <a href="/oregon-information/cities/b/">B</a>
+        <a href="/oregon-information/cities/c/">C</a>
+        <a href="/oregon-information/cities/d/">D</a>
+        <a href="/oregon-information/cities/e/">E</a>
+        <a href="/oregon-information/cities/f/">F</a>
+        <a href="/oregon-information/cities/g/">G</a>
+        <a href="/oregon-information/cities/h/">H</a>
+        <a href="/oregon-information/cities/i/">I</a>
+        <a href="/oregon-information/cities/j/">J</a>
+        <a href="/oregon-information/cities/k/">K</a>
+        <a href="/oregon-information/cities/l/">L</a>
+        <a href="/oregon-information/cities/m/">M</a>
+        <a href="/oregon-information/cities/n/">N</a>
+        <a href="/oregon-information/cities/o/">O</a>
+        <a href="/oregon-information/cities/p/">P</a>
+        <a href="/oregon-information/cities/r/">R</a>
+        <a href="/oregon-information/cities/s/">S</a>
+        <a href="/oregon-information/cities/t/">T</a>
+        <a href="/oregon-information/cities/u/">U</a>
+        <a href="/oregon-information/cities/v/">V</a>
+        <a href="/oregon-information/cities/w/">W</a>
+        <a href="/oregon-information/cities/y/">Y</a>
+      </div>
+      <p style="margin-top: 20px; text-align: center;">
+        <a href="/oregon-information/cities/">→ View All 240+ Cities</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-cols">
+      <div>
+        <h4>Oregon Information</h4>
+        <ul>
+          <li><a href="/oregon-information/">About Us</a></li>
+          <li><a href="/oregon-information/cities/">Contact</a></li>
+          <li><a href="/oregon-information/counties/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/oregon-information/">State Facts</a></li>
+          <li><a href="/oregon-information/cities/">Cities A–Z</a></li>
+          <li><a href="/oregon-information/counties/">Counties</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="/oregon-information/moving-to-oregon/">Moving Guide</a></li>
+          <li><a href="/oregon-information/visit-oregon/">Visiting Guide</a></li>
+          <li><a href="/oregon-information/counties/">All Counties</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>© 2026 Oregon Information. Independent informational resource — not affiliated with the State of Oregon.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
