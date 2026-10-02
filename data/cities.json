@@ -643,7 +643,7 @@
   "wiki_url": "https://en.wikipedia.org/wiki/Chiloquin,_Oregon",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Chiloquin%2C_Oregon.jpg/960px-Chiloquin%2C_Oregon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "image_file": "Chiloquin,_Oregon.jpg",
-  "website": "http://www.chiloquin.com/city.html"
+  "website": "https://www.chiloquin.com/"
  },
  {
   "name": "Clatskanie",
@@ -738,7 +738,7 @@
   "wiki_url": "https://en.wikipedia.org/wiki/Coos_Bay,_Oregon",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Tioga_Building.jpg/960px-Tioga_Building.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "image_file": "Tioga_Building.jpg",
-  "website": "http://www.coosbay.org/"
+  "website": "https://www.coosbay.org/"
  },
  {
   "name": "Coquille",
@@ -2296,7 +2296,7 @@
   "wiki_url": "https://en.wikipedia.org/wiki/Lincoln_City,_Oregon",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Portion_of_the_Lincoln_City_coastline.jpg/960px-Portion_of_the_Lincoln_City_coastline.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "image_file": "Portion_of_the_Lincoln_City_coastline.jpg",
-  "website": "http://www.lincolncity.org/"
+  "website": "https://www.lincolncity.org/"
  },
  {
   "name": "Lonerock",
@@ -2600,7 +2600,7 @@
   "wiki_url": "https://en.wikipedia.org/wiki/Millersburg,_Oregon",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/City_Hall_Reflection.jpg/960px-City_Hall_Reflection.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "image_file": "City_Hall_Reflection.jpg",
-  "website": "http://www.albany-millersburg.com/millersburg.htm"
+  "website": "https://www.cityofmillersburg.org/"
  },
  {
   "name": "Milton-Freewater",
@@ -3075,7 +3075,7 @@
   "wiki_url": "https://en.wikipedia.org/wiki/Paisley,_Oregon",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Paisley_Oregon_aerial_-_Sept_2025.jpg/960px-Paisley_Oregon_aerial_-_Sept_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "image_file": "Paisley_Oregon_aerial_-_Sept_2025.jpg",
-  "website": "http://cityofpaisley.net/1801.html"
+  "website": "https://cityofpaisley.net/"
  },
  {
   "name": "Pendleton",
@@ -3303,7 +3303,7 @@
   "wiki_url": "https://en.wikipedia.org/wiki/Redmond,_Oregon",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Redmond%2C_Oregon%2C_Business_Hwy_97.jpg/960px-Redmond%2C_Oregon%2C_Business_Hwy_97.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "image_file": "Redmond,_Oregon,_Business_Hwy_97.jpg",
-  "website": "http://www.ci.redmond.or.us"
+  "website": "https://www.redmondoregon.gov/"
  },
  {
   "name": "Reedsport",
@@ -3341,7 +3341,7 @@
   "wiki_url": "https://en.wikipedia.org/wiki/Richland,_Oregon",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/RichlandOregonmainstreet.jpg/960px-RichlandOregonmainstreet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "image_file": "RichlandOregonmainstreet.jpg",
-  "website": "https://sos.oregon.gov/blue-book/Pages/local/cities/l-r/richland.aspx"
+  "website": "https://sos.oregon.gov/blue-book/Pages/local/cities.aspx"
  },
  {
   "name": "Riddle",

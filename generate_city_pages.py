@@ -167,6 +167,178 @@ REGION_CONTENT = {
  },
 }
 
+# Unique hero taglines (key = city slug). Cities not listed get an auto-generated tagline.
+CITY_TAGLINES = {
+    "portland": "The Rose City — Oregon's largest city, vibrant food scene & outdoor gateway",
+    "salem": "Oregon's Capital City — nestled in the heart of the Willamette Valley wine country",
+    "eugene": "Track Town USA — home of the University of Oregon and a thriving arts scene",
+    "bend": "High Desert Adventure Hub — sunny skies, craft beer, and outdoor recreation",
+    "medford": "Southern Oregon's Hub — gateway to Crater Lake, Rogue Valley wines & outdoor adventure",
+    "gresham": "Gateway to the Columbia River Gorge — Mount Hood's neighbor in the Portland Metro",
+    "hillsboro": "Oregon's Silicon Forest — technology industry hub in the Tualatin Valley",
+    "beaverton": "Nike's Hometown — a vibrant tech corridor in Washington County",
+    "corvallis": "Home of Oregon State University — college town on the Willamette River",
+    "springfield": "Gateway to the McKenzie River — Lane County's river city at the foot of the Cascades",
+    "lake-oswego": "Oregon's 'Lake Town' — upscale lakefront living near Portland",
+    "albany": "The Rare Metals Capital — Victorian homes, covered bridges and Willamette Valley farmland",
+    "astoria": "Oregon's Oldest American Settlement — where Lewis & Clark met the Pacific",
+    "cannon-beach": "Home of Haystack Rock — iconic Oregon Coast arts and nature destination",
+    "newport": "Dungeness Crab Capital of Oregon — marine science hub on the Central Coast",
+    "ashland": "Oregon Shakespeare Festival City — cultural gem in the Siskiyou Mountains",
+    "sisters": "Gateway to Three Sisters Wilderness — charming Western-themed mountain town",
+    "hood-river": "Windsurfing Capital of the World — orchard country in the Columbia River Gorge",
+    "tillamook": "Oregon's Cheese Capital — dairy country on the spectacular North Coast",
+    "seaside": "Oregon's Largest Beach Resort Town — family fun on the North Coast",
+    "lincoln-city": "Oregon's Kite Country — glass float hunting and Central Coast beaches",
+    "florence": "Gateway to the Oregon Dunes — charming harbor town on the Central Coast",
+    "coos-bay": "Oregon's Largest Bay City — gateway to Cape Arago and South Coast adventures",
+    "grants-pass": "Whitewater Rafting Capital — Rogue River adventures in Southern Oregon",
+    "klamath-falls": "Upper Klamath Country — birding paradise and gateway to Crater Lake",
+    "la-grande": "Blue Mountains Gateway — home of Eastern Oregon University in the Grande Ronde Valley",
+    "ontario": "Eastern Oregon's Agricultural Hub — on the Idaho border in the Snake River Valley",
+    "pendleton": "Home of the Pendleton Round-Up — Eastern Oregon's rodeo and wool capital",
+    "the-dalles": "Gateway to the Columbia River Gorge — historic Lewis & Clark encampment site",
+    "mcminnville": "Willamette Valley Wine Country Hub — gateway to Oregon's Pinot Noir region",
+    "newberg": "Herbert Hoover's Boyhood Home — heart of Chehalem Mountains wine country",
+    "cottage-grove": "Covered Bridge Capital of Oregon — Row River trails and historic charm",
+    "brookings": "Oregon's Banana Belt — the warmest and sunniest city on the Oregon Coast",
+    "gold-beach": "Jet Boat Capital of Oregon — where the Rogue River meets the Pacific",
+    "bandon": "Oregon's Cranberry Capital — world-class golf and wildlife on the South Coast",
+    "waldport": "Alsea Bay Bridge Town — gateway to pristine Central Oregon Coast beaches",
+    "yachats": "The Gem of the Oregon Coast — dramatic tidepools and rugged Pacific shoreline",
+    "depoe-bay": "The World's Smallest Harbor — whale watching capital of the Oregon Coast",
+    "rockaway-beach": "A Serene Stretch of Oregon's North Coast — family beach town escape",
+    "manzanita": "Oregon's Quietest Beach Town — artsy hideaway on Nehalem Bay",
+    "wheeler": "Nestled on Nehalem Bay — a peaceful escape on the Oregon North Coast",
+    "bay-city": "Small-Town Charm on Tillamook Bay — Oregon North Coast fishing community",
+    "garibaldi": "Oregon's Deep-Sea Fishing Port — gateway to Tillamook Bay",
+    "warrenton": "Gateway to Fort Stevens — where the Columbia River meets the Pacific",
+    "st-helens": "Named for Mount St. Helens — filming location for 'Halloweentown'",
+    "tualatin": "The Turtle City — fast-growing suburb south of Portland",
+    "wilsonville": "Oregon's I-5 Crossroads — Willamette Valley growth hub south of Portland",
+    "west-linn": "City of Hills and Rivers — scenic living where the Tualatin meets the Willamette",
+    "oregon-city": "End of the Oregon Trail — the first incorporated city west of the Rockies",
+    "gladstone": "Where the Clackamas Meets the Willamette — scenic Portland Metro suburb",
+    "happy-valley": "One of Oregon's Fastest-Growing Cities — scenic foothills living in Clackamas County",
+    "troutdale": "Gateway to the Columbia River Gorge — historic Sandy River town",
+    "wood-village": "A Small City with Big Community Spirit — east Portland Metro suburb",
+    "fairview": "A Friendly East Portland Metro Community — near Blue Lake Regional Park",
+    "maywood-park": "One of Oregon's Smallest Cities — a tight-knit Portland enclave",
+    "king-city": "A Planned Retirement Community — south of Beaverton in Washington County",
+    "durham": "One of Oregon's Smallest Cities — peaceful Tualatin River community",
+    "sherwood": "Robin Hood's Oregon Town — rapidly growing Washington County suburb",
+    "tigard": "Washington County's Growth Hub — Fanno Creek trails and Portland access",
+    "cornelius": "Washington County's Agricultural Heritage — Tualatin Valley farming community",
+    "forest-grove": "Home of Pacific University — trees, trails and history west of Portland",
+    "banks": "Gateway to Tillamook State Forest — outdoor recreation in Washington County",
+    "north-plains": "Pumpkin Patch Country of Washington County — family farms near Portland",
+    "st-paul": "Home of the St. Paul Rodeo — historic French Prairie farming community",
+    "donald": "Small-Town Heart of the Willamette Valley — historic farming community in Marion County",
+    "mount-angel": "Oregon's Bavarian Town — host of the annual Oktoberfest celebration",
+    "silverton": "Oregon Garden City — home of the Oregon Garden and gateway to Silver Falls",
+    "stayton": "Gateway to the North Santiam Canyon — Santiam River valley community",
+    "sublimity": "Gateway to Silver Falls — peaceful Marion County farming community",
+    "turner": "Small-Town Marion County Charm — gateway to Salem via scenic farmland",
+    "detroit": "Gateway to Detroit Lake — North Santiam Canyon mountain recreation hub",
+    "gates": "Tiny Mountain Gateway — North Santiam Canyon scenic corridor",
+    "mill-city": "The Little Town with Big Scenery — North Santiam River canyon community",
+    "independence": "Oregon's Historic Hop Capital — Willamette River town in Polk County",
+    "monmouth": "Home of Western Oregon University — liberal arts college town in Polk County",
+    "dallas": "Polk County's Agricultural Center — gateway to the Coast Range",
+    "falls-city": "Little Luckiamute River Town — tiny Polk County community near the Coast Range",
+    "toledo": "Lincoln County's Historic Mill Town — on the Yaquina River",
+    "reedsport": "Gateway to the Oregon Dunes National Recreation Area — Umpqua River town",
+    "north-bend": "Oregon's Bay Area Twin City — gateway to the South Coast",
+    "port-orford": "Oldest Town Site on the Oregon Coast — dramatic coastal bluffs and fishing port",
+    "cave-junction": "Gateway to Oregon Caves — Illinois Valley hub in the Siskiyou Mountains",
+    "jacksonville": "A National Historic Landmark Town — Gold Rush-era gem near Medford",
+    "talent": "Rogue Valley's Artisan Hub — farm-to-table dining and arts near Ashland",
+    "phoenix": "Rogue Valley's Growing Community — between Medford and Talent",
+    "central-point": "Gateway to Table Rocks — Rogue Valley's Crater Lake Cheese hometown",
+    "eagle-point": "Rogue River Valley Gateway — small-town charm near Medford",
+    "shady-cove": "Rogue River Recreation Town — fishing, rafting and relaxing in Jackson County",
+    "butte-falls": "A Tiny Mountain Town in Jackson County — gateway to Rogue River headwaters",
+    "roseburg": "Timber Capital of the Nation — gateway to Umpqua Valley wine country",
+    "sutherlin": "Junction City of Douglas County — North Umpqua Valley crossroads",
+    "myrtle-creek": "On the South Umpqua — myrtlewood crafts and small-town Douglas County charm",
+    "canyonville": "Gateway to Seven Feathers — historic stagecoach stop in Douglas County",
+    "riddle": "Oregon's Nickel Mining Heritage — tiny Douglas County community",
+    "winston": "Wildlife Safari Hometown — Douglas County's hidden gem",
+    "drain": "Historic Railroad Town in Douglas County — gateway to the Coast Range",
+    "creswell": "Willamette Valley's Growth Town — Eugene-Springfield Metro gateway",
+    "oakridge": "Mountain Biking Capital of the Pacific Northwest — Willamette National Forest hub",
+    "lowell": "Fall Creek Country — gateway to Dexter and Lookout Point reservoirs",
+    "veneta": "Fern Ridge Lake Community — home of the legendary Oregon Country Fair",
+    "junction-city": "Oregon's Danish Heritage Town — Willamette Valley agricultural crossroads",
+    "coburg": "Antique Capital of the Willamette Valley — tiny historic city near Eugene",
+    "harrisburg": "Willamette River Farming Town — grass seed country in Linn County",
+    "halsey": "Linn County's Agricultural Heart — grass seed farming community",
+    "brownsville": "Historic Wool Town in the Calapooia River Valley — Linn County charm",
+    "lebanon": "Strawberry Capital of Oregon — Linn County's growing Santiam River city",
+    "sweet-home": "Gateway to the Cascades — fishing, hiking and reservoir recreation near Albany",
+    "idanha": "North Santiam Canyon Gateway — tiny mountain community",
+    "lyons": "Mill Town on the North Santiam — gateway to Detroit Lake",
+    "scio": "Covered Bridge Town in Linn County — small farming community near Albany",
+    "tangent": "Oregon's Grass Seed Capital — Willamette Valley agricultural community",
+    "sodaville": "Mineral Springs Heritage Town — tiny Linn County farming community",
+    "philomath": "Home of Marys Peak — Benton County's gateway to the Coast Range",
+    "adair-village": "A Small Planned Community — former military base in Benton County",
+    "monroe": "Southern Benton County Farm Town — Willamette Valley agricultural heritage",
+    "hermiston": "Watermelon Capital of Oregon — Eastern Oregon's agricultural hub",
+    "enterprise": "Wallowa County Seat — gateway to the Eagle Cap Wilderness and Hells Canyon",
+    "joseph": "Bronze Sculpture Capital — gateway to Wallowa Lake and the Eagle Cap Wilderness",
+    "lostine": "Tiny Wallowa Valley Town — gateway to the Eagle Cap Wilderness",
+    "wallowa": "Wallowa Valley Agricultural Town — small community near the Eagle Cap",
+    "nyssa": "Treasure Valley's Onion Country — Eastern Oregon's agricultural crossroads",
+    "vale": "Snake River Valley Heritage Town — Malheur County seat on the Oregon Trail",
+    "burns": "High Desert Cattle Country — gateway to Malheur National Wildlife Refuge",
+    "hines": "Twin City to Burns — gateway to Harney Basin birding and ranching",
+    "john-day": "Oregon's Gold Mining Legacy Town — gateway to the John Day Fossil Beds",
+    "prairie-city": "Grant County Mountain Town — gateway to Strawberry Mountain Wilderness",
+    "canyon-city": "Grant County's Historic Gold Rush Town — near John Day Fossil Beds",
+    "fossil": "Wheeler County Seat — heart of the John Day Country fossil region",
+    "condon": "Gilliam County's Wheat Country Town — Eastern Oregon agricultural community",
+    "arlington": "Columbia River Town — gateway to Eastern Oregon wheat country",
+    "boardman": "Columbia River Gateway — Eastern Oregon's growing agricultural hub",
+    "umatilla": "Columbia River Crossing — gateway to the Umatilla National Forest",
+    "echo": "Historic Oregon Trail Town — Umatilla River community in Umatilla County",
+    "stanfield": "Umatilla County Agricultural Town — near the Columbia River Basin",
+    "irrigon": "Columbia Basin Irrigation Town — gateway to Lake Umatilla recreation",
+    "lakeview": "Tallest Town in Oregon — hang gliding hub and gateway to Hart Mountain",
+    "paisley": "Summer Lake Basin Ranching Town — one of Lake County's most remote communities",
+    "chiloquin": "Upper Klamath Country — gateway to Collier Memorial State Park",
+    "bonanza": "Klamath Basin Town — Klamath County agricultural community",
+    "malin": "Potato Capital of Klamath County — irrigated basin agricultural community",
+    "merrill": "Klamath Basin Farming Town — near Lower Klamath National Wildlife Refuge",
+    "redmond": "Central Oregon's Crossroads — airport hub and outdoor recreation near Bend",
+    "prineville": "Oregon's Cowboy Town — Crook County's gateway to Prineville Reservoir",
+    "madras": "Solar Eclipse Capital of Oregon — gateway to Lake Billy Chinook and Warm Springs",
+    "metolius": "Tiny Jefferson County Town — gateway to the Cascade Mountains",
+    "culver": "Jefferson County's Agricultural Hub — near Cove Palisades State Park",
+    "maupin": "Whitewater Rafting Capital of the Deschutes River — gateway to the Lower Deschutes",
+    "antelope": "Rajneeshee History Town — tiny Wasco County community",
+    "spray": "North Fork John Day River Town — tiny Wheeler County community",
+    "mitchell": "The Painted Hills Gateway — tiny Wheeler County community",
+    "baker-city": "Oregon's 'Queen City of the Mines' — gold rush heritage in Eastern Oregon",
+    "halfway": "Gateway to Hells Canyon — Baker County's remote ranching community",
+    "richland": "Eagle Valley Ranching Town — Baker County gateway to Hells Canyon",
+    "unity": "Upper Burnt River Valley — tiny Baker County mountain community",
+    "heppner": "Morrow County Seat — Eastern Oregon wheat farming community",
+    "ione": "Columbia Plateau Farming Town — tiny Morrow County community",
+    "lexington": "Morrow County's Tiny Farming Community — Eastern Oregon wheat country",
+}
+
+# Per-region hero theme: gradient + short evocative line
+REGION_THEME = {
+    'Portland Metro': ('#2b2d42', '#4a4e69', 'City lights, bridges and forested hills where the Willamette meets the Columbia.'),
+    'Willamette Valley': ('#1b4332', '#40916c', 'Rolling vineyards, covered bridges and river towns in Oregon\u2019s green heart.'),
+    'Oregon Coast': ('#073b4c', '#0a9396', 'Sea stacks, lighthouses and misty headlands along 363 miles of public shoreline.'),
+    'Columbia River Gorge': ('#0b2545', '#1d4e89', 'Basalt cliffs, roaring waterfalls and wind-swept river canyons.'),
+    'Central Oregon': ('#1d3557', '#2a9d8f', 'Snow-capped Cascades, ponderosa pine and endless high-desert sunshine.'),
+    'Eastern Oregon': ('#7f4f24', '#b6862c', 'Big skies, rimrock canyons and frontier towns across Oregon\u2019s wide-open interior.'),
+    'Southern Oregon': ('#6b4e16', '#386641', 'Sunlit valleys, wild rivers and the impossible blue of Crater Lake.'),
+}
+
 OREGON_FACTS = [
  ('Statehood','February 14, 1859 (33rd state admitted to the Union)'),
  ('Capital','<a href="/cities/salem/index.html">Salem</a>'),
@@ -201,6 +373,24 @@ CSS += (
  ".dir-list a{transition:all .2s}.dir-list a:hover{background:var(--g);color:#fff;transform:translateY(-1px)}"
  "h2.st{position:relative;padding-left:14px}h2.st:before{content:'';position:absolute;left:0;top:2px;bottom:10px;width:5px;border-radius:3px;background:var(--gold)}"
  ".facts tr:nth-child(even) th,.facts tr:nth-child(even) td{background:#eef3f0}"
+ # hero variants: city / region / Oregon state
+ ".city-hero,.region-hero{position:relative;overflow:hidden}.city-hero .wrap,.region-hero .wrap,.or-hero .wrap{position:relative;z-index:2}"
+ ".hero p.city-tagline{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.05rem,2.2vw,1.3rem);color:#f3e2b3;margin-top:10px;max-width:720px}"
+ ".region-hero .hero-sub{color:#dceee3}"
+ ".pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;"
+ "padding:5px 13px;border-radius:999px;font-size:.84rem;font-weight:600;backdrop-filter:blur(2px)}.pill a{color:#fff}"
+ ".or-sil{position:absolute;right:3%;top:50%;transform:translateY(-50%);width:340px;max-width:45%;height:auto;opacity:.5;z-index:1;pointer-events:none}"
+ ".or-hero{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center;color:#fff;margin-bottom:36px;padding:72px 0 64px;"
+ "background:radial-gradient(ellipse at 75% 30%,rgba(200,162,75,.35),transparent 55%),linear-gradient(135deg,#0b2418 0%,#14382a 40%,#1f4e79 100%)}"
+ ".or-hero .wrap{width:100%}.or-sil-lg{width:440px;max-width:42%;right:4%;opacity:.6}"
+ ".or-hero h1{font-size:clamp(2rem,5.5vw,3.4rem);max-width:720px;text-shadow:0 2px 12px rgba(0,0,0,.35)}"
+ ".or-eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:14px}"
+ ".or-sub{color:#dceee3;font-size:clamp(1rem,2vw,1.18rem);margin-top:16px;max-width:620px}"
+ ".or-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}"
+ ".btn-cta,.btn-ghost{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;transition:all .2s}"
+ ".btn-cta{background:var(--gold);color:#14382a}.btn-cta:hover{background:#e0bb5e;transform:translateY(-2px)}"
+ ".btn-ghost{border:2px solid rgba(255,255,255,.7);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}"
+ "@media(max-width:700px){.or-sil{opacity:.2;max-width:80%;right:-20px}.or-hero{min-height:360px}}"
  # quick facts + map
  ".qf{display:flex;gap:20px;align-items:flex-start;margin:24px 0}.qf .facts{flex:1;min-width:0;margin:0}"
  ".ormap{flex:0 0 216px;background:var(--bg);border:1px solid #e3eae6;border-radius:10px;padding:8px;text-align:center}"
@@ -359,10 +549,16 @@ def alert_banner():
             '</div><div id="ab-live" aria-live="polite"></div></div></details>' + ALERTS_JS)
 
 
-OR_BBOX = (41.85, 46.35, -124.65, -116.40)   # lat_min, lat_max, lon_min, lon_max
-OR_OUTLINE = [(-124.55, 46.24), (-124.17, 46.23), (-123.2, 46.15), (-122.1, 45.6), (-121.0, 45.6),
-              (-119.5, 46.0), (-117.0, 46.0), (-116.95, 45.0), (-117.04, 43.0), (-117.04, 42.0),
-              (-120.0, 41.99), (-122.0, 41.99), (-124.2, 41.99), (-124.65, 43.5), (-124.65, 45.5), (-124.55, 46.24)]
+OR_BBOX = (41.92, 46.34, -124.62, -116.38)   # lat_min, lat_max, lon_min, lon_max
+OR_OUTLINE = [  # (lon, lat), clockwise from the Columbia River mouth
+    (-124.03, 46.26), (-123.55, 46.26), (-123.2, 46.17), (-122.9, 46.1), (-122.8, 45.86), (-122.77, 45.65),
+    (-122.4, 45.58), (-121.9, 45.66), (-121.5, 45.72), (-121.2, 45.61), (-120.9, 45.65), (-120.5, 45.7),
+    (-120.0, 45.82), (-119.6, 45.92), (-119.25, 45.93), (-118.98, 46.0), (-116.92, 46.0), (-116.78, 45.85),
+    (-116.55, 45.5), (-116.46, 45.2), (-116.7, 45.0), (-116.85, 44.75), (-117.15, 44.48), (-117.22, 44.3),
+    (-116.97, 44.2), (-116.9, 43.95), (-117.03, 43.8), (-117.03, 42.0), (-120.0, 42.0), (-122.5, 42.0),
+    (-124.21, 42.0), (-124.36, 42.25), (-124.42, 42.66), (-124.52, 42.87), (-124.39, 43.3), (-124.25, 43.45),
+    (-124.12, 43.75), (-124.1, 44.2), (-124.06, 44.6), (-124.02, 45.0), (-123.97, 45.5), (-123.93, 45.9),
+    (-123.98, 46.2), (-124.03, 46.26)]
 
 
 def _or_xy(lat, lon, w=200, h=160, pad=8):
@@ -377,6 +573,24 @@ def oregon_svg_map(lat, lon, label='City'):
             f'<polygon points="{pts}" fill="#dfeee5" stroke="#1a5632" stroke-width="1.5" stroke-linejoin="round"/>'
             f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#d62828" stroke="#fff" stroke-width="1.5"><title>{e(label)}</title></circle>'
             f'</svg><figcaption>Location in Oregon</figcaption></figure>')
+
+
+def oregon_silhouette(w=500, h=400, cls='or-sil'):
+    """Large decorative Oregon outline (inline SVG) for hero backgrounds."""
+    pts = ' '.join('%.1f,%.1f' % _or_xy(la, lo, w, h, 10) for lo, la in OR_OUTLINE)
+    return (f'<svg class="{cls}" viewBox="0 0 {w} {h}" aria-hidden="true" focusable="false">'
+            f'<polygon points="{pts}" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.6)" stroke-width="2.5" stroke-linejoin="round"/></svg>')
+
+
+def city_tagline(name, county, region):
+    t = CITY_TAGLINES.get(slug(name))
+    if t: return t
+    return f'{name} \u2014 {county} County \u00b7 ' + (region if region.endswith('Oregon') else f'{region}, Oregon')
+
+
+def hero_style(rname):
+    a, b, _ = REGION_THEME.get(rname, ('#14382a', '#1a5632', ''))
+    return f' style="background:linear-gradient(135deg,{a} 0%,{b} 100%)"'
 
 
 def slug(name):
@@ -419,12 +633,12 @@ def summary_html(text, limit=1100):
     return ''.join(f'<p>{e(p)}</p>' for p in out)
 
 
-def head(title, desc, path, og_type='website', image=None, extra='', up=''):
+def head(title, desc, path, og_type='website', image=None, extra='', up='', keywords=''):
     url = f'{BASE_URL}{path}'
     img = image or DEFAULT_IMG
     ga = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={ANALYTICS_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{ANALYTICS_ID}");</script>' if ANALYTICS_ID else '')
     return (f'<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>{e(title)}</title>'
-            f'<meta name="description" content="{e(desc)}"><meta name="robots" content="index, follow">'
+            f'<meta name="description" content="{e(desc)}">' + (f'<meta name="keywords" content="{e(keywords)}">' if keywords else '') + '<meta name="robots" content="index, follow">'
             f'<meta name="viewport" content="width=device-width, initial-scale=1.0">'
             f'<link rel="icon" href="{up}assets/favicon.ico"><link rel="apple-touch-icon" href="{up}assets/favicon-32.png"><link rel="canonical" href="{url}">'
             f'<meta property="og:site_name" content="{SITE_NAME}"><meta property="og:type" content="{og_type}">'
@@ -539,7 +753,16 @@ def city_page(c, all_cities, custom):
     if pop: fq.insert(0, (f"What is the population of {name}, Oregon?", f"{name} had {pop} residents at the 2020 U.S. Census (up from {n(c['pop2010'])} in 2010)." if c['change'].startswith('+') else f"{name} had {pop} residents at the 2020 U.S. Census ({n(c['pop2010'])} in 2010)."))
     faq_details = '\n'.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in fq)
     path = f'/cities/{slug(name)}/'
-    desc = f'{name}, Oregon ({county} County){": population " + pop + " (2020 Census)" if pop else ""}. City facts, history, nearby cities, moving and utility checklist, jobs, schools, DMV steps, and official links.'
+    breg = big_region(c)
+    reg_phrase = breg if breg.endswith('Oregon') else f'{breg} Oregon'
+    desc = (f'{name} is a city in {county} County, {reg_phrase}' + (f' with a population of {pop}' if pop else '')
+            + f'. Explore local schools, utilities, parks, and moving resources for {name}, OR.')
+    keywords = (f'{name}, {name} Oregon, {name} OR, {county} County Oregon, {reg_phrase}, moving to {name}, '
+                f'{name} schools, {name} utilities, Oregon cities')
+    tagline = city_tagline(name, county, breg)
+    badges = ''.join(f'<span class="pill">{b}</span>' for b in (
+        [f'&#128101; Pop. {pop}'] if pop else []) + [f'&#127963; {e(county)} County', f'&#128205; {e(breg)}']
+        + (['&#11088; State capital'] if c['capital'] else ['&#127963; County seat'] if c['seat'] else []))
     city_ld = {'@context': 'https://schema.org', '@type': 'City', 'name': f'{name}, Oregon', 'url': f'{BASE_URL}{path}',
                'containedInPlace': {'@type': 'AdministrativeArea', 'name': f'{county} County, Oregon'}}
     if c.get('lat') is not None: city_ld['geo'] = {'@type': 'GeoCoordinates', 'latitude': c['lat'], 'longitude': c['lon']}
@@ -561,9 +784,11 @@ def city_page(c, all_cities, custom):
     local.append(f'<li><a href="../../counties/{slug(county)}/index.html">{e(county)} County guide on Oregon Information</a></li>')
     if c.get('wiki_url'): local.append(f'<li><a href="{e(c["wiki_url"])}" target="_blank" rel="noopener">{e(name)} on Wikipedia</a></li>')
     lead = f'{e(name)} is an incorporated city in {county_links(counties, "../../")}, in Oregon&rsquo;s {e(region)} region' + (f', with a 2020 Census population of {pop}.' if pop else '.')
-    return (head(f'{name}, Oregon | Population, Facts, Moving Guide & Local Links', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../')
+    return (head(f'{name}, Oregon (2025 Population, Schools & Local Guide) | Oregon Information', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
             + header('../../') + ticker_html() + alert_banner()
-            + f'<div class="hero"><div class="wrap"><h1>{e(name)}, Oregon</h1><p>Located in {e(county)} County in the {e(region)} region &mdash; city facts, history, a newcomer checklist, and official links in one place.</p></div></div>'
+            + f'<div class="hero city-hero"{hero_style(breg)}><div class="wrap"><h1>{e(name)}, Oregon</h1><p class="city-tagline">{e(tagline)}</p>'
+            + f'<div class="pills">{badges}</div>'
+            + f'<p class="hero-sub">{e(name)}, OR guide: population, schools, utilities, attractions, nearby cities and a moving checklist for {e(county)} County, {e(reg_phrase)}.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Cities</a> &rsaquo; {e(name)}</nav>'
             + f'<h2 class="st">Quick Facts</h2><div class="qf"><section class="facts"><table>{facts}</table></section>{or_map}</div>'
             + f'<h2 class="st">About {e(name)}</h2><section class="prose"><p>{lead}</p>{summary_html(c["summary"])}{wiki_credit(c) if c.get("wiki_url") else ""}</section>'
@@ -571,7 +796,7 @@ def city_page(c, all_cities, custom):
             + f'<h2 class="st">Moving to {e(name)}</h2><div class="cards"><div class="card"><h3>&#9889; Utilities Checklist</h3><ul><li><strong>Electricity:</strong> {utility_links_html(electric)} (confirm by address)</li><li><strong>Natural gas:</strong> NW Natural, Avista or Cascade Natural Gas (where available)</li><li><strong>Water &amp; sewer:</strong> City of {e(name)}</li><li><strong>Trash:</strong> Franchised hauler &mdash; verify by service address</li><li><strong>Internet:</strong> Compare providers at the <a href="https://broadbandmap.fcc.gov/" target="_blank" rel="noopener">FCC broadband map</a></li></ul></div>'
             + f'<div class="card"><h3>&#128188; Jobs &amp; Economy</h3><ul><li><strong>Notable employers:</strong> {e(employers)}</li><li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon (free)</a></li><li><a href="https://www.imatchskills.org/" target="_blank" rel="noopener">iMatchSkills job board</a></li></ul></div>'
             + '<div class="card"><h3>&#127968; Housing</h3><ul><li><a href="https://www.zillow.com/or/" target="_blank" rel="noopener">Zillow Oregon</a></li><li><a href="https://www.apartments.com/oregon/" target="_blank" rel="noopener">Apartments.com</a></li><li><a href="https://www.oregon.gov/ohcs/" target="_blank" rel="noopener">OHCS buyer/renter programs</a></li></ul></div>'
-            + '<div class="card"><h3>&#128663; DMV Steps</h3><ul><li>Vehicle registration &amp; Oregon license within <strong>30 days</strong></li><li><a href="https://www.oregon.gov/odot/dmv/pages/new_residents.aspx" target="_blank" rel="noopener">New resident guide</a></li><li><a href="https://www.oregon.gov/odot/dmv/pages/find_us.aspx" target="_blank" rel="noopener">Find a DMV office</a></li></ul></div>'
+            + '<div class="card"><h3>&#128663; DMV Steps</h3><ul><li>Vehicle registration &amp; Oregon license within <strong>30 days</strong></li><li><a href="https://www.oregon.gov/odot/dmv/" target="_blank" rel="noopener">New resident guide</a></li><li><a href="https://www.oregon.gov/odot/dmv/pages/offices/index.aspx" target="_blank" rel="noopener">Find a DMV office</a></li></ul></div>'
             + schools_card + attractions_card
             + '<div class="card"><h3>&#127973; Healthcare &amp; Assistance</h3><ul><li><a href="https://one.oregon.gov/" target="_blank" rel="noopener">ONE portal (OHP/SNAP)</a></li><li><a href="https://www.oregonfoodbank.org/" target="_blank" rel="noopener">Oregon Food Bank</a></li><li><a href="https://www.211info.org/" target="_blank" rel="noopener">Dial 211 for local help</a></li></ul></div></div>'
             + (f'<h2 class="st">Nearby Cities</h2><nav class="dir-list">{near_html}</nav>' if near_html else '')
@@ -612,7 +837,7 @@ def county_page(k, cities):
     links = []
     if k.get('website'): links.append(f'<li><a href="{e(k["website"])}" target="_blank" rel="noopener">{e(name)} County official website</a></li>')
     links += ['<li><a href="https://www.211info.org/" target="_blank" rel="noopener">211info &mdash; local assistance</a></li>',
-              '<li><a href="https://www.oregon.gov/odot/dmv/pages/find_us.aspx" target="_blank" rel="noopener">Find a DMV office</a></li>',
+              '<li><a href="https://www.oregon.gov/odot/dmv/pages/offices/index.aspx" target="_blank" rel="noopener">Find a DMV office</a></li>',
               '<li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon</a></li>',
               '<li><a href="https://aocweb.org/" target="_blank" rel="noopener">Association of Oregon Counties</a></li>']
     if k.get('wiki_url'): links.append(f'<li><a href="{e(k["wiki_url"])}" target="_blank" rel="noopener">{e(name)} County on Wikipedia</a></li>')
@@ -708,7 +933,12 @@ def region_page(rname, rcities):
     rslug = REGION_SLUGS[rname]
     path = f'/regions/{rslug}/'
     desc = rc['desc']
+    meta_desc = (f"{rname}, Oregon guide: {len(rcities)} cities across {len(REGION_COUNTIES[rname])} counties. "
+                 f"{rc['hero_sub']} Living, visiting, population and city links.")
     counties_list = REGION_COUNTIES[rname]
+    evoke = REGION_THEME.get(rname, ('', '', ''))[2]
+    total_pop = sum(int(float(c['pop2020'] or 0)) for c in rcities)
+    r_kw = f"{rname} Oregon, {rname} cities, living in {rname}, visiting {rname}, " + ', '.join(f'{cn} County Oregon' for cn in REGION_COUNTIES[rname]) + ', Oregon regions'
     counties_html = ', '.join(f'<a href="../../counties/{slug(cn)}/index.html">{e(cn)} County</a>' for cn in counties_list)
     sorted_cities = sorted(rcities, key=lambda c: -float(c['pop2020'] or 0))
     top = sorted_cities[:18]
@@ -725,9 +955,12 @@ def region_page(rname, rcities):
         {'@type':'ListItem','position':1,'name':'Home','item':f'{BASE_URL}/'},
         {'@type':'ListItem','position':2,'name':'Oregon Regions','item':f'{BASE_URL}/regions/'},
         {'@type':'ListItem','position':3,'name':rname,'item':f'{BASE_URL}{path}'}]}
-    return (head(f'{rname}, Oregon | Cities, Counties & Living Guide', desc, path, 'article', None, ld(ld_obj)+ld(bread), '../../')
+    return (head(f'{rname}, Oregon (2025 Guide): {len(rcities)} Cities, Counties, Living & Travel | Oregon Information', meta_desc, path, 'article', None, ld(ld_obj)+ld(bread), '../../', r_kw)
             + header('../../') + ticker_html() + alert_banner()
-            + f'<div class="hero"><div class="wrap"><h1>{e(rname)}, Oregon</h1><p>{e(rc["hero_sub"])}</p></div></div>'
+            + f'<div class="hero region-hero"{hero_style(rname)}>{oregon_silhouette()}<div class="wrap"><h1>{e(rname)}, Oregon</h1>'
+            + f'<p class="city-tagline">{e(evoke)}</p><p class="hero-sub">{e(rc["hero_sub"])}</p>'
+            + f'<div class="pills"><span class="pill">&#127961; {len(rcities)} cities</span><span class="pill">&#127963; {len(counties_list)} counties</span>'
+            + f'<span class="pill">&#128101; {total_pop:,} residents (2020)</span></div></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Regions</a> &rsaquo; {e(rname)}</nav>'
             + f'<h2 class="st">About the {e(rname)} Region</h2><section class="prose"><p>{e(desc)}</p></section>'
             + f'<h2 class="st">Counties</h2><p class="prose" style="margin:8px 0 24px">{counties_html}</p>'
@@ -749,16 +982,18 @@ def regions_index(all_cities):
     for rname, rslug2 in REGION_SLUGS.items():
         rc = REGION_CONTENT[rname]
         city_count = sum(1 for c in all_cities if big_region(c) == rname)
-        region_cards += (f'<a href="{rslug2}/index.html" style="display:block;text-decoration:none;color:inherit" class="card">'
+        ra, rb, _ = REGION_THEME[rname]
+        region_cards += (f'<a href="{rslug2}/index.html" style="display:block;text-decoration:none;color:inherit;border-top-color:{rb}" class="card">'
                          f'<h3>{e(rname)}</h3>'
                          f'<p style="font-size:.92rem;color:var(--tx);margin:6px 0">{e(rc["desc"][:150])}&hellip;</p>'
                          f'<p style="font-size:.84rem;color:var(--mu);margin-top:6px">{city_count} cities &middot; {len(REGION_COUNTIES[rname])} counties</p>'
                          f'</a>')
     ld_obj = {'@context':'https://schema.org','@type':'ItemList','name':'Oregon Regions',
               'url':f'{BASE_URL}{path}','numberOfItems':7}
-    return (head("Oregon's Seven Regions | Geographic Guide to Oregon", desc, path, 'website', None, ld(ld_obj), '../')
+    return (head("Oregon's 7 Regions (2025 Guide): Coast, Valley, Gorge, Central, Eastern & Southern | Oregon Information", desc, path, 'website', None, ld(ld_obj), '../',
+                 'Oregon regions, Portland Metro, Willamette Valley, Oregon Coast, Columbia River Gorge, Central Oregon, Eastern Oregon, Southern Oregon, Oregon cities by region')
             + header('../') + ticker_html() + alert_banner()
-            + '<div class="hero"><div class="wrap"><h1>Oregon&rsquo;s Seven Regions</h1>'
+            + f'<div class="hero region-hero">{oregon_silhouette()}<div class="wrap"><h1>Oregon&rsquo;s Seven Regions</h1>'
             + '<p>Explore Oregon by region &mdash; cities, counties, living guides, and things to do in each part of the state.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Regions</nav>'
             + f'<div class="cards" style="margin-top:24px">{region_cards}</div>'
@@ -767,9 +1002,11 @@ def regions_index(all_cities):
 
 def oregon_page():
     path = '/oregon/'
-    title = 'Oregon State Facts | Population, Symbols, History & Geography'
-    desc = ('Oregon state facts: population, area, capital, state symbols, counties, cities, history, economy, '
-            'and links to every Oregon city and county guide.')
+    title = 'Oregon State Guide (2025): Facts, Population, 241 Cities, 36 Counties & 7 Regions | Oregon Information'
+    desc = ('Your complete guide to the State of Oregon: population, capital, state symbols, geography, history and economy, '
+            'plus guides to all 241 cities, 36 counties and 7 regions.')
+    kw = ('Oregon, State of Oregon, Oregon facts, Oregon population, Oregon cities, Oregon counties, Oregon regions, '
+          'moving to Oregon, visiting Oregon, Oregon state symbols, Oregon history')
     facts_rows = ''.join(f'<tr><th>{k}</th><td>{v}</td></tr>' for k, v in OREGON_FACTS)
     ld_obj = {'@context':'https://schema.org','@type':'State','name':'Oregon','url':f'{BASE_URL}{path}'}
     bread = {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
@@ -779,10 +1016,14 @@ def oregon_page():
         f'<a href="/regions/{REGION_SLUGS[r]}/index.html" style="display:block;text-decoration:none;color:inherit" class="card">'
         f'<h3>{e(r)}</h3><p style="font-size:.92rem;color:var(--tx);margin:4px 0">{e(REGION_CONTENT[r]["desc"][:120])}&hellip;</p></a>'
         for r in REGION_SLUGS)
-    return (head(title, desc, path, 'article', None, ld(ld_obj)+ld(bread), '../')
+    return (head(title, desc, path, 'article', None, ld(ld_obj)+ld(bread), '../', kw)
             + header('../') + ticker_html() + alert_banner()
-            + '<div class="hero"><div class="wrap"><h1>Oregon State Facts</h1>'
-            + '<p>Key facts, symbols, geography, history and economy of the U.S. state of Oregon.</p></div></div>'
+            + f'<div class="or-hero">{oregon_silhouette(cls="or-sil or-sil-lg")}<div class="wrap">'
+            + '<p class="or-eyebrow">&#10022; The Beaver State &middot; Est. 1859 &#10022;</p>'
+            + '<h1>Your Complete Guide to the State of Oregon</h1>'
+            + '<p class="or-sub">Explore 241 cities, 36 counties, 7 regions &mdash; population data, schools, utilities, attractions &amp; more</p>'
+            + '<p class="or-cta"><a class="btn-cta" href="/cities/">Explore Oregon &rarr;</a><a class="btn-ghost" href="/regions/">Browse the 7 regions</a></p>'
+            + '</div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> &rsaquo; Oregon State Facts</nav>'
             + f'<h2 class="st">Quick Facts</h2><section class="facts"><table>{facts_rows}</table></section>'
             + '''<h2 class="st">About Oregon</h2><section class="prose">

@@ -243,7 +243,7 @@
       },
       {
         "name": "Fernhill Wetlands (Forest Grove)",
-        "url": "https://www.trwc.org/fernhill-wetlands",
+        "url": "https://www.fernhillwetlands.org/",
         "desc": "250-acre wetland restoration area — an outstanding birding site in the Tualatin Basin"
       },
       {
@@ -258,7 +258,7 @@
       },
       {
         "name": "Henry Hagg Lake (15 min)",
-        "url": "https://www.co.washington.or.us/support-services/facilities-and-parks/parks/hagg-lake.cfm",
+        "url": "https://www.washingtoncountyor.gov/parks",
         "desc": "Swimming, boating, and picnicking at this reservoir in the Coast Range foothills"
       }
     ]
@@ -322,7 +322,7 @@
       },
       {
         "name": "Chinook Landing Marine Park",
-        "url": "https://www.oregonmetro.gov/parks/chinook-landing-marine-park",
+        "url": "https://www.oregonmetro.gov/parks",
         "desc": "Columbia River boat launch and park popular with anglers and paddlers"
       }
     ]
@@ -352,12 +352,12 @@
       },
       {
         "name": "Henry Hagg Lake",
-        "url": "https://www.co.washington.or.us/support-services/facilities-and-parks/parks/hagg-lake.cfm",
+        "url": "https://www.washingtoncountyor.gov/parks",
         "desc": "Reservoir park with swimming beach, boating, fishing, and a paved loop trail"
       },
       {
         "name": "Fernhill Wetlands",
-        "url": "https://www.trwc.org/fernhill-wetlands",
+        "url": "https://www.fernhillwetlands.org/",
         "desc": "250-acre restored wetland — a top birding destination in the Tualatin Basin"
       },
       {
@@ -499,7 +499,7 @@
       },
       {
         "name": "Scouters Mountain Nature Park",
-        "url": "https://www.oregonmetro.gov/parks/scouters-mountain-nature-park",
+        "url": "https://www.oregonmetro.gov/parks",
         "desc": "Over 200 acres of forested trails and meadows with views of Mt. Hood"
       },
       {
@@ -623,7 +623,7 @@
       },
       {
         "name": "George Rogers Park",
-        "url": "https://www.lakeoswego.city/parks",
+        "url": "https://www.lakeoswego.city/parksrec",
         "desc": "Willamette River park with an open-air iron furnace museum and sandy beach"
       },
       {
@@ -638,7 +638,7 @@
       },
       {
         "name": "Millennium Plaza Park",
-        "url": "https://www.lakeoswego.city/parks",
+        "url": "https://www.lakeoswego.city/parksrec",
         "desc": "Lakeside plaza with an amphitheater and access to the Willamette Shore trail"
       }
     ]
@@ -686,7 +686,7 @@
       },
       {
         "name": "Dogwood Festival Park",
-        "url": "https://www.milwaukieoregon.gov/parksrec",
+        "url": "https://www.milwaukieoregon.gov/",
         "desc": "Riverside park and event venue on the Willamette River"
       },
       {
@@ -721,7 +721,7 @@
     "top_attractions": [
       {
         "name": "Molalla River Recreation Area",
-        "url": "https://www.blm.gov/visit/molalla-river",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "BLM recreation corridor along the Molalla River with swimming holes, trails, and scenic canyon views"
       },
       {
@@ -781,12 +781,12 @@
       },
       {
         "name": "Clackamette Park & Willamette Falls",
-        "url": "https://www.orcity.org/parks",
+        "url": "https://www.orcity.org/219/Parks-Recreation",
         "desc": "Riverside park at the confluence of the Clackamas and Willamette rivers, with views of the falls"
       },
       {
         "name": "Municipal Elevator",
-        "url": "https://www.orcity.org/publicworks/elevator",
+        "url": "https://www.orcity.org/",
         "desc": "One of only four outdoor municipal elevators in the USA — connects downtown to the bluff"
       },
       {
@@ -898,7 +898,7 @@
       },
       {
         "name": "Steens Mountain Wilderness",
-        "url": "https://www.blm.gov/visit/steens-mountain",
+        "url": "https://www.blm.gov/programs/national-conservation-lands/oregon-washington/steens-mountain",
         "desc": "Oregon's most dramatic fault-block mountain — rising 5,500 feet from the Alvord Desert to 9,773 feet"
       },
       {
@@ -1608,7 +1608,7 @@
     "top_attractions": [
       {
         "name": "Table Rocks (5 min)",
-        "url": "https://www.blm.gov/visit/table-rocks",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "Upper and Lower Table Rocks — dramatic flat-topped volcanic buttes with wildflower meadows and panoramic views"
       },
       {
@@ -1673,7 +1673,7 @@
     "top_attractions": [
       {
         "name": "Table Rocks (10 min)",
-        "url": "https://www.blm.gov/visit/table-rocks",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "Flat-topped volcanic buttes with wildflower meadows and views of the Rogue Valley"
       },
       {
@@ -1762,7 +1762,7 @@
       },
       {
         "name": "Riverside Park & Rogue River",
-        "url": "https://www.grantspassoregon.gov/parksrec",
+        "url": "https://www.grantspassoregon.gov/",
         "desc": "Grants Pass's beloved Caveman statue and Rogue River park — swimming beach in summer"
       },
       {
@@ -1772,7 +1772,7 @@
       },
       {
         "name": "Rogue River Corridor & Scenic Byway",
-        "url": "https://www.blm.gov/visit/rogue-river-national-back-country-byway",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "The Wild & Scenic Rogue River corridor — rafting, fishing, and scenic road through the Rogue canyon"
       }
     ]
@@ -1871,7 +1871,7 @@
       },
       {
         "name": "Oregon Outback Scenic Byway",
-        "url": "https://www.oregon.gov/odot/oregon-scenic-byways",
+        "url": "https://www.oregon.gov/odot/programs/pages/scenic-byways.aspx",
         "desc": "140-mile scenic drive through the remote high desert — Fremont-Winema National Forest and wide open rangelands"
       },
       {
@@ -1923,7 +1923,7 @@
       },
       {
         "name": "Table Rocks",
-        "url": "https://www.blm.gov/visit/table-rocks",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "Upper and Lower Table Rocks — flat-topped volcanic buttes with wildflower meadows and panoramic views"
       },
       {
@@ -2063,7 +2063,7 @@
       },
       {
         "name": "Susan Creek (Indian Mounds) Recreation Area",
-        "url": "https://www.blm.gov/visit/susan-creek-recreation-area",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "BLM river park on the North Umpqua — trails, swimming holes, and ancient Native American earthworks"
       }
     ]
@@ -2241,7 +2241,7 @@
       },
       {
         "name": "Tonquin Natural Area",
-        "url": "https://www.oregonmetro.gov/parks/tonquin-natural-area",
+        "url": "https://www.oregonmetro.gov/parks",
         "desc": "Over 300 acres of native habitat, wetlands, and trails along the Tualatin River corridor"
       }
     ]
@@ -2276,7 +2276,7 @@
       },
       {
         "name": "Veterans Memorial Park & Columbia River",
-        "url": "https://www.sthelensoregon.gov/parks",
+        "url": "https://www.sthelensoregon.gov/",
         "desc": "Columbia River waterfront park with stunning views of Mt. Rainier on clear days"
       },
       {
@@ -2311,7 +2311,7 @@
     "top_attractions": [
       {
         "name": "Fanno Creek Regional Trail",
-        "url": "https://www.oregonmetro.gov/parks/fanno-creek-regional-trail",
+        "url": "https://www.oregonmetro.gov/parks",
         "desc": "An 18-mile paved greenway trail through Tigard, Beaverton, and Portland along Fanno Creek"
       },
       {
@@ -2331,7 +2331,6 @@
       },
       {
         "name": "Progress Ridge TownSquare",
-        "url": "https://www.progressridgetownsquare.com",
         "desc": "Outdoor shopping and dining plaza with a seasonal ice rink and community events"
       }
     ]
@@ -2361,7 +2360,7 @@
       },
       {
         "name": "Historic Columbia River Highway",
-        "url": "https://www.oregon.gov/odot/hcrh/pages/index.aspx",
+        "url": "https://www.oregon.gov/odot/regions/pages/historic-columbia-river-highway.aspx",
         "desc": "The gateway to the Historic Columbia River Highway begins in Troutdale — waterfalls, viewpoints, and scenic drives"
       },
       {
@@ -2371,12 +2370,12 @@
       },
       {
         "name": "Sandy River Delta",
-        "url": "https://www.oregonmetro.gov/parks/sandy-river-delta",
+        "url": "https://www.oregonmetro.gov/parks",
         "desc": "1,400-acre natural area at the confluence of the Sandy and Columbia rivers — off-leash dog area and great birding"
       },
       {
         "name": "Glenn Otto Community Park",
-        "url": "https://www.troutdaleoregon.gov/park/glenn-otto-community-park",
+        "url": "https://www.troutdaleoregon.gov/parks",
         "desc": "Sandy River beach park in Troutdale — swimming, picnicking, and river access"
       }
     ]
@@ -2506,7 +2505,7 @@
       },
       {
         "name": "Memorial Park",
-        "url": "https://www.wilsonvilleoregon.gov/parks",
+        "url": "https://www.wilsonvilleoregon.gov/parksandrec",
         "desc": "Wilsonville's largest park with sports fields, playgrounds, and trails"
       },
       {
@@ -2516,7 +2515,7 @@
       },
       {
         "name": "Boeckman Creek Primary Trail",
-        "url": "https://www.wilsonvilleoregon.gov/parks",
+        "url": "https://www.wilsonvilleoregon.gov/parksandrec",
         "desc": "A pleasant paved trail through the heart of Wilsonville for walking and cycling"
       },
       {
@@ -2556,7 +2555,7 @@
       },
       {
         "name": "Sandy River Delta",
-        "url": "https://www.oregonmetro.gov/parks/sandy-river-delta",
+        "url": "https://www.oregonmetro.gov/parks",
         "desc": "Wide natural area at the Sandy-Columbia confluence, popular for walking and dogs"
       },
       {
@@ -2566,7 +2565,7 @@
       },
       {
         "name": "Historic Columbia River Highway",
-        "url": "https://www.oregon.gov/odot/hcrh/pages/index.aspx",
+        "url": "https://www.oregon.gov/odot/regions/pages/historic-columbia-river-highway.aspx",
         "desc": "Gateway to Oregon's most famous scenic drive and waterfalls"
       }
     ]
@@ -2721,12 +2720,12 @@
       },
       {
         "name": "Osborn Aquatic Center",
-        "url": "https://www.corvallisoregon.gov/parks",
+        "url": "https://www.corvallisoregon.gov/parksrec",
         "desc": "Award-winning public aquatic facility with lap pools, water slides, and a lazy river"
       },
       {
         "name": "Peavy Arboretum",
-        "url": "https://cf.forestry.oregonstate.edu/peavy-arboretum",
+        "url": "https://cf.forestry.oregonstate.edu/",
         "desc": "A 40-acre arboretum in the MacDonald-Dunn Forest — peaceful trails among named tree collections"
       },
       {
@@ -2771,7 +2770,7 @@
       },
       {
         "name": "Row River Trail",
-        "url": "https://www.blm.gov/visit/row-river-national-recreation-trail",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "A 15-mile trail along a historic railroad grade passing through covered bridges and past Dorena Lake"
       },
       {
@@ -2815,7 +2814,7 @@
     "top_attractions": [
       {
         "name": "Basket Slough National Wildlife Refuge",
-        "url": "https://www.fws.gov/refuge/basket-slough",
+        "url": "https://www.fws.gov/refuge/baskett-slough",
         "desc": "One of the few remaining Willamette Valley wetland/prairie habitats — exceptional spring birdwatching"
       },
       {
@@ -3097,7 +3096,7 @@
       },
       {
         "name": "Basket Slough NWR (10 min)",
-        "url": "https://www.fws.gov/refuge/basket-slough",
+        "url": "https://www.fws.gov/refuge/baskett-slough",
         "desc": "Wetland and upland habitat for migratory birds — one of the best birding spots in the Willamette Valley"
       },
       {
@@ -3152,7 +3151,7 @@
       },
       {
         "name": "Wheatland Ferry",
-        "url": "https://www.co.yamhill.or.us/parks/wheatland_ferry.shtml",
+        "url": "https://www.co.yamhill.or.us/",
         "desc": "Free cable ferry across the Willamette — one of Oregon's oldest and most charming river crossings"
       },
       {
@@ -3167,7 +3166,7 @@
       },
       {
         "name": "Oregon State Capitol (5 min)",
-        "url": "https://www.oregonlegislature.gov/capitolhistorygateway",
+        "url": "https://www.oregonlegislature.gov/",
         "desc": "Oregon's landmark capitol building is just a few minutes south in Salem"
       }
     ]
@@ -3337,7 +3336,7 @@
       },
       {
         "name": "Paul Jensen Arctic Museum (WOU)",
-        "url": "https://www.wou.edu/armchair",
+        "url": "https://www.wou.edu/",
         "desc": "Unique museum on the WOU campus dedicated to Arctic and sub-Arctic art and culture"
       },
       {
@@ -3347,7 +3346,7 @@
       },
       {
         "name": "Basket Slough NWR (10 min)",
-        "url": "https://www.fws.gov/refuge/basket-slough",
+        "url": "https://www.fws.gov/refuge/baskett-slough",
         "desc": "Willamette Valley wetland preserve — excellent birding in spring"
       },
       {
@@ -3481,7 +3480,7 @@
     "top_attractions": [
       {
         "name": "Oregon State Capitol",
-        "url": "https://www.oregonlegislature.gov/capitolhistorygateway",
+        "url": "https://www.oregonlegislature.gov/",
         "desc": "Oregon's art deco state capitol, open for free tours — the gold pioneer statue atop is iconic"
       },
       {
@@ -3623,17 +3622,17 @@
       },
       {
         "name": "Dorris Ranch Living History Farm",
-        "url": "https://www.willamalane.org/parks/dorris-ranch",
+        "url": "https://www.willamalane.org/parks/",
         "desc": "Oregon's oldest commercial filbert orchard, now a living history site and forested park"
       },
       {
         "name": "Thurston Hills Natural Area",
-        "url": "https://www.willamalane.org/parks/thurston-hills",
+        "url": "https://www.willamalane.org/parks/",
         "desc": "600 acres of forested trails with outstanding panoramic views of Springfield and the mountains"
       },
       {
         "name": "Lane County Fairgrounds",
-        "url": "https://www.lanecounty.org/departments/laneeventcenter",
+        "url": "https://www.laneeventscenter.org/",
         "desc": "Major events venue hosting the Lane County Fair, concerts, and community events"
       }
     ]
@@ -3702,7 +3701,7 @@
       },
       {
         "name": "Quartzville Recreation Corridor",
-        "url": "https://www.blm.gov/visit/quartzville-recreation-corridor",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "Scenic BLM river corridor above Foster Lake — gem hunting, gold panning, camping, and river access"
       },
       {
@@ -3963,7 +3962,7 @@
       },
       {
         "name": "Cannon Beach Art Galleries",
-        "url": "https://www.cannonbeach.org/art",
+        "url": "https://www.cannonbeach.org/",
         "desc": "One of Oregon's premier art communities — more than 15 galleries in this small oceanside town"
       },
       {
@@ -3973,7 +3972,7 @@
       },
       {
         "name": "Haystack Rock Awareness Program",
-        "url": "https://www.cannonbeach.org/haystack-rock",
+        "url": "https://www.cannonbeach.org/",
         "desc": "Ranger-led programs at the rock during low tide — learn about tufted puffins and sea stars"
       }
     ]
@@ -4158,7 +4157,7 @@
       },
       {
         "name": "Glass Float Hunting",
-        "url": "https://www.lincolncity.org/glass-floats",
+        "url": "https://www.lincolncity.org/",
         "desc": "Artist-signed glass floats are hidden on Lincoln City beaches year-round — finding one is a beloved Oregon Coast tradition"
       }
     ]
@@ -4525,7 +4524,7 @@
       },
       {
         "name": "Warm Springs Museum (30 min)",
-        "url": "https://www.warmsprings-nsn.gov/museum",
+        "url": "https://museumatwarmsprings.org/",
         "desc": "Award-winning museum of the Confederated Tribes of Warm Springs"
       }
     ]
@@ -4645,7 +4644,7 @@
       },
       {
         "name": "Warm Springs Museum (20 min)",
-        "url": "https://www.warmsprings-nsn.gov/museum",
+        "url": "https://museumatwarmsprings.org/",
         "desc": "Award-winning museum of the Confederated Tribes of Warm Springs"
       }
     ]
@@ -4710,7 +4709,7 @@
       },
       {
         "name": "Cline Buttes Recreation Area",
-        "url": "https://www.blm.gov/visit/cline-buttes-recreation-area",
+        "url": "https://www.blm.gov/oregon-washington",
         "desc": "Popular OHV and mountain biking area on BLM land just west of Redmond"
       },
       {
@@ -5105,7 +5104,7 @@
       },
       {
         "name": "Rowena Crest Viewpoint & Tom McCall Nature Preserve",
-        "url": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/tom-mccall-preserve",
+        "url": "https://www.nature.org/en-us/about-us/where-we-work/united-states/oregon/",
         "desc": "Spectacular Gorge viewpoint with wildflower meadows — one of the best spring wildflower displays in Oregon"
       },
       {
