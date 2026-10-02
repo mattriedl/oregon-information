@@ -1,7 +1,2298 @@
 {
   "portland": {
-    "major_employers": "Nike, Intel, Providence Health",
-    "nearest_hospital": "Legacy Good Samaritan",
-    "transit": "TriMet bus and MAX light rail"
+    "major_employers": [
+      "Oregon Health & Science University (OHSU)",
+      "Intel Corporation",
+      "Providence Health & Services",
+      "Nike Inc.",
+      "Legacy Health"
+    ],
+    "nearest_hospital": "OHSU, Legacy Emanuel, Providence Portland (multiple hospitals in-city)",
+    "transit": "TriMet MAX (Blue, Red, Orange, Yellow, Green lines), extensive bus network, WES Commuter Rail"
+  },
+  "banks": {
+    "major_employers": [
+      "Banks School District",
+      "Washington County",
+      "Wilco Farm Stores",
+      "Local agriculture"
+    ],
+    "nearest_hospital": "Tuality Community Hospital, Hillsboro, ~22 mi",
+    "transit": "No public transit"
+  },
+  "barlow": {
+    "major_employers": [
+      "City of Barlow",
+      "Local agriculture",
+      "Clackamas County"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~15 mi",
+    "transit": "No public transit"
+  },
+  "beaverton": {
+    "major_employers": [
+      "Intel Corporation",
+      "Nike Inc.",
+      "Tualatin Valley Fire & Rescue",
+      "Beaverton School District"
+    ],
+    "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~7 mi",
+    "transit": "TriMet MAX Blue Line (multiple stations); extensive bus network"
+  },
+  "canby": {
+    "major_employers": [
+      "Canby School District",
+      "PCC Airfoils (Precision Castparts)",
+      "Clackamas County",
+      "Agriculture/nurseries"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~10 mi",
+    "transit": "SMART (South Metro Area Regional Transit) bus service"
+  },
+  "clatskanie": {
+    "major_employers": [
+      "Weyerhaeuser",
+      "Clatskanie School District",
+      "Columbia County",
+      "Port of St. Helens"
+    ],
+    "nearest_hospital": "Columbia Memorial Hospital, Astoria, ~55 mi",
+    "transit": "Columbia Area Transit (CATS) bus service"
+  },
+  "columbia_city": {
+    "major_employers": [
+      "City of Columbia City",
+      "Columbia County",
+      "Portland General Electric (Trojan site)",
+      "Light industry"
+    ],
+    "nearest_hospital": "PeaceHealth Southwest Medical Center, Vancouver WA, ~28 mi",
+    "transit": "Columbia Area Transit (CATS) bus service"
+  },
+  "cornelius": {
+    "major_employers": [
+      "Reser's Fine Foods",
+      "Washington County",
+      "Cornelius School District",
+      "Nursery industry"
+    ],
+    "nearest_hospital": "Tuality Community Hospital, Hillsboro, ~5 mi",
+    "transit": "TriMet bus routes (Route 57)"
+  },
+  "durham": {
+    "major_employers": [
+      "Washington County",
+      "City of Durham",
+      "Retail/commercial corridor"
+    ],
+    "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~5 mi",
+    "transit": "TriMet bus routes (Route 76)"
+  },
+  "estacada": {
+    "major_employers": [
+      "Estacada School District",
+      "Clackamas County",
+      "Georgia-Pacific (former site)",
+      "Timber/agriculture"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~20 mi",
+    "transit": "No public transit"
+  },
+  "fairview": {
+    "major_employers": [
+      "Reynolds School District",
+      "Multnomah County",
+      "Columbia River Correctional Institution",
+      "Retail"
+    ],
+    "nearest_hospital": "Legacy Mount Hood Medical Center, Gresham, ~4 mi",
+    "transit": "TriMet bus routes"
+  },
+  "forest_grove": {
+    "major_employers": [
+      "Pacific University",
+      "Forest Grove School District",
+      "Washington County",
+      "Intel Corporation (nearby Hillsboro)"
+    ],
+    "nearest_hospital": "Tuality Community Hospital, Hillsboro, ~10 mi",
+    "transit": "TriMet bus (Route 57)"
+  },
+  "gaston": {
+    "major_employers": [
+      "Gaston School District",
+      "Washington County",
+      "Vineyards/agriculture"
+    ],
+    "nearest_hospital": "Tuality Community Hospital, Hillsboro, ~20 mi",
+    "transit": "No public transit"
+  },
+  "gladstone": {
+    "major_employers": [
+      "North Clackamas School District",
+      "City of Gladstone",
+      "Retail/commercial"
+    ],
+    "nearest_hospital": "Providence Milwaukie Hospital, Milwaukie, ~5 mi",
+    "transit": "TriMet bus routes"
+  },
+  "gresham": {
+    "major_employers": [
+      "Multnomah Education Service District",
+      "City of Gresham",
+      "Walmart Distribution Center",
+      "Fred Meyer (Kroger)"
+    ],
+    "nearest_hospital": "Legacy Mount Hood Medical Center (in-city)",
+    "transit": "TriMet MAX Blue and Red lines; extensive bus network"
+  },
+  "happy_valley": {
+    "major_employers": [
+      "Clackamas County",
+      "North Clackamas School District",
+      "Retail/commercial",
+      "City of Happy Valley"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~8 mi",
+    "transit": "TriMet bus routes"
+  },
+  "hillsboro": {
+    "major_employers": [
+      "Intel Corporation",
+      "Nike Inc.",
+      "Hillsboro School District",
+      "Lattice Semiconductor"
+    ],
+    "nearest_hospital": "Tuality Community Hospital (in-city)",
+    "transit": "TriMet MAX Blue Line (multiple stations); extensive bus network"
+  },
+  "johnson_city": {
+    "major_employers": [
+      "City of Johnson City",
+      "North Clackamas School District",
+      "Retail (McLoughlin Blvd corridor)"
+    ],
+    "nearest_hospital": "Providence Milwaukie Hospital, Milwaukie, ~3 mi",
+    "transit": "TriMet bus routes"
+  },
+  "king_city": {
+    "major_employers": [
+      "City of King City",
+      "Washington County",
+      "Senior services/retirement community"
+    ],
+    "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~6 mi",
+    "transit": "TriMet bus routes (Route 93)"
+  },
+  "lake_oswego": {
+    "major_employers": [
+      "Lake Oswego School District",
+      "Mentor Graphics",
+      "Schnitzer Steel",
+      "City of Lake Oswego"
+    ],
+    "nearest_hospital": "Legacy Meridian Park Medical Center (in-city)",
+    "transit": "TriMet bus routes; Lake Oswego\u2013Portland Transit Project streetcar"
+  },
+  "maywood_park": {
+    "major_employers": [
+      "City of Maywood Park",
+      "Multnomah County",
+      "Portland metro employers (adjacent)"
+    ],
+    "nearest_hospital": "Legacy Mount Hood Medical Center, Gresham, ~5 mi",
+    "transit": "TriMet bus routes"
+  },
+  "milwaukie": {
+    "major_employers": [
+      "Bi-Mart Corporation (HQ)",
+      "North Clackamas School District",
+      "Clackamas County",
+      "Dark Horse Comics (HQ)"
+    ],
+    "nearest_hospital": "Providence Milwaukie Hospital (in-city)",
+    "transit": "TriMet bus routes; MAX Orange Line nearby (Oak Grove)"
+  },
+  "molalla": {
+    "major_employers": [
+      "Molalla School District",
+      "Clackamas County",
+      "Agriculture/timber",
+      "City of Molalla"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~20 mi",
+    "transit": "No public transit"
+  },
+  "north_plains": {
+    "major_employers": [
+      "North Plains School District",
+      "Washington County",
+      "Intel (nearby)",
+      "Agriculture/nurseries"
+    ],
+    "nearest_hospital": "Tuality Community Hospital, Hillsboro, ~15 mi",
+    "transit": "No public transit"
+  },
+  "oregon_city": {
+    "major_employers": [
+      "Clackamas County government",
+      "Clackamas Community College",
+      "Oregon City School District",
+      "Boise Cascade"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center (in-city)",
+    "transit": "TriMet bus routes; MAX Green Line terminus (City Hall Park & Ride)"
+  },
+  "adams": {
+    "major_employers": [
+      "City of Adams",
+      "Umatilla County",
+      "Agriculture (wheat, onions)"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital, Pendleton, ~20 mi",
+    "transit": "No public transit"
+  },
+  "adrian": {
+    "major_employers": [
+      "City of Adrian",
+      "Malheur County",
+      "Agriculture (sugar beets, onions)"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center, Ontario, ~30 mi",
+    "transit": "No public transit"
+  },
+  "athena": {
+    "major_employers": [
+      "Athena School District",
+      "Umatilla County",
+      "Agriculture (wheat)"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital, Pendleton, ~18 mi",
+    "transit": "No public transit"
+  },
+  "baker_city": {
+    "major_employers": [
+      "Saint Alphonsus Medical Center \u2013 Baker City",
+      "Baker School District",
+      "Baker County government",
+      "Oregon Trail history tourism"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City (in-city)",
+    "transit": "No public transit"
+  },
+  "burns": {
+    "major_employers": [
+      "Harney District Hospital",
+      "Harney County government",
+      "Burns School District",
+      "Harney County Livestock/Agriculture"
+    ],
+    "nearest_hospital": "Harney District Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "canyon_city": {
+    "major_employers": [
+      "Grant County government (county seat)",
+      "Canyon City School District",
+      "Public lands/ranching"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~2 mi",
+    "transit": "No public transit"
+  },
+  "cove": {
+    "major_employers": [
+      "Cove School District",
+      "Union County",
+      "Agriculture/orchards"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital, La Grande, ~18 mi",
+    "transit": "No public transit"
+  },
+  "dayville": {
+    "major_employers": [
+      "City of Dayville",
+      "Grant County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~18 mi",
+    "transit": "No public transit"
+  },
+  "echo": {
+    "major_employers": [
+      "City of Echo",
+      "Umatilla County",
+      "Agriculture (wheat, corn)",
+      "Tidewater (grain storage)"
+    ],
+    "nearest_hospital": "Good Shepherd Medical Center, Hermiston, ~20 mi",
+    "transit": "No public transit"
+  },
+  "elgin": {
+    "major_employers": [
+      "Elgin School District",
+      "Union County",
+      "Timber/lumber (historical)",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital, La Grande, ~18 mi",
+    "transit": "No public transit"
+  },
+  "enterprise": {
+    "major_employers": [
+      "Wallowa County government (county seat)",
+      "Wallowa Memorial Hospital",
+      "Enterprise School District",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Wallowa Memorial Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "granite": {
+    "major_employers": [
+      "No significant commercial employers (pop. 32)",
+      "Grant County",
+      "Mining history tourism"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~55 mi",
+    "transit": "No public transit"
+  },
+  "greenhorn": {
+    "major_employers": [
+      "No significant commercial employers (pop. 3; ghost town)",
+      "Baker/Grant County"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~50 mi",
+    "transit": "No public transit"
+  },
+  "haines": {
+    "major_employers": [
+      "City of Haines",
+      "Baker County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~15 mi",
+    "transit": "No public transit"
+  },
+  "halfway": {
+    "major_employers": [
+      "City of Halfway",
+      "Baker County",
+      "Agriculture/ranching",
+      "Wallowa Mountains tourism"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~55 mi",
+    "transit": "No public transit"
+  },
+  "helix": {
+    "major_employers": [
+      "City of Helix",
+      "Umatilla County",
+      "Agriculture (wheat)"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital, Pendleton, ~20 mi",
+    "transit": "No public transit"
+  },
+  "hermiston": {
+    "major_employers": [
+      "Good Shepherd Medical Center",
+      "Umatilla County",
+      "Amazon Fulfillment Center",
+      "Port of Umatilla (agriculture/shipping)"
+    ],
+    "nearest_hospital": "Good Shepherd Medical Center (in-city)",
+    "transit": "No public transit"
+  },
+  "hines": {
+    "major_employers": [
+      "Hines School District",
+      "Harney County",
+      "Harney District Hospital (adjacent Burns)",
+      "Timber (historical)"
+    ],
+    "nearest_hospital": "Harney District Hospital, Burns, ~2 mi",
+    "transit": "No public transit"
+  },
+  "huntington": {
+    "major_employers": [
+      "City of Huntington",
+      "Baker County",
+      "Agriculture/ranching",
+      "Union Pacific Railroad"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~40 mi",
+    "transit": "No public transit"
+  },
+  "imbler": {
+    "major_employers": [
+      "Imbler School District",
+      "Union County",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital, La Grande, ~14 mi",
+    "transit": "No public transit"
+  },
+  "island_city": {
+    "major_employers": [
+      "City of Island City",
+      "Union County",
+      "Eastern Oregon University (La Grande)",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital, La Grande, ~3 mi",
+    "transit": "No public transit"
+  },
+  "john_day": {
+    "major_employers": [
+      "Blue Mountain Hospital",
+      "Grant County government",
+      "John Day School District",
+      "Gold mining tourism/Kam Wah Chung"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "jordan_valley": {
+    "major_employers": [
+      "City of Jordan Valley",
+      "Malheur County",
+      "Ranching/agriculture"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~80 mi",
+    "transit": "No public transit"
+  },
+  "joseph": {
+    "major_employers": [
+      "Wallowa County",
+      "Tourism/arts (bronze foundries, galleries)",
+      "City of Joseph",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Wallowa Memorial Hospital, Enterprise, ~6 mi",
+    "transit": "No public transit"
+  },
+  "la_grande": {
+    "major_employers": [
+      "Eastern Oregon University",
+      "Grande Ronde Hospital",
+      "Union County government",
+      "La Grande School District"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "long_creek": {
+    "major_employers": [
+      "City of Long Creek",
+      "Grant County",
+      "Ranching/agriculture",
+      "Timber (historical)"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~35 mi",
+    "transit": "No public transit"
+  },
+  "lostine": {
+    "major_employers": [
+      "City of Lostine",
+      "Wallowa County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Wallowa Memorial Hospital, Enterprise, ~12 mi",
+    "transit": "No public transit"
+  },
+  "milton-freewater": {
+    "major_employers": [
+      "Milton-Freewater School District",
+      "Umatilla County",
+      "Agriculture (wheat, onions, asparagus)",
+      "Del Monte Foods (cannery, historical)"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital, Pendleton, ~30 mi",
+    "transit": "No public transit"
+  },
+  "monument": {
+    "major_employers": [
+      "City of Monument",
+      "Grant County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~55 mi",
+    "transit": "No public transit"
+  },
+  "mount_vernon": {
+    "major_employers": [
+      "City of Mount Vernon",
+      "Grant County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~8 mi",
+    "transit": "No public transit"
+  },
+  "north_powder": {
+    "major_employers": [
+      "North Powder School District",
+      "Union County",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital, La Grande, ~25 mi",
+    "transit": "No public transit"
+  },
+  "nyssa": {
+    "major_employers": [
+      "Nyssa School District",
+      "Malheur County",
+      "Amalgamated Sugar Company (beet sugar refinery)",
+      "Agriculture (sugar beets, onions, potatoes)"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~10 mi",
+    "transit": "No public transit"
+  },
+  "ontario": {
+    "major_employers": [
+      "Saint Alphonsus Medical Center \u2013 Ontario",
+      "Ontario School District",
+      "Malheur County government",
+      "Agricultural processing industry"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario (in-city)",
+    "transit": "No public transit"
+  },
+  "pendleton": {
+    "major_employers": [
+      "CHI St. Anthony Hospital",
+      "Umatilla County government",
+      "Pendleton School District",
+      "Wildhorse Resort & Casino (CTUIR)"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "pilot_rock": {
+    "major_employers": [
+      "Pilot Rock School District",
+      "Umatilla County",
+      "Agriculture/timber"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital, Pendleton, ~16 mi",
+    "transit": "No public transit"
+  },
+  "prairie_city": {
+    "major_employers": [
+      "Prairie City School District",
+      "Grant County",
+      "Timber/logging",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~14 mi",
+    "transit": "No public transit"
+  },
+  "richland": {
+    "major_employers": [
+      "City of Richland",
+      "Baker County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~45 mi",
+    "transit": "No public transit"
+  },
+  "seneca": {
+    "major_employers": [
+      "City of Seneca",
+      "Grant County",
+      "Timber (Malheur Lumber Company, historical)",
+      "Ranching"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day, ~26 mi",
+    "transit": "No public transit"
+  },
+  "stanfield": {
+    "major_employers": [
+      "Stanfield School District",
+      "Umatilla County",
+      "Agriculture (wheat, corn)",
+      "Port of Umatilla area industry"
+    ],
+    "nearest_hospital": "Good Shepherd Medical Center, Hermiston, ~12 mi",
+    "transit": "No public transit"
+  },
+  "summerville": {
+    "major_employers": [
+      "City of Summerville",
+      "Union County",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital, La Grande, ~20 mi",
+    "transit": "No public transit"
+  },
+  "sumpter": {
+    "major_employers": [
+      "City of Sumpter",
+      "Baker County",
+      "Tourism (Sumpter Valley Dredge State Heritage Area)",
+      "Mining history"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~30 mi",
+    "transit": "No public transit"
+  },
+  "ukiah": {
+    "major_employers": [
+      "City of Ukiah",
+      "Umatilla County",
+      "Timber/agriculture",
+      "Ukiah School District"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital, Pendleton, ~50 mi",
+    "transit": "No public transit"
+  },
+  "umatilla": {
+    "major_employers": [
+      "Port of Umatilla",
+      "Umatilla Chemical Depot (remediation)",
+      "Umatilla School District",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Good Shepherd Medical Center, Hermiston, ~8 mi",
+    "transit": "No public transit"
+  },
+  "union": {
+    "major_employers": [
+      "Union School District",
+      "Union County government",
+      "Agriculture/ranching",
+      "City of Union"
+    ],
+    "nearest_hospital": "Grande Ronde Hospital, La Grande, ~12 mi",
+    "transit": "No public transit"
+  },
+  "unity": {
+    "major_employers": [
+      "City of Unity",
+      "Baker County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~60 mi",
+    "transit": "No public transit"
+  },
+  "vale": {
+    "major_employers": [
+      "Malheur County government (county seat)",
+      "Vale School District",
+      "Agriculture (onions, sugar beets)",
+      "City of Vale"
+    ],
+    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~20 mi",
+    "transit": "No public transit"
+  },
+  "wallowa": {
+    "major_employers": [
+      "City of Wallowa",
+      "Wallowa County",
+      "Agriculture/ranching",
+      "Timber (historical)"
+    ],
+    "nearest_hospital": "Wallowa Memorial Hospital, Enterprise, ~18 mi",
+    "transit": "No public transit"
+  },
+  "weston": {
+    "major_employers": [
+      "Weston School District",
+      "Umatilla County",
+      "Agriculture (wheat)"
+    ],
+    "nearest_hospital": "CHI St. Anthony Hospital, Pendleton, ~16 mi",
+    "transit": "No public transit"
+  },
+  "ashland": {
+    "major_employers": [
+      "Southern Oregon University",
+      "Oregon Shakespeare Festival",
+      "Asante Ashland Community Hospital",
+      "Ashland School District"
+    ],
+    "nearest_hospital": "Asante Ashland Community Hospital (in-city)",
+    "transit": "Rogue Valley Transportation District (RVTD) bus"
+  },
+  "bonanza": {
+    "major_employers": [
+      "City of Bonanza",
+      "Klamath County",
+      "Agriculture/ranching"
+    ],
+    "nearest_hospital": "Sky Lakes Medical Center, Klamath Falls, ~40 mi",
+    "transit": "No public transit"
+  },
+  "butte_falls": {
+    "major_employers": [
+      "City of Butte Falls",
+      "Jackson County",
+      "Timber/logging (historical)",
+      "Butte Falls Charter School"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~40 mi",
+    "transit": "No public transit"
+  },
+  "canyonville": {
+    "major_employers": [
+      "Seven Feathers Hotel & Casino Resort (Cow Creek Band)",
+      "Canyonville School District",
+      "Douglas County",
+      "I-5 corridor services"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~22 mi",
+    "transit": "No public transit"
+  },
+  "cave_junction": {
+    "major_employers": [
+      "Three Rivers School District",
+      "Josephine County",
+      "Oregon Caves National Monument tourism",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Asante Three Rivers Medical Center, Grants Pass, ~30 mi",
+    "transit": "No public transit"
+  },
+  "central_point": {
+    "major_employers": [
+      "Jackson County government (county seat services)",
+      "Central Point School District",
+      "Crater Lake-Rogue Valley region retail",
+      "City of Central Point"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~5 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) bus"
+  },
+  "chiloquin": {
+    "major_employers": [
+      "Klamath Tribes government",
+      "Chiloquin School District",
+      "Klamath County",
+      "Timber/agriculture (historical)"
+    ],
+    "nearest_hospital": "Sky Lakes Medical Center, Klamath Falls, ~30 mi",
+    "transit": "No public transit"
+  },
+  "drain": {
+    "major_employers": [
+      "Drain School District",
+      "Douglas County",
+      "Timber/agriculture",
+      "City of Drain"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~28 mi",
+    "transit": "No public transit"
+  },
+  "eagle_point": {
+    "major_employers": [
+      "Eagle Point School District",
+      "Jackson County",
+      "Crater Lake National Park tourism",
+      "City of Eagle Point"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~8 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) bus"
+  },
+  "elkton": {
+    "major_employers": [
+      "City of Elkton",
+      "Douglas County",
+      "Timber/logging",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~35 mi",
+    "transit": "No public transit"
+  },
+  "glendale": {
+    "major_employers": [
+      "City of Glendale",
+      "Douglas County",
+      "Timber/logging",
+      "I-5 corridor services"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~30 mi",
+    "transit": "No public transit"
+  },
+  "gold_hill": {
+    "major_employers": [
+      "City of Gold Hill",
+      "Jackson County",
+      "Rogue River tourism",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~14 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) bus"
+  },
+  "grants_pass": {
+    "major_employers": [
+      "Asante Three Rivers Medical Center",
+      "Grants Pass School District",
+      "Josephine County government",
+      "AllCare Health"
+    ],
+    "nearest_hospital": "Asante Three Rivers Medical Center (in-city)",
+    "transit": "Josephine Community Transit (JCT) bus"
+  },
+  "jacksonville": {
+    "major_employers": [
+      "Jacksonville School District",
+      "Jackson County",
+      "Tourism (Britt Festivals)",
+      "Retail/hospitality"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~6 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) bus (limited)"
+  },
+  "klamath_falls": {
+    "major_employers": [
+      "Sky Lakes Medical Center",
+      "Oregon Institute of Technology (OIT)",
+      "Klamath County government",
+      "BNSF Railway"
+    ],
+    "nearest_hospital": "Sky Lakes Medical Center (in-city)",
+    "transit": "Basin Transit Service"
+  },
+  "lakeview": {
+    "major_employers": [
+      "Lake District Hospital",
+      "Lake County government (county seat)",
+      "Lakeview School District",
+      "Abert Lake/agriculture"
+    ],
+    "nearest_hospital": "Lake District Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "malin": {
+    "major_employers": [
+      "City of Malin",
+      "Klamath County",
+      "Agriculture (Klamath Basin potato farming)"
+    ],
+    "nearest_hospital": "Sky Lakes Medical Center, Klamath Falls, ~35 mi",
+    "transit": "No public transit"
+  },
+  "medford": {
+    "major_employers": [
+      "Asante Health System (Rogue Regional Medical Center)",
+      "Jackson County government",
+      "Medford School District",
+      "Harry & David (1-800-Flowers subsidiary)"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center (in-city)",
+    "transit": "Rogue Valley Transportation District (RVTD) bus network"
+  },
+  "merrill": {
+    "major_employers": [
+      "City of Merrill",
+      "Klamath County",
+      "Agriculture (Klamath Basin)",
+      "Dairy/ranching"
+    ],
+    "nearest_hospital": "Sky Lakes Medical Center, Klamath Falls, ~30 mi",
+    "transit": "No public transit"
+  },
+  "myrtle_creek": {
+    "major_employers": [
+      "Myrtle Creek School District",
+      "Douglas County",
+      "Timber/logging",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~22 mi",
+    "transit": "No public transit"
+  },
+  "oakland": {
+    "major_employers": [
+      "City of Oakland",
+      "Douglas County",
+      "Timber (historical)",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~18 mi",
+    "transit": "No public transit"
+  },
+  "paisley": {
+    "major_employers": [
+      "City of Paisley",
+      "Lake County",
+      "Ranching/agriculture",
+      "Warner Valley recreation"
+    ],
+    "nearest_hospital": "Lake District Hospital, Lakeview, ~45 mi",
+    "transit": "No public transit"
+  },
+  "phoenix": {
+    "major_employers": [
+      "Phoenix School District",
+      "Jackson County",
+      "Retail/commercial (Medford metro)",
+      "City of Phoenix"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~6 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) bus"
+  },
+  "reedsport": {
+    "major_employers": [
+      "Lower Umpqua Hospital",
+      "Reedsport School District",
+      "Douglas County",
+      "Commercial fishing/tourism"
+    ],
+    "nearest_hospital": "Lower Umpqua Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "riddle": {
+    "major_employers": [
+      "Riddle School District",
+      "Douglas County",
+      "Timber/logging",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~20 mi",
+    "transit": "No public transit"
+  },
+  "rogue_river": {
+    "major_employers": [
+      "City of Rogue River",
+      "Jackson County",
+      "Rogue River tourism/recreation",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~12 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) bus"
+  },
+  "roseburg": {
+    "major_employers": [
+      "Mercy Medical Center Roseburg",
+      "Douglas County government",
+      "Roseburg School District",
+      "Roseburg Forest Products"
+    ],
+    "nearest_hospital": "Mercy Medical Center Roseburg (in-city)",
+    "transit": "Umpqua Transit bus service"
+  },
+  "shady_cove": {
+    "major_employers": [
+      "City of Shady Cove",
+      "Jackson County",
+      "Rogue River recreation/tourism",
+      "Local services"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~20 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) limited service"
+  },
+  "sutherlin": {
+    "major_employers": [
+      "Sutherlin School District",
+      "Douglas County",
+      "Timber/lumber",
+      "City of Sutherlin"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~10 mi",
+    "transit": "Umpqua Transit bus service"
+  },
+  "talent": {
+    "major_employers": [
+      "Talent School District",
+      "Jackson County",
+      "Rogue Valley wine industry",
+      "City of Talent"
+    ],
+    "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~8 mi",
+    "transit": "Rogue Valley Transportation District (RVTD) bus"
+  },
+  "winston": {
+    "major_employers": [
+      "Wildlife Safari (drive-through wildlife park)",
+      "Winston-Dillard School District",
+      "Douglas County",
+      "Timber/agriculture"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~10 mi",
+    "transit": "Umpqua Transit bus service"
+  },
+  "yoncalla": {
+    "major_employers": [
+      "Yoncalla School District",
+      "Douglas County",
+      "Timber/agriculture",
+      "City of Yoncalla"
+    ],
+    "nearest_hospital": "Mercy Medical Center, Roseburg, ~25 mi",
+    "transit": "No public transit"
+  },
+  "prescott": {
+    "major_employers": [
+      "Columbia County",
+      "Agriculture",
+      "Port of St. Helens area"
+    ],
+    "nearest_hospital": "PeaceHealth Southwest Medical Center, Vancouver WA, ~30 mi",
+    "transit": "No public transit"
+  },
+  "rainier": {
+    "major_employers": [
+      "Columbia County",
+      "Rainier School District",
+      "Port of Rainier",
+      "Timber/industrial"
+    ],
+    "nearest_hospital": "PeaceHealth Southwest Medical Center, Vancouver WA, ~40 mi",
+    "transit": "Columbia Area Transit (CATS) bus service"
+  },
+  "rivergrove": {
+    "major_employers": [
+      "City of Rivergrove",
+      "Washington County",
+      "Lake Oswego metro employers"
+    ],
+    "nearest_hospital": "Legacy Meridian Park Medical Center, Lake Oswego, ~3 mi",
+    "transit": "TriMet bus routes"
+  },
+  "sandy": {
+    "major_employers": [
+      "Sandy School District",
+      "Clackamas County",
+      "Mt. Hood Community College (nearby)",
+      "Retail/tourism"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~22 mi",
+    "transit": "No public transit"
+  },
+  "scappoose": {
+    "major_employers": [
+      "Oregon Air National Guard (Portland Air Base nearby)",
+      "Scappoose School District",
+      "Columbia County",
+      "Port of St. Helens"
+    ],
+    "nearest_hospital": "PeaceHealth Southwest Medical Center, Vancouver WA, ~25 mi",
+    "transit": "Columbia Area Transit (CATS) bus service"
+  },
+  "sherwood": {
+    "major_employers": [
+      "Sherwood School District",
+      "Washington County",
+      "Mentor Graphics",
+      "Retail/commercial"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~10 mi",
+    "transit": "TriMet bus routes (Route 93)"
+  },
+  "st._helens": {
+    "major_employers": [
+      "Columbia County government",
+      "St. Helens School District",
+      "Portland General Electric",
+      "Paper/industrial"
+    ],
+    "nearest_hospital": "PeaceHealth Southwest Medical Center, Vancouver WA, ~35 mi",
+    "transit": "Columbia Area Transit (CATS) bus service"
+  },
+  "tigard": {
+    "major_employers": [
+      "Tigard-Tualatin School District",
+      "Washington County",
+      "PCC Airfoils",
+      "Retail (Washington Square area)"
+    ],
+    "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~6 mi",
+    "transit": "TriMet bus routes (Routes 76, 78, 94)"
+  },
+  "troutdale": {
+    "major_employers": [
+      "Reynolds School District",
+      "Multnomah County",
+      "Columbia Gorge Premium Outlets",
+      "FedEx distribution"
+    ],
+    "nearest_hospital": "Legacy Mount Hood Medical Center, Gresham, ~4 mi",
+    "transit": "TriMet bus routes"
+  },
+  "tualatin": {
+    "major_employers": [
+      "Precision Castparts Corp.",
+      "Tualatin-Sherwood School District",
+      "Washington County",
+      "Tuality Healthcare"
+    ],
+    "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~8 mi",
+    "transit": "TriMet bus routes; WES Commuter Rail (Tualatin Station)"
+  },
+  "vernonia": {
+    "major_employers": [
+      "Vernonia School District",
+      "Columbia County",
+      "Weyerhaeuser (former mill)",
+      "Local services"
+    ],
+    "nearest_hospital": "PeaceHealth Southwest Medical Center, Vancouver WA, ~60 mi",
+    "transit": "Columbia Area Transit (CATS) limited service"
+  },
+  "west_linn": {
+    "major_employers": [
+      "West Linn-Wilsonville School District",
+      "Clackamas County",
+      "Pacific Power (PGE)",
+      "Retail/professional services"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~5 mi",
+    "transit": "TriMet bus routes"
+  },
+  "wilsonville": {
+    "major_employers": [
+      "FLIR Systems (Teledyne)",
+      "Mentor Graphics (Siemens)",
+      "Wilsonville School District",
+      "Xerox Corporation"
+    ],
+    "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~12 mi",
+    "transit": "TriMet bus routes; WES Commuter Rail (Wilsonville Station); SMART bus"
+  },
+  "wood_village": {
+    "major_employers": [
+      "Reynolds School District",
+      "Multnomah County",
+      "Fred Meyer",
+      "Retail (82nd Ave/NE Halsey corridor)"
+    ],
+    "nearest_hospital": "Legacy Mount Hood Medical Center, Gresham, ~3 mi",
+    "transit": "TriMet bus routes"
+  },
+  "adair_village": {
+    "major_employers": [
+      "Adair Village community services",
+      "Benton County",
+      "Oregon State University (nearby Corvallis)",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Good Samaritan Regional Medical Center, Corvallis, ~12 mi",
+    "transit": "No public transit"
+  },
+  "albany": {
+    "major_employers": [
+      "Samaritan Health Services",
+      "Linn-Benton Community College",
+      "Linn County government",
+      "NORPAC Foods"
+    ],
+    "nearest_hospital": "Samaritan Albany General Hospital (in-city)",
+    "transit": "Albany Transit System (ATS) fixed-route bus"
+  },
+  "amity": {
+    "major_employers": [
+      "Amity School District",
+      "Yamhill County",
+      "Wine industry/vineyards",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center, McMinnville, ~12 mi",
+    "transit": "Yamhill County Transit (YCT) limited service"
+  },
+  "aumsville": {
+    "major_employers": [
+      "Aumsville School District",
+      "Marion County",
+      "Agriculture/food processing"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~12 mi",
+    "transit": "No public transit"
+  },
+  "aurora": {
+    "major_employers": [
+      "Aurora School District",
+      "Marion County",
+      "Antique trade/tourism",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~15 mi",
+    "transit": "No public transit"
+  },
+  "brownsville": {
+    "major_employers": [
+      "Brownsville School District",
+      "Linn County",
+      "Agriculture",
+      "City of Brownsville"
+    ],
+    "nearest_hospital": "Samaritan Lebanon Community Hospital, Lebanon, ~12 mi",
+    "transit": "No public transit"
+  },
+  "carlton": {
+    "major_employers": [
+      "Carlton School District",
+      "Yamhill County",
+      "Wine industry/tourism",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center, McMinnville, ~8 mi",
+    "transit": "Yamhill County Transit (YCT)"
+  },
+  "coburg": {
+    "major_employers": [
+      "Monaco Coach Corporation (RV manufacturing)",
+      "Coburg School District",
+      "Lane County"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart Medical Center, Springfield, ~8 mi",
+    "transit": "No public transit"
+  },
+  "corvallis": {
+    "major_employers": [
+      "Oregon State University",
+      "Samaritan Health Services",
+      "Linn-Benton Community College",
+      "Hewlett-Packard"
+    ],
+    "nearest_hospital": "Good Samaritan Regional Medical Center (in-city)",
+    "transit": "Corvallis Transit System (CTS) fixed-route bus"
+  },
+  "cottage_grove": {
+    "major_employers": [
+      "Cottage Grove School District",
+      "Lane County",
+      "Hynix Semiconductor (former; now Lattice)",
+      "Agriculture"
+    ],
+    "nearest_hospital": "PeaceHealth Cottage Grove Community Hospital (in-city); Sacred Heart Eugene ~22 mi",
+    "transit": "No public transit"
+  },
+  "creswell": {
+    "major_employers": [
+      "Creswell School District",
+      "Lane County",
+      "Agriculture/light industrial"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart Medical Center, Eugene, ~15 mi",
+    "transit": "Lane Transit District (LTD) bus service (limited)"
+  },
+  "dallas": {
+    "major_employers": [
+      "Polk County government",
+      "Dallas School District",
+      "State of Oregon (nearby Salem)",
+      "Retail"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
+    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+  },
+  "dayton": {
+    "major_employers": [
+      "Dayton School District",
+      "Yamhill County",
+      "Wine industry/vineyards"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center, McMinnville, ~8 mi",
+    "transit": "Yamhill County Transit (YCT)"
+  },
+  "detroit": {
+    "major_employers": [
+      "City of Detroit",
+      "Detroit Lake tourism/recreation",
+      "Marion County",
+      "Local services"
+    ],
+    "nearest_hospital": "Santiam Memorial Hospital, Stayton, ~35 mi",
+    "transit": "No public transit"
+  },
+  "donald": {
+    "major_employers": [
+      "City of Donald",
+      "Marion County",
+      "Agriculture",
+      "Nurseries"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~12 mi",
+    "transit": "No public transit"
+  },
+  "dundee": {
+    "major_employers": [
+      "Dundee School District",
+      "Yamhill County",
+      "Wine industry (numerous wineries)",
+      "Tourism"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~4 mi",
+    "transit": "Yamhill County Transit (YCT)"
+  },
+  "dunes_city": {
+    "major_employers": [
+      "City of Dunes City",
+      "Lane County",
+      "Tourism/recreation (Woahink & Siltcoos Lakes)"
+    ],
+    "nearest_hospital": "Peace Harbor Medical Center, Florence, ~5 mi",
+    "transit": "No public transit"
+  },
+  "eugene": {
+    "major_employers": [
+      "University of Oregon",
+      "PeaceHealth",
+      "Lane County government",
+      "Hynix (SK hynix; semiconductor)"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart Medical Center at RiverBend (in-city)",
+    "transit": "Lane Transit District (LTD) extensive bus network; EmX BRT lines"
+  },
+  "falls_city": {
+    "major_employers": [
+      "Falls City School District",
+      "Polk County",
+      "Timber/agriculture"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~25 mi",
+    "transit": "No public transit"
+  },
+  "florence": {
+    "major_employers": [
+      "Siuslaw School District",
+      "Lane County",
+      "Tourism/retail",
+      "Peace Harbor Medical Center"
+    ],
+    "nearest_hospital": "Peace Harbor Medical Center (in-city)",
+    "transit": "No public transit"
+  },
+  "gates": {
+    "major_employers": [
+      "City of Gates",
+      "Marion/Linn County",
+      "Timber (historic)",
+      "Tourism (Detroit Lake area)"
+    ],
+    "nearest_hospital": "Santiam Memorial Hospital, Stayton, ~25 mi",
+    "transit": "No public transit"
+  },
+  "gervais": {
+    "major_employers": [
+      "Gervais School District",
+      "Marion County",
+      "Agriculture",
+      "Food processing"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~15 mi",
+    "transit": "Cherriots Regional bus service"
+  },
+  "halsey": {
+    "major_employers": [
+      "Halsey School District",
+      "Linn County",
+      "Agriculture/grains"
+    ],
+    "nearest_hospital": "Samaritan Albany General Hospital, Albany, ~12 mi",
+    "transit": "No public transit"
+  },
+  "harrisburg": {
+    "major_employers": [
+      "Harrisburg School District",
+      "Linn County",
+      "Agriculture",
+      "Western Fiber (peppermint/fiber crops)"
+    ],
+    "nearest_hospital": "Samaritan Albany General Hospital, Albany, ~15 mi",
+    "transit": "No public transit"
+  },
+  "hubbard": {
+    "major_employers": [
+      "Hubbard School District",
+      "Marion County",
+      "Agriculture/nurseries",
+      "Dunn Lumber"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~15 mi",
+    "transit": "No public transit"
+  },
+  "idanha": {
+    "major_employers": [
+      "City of Idanha",
+      "Marion/Linn County",
+      "Timber (historical)",
+      "Detroit Lake area tourism"
+    ],
+    "nearest_hospital": "Santiam Memorial Hospital, Stayton, ~40 mi",
+    "transit": "No public transit"
+  },
+  "independence": {
+    "major_employers": [
+      "Independence School District",
+      "Western Oregon University (nearby Monmouth)",
+      "Polk County",
+      "Hops industry"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
+    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+  },
+  "jefferson": {
+    "major_employers": [
+      "Jefferson School District",
+      "Marion County government",
+      "Agriculture",
+      "City of Jefferson"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
+    "transit": "Cherriots Regional bus"
+  },
+  "junction_city": {
+    "major_employers": [
+      "Junction City School District",
+      "Lane County",
+      "Agriculture (grass seed)",
+      "Bi-Mart"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart, Eugene, ~18 mi",
+    "transit": "No public transit (LTD service nearby)"
+  },
+  "keizer": {
+    "major_employers": [
+      "Salem-Keizer School District",
+      "Marion County",
+      "Walmart",
+      "Roth's Fresh Markets"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~4 mi",
+    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+  },
+  "lafayette": {
+    "major_employers": [
+      "Yamhill County",
+      "Wine industry/vineyards",
+      "Lafayette School District",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center, McMinnville, ~8 mi",
+    "transit": "Yamhill County Transit (YCT)"
+  },
+  "lebanon": {
+    "major_employers": [
+      "Samaritan Lebanon Community Hospital",
+      "Lebanon School District",
+      "NORPAC Foods",
+      "Linn County"
+    ],
+    "nearest_hospital": "Samaritan Lebanon Community Hospital (in-city)",
+    "transit": "No public transit (Linn County Senior Services transport)"
+  },
+  "lowell": {
+    "major_employers": [
+      "Lowell School District",
+      "Lane County",
+      "Timber",
+      "Agriculture"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart, Eugene, ~22 mi",
+    "transit": "No public transit"
+  },
+  "lyons": {
+    "major_employers": [
+      "City of Lyons",
+      "Linn County",
+      "Timber/agriculture",
+      "Local services"
+    ],
+    "nearest_hospital": "Santiam Memorial Hospital, Stayton, ~20 mi",
+    "transit": "No public transit"
+  },
+  "mcminnville": {
+    "major_employers": [
+      "Linfield University",
+      "Evergreen International Aviation",
+      "Willamette Valley Medical Center",
+      "Yamhill County"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center (in-city)",
+    "transit": "Yamhill County Transit (YCT) fixed-route bus"
+  },
+  "mill_city": {
+    "major_employers": [
+      "Mill City School District",
+      "Marion/Linn County",
+      "Timber/lumber industry",
+      "Santiam Canyon tourism"
+    ],
+    "nearest_hospital": "Santiam Memorial Hospital, Stayton, ~25 mi",
+    "transit": "No public transit"
+  },
+  "millersburg": {
+    "major_employers": [
+      "ATI (titanium manufacturing)",
+      "Linn County",
+      "City of Millersburg",
+      "Industrial park tenants"
+    ],
+    "nearest_hospital": "Samaritan Albany General Hospital, Albany, ~3 mi",
+    "transit": "No public transit"
+  },
+  "monmouth": {
+    "major_employers": [
+      "Western Oregon University",
+      "Monmouth-Independence School District",
+      "Polk County",
+      "Retail"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
+    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+  },
+  "monroe": {
+    "major_employers": [
+      "Monroe School District",
+      "Benton County",
+      "Agriculture (grass seed, timber)"
+    ],
+    "nearest_hospital": "Good Samaritan Regional Medical Center, Corvallis, ~18 mi",
+    "transit": "No public transit"
+  },
+  "mt._angel": {
+    "major_employers": [
+      "Mt. Angel School District",
+      "Marion County",
+      "Mt. Angel Abbey (Benedictine monastery)",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
+    "transit": "Cherriots Regional bus"
+  },
+  "newberg": {
+    "major_employers": [
+      "George Fox University",
+      "Providence Newberg Medical Center",
+      "Jeld-Wen",
+      "Yamhill County"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center (in-city)",
+    "transit": "Yamhill County Transit (YCT) bus"
+  },
+  "oakridge": {
+    "major_employers": [
+      "Oakridge School District",
+      "Weyerhaeuser/Western Lumber",
+      "Lane County",
+      "Oakridge Outdoor Recreation area"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart, Eugene, ~45 mi",
+    "transit": "No public transit"
+  },
+  "philomath": {
+    "major_employers": [
+      "Philomath School District",
+      "Benton County",
+      "Oregon State University (nearby)",
+      "Alsea Lumber (historic)"
+    ],
+    "nearest_hospital": "Good Samaritan Regional Medical Center, Corvallis, ~6 mi",
+    "transit": "Corvallis Transit System (CTS) bus (limited)"
+  },
+  "salem": {
+    "major_employers": [
+      "State of Oregon (state government)",
+      "Salem Health (Salem Hospital)",
+      "Chemeketa Community College",
+      "Salem-Keizer School District"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health, in-city)",
+    "transit": "Cherriots (Salem Area Mass Transit) extensive bus network"
+  },
+  "scio": {
+    "major_employers": [
+      "Scio School District",
+      "Linn County",
+      "Agriculture",
+      "City of Scio"
+    ],
+    "nearest_hospital": "Samaritan Albany General Hospital, Albany, ~16 mi",
+    "transit": "No public transit"
+  },
+  "scotts_mills": {
+    "major_employers": [
+      "City of Scotts Mills",
+      "Marion County",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~22 mi",
+    "transit": "No public transit"
+  },
+  "sheridan": {
+    "major_employers": [
+      "Sheridan School District",
+      "Sheridan Federal Correctional Institution (BOP)",
+      "Yamhill County",
+      "Timber/agriculture"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center, McMinnville, ~20 mi",
+    "transit": "No public transit"
+  },
+  "silverton": {
+    "major_employers": [
+      "Silverton School District",
+      "Silverton Hospital (Legacy Health)",
+      "Marion County",
+      "Tourism (Oregon Garden, Silver Falls)"
+    ],
+    "nearest_hospital": "Silverton Hospital (Legacy Health, in-city)",
+    "transit": "Cherriots Regional bus"
+  },
+  "sodaville": {
+    "major_employers": [
+      "City of Sodaville",
+      "Linn County",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Samaritan Lebanon Community Hospital, Lebanon, ~8 mi",
+    "transit": "No public transit"
+  },
+  "springfield": {
+    "major_employers": [
+      "McKenzie-Willamette Medical Center",
+      "Springfield School District",
+      "Weyerhaeuser (historic)",
+      "Lane County"
+    ],
+    "nearest_hospital": "McKenzie-Willamette Medical Center (in-city); PeaceHealth Sacred Heart RiverBend, ~2 mi",
+    "transit": "Lane Transit District (LTD) bus and EmX BRT"
+  },
+  "st._paul": {
+    "major_employers": [
+      "City of St. Paul",
+      "Marion County",
+      "Agriculture (hops, filberts)"
+    ],
+    "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~12 mi",
+    "transit": "No public transit"
+  },
+  "stayton": {
+    "major_employers": [
+      "Santiam Memorial Hospital (Samaritan Health)",
+      "Stayton School District",
+      "Marion County",
+      "Staton-Minto area agriculture"
+    ],
+    "nearest_hospital": "Santiam Memorial Hospital (in-city)",
+    "transit": "No public transit"
+  },
+  "sublimity": {
+    "major_employers": [
+      "Sublimity School District",
+      "Marion County",
+      "Agriculture",
+      "Retail"
+    ],
+    "nearest_hospital": "Santiam Memorial Hospital, Stayton, ~5 mi",
+    "transit": "No public transit"
+  },
+  "sweet_home": {
+    "major_employers": [
+      "Sweet Home School District",
+      "Linn County",
+      "Timber/lumber industry",
+      "City of Sweet Home"
+    ],
+    "nearest_hospital": "Samaritan Lebanon Community Hospital, Lebanon, ~20 mi",
+    "transit": "No public transit"
+  },
+  "tangent": {
+    "major_employers": [
+      "Oregon Department of Transportation (ODOT facility)",
+      "Linn County",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Samaritan Albany General Hospital, Albany, ~8 mi",
+    "transit": "No public transit"
+  },
+  "turner": {
+    "major_employers": [
+      "Turner School District",
+      "Marion County",
+      "Agriculture",
+      "City of Turner"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~8 mi",
+    "transit": "Cherriots Regional bus"
+  },
+  "veneta": {
+    "major_employers": [
+      "Veneta School District",
+      "Lane County",
+      "Agriculture",
+      "Oregon Country Fair (annual event)"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart, Eugene, ~15 mi",
+    "transit": "No public transit"
+  },
+  "waterloo": {
+    "major_employers": [
+      "City of Waterloo",
+      "Linn County",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Samaritan Lebanon Community Hospital, Lebanon, ~10 mi",
+    "transit": "No public transit"
+  },
+  "westfir": {
+    "major_employers": [
+      "City of Westfir",
+      "Lane County",
+      "Timber (historical)",
+      "Recreation/tourism"
+    ],
+    "nearest_hospital": "PeaceHealth Sacred Heart, Eugene, ~35 mi",
+    "transit": "No public transit"
+  },
+  "willamina": {
+    "major_employers": [
+      "Willamina School District",
+      "Yamhill/Polk County",
+      "Timber/lumber",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center, McMinnville, ~20 mi",
+    "transit": "No public transit"
+  },
+  "woodburn": {
+    "major_employers": [
+      "Woodburn Company Stores (outlet mall)",
+      "NORPAC Foods",
+      "Woodburn School District",
+      "Marion County"
+    ],
+    "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~20 mi",
+    "transit": "Cherriots Regional bus service"
+  },
+  "yamhill": {
+    "major_employers": [
+      "Yamhill County",
+      "Yamhill-Carlton School District",
+      "Wine industry/agriculture"
+    ],
+    "nearest_hospital": "Willamette Valley Medical Center, McMinnville, ~15 mi",
+    "transit": "Yamhill County Transit (YCT) limited service"
+  },
+  "astoria": {
+    "major_employers": [
+      "Columbia Memorial Hospital",
+      "Astoria School District",
+      "Port of Astoria",
+      "Clatsop County government"
+    ],
+    "nearest_hospital": "Columbia Memorial Hospital (in-city)",
+    "transit": "Columbia County Rider (CCR) bus; Sunset Empire Transportation District"
+  },
+  "bandon": {
+    "major_employers": [
+      "Bandon School District",
+      "Coos County",
+      "Bandon Dunes Golf Resort",
+      "Commercial fishing/cranberry farming"
+    ],
+    "nearest_hospital": "Bay Area Hospital, Coos Bay, ~26 mi",
+    "transit": "No public transit"
+  },
+  "bay_city": {
+    "major_employers": [
+      "Tillamook County Creamery Association",
+      "City of Bay City",
+      "Commercial fishing"
+    ],
+    "nearest_hospital": "Tillamook Regional Medical Center, Tillamook, ~6 mi",
+    "transit": "No public transit"
+  },
+  "brookings": {
+    "major_employers": [
+      "Sutter Coast Hospital",
+      "Brookings-Harbor School District",
+      "Curry County",
+      "Commercial fishing/tourism"
+    ],
+    "nearest_hospital": "Sutter Coast Hospital (in-city)",
+    "transit": "Curry Public Transit bus service"
+  },
+  "cannon_beach": {
+    "major_employers": [
+      "Cannon Beach School District",
+      "Tourism/hospitality (hotels, galleries)",
+      "City of Cannon Beach",
+      "Clatsop County"
+    ],
+    "nearest_hospital": "Columbia Memorial Hospital, Astoria, ~25 mi",
+    "transit": "Sunset Empire Transportation District (SETD) bus"
+  },
+  "coos_bay": {
+    "major_employers": [
+      "Bay Area Hospital",
+      "Coos County government",
+      "Coos Bay School District",
+      "Port of Coos Bay"
+    ],
+    "nearest_hospital": "Bay Area Hospital (in-city)",
+    "transit": "Coos County Area Transit (CCAT) bus"
+  },
+  "coquille": {
+    "major_employers": [
+      "Coos County government (county seat)",
+      "Coquille School District",
+      "Coos Health & Wellness",
+      "Agriculture"
+    ],
+    "nearest_hospital": "Bay Area Hospital, Coos Bay, ~18 mi",
+    "transit": "Coos County Area Transit (CCAT) bus"
+  },
+  "depoe_bay": {
+    "major_employers": [
+      "City of Depoe Bay",
+      "Tourism/hospitality (whale watching)",
+      "Lincoln County",
+      "Commercial fishing"
+    ],
+    "nearest_hospital": "Samaritan North Lincoln Hospital, Lincoln City, ~12 mi",
+    "transit": "Lincoln County Transit (limited)"
+  },
+  "garibaldi": {
+    "major_employers": [
+      "Commercial fishing",
+      "Tillamook County",
+      "Tourism",
+      "City of Garibaldi"
+    ],
+    "nearest_hospital": "Tillamook Regional Medical Center, Tillamook, ~10 mi",
+    "transit": "No public transit"
+  },
+  "gearhart": {
+    "major_employers": [
+      "City of Gearhart",
+      "Clatsop County",
+      "Tourism/resort community",
+      "The Gearhart Golf Links"
+    ],
+    "nearest_hospital": "Columbia Memorial Hospital, Astoria, ~15 mi",
+    "transit": "Sunset Empire Transportation District (SETD) bus"
+  },
+  "gold_beach": {
+    "major_employers": [
+      "Curry General Hospital",
+      "Curry County government",
+      "Gold Beach School District",
+      "Tourism/jet boat tours"
+    ],
+    "nearest_hospital": "Curry General Hospital (in-city)",
+    "transit": "Curry Public Transit bus service"
+  },
+  "lakeside": {
+    "major_employers": [
+      "City of Lakeside",
+      "Coos County",
+      "Recreation/tourism (Ten Mile Lakes)",
+      "Retail"
+    ],
+    "nearest_hospital": "Bay Area Hospital, Coos Bay, ~8 mi",
+    "transit": "Coos County Area Transit (CCAT)"
+  },
+  "lincoln_city": {
+    "major_employers": [
+      "Chinook Winds Casino Resort",
+      "Samaritan North Lincoln Hospital",
+      "Lincoln City School District",
+      "Tourism/retail"
+    ],
+    "nearest_hospital": "Samaritan North Lincoln Hospital (in-city)",
+    "transit": "Lincoln County Transit (LCT) bus"
+  },
+  "manzanita": {
+    "major_employers": [
+      "City of Manzanita",
+      "Tillamook County",
+      "Tourism/coastal recreation",
+      "Retail/hospitality"
+    ],
+    "nearest_hospital": "Tillamook Regional Medical Center, Tillamook, ~22 mi",
+    "transit": "No public transit"
+  },
+  "myrtle_point": {
+    "major_employers": [
+      "Myrtle Point School District",
+      "Coos County",
+      "Timber/agriculture",
+      "City of Myrtle Point"
+    ],
+    "nearest_hospital": "Bay Area Hospital, Coos Bay, ~28 mi",
+    "transit": "No public transit"
+  },
+  "nehalem": {
+    "major_employers": [
+      "City of Nehalem",
+      "Tillamook County",
+      "Tourism (Nehalem Bay State Park)",
+      "Retail"
+    ],
+    "nearest_hospital": "Tillamook Regional Medical Center, Tillamook, ~20 mi",
+    "transit": "No public transit"
+  },
+  "newport": {
+    "major_employers": [
+      "Oregon State University (Hatfield Marine Science Center)",
+      "Samaritan Pacific Communities Hospital",
+      "Newport School District",
+      "Commercial fishing/tourism"
+    ],
+    "nearest_hospital": "Samaritan Pacific Communities Hospital (in-city)",
+    "transit": "Lincoln County Transit (LCT) bus"
+  },
+  "north_bend": {
+    "major_employers": [
+      "North Bend School District",
+      "Southwestern Oregon Community College",
+      "Port of Coos Bay (Weyerhaeuser)",
+      "Retail"
+    ],
+    "nearest_hospital": "Bay Area Hospital, Coos Bay, ~3 mi",
+    "transit": "Coos County Area Transit (CCAT) bus"
+  },
+  "port_orford": {
+    "major_employers": [
+      "City of Port Orford",
+      "Curry County",
+      "Commercial fishing",
+      "Tourism"
+    ],
+    "nearest_hospital": "Curry General Hospital, Gold Beach, ~27 mi",
+    "transit": "Curry Public Transit (limited)"
+  },
+  "powers": {
+    "major_employers": [
+      "Powers School District",
+      "Coos County",
+      "Timber/lumber",
+      "City of Powers"
+    ],
+    "nearest_hospital": "Bay Area Hospital, Coos Bay, ~40 mi",
+    "transit": "No public transit"
+  },
+  "rockaway_beach": {
+    "major_employers": [
+      "City of Rockaway Beach",
+      "Tillamook County",
+      "Tourism/beachfront hospitality"
+    ],
+    "nearest_hospital": "Tillamook Regional Medical Center, Tillamook, ~15 mi",
+    "transit": "No public transit"
+  },
+  "seaside": {
+    "major_employers": [
+      "Seaside School District",
+      "Clatsop County",
+      "Tourism/hospitality",
+      "Seaside Convention Center"
+    ],
+    "nearest_hospital": "Columbia Memorial Hospital, Astoria, ~17 mi",
+    "transit": "Sunset Empire Transportation District (SETD) bus"
+  },
+  "siletz": {
+    "major_employers": [
+      "Confederated Tribes of Siletz Indians",
+      "Lincoln County",
+      "City of Siletz",
+      "Timber (historical)"
+    ],
+    "nearest_hospital": "Samaritan North Lincoln Hospital, Lincoln City, ~18 mi",
+    "transit": "No public transit"
+  },
+  "tillamook": {
+    "major_employers": [
+      "Tillamook County Creamery Association (TILLAMOOK brand)",
+      "Tillamook Regional Medical Center",
+      "Tillamook County government",
+      "Tillamook School District"
+    ],
+    "nearest_hospital": "Tillamook Regional Medical Center (in-city)",
+    "transit": "No public transit"
+  },
+  "toledo": {
+    "major_employers": [
+      "Lincoln County government (county seat)",
+      "Toledo School District",
+      "Samaritan Pacific Communities Hospital (Newport nearby)",
+      "Boise Cascade (paper, historical)"
+    ],
+    "nearest_hospital": "Samaritan Pacific Communities Hospital, Newport, ~8 mi",
+    "transit": "Lincoln County Transit (LCT) bus"
+  },
+  "waldport": {
+    "major_employers": "Lincoln County School District, Oregon Coast Community College, City of Waldport, Port of Alsea",
+    "nearest_hospital": "Samaritan Pacific Communities Hospital, Newport, ~14 miles north",
+    "transit": "Lincoln County Transit (South County route linking Waldport, Yachats, and Newport)"
+  },
+  "warrenton": {
+    "major_employers": "Warrenton-Hammond School District, Fred Meyer, Astoria Forest Products, Skipanon River Marina businesses",
+    "nearest_hospital": "Columbia Memorial Hospital, Astoria, ~5 miles east",
+    "transit": "Sunset Empire Transportation District (SETD, 'The Bus') Route 15"
+  },
+  "wheeler": {
+    "major_employers": "Wheeler Marina, Old Wheeler Hotel, local hospitality and retail; many residents commute to Tillamook (Tillamook Creamery, Pacific Seafood)",
+    "nearest_hospital": "Adventist Health Tillamook, Tillamook, ~16 miles south",
+    "transit": "Tillamook County Transportation District (TCTD, 'The Wave') Route 3"
+  },
+  "yachats": {
+    "major_employers": "City of Yachats, local lodging and hospitality (Adobe Resort, Overleaf Lodge & Spa, Fireside Motel), tourism businesses",
+    "nearest_hospital": "Samaritan Pacific Communities Hospital, Newport, ~22 miles north",
+    "transit": "Lincoln County Transit (South County route linking Yachats, Waldport, and Newport)"
+  },
+  "bend": {
+    "major_employers": "St. Charles Health System, Bend-La Pine Schools, Deschutes County, Les Schwab Tire Centers",
+    "nearest_hospital": "St. Charles Bend (in-city, 2500 NE Neff Rd, Bend)",
+    "transit": "Cascades East Transit (CET) fixed-route buses plus regional Community Connector routes"
+  },
+  "culver": {
+    "major_employers": "Culver School District, Bright Wood Corporation (Culver plant), local agriculture (mint, grass seed, hay)",
+    "nearest_hospital": "St. Charles Madras, Madras, approx. 9 miles north",
+    "transit": "Cascades East Transit (CET) Community Connector route linking Culver to Madras, Metolius, Redmond and Bend"
+  },
+  "la_pine": {
+    "major_employers": "Bend-La Pine Schools, Sunriver Resort, Mt. Bachelor, Midstate Electric Cooperative",
+    "nearest_hospital": "St. Charles Bend, Bend, approx. 30 miles north",
+    "transit": "Cascades East Transit (CET) Route 30 to Bend plus Rural Dial-A-Ride"
+  },
+  "madras": {
+    "major_employers": "Bright Wood Corporation, St. Charles Madras, Jefferson County School District 509J, Jefferson County government",
+    "nearest_hospital": "St. Charles Madras (in-city, 470 NE A St, Madras)",
+    "transit": "Cascades East Transit (CET) demand-response service and Community Connector routes to Bend, Redmond and Prineville"
+  },
+  "metolius": {
+    "major_employers": "Bright Wood Corporation (Madras/Culver area), Jefferson County School District 509J, local agriculture",
+    "nearest_hospital": "St. Charles Madras, Madras, approx. 5 miles northeast",
+    "transit": "Cascades East Transit (CET) Community Connector route to Madras, Culver and Bend"
+  },
+  "prineville": {
+    "major_employers": "Meta (data center), Crook County School District, St. Charles Prineville, Crook County government",
+    "nearest_hospital": "St. Charles Prineville (in-city, 384 SE Combs Flat Rd, Prineville)",
+    "transit": "Cascades East Transit (CET) Community Connector routes to Bend, Redmond and Madras"
+  },
+  "redmond": {
+    "major_employers": "BASX Solutions, Redmond School District, St. Charles Redmond, Medline ReNewal",
+    "nearest_hospital": "St. Charles Redmond (in-city, 1253 NW Canal Blvd, Redmond)",
+    "transit": "Cascades East Transit (CET) semi-fixed routes and on-demand service; regional hub at 777 SW Kalama Ave"
+  },
+  "sisters": {
+    "major_employers": "Sisters School District, Black Butte Ranch, Aspen Lakes, City of Sisters",
+    "nearest_hospital": "St. Charles Redmond, Redmond, approx. 19 miles east",
+    "transit": "Cascades East Transit (CET) Community Connector routes 28 (Redmond) and 29 (Bend) plus Rural Dial-A-Ride"
+  },
+  "antelope": {
+    "major_employers": [
+      "Antelope School District",
+      "Wheeler County ranches and farms",
+      "small retail and services"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 70 miles northwest)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "arlington": {
+    "major_employers": [
+      "Port of Arlington",
+      "ArcelorMittal Oregon (steel facility)",
+      "irrigation farming operations",
+      "City of Arlington"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 45 miles west)",
+    "transit": "No fixed-route public transit; personal vehicle required"
+  },
+  "boardman": {
+    "major_employers": [
+      "Amazon Web Services (data centers)",
+      "Lamb Weston (potato processing)",
+      "Port of Morrow",
+      "Columbia River Seeds",
+      "Umatilla Army Depot area agriculture"
+    ],
+    "nearest_hospital": "Good Shepherd Medical Center, Hermiston (about 30 miles east)",
+    "transit": "Columbia Basin Transit provides limited service; personal vehicle typically needed"
+  },
+  "cascade_locks": {
+    "major_employers": [
+      "Columbia Gorge Hotel area hospitality",
+      "Port of Cascade Locks",
+      "Crown Point State Scenic Corridor / tourism",
+      "Columbia Gorge Express (transit)",
+      "Sternwheeler Columbia Gorge excursions"
+    ],
+    "nearest_hospital": "Providence Hood River Memorial Hospital (about 18 miles east)",
+    "transit": "Columbia Gorge Express bus links Cascade Locks to Portland on weekends; no local fixed-route service"
+  },
+  "condon": {
+    "major_employers": [
+      "Gilliam County government",
+      "Condon School District",
+      "Gilliam County ranches and wheat farms",
+      "local retail and services"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 70 miles southwest)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "dufur": {
+    "major_employers": [
+      "Dufur School District",
+      "Dufur Packing Company",
+      "local agriculture (wheat, cherries)",
+      "small retail and services"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 18 miles north)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "fossil": {
+    "major_employers": [
+      "Wheeler County government and school district",
+      "Oregon Department of Forestry",
+      "Wheeler County ranches",
+      "Fossil Mercantile and local services"
+    ],
+    "nearest_hospital": "St. Charles Madras (about 90 miles south)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "grass_valley": {
+    "major_employers": [
+      "Sherman County School District",
+      "local wheat farming and ranches",
+      "Sherman County government"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 35 miles east)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "heppner": {
+    "major_employers": [
+      "Morrow County government and school district",
+      "Pioneer Memorial Hospital",
+      "agriculture (wheat, cattle)",
+      "local retail and services"
+    ],
+    "nearest_hospital": "Pioneer Memorial Hospital (located in Heppner)",
+    "transit": "No fixed-route public transit; personal vehicle required"
+  },
+  "hood_river": {
+    "major_employers": [
+      "Hood River County School District",
+      "Columbia Gorge Hotel",
+      "Full Sail Brewing",
+      "Safeway",
+      "Providence Hood River Memorial Hospital",
+      "pear and apple orchards (seasonal)"
+    ],
+    "nearest_hospital": "Providence Hood River Memorial Hospital (located in Hood River)",
+    "transit": "Columbia Area Transit (CAT) provides local bus service within Hood River; Columbia Gorge Express to Portland on weekends"
+  },
+  "ione": {
+    "major_employers": [
+      "Ione School District",
+      "Columbia River Correctional Institution (nearby)",
+      "local agriculture and ranches"
+    ],
+    "nearest_hospital": "Good Shepherd Medical Center, Hermiston (about 35 miles east)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "irrigon": {
+    "major_employers": [
+      "agriculture (melons, corn, onions)",
+      "Port of Morrow operations",
+      "Umatilla County government services",
+      "Irrigon Elementary School District"
+    ],
+    "nearest_hospital": "Good Shepherd Medical Center, Hermiston (about 10 miles east)",
+    "transit": "Columbia Basin Transit provides limited regional service"
+  },
+  "lexington": {
+    "major_employers": [
+      "Morrow County wheat farms",
+      "Morrow County School District (outlying)",
+      "local ranches"
+    ],
+    "nearest_hospital": "Pioneer Memorial Hospital, Heppner (about 20 miles south)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "lonerock": {
+    "major_employers": [
+      "Wheeler County ranches and farms",
+      "local services (very small community)"
+    ],
+    "nearest_hospital": "Pioneer Memorial Hospital, Heppner (about 35 miles northeast)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "maupin": {
+    "major_employers": [
+      "Deschutes River recreation and outfitter businesses",
+      "Wasco County road and maintenance crews",
+      "local lodging and dining",
+      "Oregon Department of Transportation"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 45 miles north)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "mitchell": {
+    "major_employers": [
+      "Wheeler County ranches",
+      "Oregon Department of Forestry",
+      "local services (very small community)",
+      "tourism related to Painted Hills (John Day Fossil Beds)"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day (about 50 miles east)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "moro": {
+    "major_employers": [
+      "Sherman County government and school district",
+      "local wheat farming and ranches",
+      "Sherman County Museum"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 40 miles northeast)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "mosier": {
+    "major_employers": [
+      "Columbia Gorge tourism and hospitality",
+      "local orchards (pears, apples)",
+      "Oregon Department of Transportation",
+      "small retail and services"
+    ],
+    "nearest_hospital": "Providence Hood River Memorial Hospital (about 8 miles east)",
+    "transit": "Columbia Gorge Express serves nearby Hood River; no local fixed-route service in Mosier"
+  },
+  "rufus": {
+    "major_employers": [
+      "Sherman County agriculture (wheat)",
+      "ARCO Rufus Terminal (fuel distribution)",
+      "local services"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 15 miles east)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "shaniko": {
+    "major_employers": [
+      "Shaniko Historic Hotel (heritage tourism)",
+      "small ranches and local services (very small community)"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 70 miles north)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "spray": {
+    "major_employers": [
+      "Wheeler County ranches and farms",
+      "local services (very small community)",
+      "nearby hunting and fishing tourism"
+    ],
+    "nearest_hospital": "Blue Mountain Hospital, John Day (about 55 miles southeast)",
+    "transit": "No public transit; personal vehicle required"
+  },
+  "the_dalles": {
+    "major_employers": [
+      "Google (data center)",
+      "Mid-Columbia Medical Center",
+      "The Dalles School District",
+      "Columbia Gorge Community College",
+      "NWASCO Irrigation District",
+      "local retail and hospitality"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center (located in The Dalles)",
+    "transit": "Columbia Area Transit (CAT) provides local bus service; Greyhound intercity bus service available"
+  },
+  "wasco": {
+    "major_employers": [
+      "Sherman County agriculture (wheat and cattle)",
+      "Wasco Elementary School",
+      "local services"
+    ],
+    "nearest_hospital": "Mid-Columbia Medical Center, The Dalles (about 20 miles east)",
+    "transit": "No public transit; personal vehicle required"
   }
 }
