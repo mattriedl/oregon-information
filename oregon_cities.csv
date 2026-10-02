@@ -1,233 +1,242 @@
 city_name,county,population
-Adair Village,Benton,
-Adams,Umatilla,
-Adrian,Malheur,
-Albany,Linn,
-Amity,Yamhill,
-Antelope,Wasco,
-Arlington,Gilliam,
-Ashland,Jackson,20784
-Astoria,Clatsop,
-Athena,Umatilla,
-Aumsville,Marion,
-Aurora,Clackamas,
-Baker City,Baker,
-Bandon,Coos,
-Banks,Washington,
-Barlow,Clackamas,
-Bay City,Tillamook,
-Beaverton,Washington,97922
-Boardman,Morrow,
-Bonanza,Klamath,
-Brookings,Curry,
-Brownsville,Linn,
-Burns,Harney,
-Butte Falls,Jackson,
-Canby,Clackamas,
-Canyon City,Grant,
-Canyonville,Douglas,
-Carlton,Yamhill,
-Cascade Locks,Hood River,
-Cave Junction,Josephine,
-Central Point,Jackson,
-Chiloquin,Klamath,
-Clatskanie,Columbia,
-Coburg,Lane,
-Columbia City,Columbia,
-Condon,Gilliam,
-Coos Bay,Coos,
-Coquille,Coos,
-Corvallis,Benton,62223
-Cottage Grove,Lane,
-Cove,Union,
-Creswell,Lane,
-Culver,Jefferson,
-Dallas,Polk,
-Dayton,Yamhill,
-Depoe Bay,Lincoln,
-Detroit,Marion,
-Donald,Marion,
-Drain,Douglas,1193
-Dufur,Wasco,
-Dundee,Yamhill,
-Dunes City,Lane,
-Durham,Washington,
-Echo,Umatilla,
-Eagle Point,Jackson,
-Elgin,Union,
-Elkton,Douglas,
-Enterprise,Wallowa,
-Estacada,Clackamas,
-Eugene,Lane,178675
-Fairview,Multnomah,
-Falls City,Polk,
-Florence,Lane,
-Forest Grove,Washington,27470
-Fossil,Wheeler,
-Gaston,Washington,
-Gates,Marion,
-Gearhart,Clatsop,
-Gervais,Marion,
-Glendale,Douglas,
-Gladstone,Clackamas,
-Gold Beach,Curry,
-Gold Hill,Jackson,1311
-Granite,Baker,
-Grants Pass,Josephine,
-Grass Valley,Sherman,
-Greenhorn,Baker,
-Haines,Baker,
-Halfway,Baker,
-Happy Valley,Clackamas,22753
-Harrisburg,Linn,
-Halsey,Linn,
-Heppner,Morrow,
-Helix,Umatilla,
-Hermiston,Umatilla,
-Hillsboro,Washington,111820
-Hines,Harney,
-Hood River,Hood River,
-Hubbard,Marion,
-Huntington,Baker,
-Idanha,Marion,
-Imbler,Union,
-Independence,Polk,
-Ione,Morrow,
-Irrigon,Morrow,
-Island City,Union,
-Jacksonville,Jackson,
-Jefferson,Marion,
-John Day,Grant,
-Johnson City,Clackamas,
-Joseph,Wallowa,1195
-Junction City,Lane,
-Keizer,Marion,
-King City,Washington,
-Klamath Falls,Klamath,22175
-La Grande,Union,
-La Pine,Deschutes,
-Lake Oswego,Clackamas,
-Lakeview,Lake,
-Lafayette,Yamhill,
-Lakeside,Coos,
-Lebanon,Linn,20621
-Lexington,Morrow,
-Lincoln City,Lincoln,
-Long Creek,Grant,
-Lonerock,Gilliam,
-Lostine,Wallowa,
-Lowell,Lane,1303
-Lyons,Linn,1228
-Madras,Jefferson,
-Malin,Klamath,
-Manzanita,Tillamook,
-Maupin,Wasco,
-Maywood Park,Multnomah,
+Adair Village,Benton,994
+Adams,Umatilla,389
+Adrian,Malheur,157
+Albany,"Linn,Benton",56472
+Amity,Yamhill,1757
+Antelope,Wasco,37
+Arlington,Gilliam,628
+Ashland,Jackson,21360
+Astoria,Clatsop,10181
+Athena,Umatilla,1209
+Aumsville,Marion,4234
+Aurora,Marion,1133
+Baker City,Baker,10099
+Bandon,Coos,3321
+Banks,Washington,1837
+Barlow,Clackamas,133
+Bay City,Tillamook,1389
+Beaverton,Washington,97494
+Bend,Deschutes,99178
+Boardman,Morrow,3828
+Bonanza,Klamath,404
+Brookings,Curry,6744
+Brownsville,Linn,1694
+Burns,Harney,2730
+Butte Falls,Jackson,443
+Canby,Clackamas,18171
+Cannon Beach,Clatsop,1489
+Canyon City,Grant,660
+Canyonville,Douglas,1640
+Carlton,Yamhill,2220
+Cascade Locks,Hood River,1379
+Cave Junction,Josephine,2071
+Central Point,Jackson,18997
+Chiloquin,Klamath,767
+Clatskanie,Columbia,1716
+Coburg,Lane,1306
+Columbia City,Columbia,1949
+Condon,Gilliam,711
+Coos Bay,Coos,15985
+Coquille,Coos,4015
+Cornelius,Washington,12694
+Corvallis,Benton,59922
+Cottage Grove,Lane,10574
+Cove,Union,620
+Creswell,Lane,5641
+Culver,Jefferson,1602
+Dallas,Polk,16854
+Dayton,Yamhill,2678
+Dayville,Grant,132
+Depoe Bay,Lincoln,1515
+Detroit,Marion,203
+Donald,Marion,1009
+Drain,Douglas,1172
+Dufur,Wasco,632
+Dundee,Yamhill,3238
+Dunes City,Lane,1428
+Durham,Washington,1944
+Eagle Point,Jackson,9686
+Echo,Umatilla,632
+Elgin,Union,1717
+Elkton,Douglas,183
+Enterprise,Wallowa,2052
+Estacada,Clackamas,4356
+Eugene,Lane,176654
+Fairview,Multnomah,10424
+Falls City,Polk,1051
+Florence,Lane,9396
+Forest Grove,Washington,26225
+Fossil,Wheeler,447
+Garibaldi,Tillamook,830
+Gaston,"Washington,Yamhill",676
+Gates,"Marion,Linn",548
+Gearhart,Clatsop,1793
+Gervais,Marion,2595
+Gladstone,Clackamas,12017
+Glendale,Douglas,858
+Gold Beach,Curry,2341
+Gold Hill,Jackson,1335
+Granite,Grant,32
+Grants Pass,Josephine,39189
+Grass Valley,Sherman,149
+Greenhorn,"Baker,Grant",3
+Gresham,Multnomah,114247
+Haines,Baker,373
+Halfway,Baker,351
+Halsey,Linn,962
+Happy Valley,Clackamas,23733
+Harrisburg,Linn,3652
+Helix,Umatilla,194
+Heppner,Morrow,1187
+Hermiston,Umatilla,19354
+Hillsboro,Washington,106447
+Hines,Harney,1645
+Hood River,Hood River,8313
+Hubbard,Marion,3426
+Huntington,Baker,502
+Idanha,"Marion,Linn",156
+Imbler,Union,245
+Independence,Polk,9828
+Ione,Morrow,337
+Irrigon,Morrow,2011
+Island City,Union,1144
+Jacksonville,Jackson,3020
+Jefferson,Marion,3327
+John Day,Grant,1664
+Johnson City,Clackamas,539
+Jordan Valley,Malheur,130
+Joseph,Wallowa,1154
+Junction City,Lane,6787
+Keizer,Marion,39376
+King City,Washington,5184
+Klamath Falls,Klamath,21813
+La Grande,Union,13026
+La Pine,Deschutes,2512
+Lafayette,Yamhill,4423
+Lake Oswego,"Clackamas,Multnomah,Washington",40732
+Lakeside,Coos,1904
+Lakeview,Lake,2418
+Lebanon,Linn,18447
+Lexington,Morrow,238
+Lincoln City,Lincoln,9815
+Lonerock,Gilliam,25
+Long Creek,Grant,173
+Lostine,Wallowa,241
+Lowell,Lane,1196
+Lyons,Linn,1202
+Madras,Jefferson,7456
+Malin,Klamath,731
+Manzanita,Tillamook,603
+Maupin,Wasco,427
+Maywood Park,Multnomah,829
 McMinnville,Yamhill,34319
-Medford,Jackson,86483
-Merrill,Klamath,
-Metolius,Jefferson,
-Mill City,Linn,
-Millersburg,Linn,
-Mitchell,Wheeler,
-Molalla,Clackamas,
-Monmouth,Polk,
-Monroe,Benton,
-Moro,Sherman,
-Mosier,Wasco,
-Mount Angel,Marion,
-Mount Vernon,Grant,
-Milton-Freewater,Umatilla,
-Milwaukie,Clackamas,22214
-Myrtle Creek,Douglas,
-Myrtle Point,Coos,
-Nehalem,Tillamook,
-Newberg,Yamhill,27161
-Newport,Lincoln,
-North Bend,Coos,
-North Plains,Washington,
-North Powder,Union,
-Nyssa,Malheur,
-Oakland,Douglas,
-Oakridge,Lane,
-Ontario,Malheur,
-Oregon City,Clackamas,
-Paisley,Lake,
-Pendleton,Umatilla,
-Philomath,Benton,
-Phoenix,Jackson,
-Pilot Rock,Umatilla,1317
-Port Orford,Curry,
-Portland,Multnomah,630447
-Powder,,,
-Powers,Coos,
-Prairie City,Grant,
-Prescott,Columbia,
-Prineville,Crook,31216
-Prospect,Jackson,
-Rainier,Columbia,
-Redmond,Deschutes,34563
-Reedsport,Douglas,
-Richland,Baker,
-Rivergrove,Clackamas,
-Riddle,Douglas,1220
-Rogue River,Jackson,
-Roseburg,Douglas,23729
-Rufus,Sherman,
-Salem,Marion,182902
-Sandy,Clackamas,
-Scappoose,Columbia,
-Scio,Linn,
-Scotts Mills,Marion,
-Seaside,Clatsop,
-Seneca,Grant,
-Shady Cove,Jackson,
-Shaniko,Wasco,
-Sheridan,Polk,
-Sherwood,Washington,22583
-Siletz,Lincoln,1209
-Silverton,Marion,
-Sisters,Deschutes,
-Spray,Wheeler,
-Springfield,Lane,61251
-Stanfield,Umatilla,
-Stayton,Marion,
-St. Helens,Columbia,
-St. Paul,Marion,
-Sublimity,Marion,
-Summerville,Union,
-Sumpter,Baker,
-Sutherlin,Douglas,
-Sweet Home,Linn,
-Talent,Jackson,
-Tangent,Linn,1246
-The Dalles,Wasco,
-Tigard,Washington,
-Tillamook,Tillamook,
-Toledo,Lincoln,
-Troutdale,Multnomah,
-Tualatin,Washington,28152
-Turner,Marion,
-Ukiah,Umatilla,
-Umatilla,Umatilla,
-Union,Union,
-Unity,Baker,
-Vale,Malheur,
-Veneta,Lane,
-Vernonia,Columbia,
-Waldport,Lincoln,
-Wallowa,Wallowa,
-Warrenton,Clatsop,
-Wasco,Sherman,
-Westfir,Lane,
-West Linn,Clackamas,26365
-Weston,Umatilla,
-Wheeler,Tillamook,
-Willamina,Polk,
-Wilsonville,Washington,28119
-Winston,Douglas,
-Woodburn,Marion,27553
-Wood Village,Multnomah,
-Yachats,Lincoln,
-Yamhill,Yamhill,1223
-Yoncalla,Douglas,
+Medford,Jackson,85824
+Merrill,Klamath,821
+Metolius,Jefferson,978
+Mill City,"Marion,Linn",1971
+Millersburg,Linn,2919
+Milton-Freewater,Umatilla,7151
+Milwaukie,"Clackamas,Multnomah",21119
+Mitchell,Wheeler,138
+Molalla,Clackamas,10228
+Monmouth,Polk,11100
+Monroe,Benton,647
+Monument,Grant,115
+Moro,Sherman,367
+Mosier,Wasco,468
+Mount Vernon,Grant,548
+Mt. Angel,Marion,3392
+Myrtle Creek,Douglas,3481
+Myrtle Point,Coos,2475
+Nehalem,Tillamook,270
+Newberg,Yamhill,25138
+Newport,Lincoln,10256
+North Bend,Coos,10317
+North Plains,Washington,3441
+North Powder,Union,504
+Nyssa,Malheur,3198
+Oakland,Douglas,934
+Oakridge,Lane,3206
+Ontario,Malheur,11645
+Oregon City,Clackamas,37572
+Paisley,Lake,250
+Pendleton,Umatilla,17107
+Philomath,Benton,5350
+Phoenix,Jackson,4475
+Pilot Rock,Umatilla,1328
+Port Orford,Curry,1146
+Portland,"Multnomah,Washington,Clackamas",652503
+Powers,Coos,710
+Prairie City,Grant,841
+Prescott,Columbia,82
+Prineville,Crook,10736
+Rainier,Columbia,1911
+Redmond,Deschutes,33274
+Reedsport,Douglas,4310
+Richland,Baker,165
+Riddle,Douglas,1214
+Rivergrove,"Clackamas,Washington",545
+Rockaway Beach,Tillamook,1441
+Rogue River,Jackson,2407
+Roseburg,Douglas,23683
+Rufus,Sherman,268
+Salem,"Marion,Polk",175535
+Sandy,Clackamas,12612
+Scappoose,Columbia,8010
+Scio,Linn,956
+Scotts Mills,Marion,419
+Seaside,Clatsop,7115
+Seneca,Grant,165
+Shady Cove,Jackson,3081
+Shaniko,Wasco,30
+Sheridan,Yamhill,6233
+Sherwood,Washington,20450
+Siletz,Lincoln,1230
+Silverton,Marion,10484
+Sisters,Deschutes,3064
+Sodaville,Linn,360
+Spray,Wheeler,139
+Springfield,Lane,61851
+St. Helens,Columbia,13817
+St. Paul,Marion,434
+Stanfield,Umatilla,2144
+Stayton,Marion,8244
+Sublimity,Marion,2967
+Summerville,Union,119
+Sumpter,Baker,204
+Sutherlin,Douglas,8524
+Sweet Home,Linn,9828
+Talent,Jackson,6282
+Tangent,Linn,1231
+The Dalles,Wasco,16010
+Tigard,Washington,54539
+Tillamook,Tillamook,5204
+Toledo,Lincoln,3546
+Troutdale,Multnomah,16300
+Tualatin,"Washington,Clackamas",27942
+Turner,Marion,2454
+Ukiah,Umatilla,159
+Umatilla,Umatilla,7363
+Union,Union,2152
+Unity,Baker,40
+Vale,Malheur,1894
+Veneta,Lane,5214
+Vernonia,Columbia,2374
+Waldport,Lincoln,2249
+Wallowa,Wallowa,796
+Warrenton,Clatsop,6277
+Wasco,Sherman,417
+Waterloo,Linn,222
+West Linn,Clackamas,27373
+Westfir,Lane,259
+Weston,Umatilla,706
+Wheeler,Tillamook,422
+Willamina,"Yamhill,Polk",2239
+Wilsonville,"Clackamas,Washington",26664
+Winston,Douglas,5625
+Wood Village,Multnomah,4387
+Woodburn,Marion,26013
+Yachats,Lincoln,994
+Yamhill,Yamhill,1147
+Yoncalla,Douglas,1021
