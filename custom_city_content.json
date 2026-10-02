@@ -509,7 +509,7 @@
       },
       {
         "name": "Clackamas Town Center",
-        "url": "https://www.clackamatowncenter.com",
+        "url": "https://www.shopclackamas.com/",
         "desc": "Major regional mall just minutes from Happy Valley with shopping and dining"
       },
       {
@@ -691,12 +691,12 @@
       },
       {
         "name": "Clackamas Town Center (5 min)",
-        "url": "https://www.clackamatowncenter.com",
+        "url": "https://www.shopclackamas.com/",
         "desc": "Large regional shopping mall just a short drive away"
       },
       {
         "name": "Crystal Springs Rhododendron Garden (10 min)",
-        "url": "https://crystalspringsrhododendrongarden.org",
+        "url": "https://www.traveloregon.com/things-to-do/culture-history/gardens/crystal-springs-rhododendron-garden/",
         "desc": "Stunning public garden in Southeast Portland with 2,500 rhododendrons in peak spring bloom"
       }
     ]
@@ -853,7 +853,7 @@
       },
       {
         "name": "Historic Downtown Baker City",
-        "url": "https://www.bakerheritage.org",
+        "url": "https://www.historicbaker.com/",
         "desc": "One of Oregon's best-preserved Victorian downtowns with the iconic Geiser Grand Hotel (1889)"
       },
       {
@@ -913,7 +913,7 @@
       },
       {
         "name": "Harney County Historical Museum",
-        "url": "https://www.harneycountymuseum.org",
+        "url": "https://harneycounty.com/",
         "desc": "Local ranching, mining, and pioneer history of one of Oregon's most remote counties"
       }
     ]
@@ -1309,7 +1309,7 @@
       },
       {
         "name": "Nyssa Thunderegg Days Festival (15 min)",
-        "url": "https://www.nyssa-oregon.com",
+        "url": "https://www.nyssa.city/",
         "desc": "Annual festival celebrating Oregon's state rock — gem hunting and the thunderegg capital of the world"
       },
       {
@@ -1544,7 +1544,7 @@
       },
       {
         "name": "Historic Railroad District & Downtown",
-        "url": "https://www.ashlanddowntown.com",
+        "url": "https://discoverashland.com/",
         "desc": "Ashland's charming walkable downtown with over 200 shops, galleries, and restaurants"
       }
     ]
@@ -1618,12 +1618,12 @@
       },
       {
         "name": "Crater Rock Museum",
-        "url": "https://www.craterrockmuseum.org",
+        "url": "https://www.traveloregon.com/things-to-do/culture-history/historic-sites/crater-rock-museum/",
         "desc": "Exceptional mineral and fossil collection in Central Point — one of Oregon's best gem and rock museums"
       },
       {
         "name": "Rogue Valley Wine Country",
-        "url": "https://www.rougevalleywineries.com",
+        "url": "https://roguevalleywineries.com/",
         "desc": "Multiple Jackson County wineries within 20 minutes"
       },
       {
@@ -1688,7 +1688,7 @@
       },
       {
         "name": "Rogue Valley Wine Country",
-        "url": "https://www.rougevalleywineries.com",
+        "url": "https://roguevalleywineries.com/",
         "desc": "Several wineries and tasting rooms within 15 minutes"
       },
       {
@@ -1821,7 +1821,7 @@
       },
       {
         "name": "Favell Museum",
-        "url": "https://favellmuseum.com",
+        "url": "https://www.favellmuseum.org/",
         "desc": "World-class museum of Western and Native American art — thousands of arrowheads and an outstanding collection"
       },
       {
@@ -1861,7 +1861,7 @@
       },
       {
         "name": "Hunter's Hot Springs",
-        "url": "https://www.cityoflakeview.us",
+        "url": "https://traveloregon.com/places/lakeview/",
         "desc": "Geothermal hot springs right in Lakeview — Old Perpetual is one of the few constantly erupting geysers in the USA"
       },
       {
@@ -1938,7 +1938,7 @@
       },
       {
         "name": "Rogue Valley Wine Country",
-        "url": "https://www.rougevalleywineries.com",
+        "url": "https://roguevalleywineries.com/",
         "desc": "Dozens of wineries within 30 minutes of Medford — Syrah, Merlot, and Cabernet Sauvignon"
       }
     ]
@@ -2221,7 +2221,7 @@
     "top_attractions": [
       {
         "name": "Sherwood Robin Hood Festival",
-        "url": "https://www.robinhoodfestival.com",
+        "url": "https://www.robinhoodfestival.org/",
         "desc": "Annual summer festival celebrating Sherwood's unique name with archery, jousting, and medieval fun"
       },
       {
@@ -2271,7 +2271,7 @@
       },
       {
         "name": "Spirit of Halloweentown Festival",
-        "url": "https://www.spiritofhallowneentown.com",
+        "url": "https://www.sthelensoregon.gov/",
         "desc": "Annual October celebration of St. Helens as 'Halloweentown' with parades, haunted attractions, and events"
       },
       {
@@ -2623,12 +2623,12 @@
       },
       {
         "name": "Albany World Timber Championships",
-        "url": "https://www.timbercarnivals.org",
+        "url": "https://www.timberworld.com/",
         "desc": "Annual summer festival celebrating Oregon's timber heritage with log-rolling, speed climbing, and more"
       },
       {
         "name": "Linn County Historical Museum",
-        "url": "https://linnhistorical.org",
+        "url": "https://lchm.net/",
         "desc": "County history museum with pioneer artifacts, Kalapuya displays, and covered bridge exhibits"
       }
     ]
@@ -2735,7 +2735,7 @@
       },
       {
         "name": "Corvallis Farmers Market",
-        "url": "https://www.corvallisfarmersmarket.com",
+        "url": "https://www.corvallisdowntown.com/events/farmers-market",
         "desc": "One of Oregon's top farmers markets — Saturday mornings downtown with produce, food, and crafts"
       }
     ]
@@ -2760,7 +2760,7 @@
     "top_attractions": [
       {
         "name": "Covered Bridges of Lane County",
-        "url": "https://coveredbridges.lanecounty.org",
+        "url": "https://travellanecounty.org/things-to-do/covered-bridges/",
         "desc": "Cottage Grove is the 'Covered Bridge Capital of Oregon' — seven historic covered bridges in the area"
       },
       {
@@ -2775,7 +2775,7 @@
       },
       {
         "name": "Bohemia Mining District (day trip)",
-        "url": "https://www.bohemiamining.org",
+        "url": "https://bohemiaminingdays.org/",
         "desc": "Historic gold mining area in the Calapooya Mountains above Cottage Grove — scenic backcountry roads"
       },
       {
@@ -3211,12 +3211,12 @@
       },
       {
         "name": "Lebanon Strawberry Festival",
-        "url": "https://www.labfd.org",
+        "url": "https://www.lebanonoregon.gov/",
         "desc": "Annual June festival celebrating Lebanon's strawberry heritage — one of Oregon's oldest community festivals"
       },
       {
         "name": "Linn County Historical Museum (Albany, 20 min)",
-        "url": "https://linnhistorical.org",
+        "url": "https://lchm.net/",
         "desc": "Regional history museum with pioneer and Kalapuya exhibits"
       },
       {
@@ -3500,7 +3500,7 @@
       },
       {
         "name": "Hallie Ford Museum of Art (Willamette University)",
-        "url": "https://halliefordinstitute.org",
+        "url": "https://www.traveloregon.com/things-to-do/culture-history/historic-sites/hallie-ford-museum-of-art/",
         "desc": "Free art museum with an outstanding collection of Pacific Northwest and Native American art"
       }
     ]
@@ -4346,12 +4346,12 @@
       },
       {
         "name": "Seaside Outlet Center",
-        "url": "https://www.seasideoutletcenter.com",
+        "url": "https://www.seaside.com/",
         "desc": "Outlet shopping just steps from the beach — tax-free Oregon shopping"
       },
       {
         "name": "Camp 18 Restaurant (Elsie, 30 min)",
-        "url": "https://www.camp18restaurant.com",
+        "url": "https://www.traveloregon.com/places-to-eat/camp-18-restaurant/",
         "desc": "Giant log-structure roadhouse on Highway 26 with logging memorabilia and hearty food"
       }
     ]
@@ -4380,7 +4380,7 @@
     "schools": [
       {
         "name": "Tillamook High School",
-        "url": "https://ths.tillamooksd.org"
+        "url": "https://www.tillamook.k12.or.us/"
       }
     ],
     "top_attractions": [
@@ -4554,7 +4554,7 @@
       },
       {
         "name": "Sunriver Resort (15 min)",
-        "url": "https://www.sunriver-resort.com",
+        "url": "https://www.sunriverresort.com/",
         "desc": "World-class resort with golf, bike trails, pools, and the SHARC aquatic center"
       },
       {
@@ -4604,7 +4604,7 @@
       },
       {
         "name": "Solar Eclipse Viewing (2017 Ground Zero)",
-        "url": "https://www.madras.edu",
+        "url": "https://www.jeffco.k12.or.us/",
         "desc": "Madras was at the center of totality for the 2024 and 2017 total solar eclipses — next eclipse viewing in 2045"
       }
     ]
@@ -4684,7 +4684,7 @@
       },
       {
         "name": "Bowman Museum (Crook County Historical Society)",
-        "url": "https://crookcountyhistory.org",
+        "url": "https://www.co.crook.or.us/",
         "desc": "Local history museum in a 1910 bank building with pioneer, ranching, and Native American exhibits"
       }
     ]
@@ -5093,7 +5093,7 @@
     "schools": [
       {
         "name": "The Dalles-Wahtonka High School",
-        "url": "https://tdwhs.thedallessd.org"
+        "url": "https://tdschools.org/"
       }
     ],
     "top_attractions": [
