@@ -56,6 +56,110 @@ STATE_LINKS = [
  ('Travel Oregon', 'https://traveloregon.com/'),
 ]
 
+# Maps the 15 internal sub-regions (from COUNTY_INFO) to 7 public-facing Oregon regions
+BIG_REGION_MAP = {
+ 'Portland Metro':'Portland Metro','Northwest Oregon':'Portland Metro',
+ 'Willamette Valley':'Willamette Valley',
+ 'North Coast':'Oregon Coast','Central Coast':'Oregon Coast','South Coast':'Oregon Coast',
+ 'Columbia River Gorge':'Columbia River Gorge','North Central Oregon':'Columbia River Gorge',
+ 'Central Oregon':'Central Oregon',
+ 'Eastern Oregon':'Eastern Oregon','Northeast Oregon':'Eastern Oregon','Southeast Oregon':'Eastern Oregon',
+ 'Rogue Valley':'Southern Oregon','Southwest Oregon':'Southern Oregon','South Central Oregon':'Southern Oregon',
+}
+
+REGION_SLUGS = {
+ 'Portland Metro':'portland-metro','Willamette Valley':'willamette-valley',
+ 'Oregon Coast':'oregon-coast','Columbia River Gorge':'columbia-river-gorge',
+ 'Central Oregon':'central-oregon','Eastern Oregon':'eastern-oregon','Southern Oregon':'southern-oregon',
+}
+
+REGION_COUNTIES = {
+ 'Portland Metro':['Multnomah','Washington','Clackamas','Columbia'],
+ 'Willamette Valley':['Yamhill','Marion','Polk','Linn','Benton','Lane'],
+ 'Oregon Coast':['Clatsop','Tillamook','Lincoln','Coos','Curry'],
+ 'Columbia River Gorge':['Hood River','Wasco','Sherman','Gilliam','Morrow','Wheeler'],
+ 'Central Oregon':['Deschutes','Jefferson','Crook'],
+ 'Eastern Oregon':['Umatilla','Union','Wallowa','Baker','Grant','Harney','Malheur'],
+ 'Southern Oregon':['Josephine','Jackson','Douglas','Klamath','Lake'],
+}
+
+REGION_CONTENT = {
+ 'Portland Metro':{
+  'desc':"Oregon's largest metropolitan area, home to Portland, Beaverton, Hillsboro, Gresham, and Lake Oswego. Tech industry, world-class food scene, and easy access to mountains and coast.",
+  'hero_sub':"Oregon's largest city and surrounding metro \u2014 tech, food, arts, and outdoor access all within reach.",
+  'living':"The Portland Metro area offers the most urban amenities in Oregon: a robust public transit system (TriMet MAX light rail, buses, WES commuter rail), internationally recognized restaurants, a vibrant arts scene, and major employers in technology (Intel, Nike, Adidas, Oregon Health \u0026 Science University). Housing costs are higher than rural Oregon but moderate compared to Seattle or San Francisco. Neighborhoods range from dense urban core to quiet suburban communities in Washington County's Silicon Forest.",
+  'visiting':"Visitors come for Powell's Books (one of the world's largest independent bookstores), the International Rose Test Garden, Portland Saturday Market, food carts, and year-round farmers markets. Day trips reach Mt. Hood (45 min), the Columbia River Gorge (30 min), Oregon Coast (90 min), and Willamette Valley wine country (30\u201360 min south).",
+  'highlights':["Portland \u2014 the Rose City, Oregon's largest city, food and craft beer capital","Beaverton \u0026 Hillsboro \u2014 Intel and Nike campuses, Silicon Forest tech corridor","Lake Oswego \u2014 upscale lakeside community, easy MAX access to Portland","Gresham \u2014 eastern metro gateway, affordable alternative to Portland","Forest Grove \u2014 Pacific University, edge of Willamette Valley wine country","St. Helens \u2014 Columbia River setting, historic main street, \u201cHalloween Town\u201d filming location"],
+ },
+ 'Willamette Valley':{
+  'desc':"Oregon's heartland stretching from Portland south to Eugene \u2014 wine country, university towns, fertile farmland, and the state capital Salem. Home to over half of Oregon's population.",
+  'hero_sub':"Oregon wine country, university towns, and the state capital \u2014 the fertile heart of the state.",
+  'living':"The Willamette Valley is where most Oregonians live. Salem offers state government jobs, healthcare (Salem Health, Kaiser), and a family-friendly pace. Eugene is a college town (University of Oregon) with a strong arts culture. Corvallis (Oregon State University) ranks highly for quality of life and walkability. The valley floor is agricultural \u2014 wine grapes, berries, hazelnuts, Christmas trees \u2014 and housing remains relatively affordable compared to Portland. Each major city has local transit; the Valley Connector bus links many communities.",
+  'visiting':"The valley is Oregon's premier wine destination, with more than 700 wineries producing world-class Pinot Noir. Oregon Garden (Silverton), Silver Falls State Park (\u201cTrail of Ten Falls\u201d), Oregon Country Fair in Veneta, whitewater rafting on the McKenzie River, and Crater Lake day trips from Eugene are all popular. The coast is 60\u201390 minutes west.",
+  'highlights':["Salem \u2014 Oregon state capital, Willamette University, historic mission","Eugene \u2014 University of Oregon, Pre's Trail, world-class track \u0026 field","Corvallis \u2014 Oregon State University, walkable downtown, top quality of life","Albany \u2014 Victorian architecture, covered bridges, LBCC","McMinnville \u2014 wine country hub, Evergreen Aviation \u0026 Space Museum","Silverton \u2014 Silver Falls State Park gateway, Oregon Garden"],
+ },
+ 'Oregon Coast':{
+  'desc':"More than 360 miles of publicly owned Pacific coastline from Astoria south to Brookings. All Oregon beaches are free and open to everyone. Seafood, state parks, lighthouses, and dramatic headlands.",
+  'hero_sub':"Over 360 miles of publicly accessible Pacific coastline \u2014 every beach belongs to everyone.",
+  'living':"Coastal living means a mild marine climate (warm summers, wet winters), smaller tight-knit communities, and a tourism-driven economy. Newport and Coos Bay are the largest coast cities with more services. Housing is relatively affordable outside popular resort towns like Cannon Beach. Fishing, crabbing, and outdoor work are common livelihoods alongside hospitality and healthcare. Many coastal residents commute seasonally or work remotely.",
+  'visiting':"Top stops include Cannon Beach's iconic Haystack Rock, the Oregon Coast Aquarium in Newport, Cape Perpetua Scenic Area near Yachats, Bandon's Face Rock Creamery and world-class golf, and Astoria with its column viewpoint and Goonies history. Whale-watching peaks in March/April and December. All state beaches are free and accessible year-round.",
+  'highlights':["Astoria \u2014 Oregon's oldest settlement, Lewis \u0026 Clark history, Victorian homes","Cannon Beach \u2014 Haystack Rock, art galleries, fine dining","Newport \u2014 Oregon Coast Aquarium, historic Bayfront, Hatfield Marine Science Center","Florence \u2014 Sea Lion Caves, Oregon Dunes National Recreation Area","Bandon \u2014 Face Rock Creamery, Bandon Dunes Golf Resort","Brookings \u2014 Azalea Festival, Harbor, near California Redwood forests"],
+ },
+ 'Columbia River Gorge':{
+  'desc':"A National Scenic Area carved by the Columbia River on the Oregon\u2013Washington border. Hood River is the outdoor hub; the area is famous for windsurfing, waterfalls, fruit orchards, and dramatic canyon views.",
+  'hero_sub':"Waterfalls, windsurfing, and orchard country \u2014 a spectacular river canyon on the Oregon\u2013Washington border.",
+  'living':"Hood River is the main population center \u2014 a lively small city with a strong outdoor and craft-beverage culture and views of Mt. Adams and Mt. Hood. The Dalles is a historic trading post and growing tech hub (Google data center) with more affordable housing. East of the Cascades, Sherman, Gilliam, Morrow, and Wheeler counties are sparsely populated wheat-farming and ranching communities with very low costs of living.",
+  'visiting':"The Historic Columbia River Highway offers spectacular driving with multiple waterfall pullouts. Multnomah Falls (Oregon's tallest, 620 ft) draws over 2 million visitors annually. Hood River is the world capital of kiteboarding and windsurfing, with Mt. Hood skiing an hour south. The Fruit Loop driving tour passes apple, pear, and cherry orchards in spring bloom. Maupin is the hub for Deschutes River whitewater rafting.",
+  'highlights':["Hood River \u2014 kiteboarding/windsurfing mecca, fruit orchards, craft breweries","The Dalles \u2014 historic Columbia River port, murals, growing tech presence","Cascade Locks \u2014 Bridge of the Gods, Pacific Crest Trail crossing, sternwheeler tours","Maupin \u2014 Deschutes River whitewater rafting and fly fishing","Fossil \u2014 John Day Fossil Beds gateway, leaf impressions in Wheeler County rock","Condon \u2014 wheat farming community, star-gazing in Gilliam County dark skies"],
+ },
+ 'Central Oregon':{
+  'desc':"High desert east of the Cascades centered on Bend, Oregon's fastest-growing city. World-class skiing, mountain biking, rock climbing, fly fishing, and more sunny days than anywhere else in the state.",
+  'hero_sub':"High desert sunshine, volcanic landscapes, and outdoor adventure \u2014 anchored by the city of Bend.",
+  'living':"Bend has grown rapidly and now offers urban amenities \u2014 craft breweries, restaurants, a downtown arts scene, St. Charles Health System \u2014 in a high-desert outdoor recreation setting. Housing prices have risen significantly due to in-migration. Redmond is more affordable and growing quickly. Madras and Prineville offer smaller-town rural life with lower costs. The region averages over 300 sunny days per year and receives far less rainfall than western Oregon.",
+  'visiting':"Mt. Bachelor ski resort is one of the West's largest, with skiing into late spring. The Deschutes River Trail and Phil's Trail network draw mountain bikers from across the country. Smith Rock State Park is a world-class rock climbing and sport-climbing destination with dramatic spire views. The High Desert Museum, Lava Lands Visitor Center, and Newberry Volcanic National Monument fill out an active itinerary.",
+  'highlights':["Bend \u2014 outdoor recreation hub, craft brewery capital, Old Mill District","Redmond \u2014 more affordable Bend neighbor, Redmond Airport regional hub","Madras \u2014 gateway to Smith Rock, total solar eclipse 2017 ground zero","Prineville \u2014 Les Schwab Tires headquarters, Ochoco Mountains access","Sisters \u2014 western-themed charming small town, Three Sisters wilderness gateway","Mt. Bachelor \u0026 Smith Rock \u2014 skiing and climbing icons of the high desert"],
+ },
+ 'Eastern Oregon':{
+  'desc':"Oregon's vast interior \u2014 ranching, frontier history, the Wallowa Mountains (Oregon's Alps), Steens Mountain, the Painted Hills, and some of the darkest skies in the lower 48. Half of Oregon's land, a fraction of its people.",
+  'hero_sub':"Wide-open high desert, the Wallowa Mountains, wild rivers, and frontier towns \u2014 Oregon's big-sky country.",
+  'living':"Eastern Oregon offers some of the most affordable housing in the state, wide open spaces, and a ranching and agricultural economy. Pendleton is the largest city and a regional hub with healthcare services (CHI St. Anthony). La Grande (Eastern Oregon University) and Baker City (remarkably preserved Victorian downtown) are appealing smaller cities. Ontario serves as a regional commercial center on the Idaho border. Remote communities may have limited healthcare access. Most of Eastern Oregon observes Pacific Time, but Malheur County observes Mountain Time.",
+  'visiting':"The Wallowa Mountains and Eagle Cap Wilderness offer world-class backpacking, horse packing, and skiing at Ferguson Ridge. Steens Mountain (9,773 ft) rises abruptly from the Alvord Desert playa \u2014 one of Oregon's most dramatic landscapes. The Painted Hills unit of John Day Fossil Beds offers vivid red-and-gold striped hillsides. Pendleton Round-Up (September) is one of the West's largest rodeos. The Oregon Trail Historic Route runs the length of the region.",
+  'highlights':["Pendleton \u2014 Pendleton Round-Up rodeo, woolen mills, underground historical tours","La Grande \u2014 Eastern Oregon University, Blue Mountains gateway","Baker City \u2014 National Historic Oregon Trail Interpretive Center, Victorian architecture","Enterprise \u0026 Joseph \u2014 gateway to the Wallowa Mountains and Eagle Cap Wilderness","Burns \u2014 gateway to Steens Mountain and Malheur National Wildlife Refuge","Mitchell \u2014 Painted Hills gateway, fossil beds, world-class dark-sky viewing"],
+ },
+ 'Southern Oregon':{
+  'desc':"Medford, Ashland, Grants Pass, and Roseburg anchor a region of mild climate, wine country, the Oregon Shakespeare Festival, Crater Lake, and the wild Rogue River. Warmer and sunnier than western Oregon.",
+  'hero_sub':"Wine, Shakespeare, Crater Lake, and the Rogue River \u2014 Oregon's sun-drenched southern corner.",
+  'living':"Southern Oregon attracts retirees and remote workers for its mild climate (the Medford-Ashland area gets considerably more sun than Portland), relatively affordable housing, and access to outdoor recreation. Medford is the regional healthcare hub (Asante Rogue Regional, Providence Medford). The Umpqua Valley around Roseburg is emerging wine country with lower land prices. Klamath Falls is an agricultural and outdoor recreation center with some of the state's most affordable housing. Douglas County's coastal-adjacent communities offer rural living near the Umpqua River.",
+  'visiting':"Crater Lake National Park \u2014 the deepest lake in the US at 1,943 feet and with famously vivid blue water \u2014 is Southern Oregon's iconic destination. The Oregon Shakespeare Festival in Ashland runs from February to October. Rafting and jetboat excursions on the wild and scenic Rogue River, Wildlife Images Rehabilitation Center in Grants Pass, Wildlife Safari drive-through park in Winston, and Applegate Valley and Umpqua Valley winery trails round out the region.",
+  'highlights':["Medford \u2014 regional hub, Pear Blossom Festival, Bear Creek Greenway","Ashland \u2014 Oregon Shakespeare Festival, Lithia Park, charming downtown","Grants Pass \u2014 Rogue River, Hellgate Jetboat Excursions, Riverside Park","Roseburg \u2014 Umpqua Valley wine trail, Wildlife Safari drive-through zoo","Klamath Falls \u2014 Crater Lake gateway, OIT campus, affordable high-desert living","Jacksonville \u2014 entire town is a National Historic Landmark, Britt Festivals"],
+ },
+}
+
+OREGON_FACTS = [
+ ('Statehood','February 14, 1859 (33rd state admitted to the Union)'),
+ ('Capital','<a href="/cities/salem/index.html">Salem</a>'),
+ ('Largest city','<a href="/cities/portland/index.html">Portland</a>'),
+ ('Population (2020 Census)','4,237,256 (27th most populous state)'),
+ ('Area','98,379 sq mi (9th largest state)'),
+ ('Coastline','363 miles of publicly owned Pacific beaches'),
+ ('Counties','36 (see <a href="/counties/index.html">all counties</a>)'),
+ ('Incorporated cities','241 (see <a href="/cities/index.html">all cities A\u2013Z</a>)'),
+ ('Geographic regions','7 (see <a href="/regions/index.html">all regions</a>)'),
+ ('Nickname','The Beaver State'),
+ ('Motto','<em>Alis Volat Propriis</em> (\u201cShe flies with her own wings\u201d)'),
+ ('State bird','Western Meadowlark'),
+ ('State flower','Oregon Grape'),
+ ('State tree','Douglas Fir'),
+ ('State animal','American Beaver'),
+ ('State fish','Chinook Salmon'),
+ ('State song','\u201cOregon, My Oregon\u201d (adopted 1927)'),
+ ('Highest point','Mt. Hood, 11,249 ft (3,429 m)'),
+ ('Longest river','Columbia River (forms the northern border with Washington)'),
+ ('Time zone','Pacific Time (most of state); Mountain Time (Malheur County)'),
+ ('Abbreviation','OR (postal); Ore. (traditional)'),
+ ('No sales tax','Oregon levies no statewide sales tax'),
+]
+
 CSS = ":root{--gd:#14382a;--g:#1a5632;--gold:#c8a24b;--blue:#1f4e79;--bg:#f6f8f7;--tx:#22302b;--mu:#5c6b64}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',system-ui,sans-serif;color:var(--tx);line-height:1.6;background:#fff}h1,h2,h3{font-family:Georgia,serif;line-height:1.25}.wrap{max-width:1000px;margin:0 auto;padding:0 24px}.hd{background:var(--gd);color:#fff;padding:14px 0;position:sticky;top:0;z-index:50}.hd nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}.badge{width:30px;height:30px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}.nl{list-style:none;display:flex;gap:16px;flex-wrap:wrap}.nl a{color:#dbe7e0;text-decoration:none;font-weight:600;font-size:.9rem}.nl a:hover{color:var(--gold)}.hero{background:linear-gradient(160deg,var(--gd),var(--g));color:#fff;padding:52px 0 44px;margin-bottom:36px}.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);max-width:760px}.hero p{color:#dceee3;margin-top:12px;max-width:640px}.crumbs{font-size:.88rem;color:var(--mu);padding:14px 0 0}.crumbs a{color:var(--blue);text-decoration:none}h2.st{font-size:1.45rem;color:var(--gd);margin:36px 0 16px;border-bottom:3px solid var(--g);padding-bottom:8px}.facts{background:var(--bg);border:1px solid #e3eae6;border-radius:10px;padding:20px;margin:24px 0}.facts table{width:100%;border-collapse:collapse}.facts th{text-align:left;padding:9px;color:var(--gd);border-bottom:2px solid var(--g);width:35%;vertical-align:top}.facts td{padding:9px;border-bottom:1px solid #e3eae6}.facts a,.prose a,.tbl a{color:var(--blue)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0}.card{background:#fff;border:1px solid #e3eae6;border-top:4px solid var(--g);border-radius:10px;padding:20px}.card h3{font-size:1rem;color:var(--gd);margin-bottom:10px}.card ul{list-style:none}.card li{padding:6px 0;border-bottom:1px dashed #e3eae6;font-size:.92rem}.card a{color:var(--blue);text-decoration:none;font-weight:600}.faq details{background:#fff;border:1px solid #e3eae6;border-radius:8px;margin:9px 0;padding:0 16px}.faq summary{cursor:pointer;font-weight:600;padding:13px 0;color:var(--gd)}.faq p{padding:0 0 14px;font-size:.94rem}.faq ul{padding-left:20px}.faq li{padding:3px 0}.faq a{color:var(--blue)}.back{margin-top:40px;padding-top:18px;border-top:1px solid #e3eae6}.back a{color:var(--g);font-weight:700;text-decoration:none}.ft{background:var(--gd);color:#cfe0d6;padding:30px 0;text-align:center;font-size:.84rem;margin-top:44px}.ft a{color:#fff;text-decoration:none;font-weight:600}.ft .fl{margin-bottom:10px}.ft .fl a{margin:0 9px}.dir-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0 26px}.dir-list a{background:var(--bg);border:1px solid #d7e2db;border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--blue);font-weight:600;font-size:.9rem}.dir-list a small{display:block;color:var(--mu);font-weight:400;font-size:.78rem}.dir-list a:hover{background:var(--g);color:#fff}.dir-list a:hover small{color:#dceee3}.photo{margin:24px 0}.photo img{width:100%;max-height:440px;object-fit:cover;border-radius:10px;background:var(--bg)}.photo figcaption,.src{font-size:.8rem;color:var(--mu);margin-top:6px}.src a{color:var(--mu)}.prose p{margin:0 0 14px}.tbl{width:100%;border-collapse:collapse;margin:16px 0;font-size:.93rem}.tbl th{background:var(--gd);color:#fff;text-align:left;padding:9px}.tbl td{padding:9px;border-bottom:1px solid #e3eae6}.tbl tr:nth-child(even) td{background:var(--bg)}.alpha{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 20px}.alpha a{background:var(--gd);color:#fff;text-decoration:none;font-weight:700;padding:6px 11px;border-radius:5px}.alpha a:hover{background:var(--gold)}h3.letter{font-size:1.3rem;color:var(--gd);margin-top:22px;scroll-margin-top:80px}#q{width:100%;padding:12px 14px;font-size:1rem;border:2px solid #d7e2db;border-radius:8px}"
 
 
@@ -117,12 +221,14 @@ def head(title, desc, path, og_type='website', image=None, extra=''):
 def header(up):
     return (f'<header class="hd"><div class="wrap"><nav><a class="logo" href="{up}index.html"><span class="badge">&#127795;</span> Oregon Information</a>'
             f'<ul class="nl"><li><a href="{up}moving-to-oregon/index.html">Moving</a></li><li><a href="{up}visit-oregon/index.html">Visiting</a></li>'
+            f'<li><a href="{up}regions/index.html">Regions</a></li>'
             f'<li><a href="{up}counties/index.html">Counties</a></li><li><a href="{up}cities/index.html">Cities A&ndash;Z</a></li></ul></nav></div></header>')
 
 
 def footer(up, note=''):
     return (f'<footer class="ft"><div class="wrap"><p class="fl"><a href="{up}about/index.html">About</a><a href="{up}contact/index.html">Contact</a>'
-            f'<a href="{up}privacy/index.html">Privacy Policy</a><a href="{up}cities/index.html">Cities</a><a href="{up}counties/index.html">Counties</a></p>'
+            f'<a href="{up}privacy/index.html">Privacy Policy</a><a href="{up}regions/index.html">Regions</a>'
+            f'<a href="{up}cities/index.html">Cities</a><a href="{up}counties/index.html">Counties</a></p>'
             f'<p>&copy; 2026 Oregon Information &mdash; independent resource, not affiliated with the State of Oregon.{note}</p></div></footer></body></html>')
 
 
@@ -349,6 +455,118 @@ PRIVACY = f'''<p><em>Last updated: {date.today().strftime("%B %-d, %Y")}</em></p
 <p>We may update this policy; the date above shows the latest revision. Questions? Email <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>.</p>'''
 
 
+def big_region(city):
+    """Return the 7-region name for a city dict."""
+    county = city['counties'][0]
+    sub = COUNTY_INFO.get(county, ('Unknown',))[0]
+    return BIG_REGION_MAP.get(sub, 'Oregon')
+
+
+def region_page(rname, rcities):
+    rc = REGION_CONTENT[rname]
+    rslug = REGION_SLUGS[rname]
+    path = f'/regions/{rslug}/'
+    desc = rc['desc']
+    counties_list = REGION_COUNTIES[rname]
+    counties_html = ', '.join(f'<a href="../../counties/{slug(cn)}/index.html">{e(cn)} County</a>' for cn in counties_list)
+    sorted_cities = sorted(rcities, key=lambda c: -float(c['pop2020'] or 0))
+    top = sorted_cities[:18]
+    cities_grid = ''.join(
+        f'<a href="../../cities/{slug(c["name"])}/index.html">{e(c["name"])}'
+        f'<small>{e(c["counties"][0])} Co. &middot; pop. {n(c["pop2020"])}</small></a>' for c in top)
+    all_rows = ''.join(
+        f'<tr><td><a href="../../cities/{slug(c["name"])}/index.html">{e(c["name"])}</a></td>'
+        f'<td>{e(", ".join(c["counties"]))}</td><td>{n(c["pop2020"])}</td></tr>' for c in sorted_cities)
+    highlights_html = ''.join(f'<li style="padding:4px 0">{e(h)}</li>' for h in rc['highlights'])
+    ld_obj = {'@context':'https://schema.org','@type':'Place','name':f'{rname}, Oregon','url':f'{BASE_URL}{path}',
+              'containedInPlace':{'@type':'State','name':'Oregon'}}
+    bread = {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
+        {'@type':'ListItem','position':1,'name':'Home','item':f'{BASE_URL}/'},
+        {'@type':'ListItem','position':2,'name':'Oregon Regions','item':f'{BASE_URL}/regions/'},
+        {'@type':'ListItem','position':3,'name':rname,'item':f'{BASE_URL}{path}'}]}
+    return (head(f'{rname}, Oregon | Cities, Counties & Living Guide', desc, path, 'article', None, ld(ld_obj)+ld(bread))
+            + header('../../')
+            + f'<div class="hero"><div class="wrap"><h1>{e(rname)}, Oregon</h1><p>{e(rc["hero_sub"])}</p></div></div>'
+            + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Regions</a> &rsaquo; {e(rname)}</nav>'
+            + f'<h2 class="st">About the {e(rname)} Region</h2><section class="prose"><p>{e(desc)}</p></section>'
+            + f'<h2 class="st">Counties</h2><p class="prose" style="margin:8px 0 24px">{counties_html}</p>'
+            + f'<h2 class="st">Highlights</h2><ul style="padding-left:20px;margin:0 0 24px">{highlights_html}</ul>'
+            + f'<h2 class="st">Living in {e(rname)}</h2><section class="prose"><p>{e(rc["living"])}</p></section>'
+            + f'<h2 class="st">Visiting {e(rname)}</h2><section class="prose"><p>{e(rc["visiting"])}</p></section>'
+            + f'<h2 class="st">Top Cities in {e(rname)}</h2><nav class="dir-list">{cities_grid}</nav>'
+            + f'<h2 class="st">All Cities in {e(rname)} ({len(sorted_cities)} total)</h2>'
+            + f'<table class="tbl"><tr><th>City</th><th>County</th><th>Population (2020)</th></tr>{all_rows}</table>'
+            + '<p class="back"><a href="../index.html">&larr; All Oregon Regions</a></p></div></main>'
+            + footer('../../'))
+
+
+def regions_index(all_cities):
+    path = '/regions/'
+    desc = ("Oregon's seven geographic regions: Portland Metro, Willamette Valley, Oregon Coast, Columbia River Gorge, "
+            "Central Oregon, Eastern Oregon, and Southern Oregon. Find cities, counties, and living and travel guides for each region.")
+    region_cards = ''
+    for rname, rslug2 in REGION_SLUGS.items():
+        rc = REGION_CONTENT[rname]
+        city_count = sum(1 for c in all_cities if big_region(c) == rname)
+        region_cards += (f'<a href="{rslug2}/index.html" style="display:block;text-decoration:none;color:inherit" class="card">'
+                         f'<h3>{e(rname)}</h3>'
+                         f'<p style="font-size:.92rem;color:var(--tx);margin:6px 0">{e(rc["desc"][:150])}&hellip;</p>'
+                         f'<p style="font-size:.84rem;color:var(--mu);margin-top:6px">{city_count} cities &middot; {len(REGION_COUNTIES[rname])} counties</p>'
+                         f'</a>')
+    ld_obj = {'@context':'https://schema.org','@type':'ItemList','name':'Oregon Regions',
+              'url':f'{BASE_URL}{path}','numberOfItems':7}
+    return (head("Oregon's Seven Regions | Geographic Guide to Oregon", desc, path, 'website', None, ld(ld_obj))
+            + header('../')
+            + '<div class="hero"><div class="wrap"><h1>Oregon&rsquo;s Seven Regions</h1>'
+            + '<p>Explore Oregon by region &mdash; cities, counties, living guides, and things to do in each part of the state.</p></div></div>'
+            + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Regions</nav>'
+            + f'<div class="cards" style="margin-top:24px">{region_cards}</div>'
+            + '</div></main>' + footer('../'))
+
+
+def oregon_page():
+    path = '/oregon/'
+    title = 'Oregon State Facts | Population, Symbols, History & Geography'
+    desc = ('Oregon state facts: population, area, capital, state symbols, counties, cities, history, economy, '
+            'and links to every Oregon city and county guide.')
+    facts_rows = ''.join(f'<tr><th>{k}</th><td>{v}</td></tr>' for k, v in OREGON_FACTS)
+    ld_obj = {'@context':'https://schema.org','@type':'State','name':'Oregon','url':f'{BASE_URL}{path}'}
+    bread = {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
+        {'@type':'ListItem','position':1,'name':'Home','item':f'{BASE_URL}/'},
+        {'@type':'ListItem','position':2,'name':'Oregon State Facts','item':f'{BASE_URL}{path}'}]}
+    region_links = ''.join(
+        f'<a href="/regions/{REGION_SLUGS[r]}/index.html" style="display:block;text-decoration:none;color:inherit" class="card">'
+        f'<h3>{e(r)}</h3><p style="font-size:.92rem;color:var(--tx);margin:4px 0">{e(REGION_CONTENT[r]["desc"][:120])}&hellip;</p></a>'
+        for r in REGION_SLUGS)
+    return (head(title, desc, path, 'article', None, ld(ld_obj)+ld(bread))
+            + header('../')
+            + '<div class="hero"><div class="wrap"><h1>Oregon State Facts</h1>'
+            + '<p>Key facts, symbols, geography, history and economy of the U.S. state of Oregon.</p></div></div>'
+            + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> &rsaquo; Oregon State Facts</nav>'
+            + f'<h2 class="st">Quick Facts</h2><section class="facts"><table>{facts_rows}</table></section>'
+            + '''<h2 class="st">About Oregon</h2><section class="prose">
+<p>Oregon is a U.S. state in the Pacific Northwest, bordered by Washington to the north, Idaho to the east, Nevada and California to the south, and the Pacific Ocean to the west. It became the 33rd state on February&nbsp;14, 1859 &mdash; a date commemorated as Oregon Statehood Day.</p>
+<p>Oregon is geographically diverse: the wet, temperate west side of the Cascades contrasts sharply with the dry, high-desert east side. The Cascade Range runs north&ndash;south through the state, and the Coast Range parallels the Pacific shore. Major rivers include the Columbia (northern border), the Willamette (through the most populated areas), and the Rogue, Deschutes, McKenzie, and John Day rivers.</p>
+<p>The state&rsquo;s population is concentrated in the <a href="/regions/willamette-valley/index.html">Willamette Valley</a> and <a href="/regions/portland-metro/index.html">Portland Metro</a> area, which together hold more than two-thirds of all Oregonians. Portland is by far the largest city; Salem (the capital), Eugene, Gresham, Hillsboro, and Beaverton round out the six most populous cities.</p>
+</section>'''
+            + '''<h2 class="st">Economy</h2><section class="prose">
+<p>Oregon&rsquo;s economy is anchored by technology, agriculture, timber, food processing, and tourism. The tech sector &mdash; led by Intel, Nike, Adidas, and many firms clustered in Washington County&rsquo;s &ldquo;Silicon Forest&rdquo; &mdash; accounts for a large share of exports. Healthcare (Providence, Oregon Health &amp; Science University, Asante) is a major employer statewide.</p>
+<p>Agriculture thrives in the Willamette Valley (wine grapes, berries, hazelnuts, Christmas trees), the Rogue Valley (pears, wine grapes), and Eastern Oregon (wheat, cattle, potatoes). Oregon&rsquo;s timber industry, though smaller than its historical peak, remains important in rural counties. Tourism draws millions of visitors to the coast, Crater Lake, Mt.&nbsp;Hood, and the Columbia River Gorge.</p>
+<p>Oregon has <strong>no statewide sales tax</strong>, which affects consumer prices and cross-border shopping patterns. The state does levy a personal income tax.</p>
+</section>'''
+            + '''<h2 class="st">History</h2><section class="prose">
+<p>Oregon&rsquo;s pre-contact history spans thousands of years of Indigenous settlement. Nations including the Chinook, Kalapuya, Nez Perce, Paiute, Tillamook, Coos, and many others lived throughout the region. European contact began in the 18th century through maritime exploration; Lewis and Clark reached the Pacific here in 1805 and wintered at Fort Clatsop near present-day Astoria.</p>
+<p>The Oregon Trail &mdash; one of the great mass migrations in American history &mdash; brought roughly 400,000 settlers from Missouri to Oregon between the 1840s and 1860s. Statehood followed on February&nbsp;14, 1859. The 20th century brought significant industrialization, construction of Columbia River hydroelectric dams, World War II shipbuilding in Portland, and postwar suburban growth across the Willamette Valley.</p>
+</section>'''
+            + f'<h2 class="st">Explore Oregon by Region</h2><div class="cards">{region_links}</div>'
+            + '<h2 class="st">Explore by County or City</h2><div class="cards">'
+            + '<a href="/counties/index.html" class="card" style="display:block;text-decoration:none;color:inherit"><h3>All 36 Counties</h3><p style="font-size:.92rem;color:var(--tx)">Population, history, and cities for every Oregon county.</p></a>'
+            + '<a href="/cities/index.html" class="card" style="display:block;text-decoration:none;color:inherit"><h3>All 241 Cities A&ndash;Z</h3><p style="font-size:.92rem;color:var(--tx)">Directory of every incorporated city in Oregon with facts and moving guides.</p></a>'
+            + '</div>'
+            + '<p class="back"><a href="../index.html">&larr; Home</a></p></div></main>'
+            + footer('../'))
+
+
 def write(path, content):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f: f.write(content)
@@ -368,13 +586,27 @@ def main():
     write(f'{OUT}/about/index.html', simple_page('/about/', 'About Oregon Information', 'About Oregon Information: an independent, free guide to every Oregon city and county, with moving and visiting guides.', 'About Oregon Information', 'An independent, plain-language guide to the State of Oregon.', ABOUT))
     write(f'{OUT}/contact/index.html', simple_page('/contact/', 'Contact Oregon Information', 'Contact Oregon Information with questions, corrections, or suggestions.', 'Contact Us', 'Questions, corrections and suggestions are always welcome.', CONTACT))
     write(f'{OUT}/privacy/index.html', simple_page('/privacy/', 'Privacy Policy | Oregon Information', 'Privacy policy for oregoninformation.com.', 'Privacy Policy', 'How oregoninformation.com handles information.', PRIVACY))
-    urls = ['/', '/cities/', '/counties/', '/moving-to-oregon/', '/visit-oregon/', '/about/', '/contact/', '/privacy/']
+    # Build 7 region pages + regions index
+    for c in cities: c['counties'] = [x.strip() for x in c['county'].split(',')]  # ensure counties set (idempotent)
+    by_region = {}
+    for c in cities:
+        r = big_region(c)
+        by_region.setdefault(r, []).append(c)
+    for rname in REGION_SLUGS:
+        rslug2 = REGION_SLUGS[rname]
+        write(f'{OUT}/regions/{rslug2}/index.html', region_page(rname, by_region.get(rname, [])))
+    write(f'{OUT}/regions/index.html', regions_index(cities))
+    # Oregon state facts page
+    write(f'{OUT}/oregon/index.html', oregon_page())
+    # Sitemap
+    urls = ['/', '/oregon/', '/regions/', '/cities/', '/counties/', '/moving-to-oregon/', '/visit-oregon/', '/about/', '/contact/', '/privacy/']
+    urls += [f'/regions/{REGION_SLUGS[r]}/' for r in REGION_SLUGS]
     urls += [f'/counties/{slug(k["name"])}/' for k in counties] + [f'/cities/{slug(c["name"])}/' for c in cities]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sm += '\n'.join(f'  <url><loc>{BASE_URL}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '\n</urlset>\n'
     write(f'{OUT}/sitemap.xml', sm)
     write(f'{OUT}/robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n')
-    print(f'Built {len(cities)} city pages, {len(counties)} county pages, cities index, about/contact/privacy, sitemap ({len(urls)} URLs).')
+    print(f'Built {len(cities)} city pages, {len(counties)} county pages, {len(REGION_SLUGS)} region pages + index, Oregon page, cities index, about/contact/privacy, sitemap ({len(urls)} URLs).')
 
 
 if __name__ == '__main__':

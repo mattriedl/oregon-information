@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://oregoninformation.com/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/oregon/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/cities/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/counties/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/moving-to-oregon/</loc><lastmod>2026-10-02</lastmod></url>
@@ -8,6 +10,13 @@
   <url><loc>https://oregoninformation.com/about/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/contact/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/privacy/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/portland-metro/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/willamette-valley/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/oregon-coast/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/columbia-river-gorge/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/central-oregon/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/eastern-oregon/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://oregoninformation.com/regions/southern-oregon/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/counties/baker/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/counties/benton/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://oregoninformation.com/counties/clackamas/</loc><lastmod>2026-10-02</lastmod></url>
