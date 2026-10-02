@@ -8,7 +8,70 @@
       "Legacy Health"
     ],
     "nearest_hospital": "OHSU, Legacy Emanuel, Providence Portland (multiple hospitals in-city)",
-    "transit": "TriMet MAX (Blue, Red, Orange, Yellow, Green lines), extensive bus network, WES Commuter Rail"
+    "transit": "TriMet MAX (Blue, Red, Orange, Yellow, Green lines), extensive bus network, WES Commuter Rail",
+    "school_district": "Portland Public Schools",
+    "school_district_url": "https://www.pps.net",
+    "schools": [
+      {
+        "name": "Lincoln High School",
+        "url": "https://lhs.pps.net"
+      },
+      {
+        "name": "Grant High School",
+        "url": "https://ghs.pps.net"
+      },
+      {
+        "name": "Jefferson High School",
+        "url": "https://jefferson.pps.net"
+      },
+      {
+        "name": "Franklin High School",
+        "url": "https://franklin.pps.net"
+      },
+      {
+        "name": "Wilson High School",
+        "url": "https://wilson.pps.net"
+      },
+      {
+        "name": "Roosevelt High School",
+        "url": "https://rhs.pps.net"
+      },
+      {
+        "name": "Benson Polytechnic High School",
+        "url": "https://benson.pps.net"
+      },
+      {
+        "name": "Cleveland High School",
+        "url": "https://cleveland.pps.net"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Powell's City of Books",
+        "url": "https://www.powells.com",
+        "desc": "One of the world's largest independent bookstores — one full city block of new, used and rare books"
+      },
+      {
+        "name": "Washington Park",
+        "url": "https://www.washingtonpark.org",
+        "desc": "International Rose Test Garden, Japanese Garden, Hoyt Arboretum, and Oregon Zoo in one beautiful hilltop park"
+      },
+      {
+        "name": "Oregon Museum of Science and Industry (OMSI)",
+        "url": "https://www.omsi.edu",
+        "desc": "Hands-on science museum with a real submarine, planetarium, and IMAX theater"
+      },
+      {
+        "name": "Portland Art Museum",
+        "url": "https://portlandartmuseum.org",
+        "desc": "The oldest art museum on the West Coast with an impressive permanent collection"
+      },
+      {
+        "name": "Lan Su Chinese Garden",
+        "url": "https://lansugarden.org",
+        "desc": "A serene Ming Dynasty-style garden in Old Town — the most authentic Chinese garden outside China"
+      }
+    ]
   },
   "banks": {
     "major_employers": [
@@ -37,7 +100,58 @@
       "Beaverton School District"
     ],
     "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~7 mi",
-    "transit": "TriMet MAX Blue Line (multiple stations); extensive bus network"
+    "transit": "TriMet MAX Blue Line (multiple stations); extensive bus network",
+    "school_district": "Beaverton School District",
+    "school_district_url": "https://www.beaverton.k12.or.us",
+    "schools": [
+      {
+        "name": "Beaverton High School",
+        "url": "https://bhs.beaverton.k12.or.us"
+      },
+      {
+        "name": "Sunset High School",
+        "url": "https://sunset.beaverton.k12.or.us"
+      },
+      {
+        "name": "Westview High School",
+        "url": "https://westview.beaverton.k12.or.us"
+      },
+      {
+        "name": "Mountainside High School",
+        "url": "https://mountainside.beaverton.k12.or.us"
+      },
+      {
+        "name": "Jesuit High School (private)",
+        "url": "https://www.jesuitportland.org"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Nike World Headquarters Campus",
+        "url": "https://www.nike.com",
+        "desc": "The iconic Nike campus in Beaverton features sports courts, statues of legends, and the Bo Jackson Fitness Center"
+      },
+      {
+        "name": "Tualatin Hills Nature Park",
+        "url": "https://www.thprd.org/facilities/nature-park",
+        "desc": "222-acre urban nature preserve with 5 miles of forested trails and seasonal ponds"
+      },
+      {
+        "name": "Cooper Mountain Nature Park",
+        "url": "https://www.oregonmetro.gov/parks/cooper-mountain-nature-park",
+        "desc": "231 acres of oak woodland, meadows, and wildflower habitat with great valley views"
+      },
+      {
+        "name": "Beaverton Farmers Market",
+        "url": "https://www.beavertonfarmersmarket.com",
+        "desc": "One of Oregon's largest farmers markets, running Saturday mornings May through November"
+      },
+      {
+        "name": "Elsie Stuhr Center",
+        "url": "https://www.thprd.org/facilities/elsie-stuhr-center",
+        "desc": "Popular community recreation center with pool, fitness, and classes"
+      }
+    ]
   },
   "canby": {
     "major_employers": [
@@ -47,7 +161,42 @@
       "Agriculture/nurseries"
     ],
     "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~10 mi",
-    "transit": "SMART (South Metro Area Regional Transit) bus service"
+    "transit": "SMART (South Metro Area Regional Transit) bus service",
+    "school_district": "Canby School District",
+    "school_district_url": "https://www.canby.k12.or.us",
+    "schools": [
+      {
+        "name": "Canby High School",
+        "url": "https://chs.canby.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Canby Ferry",
+        "url": "https://www.clackamas.us/roads/ferry.html",
+        "desc": "Historic Willamette River cable ferry — one of Oregon's last remaining, a unique local experience"
+      },
+      {
+        "name": "The Oregon Garden (Silverton, 20 min)",
+        "url": "https://www.oregongarden.org",
+        "desc": "80-acre specialty botanical garden with the only Frank Lloyd Wright structure in Oregon"
+      },
+      {
+        "name": "Molalla River State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=110",
+        "desc": "Scenic confluence of the Molalla and Willamette rivers — hiking and river access"
+      },
+      {
+        "name": "Flower Farmer (seasonal)",
+        "url": "https://www.theflowerfarmer.com",
+        "desc": "A beloved flower farm near Canby with fields of dahlias, tulips, and seasonal blooms"
+      },
+      {
+        "name": "Canby Depot Museum",
+        "url": "https://www.canbyoregon.gov",
+        "desc": "Local history museum in a 1925 Pacific Electric Railway depot building"
+      }
+    ]
   },
   "clatskanie": {
     "major_employers": [
@@ -77,7 +226,42 @@
       "Nursery industry"
     ],
     "nearest_hospital": "Tuality Community Hospital, Hillsboro, ~5 mi",
-    "transit": "TriMet bus routes (Route 57)"
+    "transit": "TriMet bus routes (Route 57)",
+    "school_district": "Forest Grove School District",
+    "school_district_url": "https://www.fgsd.k12.or.us",
+    "schools": [
+      {
+        "name": "Forest Grove High School (serves Cornelius)",
+        "url": "https://fghs.fgsd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Forest Grove Historic Downtown (5 min)",
+        "url": "https://www.downtownforestgrove.com",
+        "desc": "Neighboring city with Pacific University campus, historic Main Street, and local dining"
+      },
+      {
+        "name": "Fernhill Wetlands (Forest Grove)",
+        "url": "https://www.trwc.org/fernhill-wetlands",
+        "desc": "250-acre wetland restoration area — an outstanding birding site in the Tualatin Basin"
+      },
+      {
+        "name": "Tualatin Valley Wine Country",
+        "url": "https://www.willamettewines.com",
+        "desc": "Washington County wine country with multiple tasting rooms within easy reach"
+      },
+      {
+        "name": "Banks-Vernonia State Trail (20 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=136",
+        "desc": "A 21-mile rail-trail through forests and farmland for cycling and walking"
+      },
+      {
+        "name": "Henry Hagg Lake (15 min)",
+        "url": "https://www.co.washington.or.us/support-services/facilities-and-parks/parks/hagg-lake.cfm",
+        "desc": "Swimming, boating, and picnicking at this reservoir in the Coast Range foothills"
+      }
+    ]
   },
   "durham": {
     "major_employers": [
@@ -106,7 +290,42 @@
       "Retail"
     ],
     "nearest_hospital": "Legacy Mount Hood Medical Center, Gresham, ~4 mi",
-    "transit": "TriMet bus routes"
+    "transit": "TriMet bus routes",
+    "school_district": "Reynolds School District",
+    "school_district_url": "https://www.rsd7.net",
+    "schools": [
+      {
+        "name": "Reynolds High School",
+        "url": "https://rhs.rsd7.net"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Fairview Lake & RV Park",
+        "url": "https://www.portlandoregon.gov",
+        "desc": "Peaceful lake for kayaking and fishing within the Fairview city limits"
+      },
+      {
+        "name": "Columbia River Gorge (10 min)",
+        "url": "https://www.fs.usda.gov/crgnsa",
+        "desc": "Quick drive to waterfall hiking and stunning Gorge scenery"
+      },
+      {
+        "name": "Multnomah Falls (20 min)",
+        "url": "https://www.multnomahfallslodge.com",
+        "desc": "Oregon's most iconic waterfall, just a short drive east"
+      },
+      {
+        "name": "Blue Lake Regional Park",
+        "url": "https://www.oregonmetro.gov/parks/blue-lake-regional-park",
+        "desc": "Regional park with swimming, fishing, and boat rentals"
+      },
+      {
+        "name": "Chinook Landing Marine Park",
+        "url": "https://www.oregonmetro.gov/parks/chinook-landing-marine-park",
+        "desc": "Columbia River boat launch and park popular with anglers and paddlers"
+      }
+    ]
   },
   "forest_grove": {
     "major_employers": [
@@ -116,7 +335,42 @@
       "Intel Corporation (nearby Hillsboro)"
     ],
     "nearest_hospital": "Tuality Community Hospital, Hillsboro, ~10 mi",
-    "transit": "TriMet bus (Route 57)"
+    "transit": "TriMet bus (Route 57)",
+    "school_district": "Forest Grove School District",
+    "school_district_url": "https://www.fgsd.k12.or.us",
+    "schools": [
+      {
+        "name": "Forest Grove High School",
+        "url": "https://fghs.fgsd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Pacific University",
+        "url": "https://www.pacificu.edu",
+        "desc": "A beautiful 55-acre campus in the heart of Forest Grove — tree-lined walks and community events"
+      },
+      {
+        "name": "Henry Hagg Lake",
+        "url": "https://www.co.washington.or.us/support-services/facilities-and-parks/parks/hagg-lake.cfm",
+        "desc": "Reservoir park with swimming beach, boating, fishing, and a paved loop trail"
+      },
+      {
+        "name": "Fernhill Wetlands",
+        "url": "https://www.trwc.org/fernhill-wetlands",
+        "desc": "250-acre restored wetland — a top birding destination in the Tualatin Basin"
+      },
+      {
+        "name": "Banks-Vernonia State Trail (20 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=136",
+        "desc": "21-mile rail-trail connecting Banks to Vernonia through beautiful coastal forest"
+      },
+      {
+        "name": "Wine Tasting on the Tualatin Valley",
+        "url": "https://www.willamettewines.com",
+        "desc": "Several award-winning wineries are within minutes of Forest Grove"
+      }
+    ]
   },
   "gaston": {
     "major_employers": [
@@ -134,7 +388,42 @@
       "Retail/commercial"
     ],
     "nearest_hospital": "Providence Milwaukie Hospital, Milwaukie, ~5 mi",
-    "transit": "TriMet bus routes"
+    "transit": "TriMet bus routes",
+    "school_district": "Gladstone School District",
+    "school_district_url": "https://www.gladstone.k12.or.us",
+    "schools": [
+      {
+        "name": "Gladstone High School",
+        "url": "https://ghs.gladstone.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Gladstone Community Park",
+        "url": "https://www.ci.gladstone.or.us/parks",
+        "desc": "Large park on the Clackamas River with sports fields, playgrounds, and picnic areas"
+      },
+      {
+        "name": "Meldrum Bar Park",
+        "url": "https://www.ci.gladstone.or.us/parks",
+        "desc": "Popular Willamette River park for swimming, fishing, and picnics in summer"
+      },
+      {
+        "name": "End of the Oregon Trail (5 min, Oregon City)",
+        "url": "https://www.historicoregoncity.org",
+        "desc": "Historic Oregon Trail interpretive center just minutes away in Oregon City"
+      },
+      {
+        "name": "Clackamas River Greenway",
+        "url": "https://www.oregonmetro.gov",
+        "desc": "Trail system along the Clackamas River passing through Gladstone"
+      },
+      {
+        "name": "Canby Ferry",
+        "url": "https://www.clackamas.us/roads/ferry.html",
+        "desc": "One of Oregon's last remaining cable ferries crosses the Willamette nearby — a fun historic experience"
+      }
+    ]
   },
   "gresham": {
     "major_employers": [
@@ -144,7 +433,46 @@
       "Fred Meyer (Kroger)"
     ],
     "nearest_hospital": "Legacy Mount Hood Medical Center (in-city)",
-    "transit": "TriMet MAX Blue and Red lines; extensive bus network"
+    "transit": "TriMet MAX Blue and Red lines; extensive bus network",
+    "school_district": "Gresham-Barlow School District",
+    "school_district_url": "https://www.gresham.k12.or.us",
+    "schools": [
+      {
+        "name": "Gresham High School",
+        "url": "https://ghs.gresham.k12.or.us"
+      },
+      {
+        "name": "Sam Barlow High School",
+        "url": "https://sbc.gresham.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Columbia Gorge (30 min)",
+        "url": "https://www.fs.usda.gov/crgnsa",
+        "desc": "Gateway to the Columbia River Gorge National Scenic Area — waterfalls, hiking, epic views"
+      },
+      {
+        "name": "Mt. Hood (45 min)",
+        "url": "https://www.timberlinelodge.com",
+        "desc": "Closest major city to Mt. Hood skiing at Timberline Lodge and Mt. Hood Meadows"
+      },
+      {
+        "name": "Blue Lake Regional Park",
+        "url": "https://www.oregonmetro.gov/parks/blue-lake-regional-park",
+        "desc": "Swimming, fishing, picnics, and boat rentals at this popular Metro regional park"
+      },
+      {
+        "name": "Gresham Farmers Market",
+        "url": "https://www.greshamfarmersmarket.com",
+        "desc": "Year-round Saturday market in downtown Gresham with local produce and artisan vendors"
+      },
+      {
+        "name": "Powell Butte Nature Park",
+        "url": "https://www.portland.gov/parks/powell-butte-nature-park",
+        "desc": "Forested 612-acre volcanic butte with trails and panoramic Cascade Range views"
+      }
+    ]
   },
   "happy_valley": {
     "major_employers": [
@@ -154,7 +482,42 @@
       "City of Happy Valley"
     ],
     "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~8 mi",
-    "transit": "TriMet bus routes"
+    "transit": "TriMet bus routes",
+    "school_district": "Clackamas Education Service District",
+    "school_district_url": "https://www.clackesd.org",
+    "schools": [
+      {
+        "name": "Clackamas High School",
+        "url": "https://www.nclack.k12.or.us/hs"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Happy Valley Park",
+        "url": "https://www.happyvalleyor.gov/parks",
+        "desc": "Large community park with sports fields, splash pad, and event pavilion"
+      },
+      {
+        "name": "Scouters Mountain Nature Park",
+        "url": "https://www.oregonmetro.gov/parks/scouters-mountain-nature-park",
+        "desc": "Over 200 acres of forested trails and meadows with views of Mt. Hood"
+      },
+      {
+        "name": "Adventure Park at Mt. Hood Skibowl (30 min)",
+        "url": "https://www.skibowl.com",
+        "desc": "Year-round adventure park with go-karts, alpine slide, mini golf, and disc golf"
+      },
+      {
+        "name": "Clackamas Town Center",
+        "url": "https://www.clackamatowncenter.com",
+        "desc": "Major regional mall just minutes from Happy Valley with shopping and dining"
+      },
+      {
+        "name": "Powell Butte Nature Park (15 min)",
+        "url": "https://www.portland.gov/parks/powell-butte-nature-park",
+        "desc": "612-acre volcanic butte park with forested trails and Cascade Range views"
+      }
+    ]
   },
   "hillsboro": {
     "major_employers": [
@@ -164,7 +527,54 @@
       "Lattice Semiconductor"
     ],
     "nearest_hospital": "Tuality Community Hospital (in-city)",
-    "transit": "TriMet MAX Blue Line (multiple stations); extensive bus network"
+    "transit": "TriMet MAX Blue Line (multiple stations); extensive bus network",
+    "school_district": "Hillsboro School District",
+    "school_district_url": "https://www.hsd.k12.or.us",
+    "schools": [
+      {
+        "name": "Hillsboro High School",
+        "url": "https://hhs.hsd.k12.or.us"
+      },
+      {
+        "name": "Century High School",
+        "url": "https://chs.hsd.k12.or.us"
+      },
+      {
+        "name": "Liberty High School",
+        "url": "https://lhs.hsd.k12.or.us"
+      },
+      {
+        "name": "Glencoe High School",
+        "url": "https://gchs.hsd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Intel Museum",
+        "url": "https://www.intel.com/content/www/us/en/corporate-responsibility/intel-museums.html",
+        "desc": "Free museum at Intel's main campus showing the history of silicon technology"
+      },
+      {
+        "name": "Tualatin Hills Nature Park",
+        "url": "https://www.thprd.org/facilities/nature-park",
+        "desc": "222-acre nature park with forested trails and seasonal wetlands in the heart of Beaverton/Hillsboro"
+      },
+      {
+        "name": "Washington County Fair & Event Center",
+        "url": "https://www.faircomplex.com",
+        "desc": "County fairgrounds hosting major events, rodeos, and the annual Washington County Fair"
+      },
+      {
+        "name": "Rice Northwest Museum of Rocks & Minerals",
+        "url": "https://ricenorthwestmuseum.org",
+        "desc": "Gem-quality mineral and fossil collection — the best rock museum in the Pacific Northwest"
+      },
+      {
+        "name": "Jackson Bottom Wetlands Preserve",
+        "url": "https://www.hillsboro-oregon.gov/jackson-bottom",
+        "desc": "600-acre wetland refuge for birdwatching and nature walks just minutes from downtown"
+      }
+    ]
   },
   "johnson_city": {
     "major_employers": [
@@ -192,7 +602,46 @@
       "City of Lake Oswego"
     ],
     "nearest_hospital": "Legacy Meridian Park Medical Center (in-city)",
-    "transit": "TriMet bus routes; Lake Oswego\u2013Portland Transit Project streetcar"
+    "transit": "TriMet bus routes; Lake Oswego–Portland Transit Project streetcar",
+    "school_district": "Lake Oswego School District",
+    "school_district_url": "https://www.loswego.k12.or.us",
+    "schools": [
+      {
+        "name": "Lake Oswego High School",
+        "url": "https://lohs.loswego.k12.or.us"
+      },
+      {
+        "name": "Lakeridge High School",
+        "url": "https://lrhs.loswego.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Oswego Lake",
+        "url": "https://www.lakeoswego.city",
+        "desc": "A private lake in the heart of the city — swimming (members), paddleboards, and lakefront dining"
+      },
+      {
+        "name": "George Rogers Park",
+        "url": "https://www.lakeoswego.city/parks",
+        "desc": "Willamette River park with an open-air iron furnace museum and sandy beach"
+      },
+      {
+        "name": "Lake Oswego Farmers Market",
+        "url": "https://www.ci.oswego.or.us/parksrec/farmers-market",
+        "desc": "Saturday morning market with local produce, flowers, and artisan goods"
+      },
+      {
+        "name": "Tryon Creek State Natural Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=103",
+        "desc": "Old-growth forest preserve with 8 miles of trails in the middle of the metro area"
+      },
+      {
+        "name": "Millennium Plaza Park",
+        "url": "https://www.lakeoswego.city/parks",
+        "desc": "Lakeside plaza with an amphitheater and access to the Willamette Shore trail"
+      }
+    ]
   },
   "maywood_park": {
     "major_employers": [
@@ -211,7 +660,46 @@
       "Dark Horse Comics (HQ)"
     ],
     "nearest_hospital": "Providence Milwaukie Hospital (in-city)",
-    "transit": "TriMet bus routes; MAX Orange Line nearby (Oak Grove)"
+    "transit": "TriMet bus routes; MAX Orange Line nearby (Oak Grove)",
+    "school_district": "North Clackamas School District",
+    "school_district_url": "https://www.nclack.k12.or.us",
+    "schools": [
+      {
+        "name": "Milwaukie High School",
+        "url": "https://www.nclack.k12.or.us/milwaukiehigh"
+      },
+      {
+        "name": "Rex Putnam High School",
+        "url": "https://www.nclack.k12.or.us/putnam"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "MAX Orange Line (Downtown Portland 15 min)",
+        "url": "https://trimet.org",
+        "desc": "Milwaukie is the southern terminus of TriMet's MAX Orange Line — direct light rail to Portland"
+      },
+      {
+        "name": "Milwaukie Farmers Market",
+        "url": "https://www.milwaukieoregon.gov",
+        "desc": "Sunday market in downtown Milwaukie with local produce, food, and crafts"
+      },
+      {
+        "name": "Dogwood Festival Park",
+        "url": "https://www.milwaukieoregon.gov/parksrec",
+        "desc": "Riverside park and event venue on the Willamette River"
+      },
+      {
+        "name": "Clackamas Town Center (5 min)",
+        "url": "https://www.clackamatowncenter.com",
+        "desc": "Large regional shopping mall just a short drive away"
+      },
+      {
+        "name": "Crystal Springs Rhododendron Garden (10 min)",
+        "url": "https://crystalspringsrhododendrongarden.org",
+        "desc": "Stunning public garden in Southeast Portland with 2,500 rhododendrons in peak spring bloom"
+      }
+    ]
   },
   "molalla": {
     "major_employers": [
@@ -221,7 +709,42 @@
       "City of Molalla"
     ],
     "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~20 mi",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Molalla River School District",
+    "school_district_url": "https://www.molallaschools.com",
+    "schools": [
+      {
+        "name": "Molalla High School",
+        "url": "https://mhs.molallaschools.com"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Molalla River Recreation Area",
+        "url": "https://www.blm.gov/visit/molalla-river",
+        "desc": "BLM recreation corridor along the Molalla River with swimming holes, trails, and scenic canyon views"
+      },
+      {
+        "name": "Molalla Buckeroo Rodeo",
+        "url": "https://molallabuckeroo.com",
+        "desc": "One of Oregon's oldest and most beloved rodeos, held every Fourth of July weekend since 1928"
+      },
+      {
+        "name": "Canby Ferry (15 min)",
+        "url": "https://www.clackamas.us/roads/ferry.html",
+        "desc": "Historic Willamette River cable ferry — a unique Oregon experience"
+      },
+      {
+        "name": "Silver Falls State Park (30 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=151",
+        "desc": "Oregon's largest state park — the Trail of Ten Falls passes behind 10 spectacular waterfalls"
+      },
+      {
+        "name": "Woodburn Premium Outlets (20 min)",
+        "url": "https://www.premiumoutlets.com/outlet/woodburn",
+        "desc": "Oregon's largest outlet mall with 110 stores — tax-free shopping"
+      }
+    ]
   },
   "north_plains": {
     "major_employers": [
@@ -241,7 +764,42 @@
       "Boise Cascade"
     ],
     "nearest_hospital": "Providence Willamette Falls Medical Center (in-city)",
-    "transit": "TriMet bus routes; MAX Green Line terminus (City Hall Park & Ride)"
+    "transit": "TriMet bus routes; MAX Green Line terminus (City Hall Park & Ride)",
+    "school_district": "Oregon City School District",
+    "school_district_url": "https://www.ocsd.k12.or.us",
+    "schools": [
+      {
+        "name": "Oregon City High School",
+        "url": "https://ochs.ocsd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "End of the Oregon Trail Interpretive Center",
+        "url": "https://www.historicoregoncity.org",
+        "desc": "The original terminus of the Oregon Trail — exhibits on the 2,000-mile overland journey to Oregon"
+      },
+      {
+        "name": "Clackamette Park & Willamette Falls",
+        "url": "https://www.orcity.org/parks",
+        "desc": "Riverside park at the confluence of the Clackamas and Willamette rivers, with views of the falls"
+      },
+      {
+        "name": "Municipal Elevator",
+        "url": "https://www.orcity.org/publicworks/elevator",
+        "desc": "One of only four outdoor municipal elevators in the USA — connects downtown to the bluff"
+      },
+      {
+        "name": "Oregon City Historic Downtown",
+        "url": "https://www.downtownoregoncity.com",
+        "desc": "Oregon's oldest incorporated city west of the Rockies, with Victorian architecture and local shops"
+      },
+      {
+        "name": "Canemah Bluff Natural Area",
+        "url": "https://www.oregonmetro.gov/parks/canemah-bluff-natural-area",
+        "desc": "Dramatic bluff-top trails above the Willamette River with great falls views and native wildflowers"
+      }
+    ]
   },
   "adams": {
     "major_employers": [
@@ -272,13 +830,48 @@
   },
   "baker_city": {
     "major_employers": [
-      "Saint Alphonsus Medical Center \u2013 Baker City",
+      "Saint Alphonsus Medical Center – Baker City",
       "Baker School District",
       "Baker County government",
       "Oregon Trail history tourism"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City (in-city)",
-    "transit": "No public transit"
+    "nearest_hospital": "Saint Alphonsus Medical Center – Baker City (in-city)",
+    "transit": "No public transit",
+    "school_district": "Baker School District",
+    "school_district_url": "https://www.baker.k12.or.us",
+    "schools": [
+      {
+        "name": "Baker High School",
+        "url": "https://bhs.baker.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "National Historic Oregon Trail Interpretive Center",
+        "url": "https://www.blm.gov/nhotic",
+        "desc": "The nation's premier Oregon Trail museum — 4 miles of outdoor trails trace the original wagon ruts"
+      },
+      {
+        "name": "Historic Downtown Baker City",
+        "url": "https://www.bakerheritage.org",
+        "desc": "One of Oregon's best-preserved Victorian downtowns with the iconic Geiser Grand Hotel (1889)"
+      },
+      {
+        "name": "Hells Canyon National Recreation Area (1 hr)",
+        "url": "https://www.fs.usda.gov/recarea/wallowa-whitman/recarea/?recid=51424",
+        "desc": "North America's deepest river gorge — boat tours, rafting, scenic overlooks, and wilderness hiking"
+      },
+      {
+        "name": "Sumpter Valley Gold Dredge State Heritage Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=168",
+        "desc": "A massive historic gold dredge preserved in a scenic wetland wildlife area — walking trails and history"
+      },
+      {
+        "name": "Anthony Lakes Mountain Resort (50 min)",
+        "url": "https://www.anthonylakes.com",
+        "desc": "High-elevation ski area in the Elkhorn Mountains with the driest, lightest snow in Oregon"
+      }
+    ]
   },
   "burns": {
     "major_employers": [
@@ -288,7 +881,42 @@
       "Harney County Livestock/Agriculture"
     ],
     "nearest_hospital": "Harney District Hospital (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Harney County School District",
+    "school_district_url": "https://www.hcsd.us",
+    "schools": [
+      {
+        "name": "Burns High School",
+        "url": "https://bhs.hcsd.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Malheur National Wildlife Refuge",
+        "url": "https://www.fws.gov/refuge/malheur",
+        "desc": "One of the USA's premier bird refuges — over 320 bird species and thousands of migratory waterfowl in season"
+      },
+      {
+        "name": "Steens Mountain Wilderness",
+        "url": "https://www.blm.gov/visit/steens-mountain",
+        "desc": "Oregon's most dramatic fault-block mountain — rising 5,500 feet from the Alvord Desert to 9,773 feet"
+      },
+      {
+        "name": "Alvord Desert (playa)",
+        "url": "https://www.blm.gov/visit/alvord-desert",
+        "desc": "Vast flat desert playa east of Steens Mountain — land sailing, solitude, and surreal landscape"
+      },
+      {
+        "name": "Alvord Hot Springs",
+        "url": "https://www.blm.gov",
+        "desc": "Remote natural hot springs at the base of Steens Mountain with views across the Alvord Desert"
+      },
+      {
+        "name": "Harney County Historical Museum",
+        "url": "https://www.harneycountymuseum.org",
+        "desc": "Local ranching, mining, and pioneer history of one of Oregon's most remote counties"
+      }
+    ]
   },
   "canyon_city": {
     "major_employers": [
@@ -345,7 +973,42 @@
       "Agriculture/ranching"
     ],
     "nearest_hospital": "Wallowa Memorial Hospital (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Enterprise School District",
+    "school_district_url": "https://www.enterprise.k12.or.us",
+    "schools": [
+      {
+        "name": "Enterprise High School",
+        "url": "https://ehs.enterprise.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Wallowa Lake State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=62",
+        "desc": "A glacial lake in a dramatic mountain setting — boating, camping, and Wallowa Lake Tramway to the summit"
+      },
+      {
+        "name": "Eagle Cap Wilderness",
+        "url": "https://www.fs.usda.gov/recarea/wallowa-whitman/recarea/?recid=52437",
+        "desc": "Oregon's largest wilderness — granite peaks, alpine lakes, and exceptional backpacking in Oregon's 'Alps'"
+      },
+      {
+        "name": "Joseph (6 miles)",
+        "url": "https://www.josephoregon.com",
+        "desc": "Charming art town with world-class bronze foundries, galleries, and Chief Joseph Days Rodeo"
+      },
+      {
+        "name": "Wallowa Lake Tramway",
+        "url": "https://wallowalaketramway.com",
+        "desc": "Oregon's only aerial tramway — ride to the 8,256-foot summit of Mt. Howard for panoramic Cascade views"
+      },
+      {
+        "name": "Hells Canyon Overlook (60 min)",
+        "url": "https://www.fs.usda.gov/recarea/wallowa-whitman/recarea/?recid=51496",
+        "desc": "Views into North America's deepest river gorge — the Snake River 8,000 feet below"
+      }
+    ]
   },
   "granite": {
     "major_employers": [
@@ -361,7 +1024,7 @@
       "No significant commercial employers (pop. 3; ghost town)",
       "Baker/Grant County"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~50 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Baker City, ~50 mi",
     "transit": "No public transit"
   },
   "haines": {
@@ -370,7 +1033,7 @@
       "Baker County",
       "Agriculture/ranching"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~15 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Baker City, ~15 mi",
     "transit": "No public transit"
   },
   "halfway": {
@@ -380,7 +1043,7 @@
       "Agriculture/ranching",
       "Wallowa Mountains tourism"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~55 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Baker City, ~55 mi",
     "transit": "No public transit"
   },
   "helix": {
@@ -400,7 +1063,42 @@
       "Port of Umatilla (agriculture/shipping)"
     ],
     "nearest_hospital": "Good Shepherd Medical Center (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Hermiston School District",
+    "school_district_url": "https://www.hermistonschools.org",
+    "schools": [
+      {
+        "name": "Hermiston High School",
+        "url": "https://hhs.hermistonschools.org"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Hat Rock State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=16",
+        "desc": "The first landmark that Lewis and Clark noted descending the Columbia — massive basalt formation with pond fishing"
+      },
+      {
+        "name": "McNary Wildlife Nature Area",
+        "url": "https://www.fws.gov",
+        "desc": "Columbia River wildlife area with excellent birdwatching on the migration route"
+      },
+      {
+        "name": "Columbia River Recreation",
+        "url": "https://www.umatillaoregon.gov",
+        "desc": "Boating, fishing, and water sports on the Columbia River near Umatilla"
+      },
+      {
+        "name": "Tamástslikt Cultural Institute (40 min)",
+        "url": "https://www.tamastslikt.org",
+        "desc": "Museum of the Confederated Tribes of the Umatilla Indian Reservation near Pendleton"
+      },
+      {
+        "name": "McNary Dam & Discovery Center",
+        "url": "https://www.nwp.usace.army.mil/mcnary",
+        "desc": "Columbia River dam with a free visitor center showing fish passage and hydroelectric operations"
+      }
+    ]
   },
   "hines": {
     "major_employers": [
@@ -419,7 +1117,7 @@
       "Agriculture/ranching",
       "Union Pacific Railroad"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~40 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Ontario, ~40 mi",
     "transit": "No public transit"
   },
   "imbler": {
@@ -457,7 +1155,7 @@
       "Malheur County",
       "Ranching/agriculture"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~80 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Ontario, ~80 mi",
     "transit": "No public transit"
   },
   "joseph": {
@@ -478,7 +1176,42 @@
       "La Grande School District"
     ],
     "nearest_hospital": "Grande Ronde Hospital (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "La Grande School District",
+    "school_district_url": "https://www.lagrandesd.org",
+    "schools": [
+      {
+        "name": "La Grande High School",
+        "url": "https://lghs.lagrandesd.org"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Eastern Oregon University",
+        "url": "https://www.eou.edu",
+        "desc": "A public liberal arts university in the heart of La Grande — the cultural center of the Blue Mountains region"
+      },
+      {
+        "name": "Wallowa-Whitman National Forest",
+        "url": "https://www.fs.usda.gov/wallowa-whitman",
+        "desc": "Vast national forest surrounding La Grande with trails, peaks, and the Eagle Cap Wilderness"
+      },
+      {
+        "name": "Hot Lake Mineral Springs Resort",
+        "url": "https://www.hotlakesprings.com",
+        "desc": "Historic 1864 resort and spa at natural hot springs — artisan foundry and sculptures on site"
+      },
+      {
+        "name": "Union County Museum (Union, 15 min)",
+        "url": "https://www.unioncountymuseum.com",
+        "desc": "Award-winning local history museum in the small historic town of Union"
+      },
+      {
+        "name": "Anthony Lakes Mountain Resort (50 min)",
+        "url": "https://www.anthonylakes.com",
+        "desc": "High-elevation ski area in the Elkhorn Mountains — family skiing, snowshoeing, and summer hiking"
+      }
+    ]
   },
   "long_creek": {
     "major_employers": [
@@ -543,18 +1276,53 @@
       "Amalgamated Sugar Company (beet sugar refinery)",
       "Agriculture (sugar beets, onions, potatoes)"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~10 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Ontario, ~10 mi",
     "transit": "No public transit"
   },
   "ontario": {
     "major_employers": [
-      "Saint Alphonsus Medical Center \u2013 Ontario",
+      "Saint Alphonsus Medical Center – Ontario",
       "Ontario School District",
       "Malheur County government",
       "Agricultural processing industry"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario (in-city)",
-    "transit": "No public transit"
+    "nearest_hospital": "Saint Alphonsus Medical Center – Ontario (in-city)",
+    "transit": "No public transit",
+    "school_district": "Ontario School District",
+    "school_district_url": "https://www.ontario.k12.or.us",
+    "schools": [
+      {
+        "name": "Ontario High School",
+        "url": "https://ohs.ontario.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Four Rivers Cultural Center",
+        "url": "https://www.4rcc.com",
+        "desc": "A cultural museum honoring the Japanese American, Basque, Native American, and Hispanic heritage of the region"
+      },
+      {
+        "name": "Owyhee Reservoir & Lake Owyhee State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=27",
+        "desc": "A dramatic canyon reservoir in southeastern Oregon — boating, fishing, and some of Oregon's best petroglyph sites"
+      },
+      {
+        "name": "Nyssa Thunderegg Days Festival (15 min)",
+        "url": "https://www.nyssa-oregon.com",
+        "desc": "Annual festival celebrating Oregon's state rock — gem hunting and the thunderegg capital of the world"
+      },
+      {
+        "name": "Succor Creek State Natural Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=80",
+        "desc": "Remote canyon with remarkable geology, fossil beds, and semi-precious stone collecting"
+      },
+      {
+        "name": "Farewell Bend State Recreation Area (30 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=13",
+        "desc": "Historic Snake River crossing on the Oregon Trail — camping, fishing, and pioneer history"
+      }
+    ]
   },
   "pendleton": {
     "major_employers": [
@@ -564,7 +1332,42 @@
       "Wildhorse Resort & Casino (CTUIR)"
     ],
     "nearest_hospital": "CHI St. Anthony Hospital (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Pendleton School District",
+    "school_district_url": "https://www.pendleton.k12.or.us",
+    "schools": [
+      {
+        "name": "Pendleton High School",
+        "url": "https://phs.pendleton.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Pendleton Round-Up",
+        "url": "https://www.pendletonroundup.com",
+        "desc": "One of the West's most famous rodeos — held every September since 1910, with 50,000+ visitors"
+      },
+      {
+        "name": "Pendleton Underground Tours",
+        "url": "https://pendletonundergroundtours.org",
+        "desc": "Fascinating tours of the historic underground tunnels and rooms beneath downtown Pendleton"
+      },
+      {
+        "name": "Pendleton Woolen Mills",
+        "url": "https://www.pendleton-usa.com",
+        "desc": "The famous Oregon textile company — factory tours and a large retail outlet store"
+      },
+      {
+        "name": "Tamástslikt Cultural Institute",
+        "url": "https://www.tamastslikt.org",
+        "desc": "The cultural museum of the Confederated Tribes of the Umatilla Indian Reservation — remarkable exhibits"
+      },
+      {
+        "name": "Emigrant Springs State Heritage Area (30 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=11",
+        "desc": "Blue Mountains camping and Oregon Trail history site along the historic wagon road"
+      }
+    ]
   },
   "pilot_rock": {
     "major_employers": [
@@ -591,7 +1394,7 @@
       "Baker County",
       "Agriculture/ranching"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~45 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Baker City, ~45 mi",
     "transit": "No public transit"
   },
   "seneca": {
@@ -630,7 +1433,7 @@
       "Tourism (Sumpter Valley Dredge State Heritage Area)",
       "Mining history"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~30 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Baker City, ~30 mi",
     "transit": "No public transit"
   },
   "ukiah": {
@@ -669,7 +1472,7 @@
       "Baker County",
       "Agriculture/ranching"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Baker City, ~60 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Baker City, ~60 mi",
     "transit": "No public transit"
   },
   "vale": {
@@ -679,7 +1482,7 @@
       "Agriculture (onions, sugar beets)",
       "City of Vale"
     ],
-    "nearest_hospital": "Saint Alphonsus Medical Center \u2013 Ontario, ~20 mi",
+    "nearest_hospital": "Saint Alphonsus Medical Center – Ontario, ~20 mi",
     "transit": "No public transit"
   },
   "wallowa": {
@@ -709,7 +1512,42 @@
       "Ashland School District"
     ],
     "nearest_hospital": "Asante Ashland Community Hospital (in-city)",
-    "transit": "Rogue Valley Transportation District (RVTD) bus"
+    "transit": "Rogue Valley Transportation District (RVTD) bus",
+    "school_district": "Ashland School District",
+    "school_district_url": "https://www.ashland.k12.or.us",
+    "schools": [
+      {
+        "name": "Ashland High School",
+        "url": "https://ahs.ashland.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Oregon Shakespeare Festival",
+        "url": "https://www.osfashland.org",
+        "desc": "World-renowned theater company running February through October — 11 plays a season in 3 theaters"
+      },
+      {
+        "name": "Lithia Park",
+        "url": "https://www.ashland.or.us/page.asp?NavID=16234",
+        "desc": "A 100-acre park in downtown Ashland with gardens, fountains, duck ponds, and trails along Ashland Creek"
+      },
+      {
+        "name": "Mt. Ashland Ski Area",
+        "url": "https://www.mtashland.com",
+        "desc": "Community-owned ski area on the slopes of Mt. Ashland — skiing with views to Mt. Shasta in California"
+      },
+      {
+        "name": "Emigrant Lake Recreation Area",
+        "url": "https://www.jacksoncounty.org",
+        "desc": "County reservoir park with a 280-foot waterslide, swimming, boating, and camping"
+      },
+      {
+        "name": "Historic Railroad District & Downtown",
+        "url": "https://www.ashlanddowntown.com",
+        "desc": "Ashland's charming walkable downtown with over 200 shops, galleries, and restaurants"
+      }
+    ]
   },
   "bonanza": {
     "major_employers": [
@@ -758,7 +1596,42 @@
       "City of Central Point"
     ],
     "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~5 mi",
-    "transit": "Rogue Valley Transportation District (RVTD) bus"
+    "transit": "Rogue Valley Transportation District (RVTD) bus",
+    "school_district": "Central Point School District 6",
+    "school_district_url": "https://www.district6.org",
+    "schools": [
+      {
+        "name": "Crater High School",
+        "url": "https://chs.district6.org"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Table Rocks (5 min)",
+        "url": "https://www.blm.gov/visit/table-rocks",
+        "desc": "Upper and Lower Table Rocks — dramatic flat-topped volcanic buttes with wildflower meadows and panoramic views"
+      },
+      {
+        "name": "Crater Lake National Park (75 min)",
+        "url": "https://www.nps.gov/crla",
+        "desc": "The deepest lake in the USA — vivid blue water surrounded by volcanic caldera walls"
+      },
+      {
+        "name": "Crater Rock Museum",
+        "url": "https://www.craterrockmuseum.org",
+        "desc": "Exceptional mineral and fossil collection in Central Point — one of Oregon's best gem and rock museums"
+      },
+      {
+        "name": "Rogue Valley Wine Country",
+        "url": "https://www.rougevalleywineries.com",
+        "desc": "Multiple Jackson County wineries within 20 minutes"
+      },
+      {
+        "name": "Bear Creek Greenway",
+        "url": "https://www.rvcog.org",
+        "desc": "20-mile paved trail connecting Central Point to Ashland — great for cycling and walking"
+      }
+    ]
   },
   "chiloquin": {
     "major_employers": [
@@ -788,7 +1661,42 @@
       "City of Eagle Point"
     ],
     "nearest_hospital": "Asante Rogue Regional Medical Center, Medford, ~8 mi",
-    "transit": "Rogue Valley Transportation District (RVTD) bus"
+    "transit": "Rogue Valley Transportation District (RVTD) bus",
+    "school_district": "Eagle Point School District 9",
+    "school_district_url": "https://www.eaglept.k12.or.us",
+    "schools": [
+      {
+        "name": "Eagle Point High School",
+        "url": "https://ephs.eaglept.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Table Rocks (10 min)",
+        "url": "https://www.blm.gov/visit/table-rocks",
+        "desc": "Flat-topped volcanic buttes with wildflower meadows and views of the Rogue Valley"
+      },
+      {
+        "name": "Upper Rogue River & Recreation",
+        "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou",
+        "desc": "Fishing, rafting, and swimming on the Upper Rogue River upstream of Eagle Point"
+      },
+      {
+        "name": "Crater Lake National Park (60 min)",
+        "url": "https://www.nps.gov/crla",
+        "desc": "Oregon's most visited national park — within an hour from Eagle Point via Highway 62"
+      },
+      {
+        "name": "Rogue Valley Wine Country",
+        "url": "https://www.rougevalleywineries.com",
+        "desc": "Several wineries and tasting rooms within 15 minutes"
+      },
+      {
+        "name": "Lava Beds (day trip to California)",
+        "url": "https://www.nps.gov/labe",
+        "desc": "Lava Beds National Monument just south — lava tube caves, Native American rock art, and volcanic landscape"
+      }
+    ]
   },
   "elkton": {
     "major_employers": [
@@ -828,7 +1736,46 @@
       "AllCare Health"
     ],
     "nearest_hospital": "Asante Three Rivers Medical Center (in-city)",
-    "transit": "Josephine Community Transit (JCT) bus"
+    "transit": "Josephine Community Transit (JCT) bus",
+    "school_district": "Grants Pass School District",
+    "school_district_url": "https://www.grantspass.k12.or.us",
+    "schools": [
+      {
+        "name": "Grants Pass High School",
+        "url": "https://gphs.grantspass.k12.or.us"
+      },
+      {
+        "name": "North Valley High School",
+        "url": "https://nvhs.threerivers.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Hellgate Jetboat Excursions",
+        "url": "https://www.hellgate.com",
+        "desc": "Scenic and thrilling jetboat tours into the Hellgate Canyon of the Rogue River — the top tourist attraction"
+      },
+      {
+        "name": "Wildlife Images Rehabilitation Center",
+        "url": "https://www.wildlifeimages.org",
+        "desc": "Oregon's leading wildlife rehabilitation center — meet resident animals including bears, eagles, and mountain lions"
+      },
+      {
+        "name": "Riverside Park & Rogue River",
+        "url": "https://www.grantspassoregon.gov/parksrec",
+        "desc": "Grants Pass's beloved Caveman statue and Rogue River park — swimming beach in summer"
+      },
+      {
+        "name": "Oregon Caves National Monument (45 min)",
+        "url": "https://www.nps.gov/orca",
+        "desc": "Rare marble cave system in the Siskiyou Mountains — guided cave tours, and a historic lodge"
+      },
+      {
+        "name": "Rogue River Corridor & Scenic Byway",
+        "url": "https://www.blm.gov/visit/rogue-river-national-back-country-byway",
+        "desc": "The Wild & Scenic Rogue River corridor — rafting, fishing, and scenic road through the Rogue canyon"
+      }
+    ]
   },
   "jacksonville": {
     "major_employers": [
@@ -848,7 +1795,46 @@
       "BNSF Railway"
     ],
     "nearest_hospital": "Sky Lakes Medical Center (in-city)",
-    "transit": "Basin Transit Service"
+    "transit": "Basin Transit Service",
+    "school_district": "Klamath Falls City Schools",
+    "school_district_url": "https://www.kfalls.k12.or.us",
+    "schools": [
+      {
+        "name": "Mazama High School",
+        "url": "https://mhs.kfalls.k12.or.us"
+      },
+      {
+        "name": "Henley High School (Klamath County SD)",
+        "url": "https://hhs.kcsd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Crater Lake National Park (40 min)",
+        "url": "https://www.nps.gov/crla",
+        "desc": "The deepest lake in the USA — brilliant blue water in an ancient volcanic caldera — accessible via Klamath Falls"
+      },
+      {
+        "name": "Klamath Lake",
+        "url": "https://www.klamathcounty.org",
+        "desc": "Oregon's largest freshwater lake — outstanding birding (pelicans, egrets, herons), kayaking, and fishing"
+      },
+      {
+        "name": "Favell Museum",
+        "url": "https://favellmuseum.com",
+        "desc": "World-class museum of Western and Native American art — thousands of arrowheads and an outstanding collection"
+      },
+      {
+        "name": "Collier Memorial State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=7",
+        "desc": "Logging museum with pioneer equipment — the most comprehensive logging museum in Oregon"
+      },
+      {
+        "name": "Running Y Resort & Golf",
+        "url": "https://www.runningy.com",
+        "desc": "Resort destination with world-class golf, spa, and stunning views of Upper Klamath Lake"
+      }
+    ]
   },
   "lakeview": {
     "major_employers": [
@@ -858,7 +1844,42 @@
       "Abert Lake/agriculture"
     ],
     "nearest_hospital": "Lake District Hospital (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Lake County School District",
+    "school_district_url": "https://www.lake.k12.or.us",
+    "schools": [
+      {
+        "name": "Lakeview High School",
+        "url": "https://lhs.lake.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Hart Mountain National Antelope Refuge",
+        "url": "https://www.fws.gov/refuge/hart-mountain-national-antelope",
+        "desc": "Remote high-desert refuge with pronghorn antelope, big horn sheep, and wild horses — plus primitive hot springs"
+      },
+      {
+        "name": "Hunter's Hot Springs",
+        "url": "https://www.cityoflakeview.us",
+        "desc": "Geothermal hot springs right in Lakeview — Old Perpetual is one of the few constantly erupting geysers in the USA"
+      },
+      {
+        "name": "Goose Lake State Recreation Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=18",
+        "desc": "Large lake straddling the Oregon-California border — boating, fishing, and camping"
+      },
+      {
+        "name": "Oregon Outback Scenic Byway",
+        "url": "https://www.oregon.gov/odot/oregon-scenic-byways",
+        "desc": "140-mile scenic drive through the remote high desert — Fremont-Winema National Forest and wide open rangelands"
+      },
+      {
+        "name": "Paisley and Summer Lake Hot Springs (40 min)",
+        "url": "https://www.summerlakehotsprings.com",
+        "desc": "Remote natural hot springs beside Summer Lake in Oregon's outback — a hidden gem"
+      }
+    ]
   },
   "malin": {
     "major_employers": [
@@ -877,7 +1898,50 @@
       "Harry & David (1-800-Flowers subsidiary)"
     ],
     "nearest_hospital": "Asante Rogue Regional Medical Center (in-city)",
-    "transit": "Rogue Valley Transportation District (RVTD) bus network"
+    "transit": "Rogue Valley Transportation District (RVTD) bus network",
+    "school_district": "Medford School District",
+    "school_district_url": "https://www.medford.k12.or.us",
+    "schools": [
+      {
+        "name": "Medford Senior High School",
+        "url": "https://mhs.medford.k12.or.us"
+      },
+      {
+        "name": "South Medford High School",
+        "url": "https://smhs.medford.k12.or.us"
+      },
+      {
+        "name": "North Medford High School",
+        "url": "https://nmhs.medford.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Crater Lake National Park (75 min)",
+        "url": "https://www.nps.gov/crla",
+        "desc": "The deepest lake in the USA (1,943 ft) with famously clear, vivid blue water — a must-see Oregon landmark"
+      },
+      {
+        "name": "Table Rocks",
+        "url": "https://www.blm.gov/visit/table-rocks",
+        "desc": "Upper and Lower Table Rocks — flat-topped volcanic buttes with wildflower meadows and panoramic views"
+      },
+      {
+        "name": "Harry & David (flagship store)",
+        "url": "https://www.harryanddavid.com",
+        "desc": "The famous mail-order fruit company's store in Medford — tours, tastings, and gourmet Oregon products"
+      },
+      {
+        "name": "Bear Creek Greenway Trail",
+        "url": "https://www.rvcog.org/index.asp?SEC=B3EBC2B2-5EC7-4E07-9FCC-85D7A5E2DEA7",
+        "desc": "A 20-mile paved trail from Ashland to Central Point along Bear Creek — cycling, walking, and birdwatching"
+      },
+      {
+        "name": "Rogue Valley Wine Country",
+        "url": "https://www.rougevalleywineries.com",
+        "desc": "Dozens of wineries within 30 minutes of Medford — Syrah, Merlot, and Cabernet Sauvignon"
+      }
+    ]
   },
   "merrill": {
     "major_employers": [
@@ -967,7 +2031,42 @@
       "Roseburg Forest Products"
     ],
     "nearest_hospital": "Mercy Medical Center Roseburg (in-city)",
-    "transit": "Umpqua Transit bus service"
+    "transit": "Umpqua Transit bus service",
+    "school_district": "Roseburg School District",
+    "school_district_url": "https://www.roseburg.k12.or.us",
+    "schools": [
+      {
+        "name": "Roseburg High School",
+        "url": "https://rhs.roseburg.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Wildlife Safari",
+        "url": "https://www.wildlifesafari.net",
+        "desc": "Oregon's famous drive-through wildlife park — over 500 animals roam 600 acres, including lions, bears, and rhinos"
+      },
+      {
+        "name": "Umpqua Valley Wine Trail",
+        "url": "https://www.umpquavalleywineries.org",
+        "desc": "Oregon's oldest AVA — a growing wine region producing Tempranillo, Cabernet Sauvignon, and Pinot Noir"
+      },
+      {
+        "name": "North Umpqua River & Watson Falls (40 min)",
+        "url": "https://www.fs.usda.gov/recarea/umpqua/recarea/?recid=20832",
+        "desc": "Stunning river canyon and Oregon's second-tallest waterfall (272 ft) east of Roseburg"
+      },
+      {
+        "name": "Douglas County Museum",
+        "url": "https://www.co.douglas.or.us/museum",
+        "desc": "Regional history and natural science museum in the Umpqua Valley"
+      },
+      {
+        "name": "Susan Creek (Indian Mounds) Recreation Area",
+        "url": "https://www.blm.gov/visit/susan-creek-recreation-area",
+        "desc": "BLM river park on the North Umpqua — trails, swimming holes, and ancient Native American earthworks"
+      }
+    ]
   },
   "shady_cove": {
     "major_employers": [
@@ -1055,7 +2154,42 @@
       "Retail/tourism"
     ],
     "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~22 mi",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Sandy School District",
+    "school_district_url": "https://www.sandy.k12.or.us",
+    "schools": [
+      {
+        "name": "Sandy High School",
+        "url": "https://shs.sandy.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Mt. Hood (20 min)",
+        "url": "https://www.timberlinelodge.com",
+        "desc": "Sandy is the gateway to Mt. Hood — skiing, hiking, and the iconic Timberline Lodge"
+      },
+      {
+        "name": "Mt. Hood Skibowl (20 min)",
+        "url": "https://www.skibowl.com",
+        "desc": "Ski area and year-round adventure park with summer zip lines, alpine slides, and go-karts"
+      },
+      {
+        "name": "Jonsrud Viewpoint",
+        "url": "https://www.sandyoregon.gov/parks",
+        "desc": "A classic Sandy River Valley viewpoint with Mt. Hood views and wildflower meadows"
+      },
+      {
+        "name": "Sandy Salmon Heritage Site",
+        "url": "https://www.sandyoregon.gov",
+        "desc": "Sandy River access and salmon viewing site — coho and Chinook are visible in season"
+      },
+      {
+        "name": "Historic Sandy Town Center",
+        "url": "https://www.sandyoregon.gov",
+        "desc": "Small-town main street with unique shops, restaurants, and the Sandy Mountain Festival"
+      }
+    ]
   },
   "scappoose": {
     "major_employers": [
@@ -1075,7 +2209,42 @@
       "Retail/commercial"
     ],
     "nearest_hospital": "Providence Newberg Medical Center, Newberg, ~10 mi",
-    "transit": "TriMet bus routes (Route 93)"
+    "transit": "TriMet bus routes (Route 93)",
+    "school_district": "Sherwood School District",
+    "school_district_url": "https://www.sherwood.k12.or.us",
+    "schools": [
+      {
+        "name": "Sherwood High School",
+        "url": "https://shs.sherwood.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Sherwood Robin Hood Festival",
+        "url": "https://www.robinhoodfestival.com",
+        "desc": "Annual summer festival celebrating Sherwood's unique name with archery, jousting, and medieval fun"
+      },
+      {
+        "name": "North Tualatin Mountains / Chehalem Mountains",
+        "url": "https://www.oregonmetro.gov",
+        "desc": "Forested foothills great for hiking and mountain biking — multiple trail access points near Sherwood"
+      },
+      {
+        "name": "Sherwood Community Sports Complex",
+        "url": "https://www.sherwoodoregon.gov/parksrec",
+        "desc": "Major sports facility with multi-use fields, courts, and an indoor sports hall"
+      },
+      {
+        "name": "Willamette Valley Wine Country (30 min)",
+        "url": "https://www.willamettewines.com",
+        "desc": "Dozens of Pinot Noir wineries within a short drive south of Sherwood"
+      },
+      {
+        "name": "Tonquin Natural Area",
+        "url": "https://www.oregonmetro.gov/parks/tonquin-natural-area",
+        "desc": "Over 300 acres of native habitat, wetlands, and trails along the Tualatin River corridor"
+      }
+    ]
   },
   "st._helens": {
     "major_employers": [
@@ -1085,7 +2254,42 @@
       "Paper/industrial"
     ],
     "nearest_hospital": "PeaceHealth Southwest Medical Center, Vancouver WA, ~35 mi",
-    "transit": "Columbia Area Transit (CATS) bus service"
+    "transit": "Columbia Area Transit (CATS) bus service",
+    "school_district": "St. Helens School District",
+    "school_district_url": "https://www.sthelens.k12.or.us",
+    "schools": [
+      {
+        "name": "St. Helens High School",
+        "url": "https://shs.sthelens.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Columbia City & Historic District",
+        "url": "https://www.sthelensoregon.gov",
+        "desc": "St. Helens' Old Town on the Columbia River — the filming location for 'Halloweentown' and other movies"
+      },
+      {
+        "name": "Spirit of Halloweentown Festival",
+        "url": "https://www.spiritofhallowneentown.com",
+        "desc": "Annual October celebration of St. Helens as 'Halloweentown' with parades, haunted attractions, and events"
+      },
+      {
+        "name": "Veterans Memorial Park & Columbia River",
+        "url": "https://www.sthelensoregon.gov/parks",
+        "desc": "Columbia River waterfront park with stunning views of Mt. Rainier on clear days"
+      },
+      {
+        "name": "Scappoose Bay Marine Park",
+        "url": "https://www.co.columbia.or.us",
+        "desc": "Paddle, kayak, and watch birds on scenic Scappoose Bay, a Columbia River side channel"
+      },
+      {
+        "name": "Martin's Gorge (Columbia County)",
+        "url": "https://www.columbiacountyor.gov",
+        "desc": "Peaceful county park on the Scappoose Creek with picnicking and wildlife viewing"
+      }
+    ]
   },
   "tigard": {
     "major_employers": [
@@ -1095,7 +2299,42 @@
       "Retail (Washington Square area)"
     ],
     "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~6 mi",
-    "transit": "TriMet bus routes (Routes 76, 78, 94)"
+    "transit": "TriMet bus routes (Routes 76, 78, 94)",
+    "school_district": "Tigard-Tualatin School District",
+    "school_district_url": "https://www.ttsd.k12.or.us",
+    "schools": [
+      {
+        "name": "Tigard High School",
+        "url": "https://ths.ttsd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Fanno Creek Regional Trail",
+        "url": "https://www.oregonmetro.gov/parks/fanno-creek-regional-trail",
+        "desc": "An 18-mile paved greenway trail through Tigard, Beaverton, and Portland along Fanno Creek"
+      },
+      {
+        "name": "Washington Square Mall",
+        "url": "https://www.shopwashingtonsquare.com",
+        "desc": "Major indoor mall in Tigard with over 150 stores and restaurants"
+      },
+      {
+        "name": "Cook Park",
+        "url": "https://www.tigard-or.gov/residents/parks/parks.php",
+        "desc": "Spacious Tualatin River park with boat launch, picnic areas, and sports fields"
+      },
+      {
+        "name": "Metzger Park",
+        "url": "https://www.tigard-or.gov",
+        "desc": "Neighborhood park popular for disc golf, playground, and wooded walks"
+      },
+      {
+        "name": "Progress Ridge TownSquare",
+        "url": "https://www.progressridgetownsquare.com",
+        "desc": "Outdoor shopping and dining plaza with a seasonal ice rink and community events"
+      }
+    ]
   },
   "troutdale": {
     "major_employers": [
@@ -1105,7 +2344,42 @@
       "FedEx distribution"
     ],
     "nearest_hospital": "Legacy Mount Hood Medical Center, Gresham, ~4 mi",
-    "transit": "TriMet bus routes"
+    "transit": "TriMet bus routes",
+    "school_district": "Reynolds School District",
+    "school_district_url": "https://www.rsd7.net",
+    "schools": [
+      {
+        "name": "Reynolds High School",
+        "url": "https://rhs.rsd7.net"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Multnomah Falls",
+        "url": "https://www.multnomahfallslodge.com",
+        "desc": "Oregon's iconic 620-foot waterfall — the most-visited natural site in the Pacific Northwest, 10 minutes from Troutdale"
+      },
+      {
+        "name": "Historic Columbia River Highway",
+        "url": "https://www.oregon.gov/odot/hcrh/pages/index.aspx",
+        "desc": "The gateway to the Historic Columbia River Highway begins in Troutdale — waterfalls, viewpoints, and scenic drives"
+      },
+      {
+        "name": "Portland Women's Forum State Scenic Viewpoint",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=119",
+        "desc": "Sweeping viewpoint over the Columbia River Gorge and Crown Point — one of the best Gorge panoramas"
+      },
+      {
+        "name": "Sandy River Delta",
+        "url": "https://www.oregonmetro.gov/parks/sandy-river-delta",
+        "desc": "1,400-acre natural area at the confluence of the Sandy and Columbia rivers — off-leash dog area and great birding"
+      },
+      {
+        "name": "Glenn Otto Community Park",
+        "url": "https://www.troutdaleoregon.gov/park/glenn-otto-community-park",
+        "desc": "Sandy River beach park in Troutdale — swimming, picnicking, and river access"
+      }
+    ]
   },
   "tualatin": {
     "major_employers": [
@@ -1115,7 +2389,42 @@
       "Tuality Healthcare"
     ],
     "nearest_hospital": "Providence St. Vincent Medical Center, Portland, ~8 mi",
-    "transit": "TriMet bus routes; WES Commuter Rail (Tualatin Station)"
+    "transit": "TriMet bus routes; WES Commuter Rail (Tualatin Station)",
+    "school_district": "Tigard-Tualatin School District",
+    "school_district_url": "https://www.ttsd.k12.or.us",
+    "schools": [
+      {
+        "name": "Tualatin High School",
+        "url": "https://tuhs.ttsd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Tualatin Community Park",
+        "url": "https://www.tualatinoregon.gov/parks",
+        "desc": "A large lakeside park with an amphitheater, splash pad, and boardwalk along Tualatin Lake"
+      },
+      {
+        "name": "Tualatin River National Wildlife Refuge",
+        "url": "https://www.fws.gov/refuge/tualatin-river",
+        "desc": "Wetland habitat refuge with wildlife viewing and a public fishing pier — one of the few urban national refuges"
+      },
+      {
+        "name": "Meridian Park",
+        "url": "https://www.tualatinoregon.gov/parks",
+        "desc": "Sports complex with soccer, baseball, and trails connecting to the Tualatin River Greenway"
+      },
+      {
+        "name": "Tualatin Farmers Market",
+        "url": "https://www.tualatinfarmersmarket.com",
+        "desc": "Thursday evening market in the heart of Tualatin with local farm produce and food carts"
+      },
+      {
+        "name": "Bridgeport Village",
+        "url": "https://www.bridgeportvillage.com",
+        "desc": "Upscale open-air shopping and dining destination with national and local retailers"
+      }
+    ]
   },
   "vernonia": {
     "major_employers": [
@@ -1135,7 +2444,42 @@
       "Retail/professional services"
     ],
     "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~5 mi",
-    "transit": "TriMet bus routes"
+    "transit": "TriMet bus routes",
+    "school_district": "West Linn-Wilsonville School District",
+    "school_district_url": "https://www.wlwv.k12.or.us",
+    "schools": [
+      {
+        "name": "West Linn High School",
+        "url": "https://wlhs.wlwv.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Willamette Falls",
+        "url": "https://www.willamettefalls.org",
+        "desc": "The most powerful waterfall by volume in the Northwest — a spectacular natural feature on the Willamette River"
+      },
+      {
+        "name": "Camassia Natural Area",
+        "url": "https://www.natureconservancy.org",
+        "desc": "An ancient basalt upland preserve ablaze with camas wildflowers in spring — managed by The Nature Conservancy"
+      },
+      {
+        "name": "Mary S. Young State Recreation Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=147",
+        "desc": "A forested Willamette River park with trails, picnic areas, and off-leash dog area"
+      },
+      {
+        "name": "Old Willamette Historic District",
+        "url": "https://www.westlinnoregon.gov",
+        "desc": "West Linn's historic downtown along the Willamette with shops, restaurants, and river views"
+      },
+      {
+        "name": "Wilderness Park Trail System",
+        "url": "https://www.westlinnoregon.gov/parksrec",
+        "desc": "350+ acres of forested trails connecting multiple West Linn neighborhoods"
+      }
+    ]
   },
   "wilsonville": {
     "major_employers": [
@@ -1145,7 +2489,42 @@
       "Xerox Corporation"
     ],
     "nearest_hospital": "Providence Willamette Falls Medical Center, Oregon City, ~12 mi",
-    "transit": "TriMet bus routes; WES Commuter Rail (Wilsonville Station); SMART bus"
+    "transit": "TriMet bus routes; WES Commuter Rail (Wilsonville Station); SMART bus",
+    "school_district": "West Linn-Wilsonville School District",
+    "school_district_url": "https://www.wlwv.k12.or.us",
+    "schools": [
+      {
+        "name": "Wilsonville High School",
+        "url": "https://wvhs.wlwv.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Villebois Village",
+        "url": "https://www.villeboisliving.com",
+        "desc": "A beautiful planned community with parks, pathways, and a town center — great for a walk"
+      },
+      {
+        "name": "Memorial Park",
+        "url": "https://www.wilsonvilleoregon.gov/parks",
+        "desc": "Wilsonville's largest park with sports fields, playgrounds, and trails"
+      },
+      {
+        "name": "Murase Associates Plaza",
+        "url": "https://www.wilsonvilleoregon.gov",
+        "desc": "Scenic riverfront plaza on the Willamette with public art and boat access"
+      },
+      {
+        "name": "Boeckman Creek Primary Trail",
+        "url": "https://www.wilsonvilleoregon.gov/parks",
+        "desc": "A pleasant paved trail through the heart of Wilsonville for walking and cycling"
+      },
+      {
+        "name": "SMART (South Metro Area Regional Transit)",
+        "url": "https://www.ridesmart.com",
+        "desc": "Free bus service connecting Wilsonville to Tualatin, Tigard, and the Portland metro"
+      }
+    ]
   },
   "wood_village": {
     "major_employers": [
@@ -1155,7 +2534,42 @@
       "Retail (82nd Ave/NE Halsey corridor)"
     ],
     "nearest_hospital": "Legacy Mount Hood Medical Center, Gresham, ~3 mi",
-    "transit": "TriMet bus routes"
+    "transit": "TriMet bus routes",
+    "school_district": "Reynolds School District",
+    "school_district_url": "https://www.rsd7.net",
+    "schools": [
+      {
+        "name": "Reynolds High School",
+        "url": "https://rhs.rsd7.net"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Columbia Gorge Express (nearby)",
+        "url": "https://columbiagorgeexpress.com",
+        "desc": "Hop on the Gorge Express bus for waterfall hikes without the parking hassle"
+      },
+      {
+        "name": "Multnomah Falls (15 min)",
+        "url": "https://www.multnomahfallslodge.com",
+        "desc": "Oregon's iconic 620-foot waterfall — easily reached from the Gorge area"
+      },
+      {
+        "name": "Sandy River Delta",
+        "url": "https://www.oregonmetro.gov/parks/sandy-river-delta",
+        "desc": "Wide natural area at the Sandy-Columbia confluence, popular for walking and dogs"
+      },
+      {
+        "name": "Blue Lake Regional Park",
+        "url": "https://www.oregonmetro.gov/parks/blue-lake-regional-park",
+        "desc": "Swimming and fishing at a popular Metro regional park"
+      },
+      {
+        "name": "Historic Columbia River Highway",
+        "url": "https://www.oregon.gov/odot/hcrh/pages/index.aspx",
+        "desc": "Gateway to Oregon's most famous scenic drive and waterfalls"
+      }
+    ]
   },
   "adair_village": {
     "major_employers": [
@@ -1175,7 +2589,50 @@
       "NORPAC Foods"
     ],
     "nearest_hospital": "Samaritan Albany General Hospital (in-city)",
-    "transit": "Albany Transit System (ATS) fixed-route bus"
+    "transit": "Albany Transit System (ATS) fixed-route bus",
+    "school_district": "Greater Albany Public Schools",
+    "school_district_url": "https://www.albanyschools.org",
+    "schools": [
+      {
+        "name": "South Albany High School",
+        "url": "https://sahs.albanyschools.org"
+      },
+      {
+        "name": "West Albany High School",
+        "url": "https://wahs.albanyschools.org"
+      },
+      {
+        "name": "North Albany High School",
+        "url": "https://nah.albanyschools.org"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Covered Bridges of Linn County",
+        "url": "https://www.linncountyoregon.gov/visitors/page/covered-bridges",
+        "desc": "Albany is the gateway to Linn County's covered bridges — the highest concentration in the western US"
+      },
+      {
+        "name": "Albany Historic Districts",
+        "url": "https://www.cityofalbany.net/departments/community-development/planning/historic-districts",
+        "desc": "Four designated historic districts with over 700 Victorian and Craftsman-era structures — free walking tours"
+      },
+      {
+        "name": "Timber-Linn Memorial Park",
+        "url": "https://www.cityofalbany.net/departments/community-services/parks-recreation/parks-facilities/timber-linn-park",
+        "desc": "The largest park in Albany with a boat ramp, disc golf, off-leash dog area, and playground"
+      },
+      {
+        "name": "Albany World Timber Championships",
+        "url": "https://www.timbercarnivals.org",
+        "desc": "Annual summer festival celebrating Oregon's timber heritage with log-rolling, speed climbing, and more"
+      },
+      {
+        "name": "Linn County Historical Museum",
+        "url": "https://linnhistorical.org",
+        "desc": "County history museum with pioneer artifacts, Kalapuya displays, and covered bridge exhibits"
+      }
+    ]
   },
   "amity": {
     "major_employers": [
@@ -1243,7 +2700,46 @@
       "Hewlett-Packard"
     ],
     "nearest_hospital": "Good Samaritan Regional Medical Center (in-city)",
-    "transit": "Corvallis Transit System (CTS) fixed-route bus"
+    "transit": "Corvallis Transit System (CTS) fixed-route bus",
+    "school_district": "Corvallis School District",
+    "school_district_url": "https://www.corvallis.k12.or.us",
+    "schools": [
+      {
+        "name": "Corvallis High School",
+        "url": "https://chs.corvallis.k12.or.us"
+      },
+      {
+        "name": "Crescent Valley High School",
+        "url": "https://cvhs.corvallis.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Oregon State University Campus",
+        "url": "https://oregonstate.edu",
+        "desc": "A beautiful 420-acre campus — visit the Memorial Union, OSU gardens, and Reser Stadium"
+      },
+      {
+        "name": "Osborn Aquatic Center",
+        "url": "https://www.corvallisoregon.gov/parks",
+        "desc": "Award-winning public aquatic facility with lap pools, water slides, and a lazy river"
+      },
+      {
+        "name": "Peavy Arboretum",
+        "url": "https://cf.forestry.oregonstate.edu/peavy-arboretum",
+        "desc": "A 40-acre arboretum in the MacDonald-Dunn Forest — peaceful trails among named tree collections"
+      },
+      {
+        "name": "Marys Peak (25 min)",
+        "url": "https://www.fs.usda.gov/recarea/siuslaw/recarea/?recid=42741",
+        "desc": "The highest peak in the Oregon Coast Range — panoramic views from the Willamette Valley to the ocean"
+      },
+      {
+        "name": "Corvallis Farmers Market",
+        "url": "https://www.corvallisfarmersmarket.com",
+        "desc": "One of Oregon's top farmers markets — Saturday mornings downtown with produce, food, and crafts"
+      }
+    ]
   },
   "cottage_grove": {
     "major_employers": [
@@ -1253,7 +2749,42 @@
       "Agriculture"
     ],
     "nearest_hospital": "PeaceHealth Cottage Grove Community Hospital (in-city); Sacred Heart Eugene ~22 mi",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "South Lane School District",
+    "school_district_url": "https://www.slane.k12.or.us",
+    "schools": [
+      {
+        "name": "Cottage Grove High School",
+        "url": "https://cg.slane.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Covered Bridges of Lane County",
+        "url": "https://coveredbridges.lanecounty.org",
+        "desc": "Cottage Grove is the 'Covered Bridge Capital of Oregon' — seven historic covered bridges in the area"
+      },
+      {
+        "name": "Dorena Lake & Reservoir",
+        "url": "https://www.recreation.gov",
+        "desc": "Reservoir park with boating, waterskiing, swimming, and camping in a forested setting"
+      },
+      {
+        "name": "Row River Trail",
+        "url": "https://www.blm.gov/visit/row-river-national-recreation-trail",
+        "desc": "A 15-mile trail along a historic railroad grade passing through covered bridges and past Dorena Lake"
+      },
+      {
+        "name": "Bohemia Mining District (day trip)",
+        "url": "https://www.bohemiamining.org",
+        "desc": "Historic gold mining area in the Calapooya Mountains above Cottage Grove — scenic backcountry roads"
+      },
+      {
+        "name": "Historic Downtown Cottage Grove",
+        "url": "https://www.cottagegrovechamber.com",
+        "desc": "Charming small-town main street that served as the filming location for 'Animal House'"
+      }
+    ]
   },
   "creswell": {
     "major_employers": [
@@ -1272,7 +2803,42 @@
       "Retail"
     ],
     "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
-    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+    "transit": "Cherriots (Salem Area Mass Transit) bus service",
+    "school_district": "Dallas School District",
+    "school_district_url": "https://www.dallas.k12.or.us",
+    "schools": [
+      {
+        "name": "Dallas High School",
+        "url": "https://dhs.dallas.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Basket Slough National Wildlife Refuge",
+        "url": "https://www.fws.gov/refuge/basket-slough",
+        "desc": "One of the few remaining Willamette Valley wetland/prairie habitats — exceptional spring birdwatching"
+      },
+      {
+        "name": "Dallas Aquatic Center",
+        "url": "https://www.cityofdallas.net/parksrec",
+        "desc": "Community pool and water recreation facility"
+      },
+      {
+        "name": "Riverview Park",
+        "url": "https://www.cityofdallas.net/parksrec",
+        "desc": "Peaceful park along Rickreall Creek with walking paths and picnic areas"
+      },
+      {
+        "name": "Willamette Valley Wine Country (20 min)",
+        "url": "https://www.willamettewines.com",
+        "desc": "Polk County wine country with numerous tasting rooms"
+      },
+      {
+        "name": "Elkins Ranch Vineyard",
+        "url": "https://www.elkinsranch.com",
+        "desc": "Family vineyard producing Pinot Noir in the heart of Polk County"
+      }
+    ]
   },
   "dayton": {
     "major_employers": [
@@ -1330,7 +2896,58 @@
       "Hynix (SK hynix; semiconductor)"
     ],
     "nearest_hospital": "PeaceHealth Sacred Heart Medical Center at RiverBend (in-city)",
-    "transit": "Lane Transit District (LTD) extensive bus network; EmX BRT lines"
+    "transit": "Lane Transit District (LTD) extensive bus network; EmX BRT lines",
+    "school_district": "Eugene School District 4J",
+    "school_district_url": "https://www.4j.lane.edu",
+    "schools": [
+      {
+        "name": "South Eugene High School",
+        "url": "https://sehs.4j.lane.edu"
+      },
+      {
+        "name": "North Eugene High School",
+        "url": "https://nehs.4j.lane.edu"
+      },
+      {
+        "name": "Sheldon High School",
+        "url": "https://shs.4j.lane.edu"
+      },
+      {
+        "name": "Churchill High School",
+        "url": "https://chs.4j.lane.edu"
+      },
+      {
+        "name": "Willamette High School (Bethel SD)",
+        "url": "https://whs.bethel.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Hayward Field (University of Oregon)",
+        "url": "https://haywardfield.com",
+        "desc": "The world's premier track and field venue — rebuilt in 2020, home of the Olympic Trials"
+      },
+      {
+        "name": "Pre's Trail",
+        "url": "https://www.eugene-or.gov/facilities/facility/details/Pre-s-Trail-98",
+        "desc": "A scenic 4-mile recreational path along the Willamette River, named after running legend Steve Prefontaine"
+      },
+      {
+        "name": "Oregon Museum of Natural and Cultural History (UO)",
+        "url": "https://natural-history.uoregon.edu",
+        "desc": "University of Oregon's natural history and cultural museum with Oregon artifacts and saber-toothed tiger skeleton"
+      },
+      {
+        "name": "Saturday Market",
+        "url": "https://www.eugenesaturdaymarket.org",
+        "desc": "The longest continuously running outdoor arts and crafts fair in the USA — open Saturdays April–November"
+      },
+      {
+        "name": "Alton Baker Park & Willamette River",
+        "url": "https://www.eugene-or.gov/facilities/facility/details/Alton-Baker-Park-35",
+        "desc": "250-acre park along the Willamette with trails, Autzen Stadium, and Science Factory"
+      }
+    ]
   },
   "falls_city": {
     "major_employers": [
@@ -1349,7 +2966,42 @@
       "Peace Harbor Medical Center"
     ],
     "nearest_hospital": "Peace Harbor Medical Center (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Siuslaw School District",
+    "school_district_url": "https://www.siuslaw.k12.or.us",
+    "schools": [
+      {
+        "name": "Siuslaw High School",
+        "url": "https://shs.siuslaw.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Sea Lion Caves",
+        "url": "https://www.sealioncaves.com",
+        "desc": "The largest sea cave in America — a natural grotto where hundreds of Steller sea lions live year-round"
+      },
+      {
+        "name": "Oregon Dunes National Recreation Area",
+        "url": "https://www.fs.usda.gov/recarea/siuslaw/recarea/?recid=42888",
+        "desc": "The largest coastal sand dune system in North America — ATV riding, hiking, and sandboarding"
+      },
+      {
+        "name": "Heceta Head Lighthouse & B&B",
+        "url": "https://hecetalighthouse.com",
+        "desc": "Oregon's most photographed lighthouse — a working historic lighthouse with an acclaimed B&B"
+      },
+      {
+        "name": "Old Town Florence",
+        "url": "https://www.florenceoregon.com/old-town",
+        "desc": "Charming waterfront district on the Siuslaw River with shops, galleries, and fresh seafood restaurants"
+      },
+      {
+        "name": "Darlingtonia State Natural Site",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=109",
+        "desc": "The only Oregon state park dedicated to a plant — carnivorous cobra lily (Darlingtonia) bogs"
+      }
+    ]
   },
   "gates": {
     "major_employers": [
@@ -1418,7 +3070,42 @@
       "Hops industry"
     ],
     "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
-    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+    "transit": "Cherriots (Salem Area Mass Transit) bus service",
+    "school_district": "Central School District",
+    "school_district_url": "https://www.central.k12.or.us",
+    "schools": [
+      {
+        "name": "Central High School",
+        "url": "https://chs.central.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Riverview Park & Willamette River",
+        "url": "https://www.ci.independence.or.us/parks",
+        "desc": "Scenic Willamette River frontage with park, boat ramp, and summer swimming"
+      },
+      {
+        "name": "Independence Hop & Heritage Festival",
+        "url": "https://www.ci.independence.or.us",
+        "desc": "Annual fall festival celebrating Independence's history as the hop capital of the Willamette Valley"
+      },
+      {
+        "name": "Hop & Heritage Museum",
+        "url": "https://www.ci.independence.or.us",
+        "desc": "Local history museum in downtown Independence focusing on the area's agricultural heritage"
+      },
+      {
+        "name": "Basket Slough NWR (10 min)",
+        "url": "https://www.fws.gov/refuge/basket-slough",
+        "desc": "Wetland and upland habitat for migratory birds — one of the best birding spots in the Willamette Valley"
+      },
+      {
+        "name": "Willamette Valley wine trails (30 min)",
+        "url": "https://www.willamettewines.com",
+        "desc": "Polk County wineries are a short drive away"
+      }
+    ]
   },
   "jefferson": {
     "major_employers": [
@@ -1448,7 +3135,42 @@
       "Roth's Fresh Markets"
     ],
     "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~4 mi",
-    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+    "transit": "Cherriots (Salem Area Mass Transit) bus service",
+    "school_district": "Salem-Keizer School District",
+    "school_district_url": "https://www.salkeiz.k12.or.us",
+    "schools": [
+      {
+        "name": "McNary High School",
+        "url": "https://mcnaryhs.salkeiz.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Willamette Mission State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=128",
+        "desc": "Site of Jason Lee's 1834 Methodist Mission — largest black cottonwood tree in the world grows here"
+      },
+      {
+        "name": "Wheatland Ferry",
+        "url": "https://www.co.yamhill.or.us/parks/wheatland_ferry.shtml",
+        "desc": "Free cable ferry across the Willamette — one of Oregon's oldest and most charming river crossings"
+      },
+      {
+        "name": "Riverfront City Park, Salem (5 min)",
+        "url": "https://www.cityofsalem.net/Pages/Riverfront-Park.aspx",
+        "desc": "Willamette River park with the Eco Earth Globe and Carousel — great for families"
+      },
+      {
+        "name": "Volcano Vineyards",
+        "url": "https://www.volcanovineyards.com",
+        "desc": "Willamette Valley winery with a tasting room in the Keizer area"
+      },
+      {
+        "name": "Oregon State Capitol (5 min)",
+        "url": "https://www.oregonlegislature.gov/capitolhistorygateway",
+        "desc": "Oregon's landmark capitol building is just a few minutes south in Salem"
+      }
+    ]
   },
   "lafayette": {
     "major_employers": [
@@ -1468,7 +3190,42 @@
       "Linn County"
     ],
     "nearest_hospital": "Samaritan Lebanon Community Hospital (in-city)",
-    "transit": "No public transit (Linn County Senior Services transport)"
+    "transit": "No public transit (Linn County Senior Services transport)",
+    "school_district": "Lebanon Community School District",
+    "school_district_url": "https://www.lebanon.k12.or.us",
+    "schools": [
+      {
+        "name": "Lebanon High School",
+        "url": "https://lhs.lebanon.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Cascades Gateway Park & Linn County Fairgrounds",
+        "url": "https://www.linncountyoregon.gov",
+        "desc": "County fairgrounds hosting the Linn County Fair and major community events"
+      },
+      {
+        "name": "Waterloo County Park",
+        "url": "https://www.linncountyoregon.gov/parks",
+        "desc": "Scenic South Santiam River park with swimming, fishing, picnicking, and camping"
+      },
+      {
+        "name": "Lebanon Strawberry Festival",
+        "url": "https://www.labfd.org",
+        "desc": "Annual June festival celebrating Lebanon's strawberry heritage — one of Oregon's oldest community festivals"
+      },
+      {
+        "name": "Linn County Historical Museum (Albany, 20 min)",
+        "url": "https://linnhistorical.org",
+        "desc": "Regional history museum with pioneer and Kalapuya exhibits"
+      },
+      {
+        "name": "Sweet Home (20 min) — Foster Reservoir",
+        "url": "https://www.recreation.gov",
+        "desc": "Reservoir park at the base of the Cascades — boating, fishing, and summer swimming"
+      }
+    ]
   },
   "lowell": {
     "major_employers": [
@@ -1498,7 +3255,42 @@
       "Yamhill County"
     ],
     "nearest_hospital": "Willamette Valley Medical Center (in-city)",
-    "transit": "Yamhill County Transit (YCT) fixed-route bus"
+    "transit": "Yamhill County Transit (YCT) fixed-route bus",
+    "school_district": "McMinnville School District",
+    "school_district_url": "https://www.msd.k12.or.us",
+    "schools": [
+      {
+        "name": "McMinnville High School",
+        "url": "https://mhs.msd.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Evergreen Aviation & Space Museum",
+        "url": "https://www.evergreenmuseum.org",
+        "desc": "Howard Hughes's famous Spruce Goose flying boat and Space Shuttle replica — a world-class aviation museum"
+      },
+      {
+        "name": "Willamette Valley Wine Country",
+        "url": "https://www.willamettewines.com",
+        "desc": "McMinnville is the heart of Oregon wine country — more than 30 tasting rooms within easy reach"
+      },
+      {
+        "name": "Third Street (Historic Downtown)",
+        "url": "https://www.downtownmcminnville.com",
+        "desc": "Award-winning historic main street with local restaurants, wine bars, galleries, and boutiques"
+      },
+      {
+        "name": "International Pinot Noir Celebration",
+        "url": "https://www.ipnc.org",
+        "desc": "Celebrated annual wine event (late July) drawing top winemakers from around the world"
+      },
+      {
+        "name": "Linfield University",
+        "url": "https://www.linfield.edu",
+        "desc": "A beautiful private liberal arts campus in the heart of McMinnville, open for campus visits"
+      }
+    ]
   },
   "mill_city": {
     "major_employers": [
@@ -1528,7 +3320,42 @@
       "Retail"
     ],
     "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~18 mi",
-    "transit": "Cherriots (Salem Area Mass Transit) bus service"
+    "transit": "Cherriots (Salem Area Mass Transit) bus service",
+    "school_district": "Central School District",
+    "school_district_url": "https://www.central.k12.or.us",
+    "schools": [
+      {
+        "name": "Central High School",
+        "url": "https://chs.central.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Western Oregon University",
+        "url": "https://www.wou.edu",
+        "desc": "Small liberal arts university in downtown Monmouth — a community anchor for arts, athletics, and events"
+      },
+      {
+        "name": "Paul Jensen Arctic Museum (WOU)",
+        "url": "https://www.wou.edu/armchair",
+        "desc": "Unique museum on the WOU campus dedicated to Arctic and sub-Arctic art and culture"
+      },
+      {
+        "name": "Talmadge Mountain Trail",
+        "url": "https://www.ci.monmouth.or.us/parks",
+        "desc": "Forested hiking trail above Monmouth with valley views"
+      },
+      {
+        "name": "Basket Slough NWR (10 min)",
+        "url": "https://www.fws.gov/refuge/basket-slough",
+        "desc": "Willamette Valley wetland preserve — excellent birding in spring"
+      },
+      {
+        "name": "Historic Downtown Monmouth",
+        "url": "https://www.ci.monmouth.or.us",
+        "desc": "Small walkable downtown with parks, local shops, and a farmers market"
+      }
+    ]
   },
   "monroe": {
     "major_employers": [
@@ -1557,7 +3384,42 @@
       "Yamhill County"
     ],
     "nearest_hospital": "Providence Newberg Medical Center (in-city)",
-    "transit": "Yamhill County Transit (YCT) bus"
+    "transit": "Yamhill County Transit (YCT) bus",
+    "school_district": "Newberg School District",
+    "school_district_url": "https://www.newberg.k12.or.us",
+    "schools": [
+      {
+        "name": "Newberg High School",
+        "url": "https://nhs.newberg.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Willamette Valley Wine Country",
+        "url": "https://www.willamettewines.com",
+        "desc": "Newberg is the northern hub of Oregon's Willamette Valley wine region with dozens of tasting rooms"
+      },
+      {
+        "name": "Hoover-Minthorn House Museum",
+        "url": "https://www.hooverminthorn.org",
+        "desc": "The boyhood home of President Herbert Hoover — the oldest house in Newberg"
+      },
+      {
+        "name": "Chehalem Cultural Center",
+        "url": "https://www.chehalemculturalcenter.org",
+        "desc": "Community arts center with galleries, performance space, and events"
+      },
+      {
+        "name": "Champoeg State Heritage Area (15 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=126",
+        "desc": "Oregon history museum and riverside trails at the birthplace of Oregon's provisional government"
+      },
+      {
+        "name": "Rex Hill Winery",
+        "url": "https://www.rexhill.com",
+        "desc": "Historic winery in Newberg producing award-winning Willamette Valley Pinot Noir"
+      }
+    ]
   },
   "oakridge": {
     "major_employers": [
@@ -1587,7 +3449,62 @@
       "Salem-Keizer School District"
     ],
     "nearest_hospital": "Salem Hospital (Salem Health, in-city)",
-    "transit": "Cherriots (Salem Area Mass Transit) extensive bus network"
+    "transit": "Cherriots (Salem Area Mass Transit) extensive bus network",
+    "school_district": "Salem-Keizer School District",
+    "school_district_url": "https://www.salkeiz.k12.or.us",
+    "schools": [
+      {
+        "name": "McKay High School",
+        "url": "https://mhs.salkeiz.k12.or.us"
+      },
+      {
+        "name": "McNary High School",
+        "url": "https://mcnaryhs.salkeiz.k12.or.us"
+      },
+      {
+        "name": "North Salem High School",
+        "url": "https://nshs.salkeiz.k12.or.us"
+      },
+      {
+        "name": "South Salem High School",
+        "url": "https://sshs.salkeiz.k12.or.us"
+      },
+      {
+        "name": "West Salem High School",
+        "url": "https://wshs.salkeiz.k12.or.us"
+      },
+      {
+        "name": "Sprague High School",
+        "url": "https://sprague.salkeiz.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Oregon State Capitol",
+        "url": "https://www.oregonlegislature.gov/capitolhistorygateway",
+        "desc": "Oregon's art deco state capitol, open for free tours — the gold pioneer statue atop is iconic"
+      },
+      {
+        "name": "Willamette Heritage Center",
+        "url": "https://www.willametteheritage.org",
+        "desc": "Five-acre historic site with the oldest structures in the Pacific Northwest including Thomas Kay Woolen Mill"
+      },
+      {
+        "name": "Bush's Pasture Park & Bush House Museum",
+        "url": "https://www.cityofsalem.net/pages/bush-art-center",
+        "desc": "Victorian-era estate turned public park with rose garden, art center, and historic mansion"
+      },
+      {
+        "name": "Silver Falls State Park (25 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=151",
+        "desc": "Oregon's largest state park — the 'Trail of Ten Falls' passes behind 10 spectacular waterfalls"
+      },
+      {
+        "name": "Hallie Ford Museum of Art (Willamette University)",
+        "url": "https://halliefordinstitute.org",
+        "desc": "Free art museum with an outstanding collection of Pacific Northwest and Native American art"
+      }
+    ]
   },
   "scio": {
     "major_employers": [
@@ -1626,7 +3543,42 @@
       "Tourism (Oregon Garden, Silver Falls)"
     ],
     "nearest_hospital": "Silverton Hospital (Legacy Health, in-city)",
-    "transit": "Cherriots Regional bus"
+    "transit": "Cherriots Regional bus",
+    "school_district": "Silver Falls School District",
+    "school_district_url": "https://www.silverfalls.k12.or.us",
+    "schools": [
+      {
+        "name": "Silverton High School",
+        "url": "https://shs.silverfalls.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Silver Falls State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=151",
+        "desc": "Oregon's largest state park and #1 state park visitor destination — the Trail of Ten Falls is spectacular"
+      },
+      {
+        "name": "The Oregon Garden",
+        "url": "https://www.oregongarden.org",
+        "desc": "80-acre specialty botanical garden with 20 themed gardens and the only Frank Lloyd Wright house in Oregon"
+      },
+      {
+        "name": "Silverton Murals",
+        "url": "https://www.silvertonor.gov",
+        "desc": "Silverton's Main Street features a celebrated collection of outdoor mural art"
+      },
+      {
+        "name": "Homer Davenport Days",
+        "url": "https://www.silvertonor.gov",
+        "desc": "Annual summer festival in Silverton celebrating the famous local political cartoonist"
+      },
+      {
+        "name": "Silver Creek Corridor",
+        "url": "https://stateparks.oregon.gov",
+        "desc": "Scenic Silver Creek flows through Silverton and connects downtown to Silver Falls State Park"
+      }
+    ]
   },
   "sodaville": {
     "major_employers": [
@@ -1645,7 +3597,46 @@
       "Lane County"
     ],
     "nearest_hospital": "McKenzie-Willamette Medical Center (in-city); PeaceHealth Sacred Heart RiverBend, ~2 mi",
-    "transit": "Lane Transit District (LTD) bus and EmX BRT"
+    "transit": "Lane Transit District (LTD) bus and EmX BRT",
+    "school_district": "Springfield School District",
+    "school_district_url": "https://www.springfield.k12.or.us",
+    "schools": [
+      {
+        "name": "Thurston High School",
+        "url": "https://ths.springfield.k12.or.us"
+      },
+      {
+        "name": "Springfield High School",
+        "url": "https://shs.springfield.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Willamalane Park & Recreation District",
+        "url": "https://www.willamalane.org",
+        "desc": "Award-winning parks district with pools, splash pads, sports facilities, and extensive trail system"
+      },
+      {
+        "name": "McKenzie River Trail (20 min)",
+        "url": "https://www.fs.usda.gov/recarea/willamette/recarea/?recid=4518",
+        "desc": "World-class 26-mile trail alongside the crystal-clear McKenzie River — hiking, mountain biking, and fly fishing"
+      },
+      {
+        "name": "Dorris Ranch Living History Farm",
+        "url": "https://www.willamalane.org/parks/dorris-ranch",
+        "desc": "Oregon's oldest commercial filbert orchard, now a living history site and forested park"
+      },
+      {
+        "name": "Thurston Hills Natural Area",
+        "url": "https://www.willamalane.org/parks/thurston-hills",
+        "desc": "600 acres of forested trails with outstanding panoramic views of Springfield and the mountains"
+      },
+      {
+        "name": "Lane County Fairgrounds",
+        "url": "https://www.lanecounty.org/departments/laneeventcenter",
+        "desc": "Major events venue hosting the Lane County Fair, concerts, and community events"
+      }
+    ]
   },
   "st._paul": {
     "major_employers": [
@@ -1684,7 +3675,42 @@
       "City of Sweet Home"
     ],
     "nearest_hospital": "Samaritan Lebanon Community Hospital, Lebanon, ~20 mi",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Sweet Home School District",
+    "school_district_url": "https://www.sweethome.k12.or.us",
+    "schools": [
+      {
+        "name": "Sweet Home High School",
+        "url": "https://shhs.sweethome.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Foster Reservoir",
+        "url": "https://www.recreation.gov",
+        "desc": "A large reservoir at the Cascade foothills with boating, waterskiing, fishing, and swimming beaches"
+      },
+      {
+        "name": "Oregon Jamboree Music Festival",
+        "url": "https://www.oregonjamboree.com",
+        "desc": "Major country music festival held annually in Sweet Home — one of the largest in the Pacific Northwest"
+      },
+      {
+        "name": "Sweet Home Aquatic Center",
+        "url": "https://www.sweethomeoregon.com",
+        "desc": "Community aquatic center with lap pool and water park features"
+      },
+      {
+        "name": "Quartzville Recreation Corridor",
+        "url": "https://www.blm.gov/visit/quartzville-recreation-corridor",
+        "desc": "Scenic BLM river corridor above Foster Lake — gem hunting, gold panning, camping, and river access"
+      },
+      {
+        "name": "South Santiam River Trail",
+        "url": "https://www.recreation.gov",
+        "desc": "Beautiful riverside trails along the South Santiam River heading into the Cascades"
+      }
+    ]
   },
   "tangent": {
     "major_employers": [
@@ -1752,7 +3778,42 @@
       "Marion County"
     ],
     "nearest_hospital": "Salem Hospital (Salem Health), Salem, ~20 mi",
-    "transit": "Cherriots Regional bus service"
+    "transit": "Cherriots Regional bus service",
+    "school_district": "Woodburn School District",
+    "school_district_url": "https://www.woodburn.k12.or.us",
+    "schools": [
+      {
+        "name": "Woodburn High School",
+        "url": "https://whs.woodburn.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Woodburn Premium Outlets",
+        "url": "https://www.premiumoutlets.com/outlet/woodburn",
+        "desc": "Oregon's largest outlet shopping center with 110 stores — enjoy tax-free shopping"
+      },
+      {
+        "name": "Wooden Shoe Tulip Farm (seasonal)",
+        "url": "https://www.woodenshoe.com",
+        "desc": "One of the Pacific Northwest's most spectacular spring festivals with acres of tulip fields"
+      },
+      {
+        "name": "St. Louis Ponds County Park",
+        "url": "https://www.co.marion.or.us",
+        "desc": "Series of fishing ponds stocked with trout and bass — popular with local anglers"
+      },
+      {
+        "name": "Champoeg State Heritage Area (15 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=126",
+        "desc": "Where Oregon's provisional government was voted in (1843) — riverside trails and Oregon history museum"
+      },
+      {
+        "name": "Silver Falls State Park (35 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=151",
+        "desc": "Oregon's largest state park — ten waterfalls on the Trail of Ten Falls"
+      }
+    ]
   },
   "yamhill": {
     "major_employers": [
@@ -1771,7 +3832,42 @@
       "Clatsop County government"
     ],
     "nearest_hospital": "Columbia Memorial Hospital (in-city)",
-    "transit": "Columbia County Rider (CCR) bus; Sunset Empire Transportation District"
+    "transit": "Columbia County Rider (CCR) bus; Sunset Empire Transportation District",
+    "school_district": "Astoria School District",
+    "school_district_url": "https://www.astoria.k12.or.us",
+    "schools": [
+      {
+        "name": "Astoria High School",
+        "url": "https://ahs.astoria.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Astoria Column",
+        "url": "https://www.astoriacolumn.org",
+        "desc": "A 125-foot column on Coxcomb Hill with a panoramic mural — spectacular views of the Columbia River and Pacific Ocean"
+      },
+      {
+        "name": "Columbia River Maritime Museum",
+        "url": "https://www.crmm.org",
+        "desc": "Oregon's most visited museum — exceptional exhibits on maritime history including a lightship you can board"
+      },
+      {
+        "name": "Fort Clatsop / Lewis & Clark National Historical Park",
+        "url": "https://www.nps.gov/lewi",
+        "desc": "Reconstructed fort where Lewis & Clark wintered in 1805-06 — living history demonstrations and trails"
+      },
+      {
+        "name": "Historic Downtown Astoria",
+        "url": "https://www.oldoregon.com",
+        "desc": "Victorian hilltop homes, 'The Goonies' filming locations, Astoria-Megler Bridge views, and funicular trolley"
+      },
+      {
+        "name": "Flavel House Museum",
+        "url": "https://www.cumtux.org/flavel-house-museum",
+        "desc": "An 1885 Queen Anne Victorian mansion — one of the most beautiful historic homes in the Pacific Northwest"
+      }
+    ]
   },
   "bandon": {
     "major_employers": [
@@ -1800,7 +3896,42 @@
       "Commercial fishing/tourism"
     ],
     "nearest_hospital": "Sutter Coast Hospital (in-city)",
-    "transit": "Curry Public Transit bus service"
+    "transit": "Curry Public Transit bus service",
+    "school_district": "Brookings-Harbor School District",
+    "school_district_url": "https://www.brookings.k12.or.us",
+    "schools": [
+      {
+        "name": "Brookings-Harbor High School",
+        "url": "https://bhhs.brookings.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Azalea State Natural Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=66",
+        "desc": "Ancient azalea grove with 300-year-old plants — spectacular bloom in May during the Azalea Festival"
+      },
+      {
+        "name": "Samuel H. Boardman State Scenic Corridor",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=56",
+        "desc": "12 miles of the most dramatic coastline in Oregon — sea arches, blowholes, and natural bridges"
+      },
+      {
+        "name": "Chetco River & Kalmiopsis Wilderness",
+        "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/recarea/?recid=55994",
+        "desc": "Wild and Scenic Chetco River with exceptional salmon and steelhead fishing — gateway to the Kalmiopsis"
+      },
+      {
+        "name": "Brookings Harbor (Boat Basin)",
+        "url": "https://www.brookings.or.us",
+        "desc": "A working commercial harbor — the southernmost Oregon coast port, with fresh seafood and fishing charters"
+      },
+      {
+        "name": "Harris Beach State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=57",
+        "desc": "Rocky shoreline, sea stacks, and Bird Island — Oregon's most southern major state park"
+      }
+    ]
   },
   "cannon_beach": {
     "major_employers": [
@@ -1810,7 +3941,42 @@
       "Clatsop County"
     ],
     "nearest_hospital": "Columbia Memorial Hospital, Astoria, ~25 mi",
-    "transit": "Sunset Empire Transportation District (SETD) bus"
+    "transit": "Sunset Empire Transportation District (SETD) bus",
+    "school_district": "Seaside School District",
+    "school_district_url": "https://www.seaside.k12.or.us",
+    "schools": [
+      {
+        "name": "Cannon Beach Elementary (Seaside SD)",
+        "url": "https://www.seaside.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Haystack Rock & Beaches",
+        "url": "https://www.cannonbeach.org",
+        "desc": "Oregon's most iconic coastal landmark — a 235-foot sea stack with nesting seabirds and rich tide pools"
+      },
+      {
+        "name": "Ecola State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=136",
+        "desc": "Dramatic headland state park with forest trails and sweeping views of Haystack Rock and the coast"
+      },
+      {
+        "name": "Cannon Beach Art Galleries",
+        "url": "https://www.cannonbeach.org/art",
+        "desc": "One of Oregon's premier art communities — more than 15 galleries in this small oceanside town"
+      },
+      {
+        "name": "The Coaster Theatre",
+        "url": "https://www.coastertheatre.com",
+        "desc": "Community performing arts theater in a charming historic building — year-round performances"
+      },
+      {
+        "name": "Haystack Rock Awareness Program",
+        "url": "https://www.cannonbeach.org/haystack-rock",
+        "desc": "Ranger-led programs at the rock during low tide — learn about tufted puffins and sea stars"
+      }
+    ]
   },
   "coos_bay": {
     "major_employers": [
@@ -1820,7 +3986,42 @@
       "Port of Coos Bay"
     ],
     "nearest_hospital": "Bay Area Hospital (in-city)",
-    "transit": "Coos County Area Transit (CCAT) bus"
+    "transit": "Coos County Area Transit (CCAT) bus",
+    "school_district": "Coos Bay School District",
+    "school_district_url": "https://www.coosbay.k12.or.us",
+    "schools": [
+      {
+        "name": "Marshfield High School",
+        "url": "https://mhs.coosbay.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Shore Acres State Park (12 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=68",
+        "desc": "A spectacular formal garden on dramatic ocean cliffs — one of Oregon's most beautiful and surprising parks"
+      },
+      {
+        "name": "Cape Arago State Park (12 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=67",
+        "desc": "Rocky headland with sea lion haul-outs and exceptional tide pools — the best wildlife viewing on the South Coast"
+      },
+      {
+        "name": "Charleston Marina & Coos History Museum",
+        "url": "https://www.cooshistory.org",
+        "desc": "Working fishing harbor and award-winning regional museum on the Coos Bay waterfront"
+      },
+      {
+        "name": "Oregon Dunes National Recreation Area (15 min)",
+        "url": "https://www.fs.usda.gov/recarea/siuslaw/recarea/?recid=42888",
+        "desc": "The northern portion of the massive coastal dune system — OHV areas and hiking trails"
+      },
+      {
+        "name": "Empire Lakes Trail System",
+        "url": "https://www.oregonstateparks.org",
+        "desc": "A system of forested walking trails around Empire Lakes in the heart of Coos Bay"
+      }
+    ]
   },
   "coquille": {
     "major_employers": [
@@ -1870,7 +4071,42 @@
       "Tourism/jet boat tours"
     ],
     "nearest_hospital": "Curry General Hospital (in-city)",
-    "transit": "Curry Public Transit bus service"
+    "transit": "Curry Public Transit bus service",
+    "school_district": "Curry School District",
+    "school_district_url": "https://www.curry.k12.or.us",
+    "schools": [
+      {
+        "name": "Gold Beach High School",
+        "url": "https://gbhs.curry.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Jerry's Rogue River Jetboat Trips",
+        "url": "https://www.roguejets.com",
+        "desc": "Daily jet boat tours up the Wild & Scenic Rogue River — one of Oregon's top tourist experiences"
+      },
+      {
+        "name": "Curry Historical Society Museum",
+        "url": "https://www.curryhistory.com",
+        "desc": "Local history museum in Gold Beach covering Curry County and the Rogue River area"
+      },
+      {
+        "name": "Otter Point State Recreation Site",
+        "url": "https://stateparks.oregon.gov",
+        "desc": "Rugged rocky point with excellent tide pools and coastal views"
+      },
+      {
+        "name": "Cape Sebastian State Scenic Corridor (10 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=65",
+        "desc": "A dramatic headland with one of the best view of the coastline in either direction — clear days show 50 miles"
+      },
+      {
+        "name": "Pistol River State Scenic Viewpoint",
+        "url": "https://stateparks.oregon.gov",
+        "desc": "A wide sandy beach and dunes popular for kite surfing and windsurfing — world championships held here"
+      }
+    ]
   },
   "lakeside": {
     "major_employers": [
@@ -1890,7 +4126,42 @@
       "Tourism/retail"
     ],
     "nearest_hospital": "Samaritan North Lincoln Hospital (in-city)",
-    "transit": "Lincoln County Transit (LCT) bus"
+    "transit": "Lincoln County Transit (LCT) bus",
+    "school_district": "Lincoln County School District",
+    "school_district_url": "https://www.lincoln.k12.or.us",
+    "schools": [
+      {
+        "name": "Taft High School",
+        "url": "https://tahs.lincoln.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Chinook Winds Casino Resort",
+        "url": "https://www.chinookwindscasino.com",
+        "desc": "Large oceanfront casino resort operated by the Confederated Tribes of Siletz Indians — entertainment, dining, and hotel"
+      },
+      {
+        "name": "Devil's Lake State Recreation Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=136",
+        "desc": "Freshwater lake just blocks from the Pacific — kayaking, camping, and bird watching"
+      },
+      {
+        "name": "Siletz Bay National Wildlife Refuge",
+        "url": "https://www.fws.gov/refuge/siletz-bay",
+        "desc": "Tidal estuary refuge with shorebirds, harbor seals, and excellent sunset views"
+      },
+      {
+        "name": "Hatfield Marine Science Center (Newport, 30 min)",
+        "url": "https://hmsc.oregonstate.edu",
+        "desc": "Oregon State University's marine research center — free public wing with live tide pool animals"
+      },
+      {
+        "name": "Glass Float Hunting",
+        "url": "https://www.lincolncity.org/glass-floats",
+        "desc": "Artist-signed glass floats are hidden on Lincoln City beaches year-round — finding one is a beloved Oregon Coast tradition"
+      }
+    ]
   },
   "manzanita": {
     "major_employers": [
@@ -1930,7 +4201,42 @@
       "Commercial fishing/tourism"
     ],
     "nearest_hospital": "Samaritan Pacific Communities Hospital (in-city)",
-    "transit": "Lincoln County Transit (LCT) bus"
+    "transit": "Lincoln County Transit (LCT) bus",
+    "school_district": "Lincoln County School District",
+    "school_district_url": "https://www.lincoln.k12.or.us",
+    "schools": [
+      {
+        "name": "Newport High School",
+        "url": "https://nhs.lincoln.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Oregon Coast Aquarium",
+        "url": "https://aquarium.org",
+        "desc": "One of the top aquariums in the USA — shark tunnel, sea otters, octopus, and the massive aviary and wave machine"
+      },
+      {
+        "name": "Hatfield Marine Science Center",
+        "url": "https://hmsc.oregonstate.edu",
+        "desc": "Oregon State University's ocean research center — free public exhibits on marine biology and oceanography"
+      },
+      {
+        "name": "Historic Bayfront",
+        "url": "https://www.discovernewport.com",
+        "desc": "Newport's working waterfront with fishing docks, seal viewing, fresh seafood restaurants, and the famous Mo's chowder"
+      },
+      {
+        "name": "Yaquina Head Outstanding Natural Area",
+        "url": "https://www.blm.gov/visit/yaquina-head-outstanding-natural-area",
+        "desc": "Oregon's tallest lighthouse (93 ft), tide pools, and a seabird colony — incredible wildlife viewing"
+      },
+      {
+        "name": "Rogue Ales Public House",
+        "url": "https://www.rogue.com",
+        "desc": "Newport is home to Rogue Ales — tour the brewery and sample their famous Dead Guy Ale at the bayfront location"
+      }
+    ]
   },
   "north_bend": {
     "major_employers": [
@@ -1940,7 +4246,42 @@
       "Retail"
     ],
     "nearest_hospital": "Bay Area Hospital, Coos Bay, ~3 mi",
-    "transit": "Coos County Area Transit (CCAT) bus"
+    "transit": "Coos County Area Transit (CCAT) bus",
+    "school_district": "North Bend School District",
+    "school_district_url": "https://www.nbend.k12.or.us",
+    "schools": [
+      {
+        "name": "North Bend High School",
+        "url": "https://nbhs.nbend.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Oregon Dunes NRA",
+        "url": "https://www.fs.usda.gov/recarea/siuslaw/recarea/?recid=42888",
+        "desc": "Ride ATVs on the massive coastal dunes or hike to a stunning ocean overlook"
+      },
+      {
+        "name": "Shore Acres & Cape Arago (20 min)",
+        "url": "https://stateparks.oregon.gov",
+        "desc": "Two of Oregon's most spectacular state parks just south of Coos Bay"
+      },
+      {
+        "name": "North Bend Municipal Airport Observation Area",
+        "url": "https://www.flyoth.com",
+        "desc": "Regional airport with scenic coastal views"
+      },
+      {
+        "name": "Pony Village Mall",
+        "url": "https://www.ponyvillagemall.com",
+        "desc": "Main shopping center serving the Coos Bay-North Bend community"
+      },
+      {
+        "name": "Charleston Marine Life Center",
+        "url": "https://cmlc.uoregon.edu",
+        "desc": "University of Oregon's public marine aquarium — sharks, wolf eels, and local deep-sea organisms"
+      }
+    ]
   },
   "port_orford": {
     "major_employers": [
@@ -1979,7 +4320,42 @@
       "Seaside Convention Center"
     ],
     "nearest_hospital": "Columbia Memorial Hospital, Astoria, ~17 mi",
-    "transit": "Sunset Empire Transportation District (SETD) bus"
+    "transit": "Sunset Empire Transportation District (SETD) bus",
+    "school_district": "Seaside School District",
+    "school_district_url": "https://www.seaside.k12.or.us",
+    "schools": [
+      {
+        "name": "Seaside High School",
+        "url": "https://shs.seaside.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Seaside Promenade & Beach",
+        "url": "https://www.seasideor.com",
+        "desc": "Oregon's longest oceanfront boardwalk (1.5 miles) — arcades, saltwater taffy, and the turnaround at the end of the Oregon Trail"
+      },
+      {
+        "name": "Seaside Aquarium",
+        "url": "https://www.seasideaquarium.com",
+        "desc": "A classic Oregon Coast aquarium where you can feed harbor seals — family favorite since 1937"
+      },
+      {
+        "name": "Tillamook Head Trail & Ecola State Park (10 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=136",
+        "desc": "Oregon's most popular state park — Haystack Rock, tide pools, and sweeping coastal headland views"
+      },
+      {
+        "name": "Seaside Outlet Center",
+        "url": "https://www.seasideoutletcenter.com",
+        "desc": "Outlet shopping just steps from the beach — tax-free Oregon shopping"
+      },
+      {
+        "name": "Camp 18 Restaurant (Elsie, 30 min)",
+        "url": "https://www.camp18restaurant.com",
+        "desc": "Giant log-structure roadhouse on Highway 26 with logging memorabilia and hearty food"
+      }
+    ]
   },
   "siletz": {
     "major_employers": [
@@ -1999,7 +4375,42 @@
       "Tillamook School District"
     ],
     "nearest_hospital": "Tillamook Regional Medical Center (in-city)",
-    "transit": "No public transit"
+    "transit": "No public transit",
+    "school_district": "Tillamook School District",
+    "school_district_url": "https://www.tillamooksd.org",
+    "schools": [
+      {
+        "name": "Tillamook High School",
+        "url": "https://ths.tillamooksd.org"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Tillamook Creamery (Visitor Center)",
+        "url": "https://www.tillamook.com/creamery",
+        "desc": "Oregon's most visited attraction — tour the cheese-making process and sample famous Tillamook ice cream and cheese"
+      },
+      {
+        "name": "Tillamook Air Museum",
+        "url": "https://www.tillamookair.com",
+        "desc": "Huge blimp hangar from WWII housing an impressive collection of vintage aircraft — one of the largest wooden structures ever built"
+      },
+      {
+        "name": "Three Capes Scenic Route",
+        "url": "https://www.tillamookcoast.com/three-capes",
+        "desc": "A stunning coastal drive past Cape Meares, Cape Lookout, and Cape Kiwanda — lighthouses, sea stacks, and beaches"
+      },
+      {
+        "name": "Cape Lookout State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=136",
+        "desc": "Dramatic headland trail to the cape tip — one of the best whale-watching spots on the Oregon Coast"
+      },
+      {
+        "name": "Munson Creek Falls",
+        "url": "https://stateparks.oregon.gov",
+        "desc": "Oregon's tallest waterfall south of the Columbia Gorge (266 ft) — a short trail through old-growth Sitka spruce"
+      }
+    ]
   },
   "toledo": {
     "major_employers": [
@@ -2034,42 +4445,330 @@
   "bend": {
     "major_employers": "St. Charles Health System, Bend-La Pine Schools, Deschutes County, Les Schwab Tire Centers",
     "nearest_hospital": "St. Charles Bend (in-city, 2500 NE Neff Rd, Bend)",
-    "transit": "Cascades East Transit (CET) fixed-route buses plus regional Community Connector routes"
+    "transit": "Cascades East Transit (CET) fixed-route buses plus regional Community Connector routes",
+    "school_district": "Bend-La Pine Schools",
+    "school_district_url": "https://www.bend.k12.or.us",
+    "schools": [
+      {
+        "name": "Bend Senior High School",
+        "url": "https://bhs.bend.k12.or.us"
+      },
+      {
+        "name": "Mountain View High School",
+        "url": "https://mvhs.bend.k12.or.us"
+      },
+      {
+        "name": "Summit High School",
+        "url": "https://suhs.bend.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Smith Rock State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=36",
+        "desc": "World-class rock climbing and hiking destination with dramatic volcanic spires and the Crooked River canyon"
+      },
+      {
+        "name": "Mt. Bachelor Ski Resort",
+        "url": "https://www.mtbachelor.com",
+        "desc": "One of the largest ski areas in the West — 4,318 skiable acres with skiing often into late spring"
+      },
+      {
+        "name": "High Desert Museum",
+        "url": "https://www.highdesertmuseum.org",
+        "desc": "Award-winning living museum dedicated to the natural and cultural heritage of the Intermountain West"
+      },
+      {
+        "name": "Old Mill District",
+        "url": "https://www.oldmill.com",
+        "desc": "Vibrant riverfront shopping, dining, and entertainment district along the Deschutes River"
+      },
+      {
+        "name": "Newberry National Volcanic Monument",
+        "url": "https://www.fs.usda.gov/recarea/deschutes/recarea/?recid=38446",
+        "desc": "20-mile-wide caldera, obsidian lava flow, and two lakes — a geologic wonder 15 miles south of Bend"
+      }
+    ]
   },
   "culver": {
     "major_employers": "Culver School District, Bright Wood Corporation (Culver plant), local agriculture (mint, grass seed, hay)",
     "nearest_hospital": "St. Charles Madras, Madras, approx. 9 miles north",
-    "transit": "Cascades East Transit (CET) Community Connector route linking Culver to Madras, Metolius, Redmond and Bend"
+    "transit": "Cascades East Transit (CET) Community Connector route linking Culver to Madras, Metolius, Redmond and Bend",
+    "school_district": "Jefferson County School District 509J",
+    "school_district_url": "https://www.jefferson.k12.or.us",
+    "schools": [
+      {
+        "name": "Culver High School (Culver School District 4)",
+        "url": "https://www.culver.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Cove Palisades State Park (15 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=31",
+        "desc": "Dramatic Lake Billy Chinook reservoir surrounded by canyon walls — boating and camping"
+      },
+      {
+        "name": "Lake Billy Chinook",
+        "url": "https://www.recreation.gov",
+        "desc": "A stunning high-desert reservoir formed by Round Butte Dam — great for houseboating and fishing"
+      },
+      {
+        "name": "Smith Rock State Park (30 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=36",
+        "desc": "World-famous rock climbing park just a short drive north"
+      },
+      {
+        "name": "Metolius Arm of Lake Billy Chinook",
+        "url": "https://www.recreation.gov",
+        "desc": "The pristine Metolius River arm of the reservoir — fishing for trophy trout"
+      },
+      {
+        "name": "Warm Springs Museum (30 min)",
+        "url": "https://www.warmsprings-nsn.gov/museum",
+        "desc": "Award-winning museum of the Confederated Tribes of Warm Springs"
+      }
+    ]
   },
   "la_pine": {
     "major_employers": "Bend-La Pine Schools, Sunriver Resort, Mt. Bachelor, Midstate Electric Cooperative",
     "nearest_hospital": "St. Charles Bend, Bend, approx. 30 miles north",
-    "transit": "Cascades East Transit (CET) Route 30 to Bend plus Rural Dial-A-Ride"
+    "transit": "Cascades East Transit (CET) Route 30 to Bend plus Rural Dial-A-Ride",
+    "school_district": "Bend-La Pine Schools",
+    "school_district_url": "https://www.bend.k12.or.us",
+    "schools": [
+      {
+        "name": "La Pine High School",
+        "url": "https://lphs.bend.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Newberry National Volcanic Monument",
+        "url": "https://www.fs.usda.gov/recarea/deschutes/recarea/?recid=38446",
+        "desc": "One of the largest volcanic shield volcanoes in the world — obsidian flow, caldera lakes, and amazing geology"
+      },
+      {
+        "name": "La Pine State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=26",
+        "desc": "Beautiful state park on the Upper Deschutes River — hiking, mountain biking, and camping in tall pines"
+      },
+      {
+        "name": "Sunriver Resort (15 min)",
+        "url": "https://www.sunriver-resort.com",
+        "desc": "World-class resort with golf, bike trails, pools, and the SHARC aquatic center"
+      },
+      {
+        "name": "Paulina Peak Viewpoint",
+        "url": "https://www.fs.usda.gov/recarea/deschutes/recarea/?recid=38446",
+        "desc": "The highest point on Newberry Volcano — panoramic views of the Cascades from a 7,985-foot summit"
+      },
+      {
+        "name": "Upper Deschutes River Fishing",
+        "url": "https://www.dfw.state.or.us",
+        "desc": "One of Oregon's premier wild trout streams — brown trout and rainbow trout fishing in pristine high-desert water"
+      }
+    ]
   },
   "madras": {
     "major_employers": "Bright Wood Corporation, St. Charles Madras, Jefferson County School District 509J, Jefferson County government",
     "nearest_hospital": "St. Charles Madras (in-city, 470 NE A St, Madras)",
-    "transit": "Cascades East Transit (CET) demand-response service and Community Connector routes to Bend, Redmond and Prineville"
+    "transit": "Cascades East Transit (CET) demand-response service and Community Connector routes to Bend, Redmond and Prineville",
+    "school_district": "Jefferson County School District 509J",
+    "school_district_url": "https://www.jefferson.k12.or.us",
+    "schools": [
+      {
+        "name": "Madras High School",
+        "url": "https://mhs.jefferson.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Smith Rock State Park (25 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=36",
+        "desc": "Iconic volcanic rock climbing and hiking park — a landmark of Central Oregon"
+      },
+      {
+        "name": "Lake Billy Chinook / Cove Palisades State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=31",
+        "desc": "Dramatic reservoir surrounded by high desert canyon walls — boating, fishing, and camping"
+      },
+      {
+        "name": "Warm Springs Indian Reservation",
+        "url": "https://www.warmsprings-nsn.gov",
+        "desc": "The Confederated Tribes of Warm Springs — cultural museum and the warm springs resort area"
+      },
+      {
+        "name": "Madras Mural Project",
+        "url": "https://www.madraschamber.com",
+        "desc": "Colorful community murals throughout downtown Madras celebrating local history and culture"
+      },
+      {
+        "name": "Solar Eclipse Viewing (2017 Ground Zero)",
+        "url": "https://www.madras.edu",
+        "desc": "Madras was at the center of totality for the 2024 and 2017 total solar eclipses — next eclipse viewing in 2045"
+      }
+    ]
   },
   "metolius": {
     "major_employers": "Bright Wood Corporation (Madras/Culver area), Jefferson County School District 509J, local agriculture",
     "nearest_hospital": "St. Charles Madras, Madras, approx. 5 miles northeast",
-    "transit": "Cascades East Transit (CET) Community Connector route to Madras, Culver and Bend"
+    "transit": "Cascades East Transit (CET) Community Connector route to Madras, Culver and Bend",
+    "school_district": "Jefferson County School District 509J",
+    "school_district_url": "https://www.jefferson.k12.or.us",
+    "schools": [
+      {
+        "name": "Madras High School",
+        "url": "https://mhs.jefferson.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Metolius River Headwaters",
+        "url": "https://www.fs.usda.gov/recarea/deschutes/recarea/?recid=38470",
+        "desc": "A famous spring-fed river that appears out of the ground at the base of Black Butte — crystal clear water"
+      },
+      {
+        "name": "Cove Palisades State Park (15 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=31",
+        "desc": "High-desert canyon reservoir park — boating and fishing"
+      },
+      {
+        "name": "Smith Rock State Park (20 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=36",
+        "desc": "World-class rock climbing and hiking"
+      },
+      {
+        "name": "Camp Sherman (Metolius River area)",
+        "url": "https://www.fs.usda.gov/recarea/deschutes/recarea/?recid=38470",
+        "desc": "A small resort community along the spring-fed Metolius River — fly fishing at its finest"
+      },
+      {
+        "name": "Warm Springs Museum (20 min)",
+        "url": "https://www.warmsprings-nsn.gov/museum",
+        "desc": "Award-winning museum of the Confederated Tribes of Warm Springs"
+      }
+    ]
   },
   "prineville": {
     "major_employers": "Meta (data center), Crook County School District, St. Charles Prineville, Crook County government",
     "nearest_hospital": "St. Charles Prineville (in-city, 384 SE Combs Flat Rd, Prineville)",
-    "transit": "Cascades East Transit (CET) Community Connector routes to Bend, Redmond and Madras"
+    "transit": "Cascades East Transit (CET) Community Connector routes to Bend, Redmond and Madras",
+    "school_district": "Crook County School District",
+    "school_district_url": "https://www.crookcounty.k12.or.us",
+    "schools": [
+      {
+        "name": "Crook County High School",
+        "url": "https://cchs.crookcounty.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Smith Rock State Park (25 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=36",
+        "desc": "World-famous rock climbing and hiking park — one of Oregon's 7 Wonders"
+      },
+      {
+        "name": "Ochoco National Forest",
+        "url": "https://www.fs.usda.gov/ochoco",
+        "desc": "512,000-acre forest with trails, meadows, and outstanding agate and thunderegg hunting"
+      },
+      {
+        "name": "Prineville Reservoir State Park",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=34",
+        "desc": "Reservoir park with boating, fishing, camping, and swimming in a scenic high-desert setting"
+      },
+      {
+        "name": "Les Schwab Tires World Headquarters",
+        "url": "https://www.lesschwab.com",
+        "desc": "The national tire company was founded in Prineville in 1952 — its HQ is still here"
+      },
+      {
+        "name": "Bowman Museum (Crook County Historical Society)",
+        "url": "https://crookcountyhistory.org",
+        "desc": "Local history museum in a 1910 bank building with pioneer, ranching, and Native American exhibits"
+      }
+    ]
   },
   "redmond": {
     "major_employers": "BASX Solutions, Redmond School District, St. Charles Redmond, Medline ReNewal",
     "nearest_hospital": "St. Charles Redmond (in-city, 1253 NW Canal Blvd, Redmond)",
-    "transit": "Cascades East Transit (CET) semi-fixed routes and on-demand service; regional hub at 777 SW Kalama Ave"
+    "transit": "Cascades East Transit (CET) semi-fixed routes and on-demand service; regional hub at 777 SW Kalama Ave",
+    "school_district": "Redmond School District",
+    "school_district_url": "https://www.redmond.k12.or.us",
+    "schools": [
+      {
+        "name": "Redmond High School",
+        "url": "https://rhs.redmond.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Smith Rock State Park (15 min)",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=36",
+        "desc": "One of Oregon's most iconic parks — world-class rock climbing and spectacular gorge hikes"
+      },
+      {
+        "name": "Cline Buttes Recreation Area",
+        "url": "https://www.blm.gov/visit/cline-buttes-recreation-area",
+        "desc": "Popular OHV and mountain biking area on BLM land just west of Redmond"
+      },
+      {
+        "name": "Eagle Crest Resort",
+        "url": "https://www.eagle-crest.com",
+        "desc": "Full-service resort with golf, pools, and resort activities between Redmond and Bend"
+      },
+      {
+        "name": "Redmond Air Center",
+        "url": "https://www.fs.usda.gov/detail/centraloregon/about-forest/offices/?cid=fswdev3_008446",
+        "desc": "Home base for airtanker fire suppression — one of the largest aerial firefighting bases in the USA"
+      },
+      {
+        "name": "Dry Canyon Trail",
+        "url": "https://www.redmondoregon.gov",
+        "desc": "A 5-mile urban trail running through Redmond's iconic Dry Canyon — wildlife viewing and great views"
+      }
+    ]
   },
   "sisters": {
     "major_employers": "Sisters School District, Black Butte Ranch, Aspen Lakes, City of Sisters",
     "nearest_hospital": "St. Charles Redmond, Redmond, approx. 19 miles east",
-    "transit": "Cascades East Transit (CET) Community Connector routes 28 (Redmond) and 29 (Bend) plus Rural Dial-A-Ride"
+    "transit": "Cascades East Transit (CET) Community Connector routes 28 (Redmond) and 29 (Bend) plus Rural Dial-A-Ride",
+    "school_district": "Sisters School District",
+    "school_district_url": "https://www.sisters.k12.or.us",
+    "schools": [
+      {
+        "name": "Sisters High School",
+        "url": "https://shs.sisters.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Three Sisters Wilderness",
+        "url": "https://www.fs.usda.gov/recarea/deschutes/recarea/?recid=38468",
+        "desc": "Spectacular wilderness area with three volcanic peaks over 10,000 feet — world-class hiking and camping"
+      },
+      {
+        "name": "Sisters Rodeo",
+        "url": "https://www.sistersrodeo.com",
+        "desc": "Famous annual June rodeo — 'The Biggest Little Show in the World' since 1940"
+      },
+      {
+        "name": "McKenzie Pass",
+        "url": "https://www.fs.usda.gov/recarea/willamette/recarea/?recid=4571",
+        "desc": "Spectacular Cascade highway through ancient lava fields with stunning Three Sisters views"
+      },
+      {
+        "name": "Metolius River",
+        "url": "https://www.fs.usda.gov/recarea/deschutes/recarea/?recid=38470",
+        "desc": "A spring-fed river of remarkable clarity — one of the top dry-fly fishing streams in the USA"
+      },
+      {
+        "name": "Sisters Country Quilt Show",
+        "url": "https://www.sistersoutdoorquiltshow.org",
+        "desc": "The world's largest outdoor quilt show, held each July — thousands of quilts displayed on building facades"
+      }
+    ]
   },
   "antelope": {
     "major_employers": [
@@ -2110,7 +4809,42 @@
       "Sternwheeler Columbia Gorge excursions"
     ],
     "nearest_hospital": "Providence Hood River Memorial Hospital (about 18 miles east)",
-    "transit": "Columbia Gorge Express bus links Cascade Locks to Portland on weekends; no local fixed-route service"
+    "transit": "Columbia Gorge Express bus links Cascade Locks to Portland on weekends; no local fixed-route service",
+    "school_district": "Cascade Locks School District",
+    "school_district_url": "https://www.clocks.k12.or.us",
+    "schools": [
+      {
+        "name": "Cascade Locks School (K-8)",
+        "url": "https://www.clocks.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Multnomah Falls (8 min)",
+        "url": "https://www.multnomahfallslodge.com",
+        "desc": "Oregon's iconic waterfall just a few minutes west on the Historic Columbia River Highway"
+      },
+      {
+        "name": "Bridge of the Gods",
+        "url": "https://www.portofcascadelocks.org",
+        "desc": "A steel truss toll bridge spanning the Columbia — the Pacific Crest Trail crosses here from Oregon into Washington"
+      },
+      {
+        "name": "Columbia Gorge Sternwheeler",
+        "url": "https://www.portlandspirit.com",
+        "desc": "Scenic cruises on the Columbia River aboard a historic-style sternwheeler paddleboat"
+      },
+      {
+        "name": "Pacific Crest Trail Crossing",
+        "url": "https://www.pcta.org",
+        "desc": "Cascade Locks is a famous resupply point for Pacific Crest Trail thru-hikers — hike a section or cheer them on"
+      },
+      {
+        "name": "Bonneville Dam & Sturgeon Viewing",
+        "url": "https://www.nwp.usace.army.mil/bonneville",
+        "desc": "The first federal dam on the Columbia (1938) — fish ladders, dam tours, and the giant sturgeon viewing underwater window"
+      }
+    ]
   },
   "condon": {
     "major_employers": [
@@ -2171,7 +4905,42 @@
       "pear and apple orchards (seasonal)"
     ],
     "nearest_hospital": "Providence Hood River Memorial Hospital (located in Hood River)",
-    "transit": "Columbia Area Transit (CAT) provides local bus service within Hood River; Columbia Gorge Express to Portland on weekends"
+    "transit": "Columbia Area Transit (CAT) provides local bus service within Hood River; Columbia Gorge Express to Portland on weekends",
+    "school_district": "Hood River County School District",
+    "school_district_url": "https://www.hoodriver.k12.or.us",
+    "schools": [
+      {
+        "name": "Hood River Valley High School",
+        "url": "https://hhs.hoodriver.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Multnomah Falls (25 min)",
+        "url": "https://www.multnomahfallslodge.com",
+        "desc": "Oregon's iconic 620-foot waterfall — the most visited natural site in the Pacific Northwest"
+      },
+      {
+        "name": "Hood River Waterfront & Kiteboarding",
+        "url": "https://www.hoodriver.org",
+        "desc": "The 'windsurfing and kiteboarding capital of the world' — watch or participate in world-class wind sports"
+      },
+      {
+        "name": "Fruit Loop Driving Tour",
+        "url": "https://www.hoodriverfruitloop.com",
+        "desc": "A 35-mile scenic loop through orchards, farms, wineries, and lavender fields with Mt. Hood views"
+      },
+      {
+        "name": "Mt. Hood Meadows Ski Resort (40 min)",
+        "url": "https://www.skihood.com",
+        "desc": "Oregon's largest ski resort on the slopes of Mt. Hood — excellent skiing and snowboarding"
+      },
+      {
+        "name": "Full Sail Brewing Company",
+        "url": "https://www.fullsailbrewing.com",
+        "desc": "One of Oregon's original craft breweries with a tasting room and restaurant overlooking the Columbia River"
+      }
+    ]
   },
   "ione": {
     "major_employers": [
@@ -2246,7 +5015,42 @@
       "small retail and services"
     ],
     "nearest_hospital": "Providence Hood River Memorial Hospital (about 8 miles east)",
-    "transit": "Columbia Gorge Express serves nearby Hood River; no local fixed-route service in Mosier"
+    "transit": "Columbia Gorge Express serves nearby Hood River; no local fixed-route service in Mosier",
+    "school_district": "Hood River County School District",
+    "school_district_url": "https://www.hoodriver.k12.or.us",
+    "schools": [
+      {
+        "name": "Mosier Community School (K-8)",
+        "url": "https://www.hoodriver.k12.or.us"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Historic Columbia River Highway State Trail",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=147",
+        "desc": "A restored section of the original Columbia River Highway — now a paved trail for cycling and walking with stunning Gorge views"
+      },
+      {
+        "name": "Mosier Twin Tunnels",
+        "url": "https://stateparks.oregon.gov",
+        "desc": "Iconic restored highway tunnels on the Historic Columbia River Highway State Trail — a beloved cycling route"
+      },
+      {
+        "name": "Rowena Crest & Tom McCall Preserve (10 min)",
+        "url": "https://www.nature.org",
+        "desc": "Wildflower meadows and sweeping Gorge views at one of Oregon's most beautiful spring viewpoints"
+      },
+      {
+        "name": "Hood River Waterfront (8 min)",
+        "url": "https://www.hoodriver.org",
+        "desc": "Kiteboarding, dining, and the famous Hood River Fruit Loop are just a short drive east"
+      },
+      {
+        "name": "Multnomah Falls (20 min)",
+        "url": "https://www.multnomahfallslodge.com",
+        "desc": "Oregon's most iconic waterfall — a short drive west on the Historic Columbia River Highway"
+      }
+    ]
   },
   "rufus": {
     "major_employers": [
@@ -2284,7 +5088,42 @@
       "local retail and hospitality"
     ],
     "nearest_hospital": "Mid-Columbia Medical Center (located in The Dalles)",
-    "transit": "Columbia Area Transit (CAT) provides local bus service; Greyhound intercity bus service available"
+    "transit": "Columbia Area Transit (CAT) provides local bus service; Greyhound intercity bus service available",
+    "school_district": "The Dalles School District",
+    "school_district_url": "https://www.thedallessd.org",
+    "schools": [
+      {
+        "name": "The Dalles-Wahtonka High School",
+        "url": "https://tdwhs.thedallessd.org"
+      }
+    ],
+    "top_attractions": [
+      {
+        "name": "Columbia Gorge Discovery Center",
+        "url": "https://www.gorgediscovery.org",
+        "desc": "Official interpretive center for the Columbia River Gorge — natural and human history of the region"
+      },
+      {
+        "name": "Rowena Crest Viewpoint & Tom McCall Nature Preserve",
+        "url": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/tom-mccall-preserve",
+        "desc": "Spectacular Gorge viewpoint with wildflower meadows — one of the best spring wildflower displays in Oregon"
+      },
+      {
+        "name": "Deschutes River State Recreation Area",
+        "url": "https://stateparks.oregon.gov/index.cfm?do=park.profile&parkid=9",
+        "desc": "Hiking, mountain biking, and camping where the Deschutes meets the Columbia — excellent steelhead fishing"
+      },
+      {
+        "name": "The Dalles Murals",
+        "url": "https://www.thedalles.org",
+        "desc": "Remarkable collection of historic murals throughout downtown depicting the city's colorful history"
+      },
+      {
+        "name": "Fort Dalles Museum",
+        "url": "https://www.fortdallesmuseum.org",
+        "desc": "The only remaining building from the 1850s military fort — local history and pioneer artifacts"
+      }
+    ]
   },
   "wasco": {
     "major_employers": [

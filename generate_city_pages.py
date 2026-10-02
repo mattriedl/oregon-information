@@ -43,6 +43,38 @@ COUNTY_INFO = {
  'Malheur':('Southeast Oregon','Idaho Power'),'Wheeler':('North Central Oregon','Columbia Power Cooperative'),
 }
 
+UTILITY_URLS = {
+ 'Portland General Electric': 'https://www.portlandgeneral.com/',
+ 'Pacific Power': 'https://www.pacificpower.net/',
+ 'Tillamook PUD': 'https://www.tillamookpud.org/',
+ 'Central Lincoln PUD': 'https://www.clpud.org/',
+ 'EWEB': 'https://www.eweb.org/',
+ 'Douglas Electric Cooperative': 'https://www.douglas-electric.coop/',
+ 'Coos-Curry Electric Cooperative': 'https://www.cooscurry.com/',
+ 'Northern Wasco County PUD': 'https://www.nwcpud.com/',
+ 'Wasco Electric Cooperative': 'https://www.wascoelectric.com/',
+ 'Columbia Basin Electric Cooperative': 'https://www.columbiapowertrust.org/',
+ 'Umatilla Electric Cooperative': 'https://www.umatillaelectric.com/',
+ 'Oregon Trail Electric Cooperative': 'https://www.otec.coop/',
+ 'Harney Electric Cooperative': 'https://www.harneyelectric.com/',
+ 'Idaho Power': 'https://www.idahopower.com/',
+ 'Columbia Power Cooperative': 'https://www.colpow.com/',
+ 'Central Electric Cooperative': 'https://www.cepco.com/',
+ 'Pacific Power / Central Electric Cooperative': '',
+ 'NW Natural': 'https://www.nwnatural.com/',
+ 'Surprise Valley Electric': 'https://www.svec.org/',
+}
+
+
+def utility_links_html(electric_str):
+    """'Pacific Power / EWEB' -> linked names joined by ' / ' (plain text when no URL is known)."""
+    parts = []
+    for name in [p.strip() for p in (electric_str or '').split('/') if p.strip()]:
+        url = UTILITY_URLS.get(name)
+        parts.append(f'<a href="{e(url)}" target="_blank" rel="noopener">{e(name)}</a>' if url else e(name))
+    return ' / '.join(parts)
+
+
 STATE_LINKS = [
  ('Oregon.gov', 'https://www.oregon.gov/'),
  ('Oregon DMV', 'https://www.oregon.gov/odot/dmv/'),
@@ -162,6 +194,190 @@ OREGON_FACTS = [
 
 CSS = ":root{--gd:#14382a;--g:#1a5632;--gold:#c8a24b;--blue:#1f4e79;--bg:#f6f8f7;--tx:#22302b;--mu:#5c6b64}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',system-ui,sans-serif;color:var(--tx);line-height:1.6;background:#fff}h1,h2,h3{font-family:Georgia,serif;line-height:1.25}.wrap{max-width:1000px;margin:0 auto;padding:0 24px}.hd{background:var(--gd);color:#fff;padding:14px 0;position:sticky;top:0;z-index:50}.hd nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}.badge{width:30px;height:30px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}.nl{list-style:none;display:flex;gap:16px;flex-wrap:wrap}.nl a{color:#dbe7e0;text-decoration:none;font-weight:600;font-size:.9rem}.nl a:hover{color:var(--gold)}.hero{background:linear-gradient(160deg,var(--gd),var(--g));color:#fff;padding:52px 0 44px;margin-bottom:36px}.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);max-width:760px}.hero p{color:#dceee3;margin-top:12px;max-width:640px}.crumbs{font-size:.88rem;color:var(--mu);padding:14px 0 0}.crumbs a{color:var(--blue);text-decoration:none}h2.st{font-size:1.45rem;color:var(--gd);margin:36px 0 16px;border-bottom:3px solid var(--g);padding-bottom:8px}.facts{background:var(--bg);border:1px solid #e3eae6;border-radius:10px;padding:20px;margin:24px 0}.facts table{width:100%;border-collapse:collapse}.facts th{text-align:left;padding:9px;color:var(--gd);border-bottom:2px solid var(--g);width:35%;vertical-align:top}.facts td{padding:9px;border-bottom:1px solid #e3eae6}.facts a,.prose a,.tbl a{color:var(--blue)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0}.card{background:#fff;border:1px solid #e3eae6;border-top:4px solid var(--g);border-radius:10px;padding:20px}.card h3{font-size:1rem;color:var(--gd);margin-bottom:10px}.card ul{list-style:none}.card li{padding:6px 0;border-bottom:1px dashed #e3eae6;font-size:.92rem}.card a{color:var(--blue);text-decoration:none;font-weight:600}.faq details{background:#fff;border:1px solid #e3eae6;border-radius:8px;margin:9px 0;padding:0 16px}.faq summary{cursor:pointer;font-weight:600;padding:13px 0;color:var(--gd)}.faq p{padding:0 0 14px;font-size:.94rem}.faq ul{padding-left:20px}.faq li{padding:3px 0}.faq a{color:var(--blue)}.back{margin-top:40px;padding-top:18px;border-top:1px solid #e3eae6}.back a{color:var(--g);font-weight:700;text-decoration:none}.ft{background:var(--gd);color:#cfe0d6;padding:30px 0;text-align:center;font-size:.84rem;margin-top:44px}.ft a{color:#fff;text-decoration:none;font-weight:600}.ft .fl{margin-bottom:10px}.ft .fl a{margin:0 9px}.dir-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0 26px}.dir-list a{background:var(--bg);border:1px solid #d7e2db;border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--blue);font-weight:600;font-size:.9rem}.dir-list a small{display:block;color:var(--mu);font-weight:400;font-size:.78rem}.dir-list a:hover{background:var(--g);color:#fff}.dir-list a:hover small{color:#dceee3}.photo{margin:24px 0}.photo img{width:100%;max-height:440px;object-fit:cover;border-radius:10px;background:var(--bg)}.photo figcaption,.src{font-size:.8rem;color:var(--mu);margin-top:6px}.src a{color:var(--mu)}.prose p{margin:0 0 14px}.tbl{width:100%;border-collapse:collapse;margin:16px 0;font-size:.93rem}.tbl th{background:var(--gd);color:#fff;text-align:left;padding:9px}.tbl td{padding:9px;border-bottom:1px solid #e3eae6}.tbl tr:nth-child(even) td{background:var(--bg)}.alpha{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 20px}.alpha a{background:var(--gd);color:#fff;text-decoration:none;font-weight:700;padding:6px 11px;border-radius:5px}.alpha a:hover{background:var(--gold)}h3.letter{font-size:1.3rem;color:var(--gd);margin-top:22px;scroll-margin-top:80px}#q{width:100%;padding:12px 14px;font-size:1rem;border:2px solid #d7e2db;border-radius:8px}"
 
+CSS += (
+ # cards, headings, tables, hero
+ ".hero{padding:64px 0 52px}.card{transition:all .2s}.card:hover{box-shadow:0 4px 16px rgba(0,0,0,.12);transform:translateY(-2px)}"
+ ".card ul li:last-child{border-bottom:none}.card li small{display:block;color:var(--mu);font-weight:400;font-size:.82rem;line-height:1.4}"
+ ".dir-list a{transition:all .2s}.dir-list a:hover{background:var(--g);color:#fff;transform:translateY(-1px)}"
+ "h2.st{position:relative;padding-left:14px}h2.st:before{content:'';position:absolute;left:0;top:2px;bottom:10px;width:5px;border-radius:3px;background:var(--gold)}"
+ ".facts tr:nth-child(even) th,.facts tr:nth-child(even) td{background:#eef3f0}"
+ # quick facts + map
+ ".qf{display:flex;gap:20px;align-items:flex-start;margin:24px 0}.qf .facts{flex:1;min-width:0;margin:0}"
+ ".ormap{flex:0 0 216px;background:var(--bg);border:1px solid #e3eae6;border-radius:10px;padding:8px;text-align:center}"
+ ".ormap svg{display:block;width:200px;height:160px}.ormap figcaption{font-size:.8rem;color:var(--mu);margin-top:4px}"
+ # ticker (pure CSS)
+ ".ticker{background:var(--gd);border-top:1px solid #2c5a45;border-bottom:1px solid #0b241a;overflow:hidden;white-space:nowrap;font-size:.85rem}"
+ ".ticker-track{display:inline-block;padding:7px 0;animation:scroll-left 1500s linear infinite;will-change:transform}"
+ ".ticker-track:hover{animation-play-state:paused}.ticker-track span{color:var(--gold);padding:0 26px;border-right:1px solid #2c5a45}"
+ "@keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}"
+ "@media(prefers-reduced-motion:reduce){.ticker-track{animation-play-state:paused}}"
+ # travel alerts banner
+ "#alerts-bar{background:#fff8e6;border-bottom:1px solid #e8c873}#alerts-bar summary{max-width:1000px;margin:0 auto;padding:7px 24px;cursor:pointer;font-weight:700;font-size:.88rem;color:#7a4b00;list-style-position:inside}"
+ "#alerts-bar summary:hover{color:#4f3100}#alerts-bar[open]{background:#fffbf0}#alerts-bar .ab{max-width:1000px;margin:0 auto;padding:4px 24px 16px;font-size:.9rem}"
+ "#alerts-bar .ab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}#alerts-bar .ab-grid div{background:#fff;border:1px solid #f0dca6;border-left:4px solid var(--g);border-radius:6px;padding:10px 12px}"
+ "#alerts-bar h4{color:var(--gd);font-size:.92rem;margin-bottom:4px}#alerts-bar a{color:var(--blue);font-weight:600}#alerts-bar ul{list-style:none}#alerts-bar li{padding:2px 0}"
+ "#ab-live{margin-top:12px}#ab-live:empty{display:none}#ab-live p{margin:4px 0}#ab-live .ab-note{font-size:.78rem;color:var(--mu)}"
+ # mobile
+ "@media(max-width:600px){.cards{grid-template-columns:1fr}.hero{padding:40px 0 32px}.qf{flex-direction:column}.ormap{align-self:center}"
+ ".wrap{padding:0 16px}.nl{gap:10px}.facts{padding:12px}.facts th{width:auto}.facts th,.facts td{display:block;border-bottom:none;padding:4px 6px}.facts td{border-bottom:1px solid #e3eae6;padding-bottom:9px}"
+ "#alerts-bar summary,#alerts-bar .ab{padding-left:16px;padding-right:16px}}"
+)
+
+OREGON_TICKER_FACTS = [
+ "Oregon has the only two-sided state flag in the US 🦫",
+ "Crater Lake is the deepest lake in the US at 1,943 feet deep 🏔",
+ "Oregon beaches are 100% publicly owned by law — no private beach access 🌊",
+ "Oregon has no statewide sales tax 💰",
+ "The world's largest living organism is in Oregon — a honey fungus spanning 2.4 miles in Malheur National Forest 🍄",
+ "Portland has the world's smallest park: Mill Ends Park, just 2 feet in diameter 🌳",
+ "Oregon grows 99% of the US hazelnut crop 🌰",
+ "Portland's Powell's Books is one of the world's largest independent bookstores 📚",
+ "Nike was founded in Oregon in 1964 by Phil Knight and Bill Bowerman 👟",
+ "Multnomah Falls drops 620 feet — one of the tallest year-round waterfalls in the US 💧",
+ "Oregon was the first state to vote entirely by mail 📬",
+ "Oregon City (1844) was the first incorporated city west of the Rocky Mountains 🏙",
+ "Oregon has 40+ covered bridges — more than any other western state 🌉",
+ "The Oregon Dunes are the largest coastal sand dune system in North America 🏜",
+ "Smith Rock State Park is considered the birthplace of American sport climbing 🧗",
+ "Oregon's state nut is the hazelnut 🌰",
+ "Oregon is the #1 US producer of Christmas trees 🎄",
+ "Crater Lake gets an average of 533 inches of snow per year ❄",
+ "Silver Falls State Park's Trail of Ten Falls passes 10 waterfalls in just 7.2 miles 🏞",
+ "Oregon's Sea Lion Caves near Florence is the only mainland year-round wild sea lion habitat in the US 🦭",
+ "The Columbia River Gorge has 77 named waterfalls 💦",
+ "Oregon has 300+ craft breweries — among the most per capita in the US 🍺",
+ "Astoria (1811) is the oldest American settlement west of the Rocky Mountains ⚓",
+ "Mt. Hood is climbed by 10,000+ people every year 🏔",
+ "The Willamette Valley produces world-class Pinot Noir wine 🍷",
+ "Tillamook County Creamery makes 167,000 pounds of cheese per day 🧀",
+ "Oregon's state bird is the Western Meadowlark 🐦",
+ "Portland was named by a coin flip between settlers from Portland ME and Boston MA 🪙",
+ "Oregon's Painted Hills have layers of red, tan and black from 35 million years of volcanic history 🎨",
+ "The Pacific Crest Trail runs 430 miles through Oregon 🥾",
+ "Oregon's state mushroom is the Pacific Golden Chanterelle 🍄",
+ "The Wallowa Mountains in NE Oregon are nicknamed 'Oregon's Alps' 🏔",
+ "Oregon's state tree is the Douglas Fir — the most common lumber tree in North America 🌲",
+ "Mt. Hood is Oregon's highest peak at 11,249 feet 🗻",
+ "The Oregon Trail carried 400,000+ settlers from Missouri to Oregon in the 1840s–60s 🐂",
+ "Oregon's Crater Lake is so clear you can see 100+ feet into the water 🔵",
+ "The Timberline Lodge on Mt. Hood was hand-built by craftsmen in 1937 as a WPA project 🏛",
+ "Oregon's Columbia River Gorge is a National Scenic Area 80 miles long 🌄",
+ "The Rogue River runs entirely within Oregon for 215 miles 🚣",
+ "Oregon's state fish is the Chinook Salmon 🐟",
+ "Portland's International Rose Test Garden has over 10,000 rose bushes 🌹",
+ "Oregon's bottle bill (1971) was the first container deposit law in the US ♻",
+ "Oregon's Astoria Column has a 164-step spiral staircase with panoramic views 🌀",
+ "Crater Lake was formed 7,700 years ago when Mt. Mazama collapsed 🌋",
+ "Oregon has 14 national forests covering millions of acres 🌲",
+ "The Oregon Shakespeare Festival in Ashland runs February through October 🎭",
+ "Oregon has more than 100 state parks 🏕",
+ "Bonneville Dam (1938) on the Columbia River was one of the first great New Deal hydropower projects ⚡",
+ "Oregon's Pendleton Round-Up (est. 1910) is one of the top 5 rodeos in the US 🤠",
+ "Oregon's state flower is the Oregon Grape 🌿",
+ "Portland's Hawthorne Bridge (1910) is the oldest operating vertical-lift bridge in the US 🌉",
+ "Intel employs over 20,000 people in Hillsboro, Oregon 💻",
+ "The John Day Fossil Beds contain 50+ million years of continuous fossils 🦴",
+ "Oregon's Malheur National Wildlife Refuge hosts over 320 bird species 🦅",
+ "Oregon's Harney County is bigger than Maryland and Delaware combined 🗺",
+ "The Willamette Meteorite (1902) is the largest meteorite ever found in the US ☄",
+ "Oregon's state motto: 'She Flies with Her Own Wings' 🦅",
+ "Eugene's Prefontaine Memorial Trail honors Steve Prefontaine, who held 7 American track records 🏃",
+ "Oregon's McKenzie River near Eugene is rated one of the top trout streams in the West 🎣",
+ "Oregon Caves in Josephine County are still being formed by moving water today 🕳",
+ "The Oregon Coast Aquarium in Newport has a massive open-ocean exhibit 🦈",
+ "Oregon's state insect is the Oregon Swallowtail butterfly 🦋",
+ "Portland's MAX light rail (opened 1986) is one of the longest light rail systems in the US 🚇",
+ "Oregon's Forest Park in Portland is one of the largest urban forests in the US, at over 5,000 acres 🌳",
+ "The Columbia River produces more hydropower than any other river in North America ⚡",
+ "Oregon's Pacific Flyway is a major migratory route for birds from Alaska to Baja California 🦆",
+ "Portland's Lan Su Chinese Garden is the largest authentic Suzhou-style garden outside China 🏯",
+ "Oregon's state rock is the thunder egg — a type of geode found in volcanic ash beds ⚡🥚",
+ "Oregon has more than 600 lakes over 10 acres in size 🏞",
+ "Silver Falls is Oregon's largest state park at 9,000+ acres 🌲",
+ "Oregon's Sea Lion Caves are accessible by elevator carved into the cliff ⬇",
+ "The original Oregon Territory (1848) included modern Oregon, Washington, Idaho and parts of Montana 🗺",
+ "Oregon's Willamette Valley is the #1 US producer of grass seed 🌾",
+ "Oregonians consume more coffee per capita than almost any other US state ☕",
+ "Portland has over 500 food carts — one of the most vibrant food cart cultures in the country 🌮",
+ "Oregon's Crater Lake has a small island called Wizard Island formed by a cinder cone 🌋",
+ "The Umpqua River is considered one of the oldest river systems in the Cascade Range 🏔",
+ "Oregon's Newberry Volcanic National Monument contains one of North America's largest calderas 🌋",
+ "Oregon's state fossil is Metasequoia (dawn redwood) 🌲",
+ "The Alvord Desert in southeast Oregon is one of the driest places in the Pacific Northwest ☀",
+ "Steens Mountain in SE Oregon rises 9,773 feet above the desert floor 🏔",
+ "Portland's Saturday Market (est. 1974) is the largest continuously operating outdoor arts market in the US 🎨",
+ "Oregon's Tillamook Air Museum houses one of the world's largest wooden structures 🛩",
+ "The Pacific Ring of Fire runs through Oregon — several volcanoes are still considered active 🌋",
+ "Oregon's Mt. Jefferson is the 2nd highest peak in the state at 10,495 feet 🗻",
+ "Oregon has more designated Wild and Scenic Rivers than any other state 🚣",
+ "Oregon is one of only 5 states with no general sales tax 💵",
+ "The Astoria-Megler Bridge (1966) crossing the Columbia River is 4.1 miles long 🌉",
+ "Oregon banned self-serve gas for 72 years — since 2023, drivers statewide may pump their own ⛽",
+ "Oregon's Fort Clatsop near Astoria is where Lewis and Clark spent winter 1805–1806 ⛺",
+ "Oregon's 1000 Friends (est. 1975) pioneered land-use planning to protect farmland from sprawl 🌾",
+ "Oregon has 13 National Wildlife Refuges 🦅",
+ "Portland's Union Station has been an active train station since 1896 🚂",
+ "Oregon's Crater Lake National Park was established in 1902 — Oregon's only national park 🏞",
+ "Oregon is one of the top US producers of peppermint oil 🌿",
+ "The Fremont Bridge in Portland (1973) has the longest tied-arch span in the US at 1,255 feet 🌉",
+ "Oregon's 'Open Beaches Act' (1967) ensures all Oregon beaches are publicly accessible 🏖",
+ "Oregon's Lan Su Chinese Garden in Portland was built by 65 craftspeople from Suzhou, China 🪷",
+ "Oregon became the 33rd state on February 14, 1859 — Valentine's Day 💘",
+ "The beaver is Oregon's state animal, which is why it's called the Beaver State 🦫",
+ "Haystack Rock at Cannon Beach rises 235 feet from the sand 🪨",
+ "Hells Canyon on the Oregon–Idaho border is North America's deepest river gorge 🏞",
+]
+
+
+def ticker_html():
+    """Infinite horizontal fact ticker — CSS animation only; facts duplicated so translateX(-50%) loops seamlessly."""
+    spans = ''.join(f'<span>{e(f)}</span>' for f in OREGON_TICKER_FACTS)
+    return f'<div class="ticker" role="region" aria-label="Oregon fun facts"><div class="ticker-track">{spans}{spans}</div></div>'
+
+
+ALERTS_JS = ("<script>(function(){var d=document.getElementById('alerts-bar'),done=false;if(!d)return;"
+ "d.addEventListener('toggle',function(){if(!d.open||done)return;done=true;var box=document.getElementById('ab-live');"
+ "var src='https://traveloregon.com/wp-json/wp/v2/pages?slug=travel-alerts&_fields=content';"
+ "var ctl=window.AbortController?new AbortController():null;if(ctl)setTimeout(function(){ctl.abort()},9000);"
+ "fetch('https://api.allorigins.win/get?url='+encodeURIComponent(src),ctl?{signal:ctl.signal}:{}).then(function(r){return r.json()})"
+ ".then(function(j){var a=JSON.parse(j.contents);var h=a&&a[0]&&a[0].content&&a[0].content.rendered;if(!h)return;"
+ "var doc=new DOMParser().parseFromString(h,'text/html'),items=[];"
+ "doc.querySelectorAll('h2,h3,h4,p,li').forEach(function(n){var t=(n.textContent||'').replace(/\\s+/g,' ').trim();if(t.length>25&&items.length<6)items.push(t)});"
+ "if(!items.length)return;var hd=document.createElement('h4');hd.textContent='Latest from Travel Oregon';box.appendChild(hd);"
+ "items.forEach(function(t){var p=document.createElement('p');p.textContent=t.length>300?t.slice(0,297)+'\\u2026':t;box.appendChild(p)});"
+ "var s=document.createElement('p');s.className='ab-note';s.textContent='Live excerpt \\u2014 see the full alerts page for details.';box.appendChild(s);"
+ "}).catch(function(){});});})();</script>")
+
+
+def alert_banner():
+    """Collapsed travel-alert bar on every page; live Travel Oregon text is fetched on first expand (silent fail)."""
+    ext = 'target="_blank" rel="noopener"'
+    return ('<details id="alerts-bar"><summary>&#9888;&#65039; Oregon Travel Alerts &mdash; Road Closures &amp; Wildfire Safety</summary><div class="ab"><div class="ab-grid">'
+            f'<div><h4>&#128679; Road Conditions</h4><ul><li><a href="https://www.tripcheck.com/" {ext}>TripCheck.com</a> &mdash; ODOT closures, cameras &amp; chain rules</li><li>Dial <strong>511</strong> for road info by phone</li></ul></div>'
+            f'<div><h4>&#128293; Wildfire Safety</h4><ul><li><a href="https://wildfire.oregon.gov/" {ext}>Oregon Wildfire Response &amp; Recovery</a></li><li><a href="https://fire.airnow.gov/" {ext}>AirNow Fire &amp; Smoke Map</a></li></ul></div>'
+            f'<div><h4>&#128226; Alerts &amp; Updates</h4><ul><li><a href="https://traveloregon.com/travel-alerts/" {ext}>Travel Oregon travel alerts</a></li><li><a href="https://www.oralert.gov/" {ext}>ORAlert.gov</a> &mdash; sign up for emergency alerts</li></ul></div>'
+            '</div><div id="ab-live" aria-live="polite"></div></div></details>' + ALERTS_JS)
+
+
+OR_BBOX = (41.85, 46.35, -124.65, -116.40)   # lat_min, lat_max, lon_min, lon_max
+OR_OUTLINE = [(-124.55, 46.24), (-124.17, 46.23), (-123.2, 46.15), (-122.1, 45.6), (-121.0, 45.6),
+              (-119.5, 46.0), (-117.0, 46.0), (-116.95, 45.0), (-117.04, 43.0), (-117.04, 42.0),
+              (-120.0, 41.99), (-122.0, 41.99), (-124.2, 41.99), (-124.65, 43.5), (-124.65, 45.5), (-124.55, 46.24)]
+
+
+def _or_xy(lat, lon, w=200, h=160, pad=8):
+    la0, la1, lo0, lo1 = OR_BBOX
+    return (lon - lo0) / (lo1 - lo0) * (w - 2 * pad) + pad, (la1 - lat) / (la1 - la0) * (h - 2 * pad) + pad
+
+
+def oregon_svg_map(lat, lon, label='City'):
+    pts = ' '.join('%.1f,%.1f' % _or_xy(la, lo) for lo, la in OR_OUTLINE)
+    x, y = _or_xy(lat, lon)
+    return (f'<figure class="ormap"><svg viewBox="0 0 200 160" width="200" height="160" role="img" aria-label="Map of Oregon showing the location of {e(label)}">'
+            f'<polygon points="{pts}" fill="#dfeee5" stroke="#1a5632" stroke-width="1.5" stroke-linejoin="round"/>'
+            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#d62828" stroke="#fff" stroke-width="1.5"><title>{e(label)}</title></circle>'
+            f'</svg><figcaption>Location in Oregon</figcaption></figure>')
+
 
 def slug(name):
     if name in SLUG_OVERRIDES: return SLUG_OVERRIDES[name]
@@ -203,13 +419,14 @@ def summary_html(text, limit=1100):
     return ''.join(f'<p>{e(p)}</p>' for p in out)
 
 
-def head(title, desc, path, og_type='website', image=None, extra=''):
+def head(title, desc, path, og_type='website', image=None, extra='', up=''):
     url = f'{BASE_URL}{path}'
     img = image or DEFAULT_IMG
     ga = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={ANALYTICS_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{ANALYTICS_ID}");</script>' if ANALYTICS_ID else '')
     return (f'<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>{e(title)}</title>'
             f'<meta name="description" content="{e(desc)}"><meta name="robots" content="index, follow">'
-            f'<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="{url}">'
+            f'<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+            f'<link rel="icon" href="{up}assets/favicon.ico"><link rel="apple-touch-icon" href="{up}assets/favicon-32.png"><link rel="canonical" href="{url}">'
             f'<meta property="og:site_name" content="{SITE_NAME}"><meta property="og:type" content="{og_type}">'
             f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">'
             f'<meta property="og:url" content="{url}"><meta property="og:image" content="{e(img)}">'
@@ -273,7 +490,31 @@ def city_page(c, all_cities, custom):
     name = c['name']; counties = c['counties']; county = counties[0]
     region, electric = COUNTY_INFO.get(county, ('Oregon', 'Local utility'))
     x = custom.get(name.lower().replace(' ', '_'), {})
-    employers = x.get('major_employers', f'Employers in and around {name} and {county} County')
+    employers = x.get('major_employers') or f'Employers in and around {name} and {county} County'
+    if isinstance(employers, list): employers = ', '.join(employers)
+    or_map = oregon_svg_map(c['lat'], c['lon'], f'{name}, Oregon') if c.get('lat') is not None else ''
+    ext = ' target="_blank" rel="noopener"'
+    schools = [s for s in (x.get('schools') or []) if s.get('name')]
+    district, district_url = x.get('school_district'), x.get('school_district_url')
+    if schools or district:
+        items = []
+        if district:
+            dn = f'<a href="{e(district_url)}"{ext}>{e(district)}</a>' if district_url else e(district)
+            items.append(f'<li><strong>District:</strong> {dn}</li>')
+        for s in schools[:5]:
+            items.append(f'<li><a href="{e(s["url"])}"{ext}>{e(s["name"])}</a></li>' if s.get('url') else f'<li>{e(s["name"])}</li>')
+        if len(schools) > 5:
+            more = district_url or 'https://www.oregon.gov/ode/pages/default.aspx'
+            items.append(f'<li><a href="{e(more)}"{ext}>See all schools &rarr;</a></li>')
+        schools_card = f'<div class="card"><h3>&#127891; Schools</h3><ul>{"".join(items)}</ul></div>'
+    else:
+        schools_card = f'<div class="card"><h3>&#127891; Schools</h3><ul><li>Districts vary by address &mdash; verify before renting/buying</li><li><a href="https://www.oregon.gov/ode/pages/default.aspx"{ext}>Oregon Dept. of Education</a></li><li>Contact the {e(county)} County district office</li></ul></div>'
+    attr = [a for a in (x.get('top_attractions') or []) if a.get('name')][:5]
+    attractions_card = ''
+    if attr:
+        ai = ''.join((f'<li><a href="{e(a["url"])}"{ext}>{e(a["name"])}</a>' if a.get('url') else f'<li><strong>{e(a["name"])}</strong>')
+                     + (f'<br><small>{e(a["desc"])}</small>' if a.get('desc') else '') + '</li>' for a in attr)
+        attractions_card = f'<div class="card"><h3>&#127956; Top Attractions</h3><ul>{ai}</ul></div>'
     pop = n(c['pop2020'])
     area = c.get('area_sqmi')
     density = f'{float(c["pop2020"]) / float(area):,.0f} people per sq mi' if area and float(area) > 0 else ''
@@ -320,18 +561,18 @@ def city_page(c, all_cities, custom):
     local.append(f'<li><a href="../../counties/{slug(county)}/index.html">{e(county)} County guide on Oregon Information</a></li>')
     if c.get('wiki_url'): local.append(f'<li><a href="{e(c["wiki_url"])}" target="_blank" rel="noopener">{e(name)} on Wikipedia</a></li>')
     lead = f'{e(name)} is an incorporated city in {county_links(counties, "../../")}, in Oregon&rsquo;s {e(region)} region' + (f', with a 2020 Census population of {pop}.' if pop else '.')
-    return (head(f'{name}, Oregon | Population, Facts, Moving Guide & Local Links', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld))
-            + header('../../')
+    return (head(f'{name}, Oregon | Population, Facts, Moving Guide & Local Links', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../')
+            + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{e(name)}, Oregon</h1><p>Located in {e(county)} County in the {e(region)} region &mdash; city facts, history, a newcomer checklist, and official links in one place.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Cities</a> &rsaquo; {e(name)}</nav>'
-            + f'<h2 class="st">Quick Facts</h2><section class="facts"><table>{facts}</table></section>'
+            + f'<h2 class="st">Quick Facts</h2><div class="qf"><section class="facts"><table>{facts}</table></section>{or_map}</div>'
             + f'<h2 class="st">About {e(name)}</h2><section class="prose"><p>{lead}</p>{summary_html(c["summary"])}{wiki_credit(c) if c.get("wiki_url") else ""}</section>'
             + photo(c, f'{name}, Oregon')
-            + f'<h2 class="st">Moving to {e(name)}</h2><div class="cards"><div class="card"><h3>&#9889; Utilities Checklist</h3><ul><li><strong>Electricity:</strong> {e(electric)} (confirm by address)</li><li><strong>Natural gas:</strong> NW Natural, Avista or Cascade Natural Gas (where available)</li><li><strong>Water &amp; sewer:</strong> City of {e(name)}</li><li><strong>Trash:</strong> Franchised hauler &mdash; verify by service address</li><li><strong>Internet:</strong> Compare providers at the <a href="https://broadbandmap.fcc.gov/" target="_blank" rel="noopener">FCC broadband map</a></li></ul></div>'
+            + f'<h2 class="st">Moving to {e(name)}</h2><div class="cards"><div class="card"><h3>&#9889; Utilities Checklist</h3><ul><li><strong>Electricity:</strong> {utility_links_html(electric)} (confirm by address)</li><li><strong>Natural gas:</strong> NW Natural, Avista or Cascade Natural Gas (where available)</li><li><strong>Water &amp; sewer:</strong> City of {e(name)}</li><li><strong>Trash:</strong> Franchised hauler &mdash; verify by service address</li><li><strong>Internet:</strong> Compare providers at the <a href="https://broadbandmap.fcc.gov/" target="_blank" rel="noopener">FCC broadband map</a></li></ul></div>'
             + f'<div class="card"><h3>&#128188; Jobs &amp; Economy</h3><ul><li><strong>Notable employers:</strong> {e(employers)}</li><li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon (free)</a></li><li><a href="https://www.imatchskills.org/" target="_blank" rel="noopener">iMatchSkills job board</a></li></ul></div>'
             + '<div class="card"><h3>&#127968; Housing</h3><ul><li><a href="https://www.zillow.com/or/" target="_blank" rel="noopener">Zillow Oregon</a></li><li><a href="https://www.apartments.com/oregon/" target="_blank" rel="noopener">Apartments.com</a></li><li><a href="https://www.oregon.gov/ohcs/" target="_blank" rel="noopener">OHCS buyer/renter programs</a></li></ul></div>'
             + '<div class="card"><h3>&#128663; DMV Steps</h3><ul><li>Vehicle registration &amp; Oregon license within <strong>30 days</strong></li><li><a href="https://www.oregon.gov/odot/dmv/pages/new_residents.aspx" target="_blank" rel="noopener">New resident guide</a></li><li><a href="https://www.oregon.gov/odot/dmv/pages/find_us.aspx" target="_blank" rel="noopener">Find a DMV office</a></li></ul></div>'
-            + f'<div class="card"><h3>&#127891; Schools</h3><ul><li>Districts vary by address &mdash; verify before renting/buying</li><li><a href="https://www.oregon.gov/ode/pages/default.aspx" target="_blank" rel="noopener">Oregon Dept. of Education</a></li><li>Contact the {e(county)} County district office</li></ul></div>'
+            + schools_card + attractions_card
             + '<div class="card"><h3>&#127973; Healthcare &amp; Assistance</h3><ul><li><a href="https://one.oregon.gov/" target="_blank" rel="noopener">ONE portal (OHP/SNAP)</a></li><li><a href="https://www.oregonfoodbank.org/" target="_blank" rel="noopener">Oregon Food Bank</a></li><li><a href="https://www.211info.org/" target="_blank" rel="noopener">Dial 211 for local help</a></li></ul></div></div>'
             + (f'<h2 class="st">Nearby Cities</h2><nav class="dir-list">{near_html}</nav>' if near_html else '')
             + f'<h2 class="st">Frequently Asked Questions</h2><section class="faq">{faq_details}</section>'
@@ -375,8 +616,8 @@ def county_page(k, cities):
               '<li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon</a></li>',
               '<li><a href="https://aocweb.org/" target="_blank" rel="noopener">Association of Oregon Counties</a></li>']
     if k.get('wiki_url'): links.append(f'<li><a href="{e(k["wiki_url"])}" target="_blank" rel="noopener">{e(name)} County on Wikipedia</a></li>')
-    return (head(f'{name} County, Oregon | Cities, Population, Facts & Links', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread))
-            + header('../../')
+    return (head(f'{name} County, Oregon | Cities, Population, Facts & Links', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread), '../../')
+            + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{e(name)} County, Oregon</h1><p>County seat: {e(k["seat"])} &middot; {e(region)} region &middot; {len(members)} incorporated cities</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Counties</a> &rsaquo; {e(name)} County</nav>'
             + f'<h2 class="st">Quick Facts</h2><section class="facts"><table>{facts}</table></section>'
@@ -397,14 +638,14 @@ def cities_index(cities):
         f'<a href="{slug(c["name"])}/index.html" data-n="{e(c["name"].lower())} {e(" ".join(c["counties"]).lower())}">{e(c["name"])}<small>{e(", ".join(c["counties"]))} Co. &middot; pop. {n(c["pop2020"])}</small></a>' for c in cs) + '</nav>' for L, cs in groups.items())
     js = "<script>document.getElementById('q').addEventListener('input',function(){var v=this.value.toLowerCase();document.querySelectorAll('.dir-list a').forEach(function(a){a.style.display=a.dataset.n.indexOf(v)>-1?'':'none'});});</script>"
     desc = f'Directory of all {len(cities)} incorporated cities in Oregon with county, 2020 Census population, history, and moving guides.'
-    return (head('Oregon Cities A–Z | All 241 Incorporated Cities', desc, '/cities/') + header('../')
+    return (head('Oregon Cities A–Z | All 241 Incorporated Cities', desc, '/cities/', up='../') + header('../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>Oregon Cities A&ndash;Z</h1><p>Every incorporated city in Oregon ({len(cities)} total), with county and 2020 Census population.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Cities</nav><p style="margin:18px 0 8px"><input id="q" type="search" placeholder="Filter by city or county name..." aria-label="Filter cities"></p>'
             + f'<nav class="alpha">{alpha}</nav>{body}</div></main>' + js + footer('../', '<br>Population: U.S. Census Bureau 2020.'))
 
 
 def simple_page(path, title, desc, h1, sub, body):
-    return (head(title, desc, path) + header('../')
+    return (head(title, desc, path, up='../') + header('../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{h1}</h1><p>{sub}</p></div></div>'
             + f'<main><div class="wrap prose"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; {h1}</nav>{body}</div></main>' + footer('../'))
 
@@ -484,8 +725,8 @@ def region_page(rname, rcities):
         {'@type':'ListItem','position':1,'name':'Home','item':f'{BASE_URL}/'},
         {'@type':'ListItem','position':2,'name':'Oregon Regions','item':f'{BASE_URL}/regions/'},
         {'@type':'ListItem','position':3,'name':rname,'item':f'{BASE_URL}{path}'}]}
-    return (head(f'{rname}, Oregon | Cities, Counties & Living Guide', desc, path, 'article', None, ld(ld_obj)+ld(bread))
-            + header('../../')
+    return (head(f'{rname}, Oregon | Cities, Counties & Living Guide', desc, path, 'article', None, ld(ld_obj)+ld(bread), '../../')
+            + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{e(rname)}, Oregon</h1><p>{e(rc["hero_sub"])}</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Regions</a> &rsaquo; {e(rname)}</nav>'
             + f'<h2 class="st">About the {e(rname)} Region</h2><section class="prose"><p>{e(desc)}</p></section>'
@@ -515,8 +756,8 @@ def regions_index(all_cities):
                          f'</a>')
     ld_obj = {'@context':'https://schema.org','@type':'ItemList','name':'Oregon Regions',
               'url':f'{BASE_URL}{path}','numberOfItems':7}
-    return (head("Oregon's Seven Regions | Geographic Guide to Oregon", desc, path, 'website', None, ld(ld_obj))
-            + header('../')
+    return (head("Oregon's Seven Regions | Geographic Guide to Oregon", desc, path, 'website', None, ld(ld_obj), '../')
+            + header('../') + ticker_html() + alert_banner()
             + '<div class="hero"><div class="wrap"><h1>Oregon&rsquo;s Seven Regions</h1>'
             + '<p>Explore Oregon by region &mdash; cities, counties, living guides, and things to do in each part of the state.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Regions</nav>'
@@ -538,8 +779,8 @@ def oregon_page():
         f'<a href="/regions/{REGION_SLUGS[r]}/index.html" style="display:block;text-decoration:none;color:inherit" class="card">'
         f'<h3>{e(r)}</h3><p style="font-size:.92rem;color:var(--tx);margin:4px 0">{e(REGION_CONTENT[r]["desc"][:120])}&hellip;</p></a>'
         for r in REGION_SLUGS)
-    return (head(title, desc, path, 'article', None, ld(ld_obj)+ld(bread))
-            + header('../')
+    return (head(title, desc, path, 'article', None, ld(ld_obj)+ld(bread), '../')
+            + header('../') + ticker_html() + alert_banner()
             + '<div class="hero"><div class="wrap"><h1>Oregon State Facts</h1>'
             + '<p>Key facts, symbols, geography, history and economy of the U.S. state of Oregon.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> &rsaquo; Oregon State Facts</nav>'
