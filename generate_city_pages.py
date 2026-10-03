@@ -364,7 +364,7 @@ OREGON_FACTS = [
  ('No sales tax','Oregon levies no statewide sales tax'),
 ]
 
-CSS = ":root{--gd:#14382a;--g:#1a5632;--gold:#c8a24b;--blue:#1f4e79;--bg:#f6f8f7;--tx:#22302b;--mu:#5c6b64}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',system-ui,sans-serif;color:var(--tx);line-height:1.6;background:#fff}h1,h2,h3{font-family:Georgia,serif;line-height:1.25}.wrap{max-width:1000px;margin:0 auto;padding:0 24px}.hd{background:var(--gd);color:#fff;padding:14px 0;position:sticky;top:0;z-index:50}.hd nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}.badge{width:30px;height:30px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}.nl{list-style:none;display:flex;gap:16px;flex-wrap:wrap}.nl a{color:#dbe7e0;text-decoration:none;font-weight:600;font-size:.9rem}.nl a:hover{color:var(--gold)}.hero{background:linear-gradient(160deg,var(--gd),var(--g));color:#fff;padding:52px 0 44px;margin-bottom:36px}.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);max-width:760px}.hero p{color:#dceee3;margin-top:12px;max-width:640px}.crumbs{font-size:.88rem;color:var(--mu);padding:14px 0 0}.crumbs a{color:var(--blue);text-decoration:none}h2.st{font-size:1.45rem;color:var(--gd);margin:36px 0 16px;border-bottom:3px solid var(--g);padding-bottom:8px}.facts{background:var(--bg);border:1px solid #e3eae6;border-radius:10px;padding:20px;margin:24px 0}.facts table{width:100%;border-collapse:collapse}.facts th{text-align:left;padding:9px;color:var(--gd);border-bottom:2px solid var(--g);width:35%;vertical-align:top}.facts td{padding:9px;border-bottom:1px solid #e3eae6}.facts a,.prose a,.tbl a{color:var(--blue)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0}.card{background:#fff;border:1px solid #e3eae6;border-top:4px solid var(--g);border-radius:10px;padding:20px}.card h3{font-size:1rem;color:var(--gd);margin-bottom:10px}.card ul{list-style:none}.card li{padding:6px 0;border-bottom:1px dashed #e3eae6;font-size:.92rem}.card a{color:var(--blue);text-decoration:none;font-weight:600}.faq details{background:#fff;border:1px solid #e3eae6;border-radius:8px;margin:9px 0;padding:0 16px}.faq summary{cursor:pointer;font-weight:600;padding:13px 0;color:var(--gd)}.faq p{padding:0 0 14px;font-size:.94rem}.faq ul{padding-left:20px}.faq li{padding:3px 0}.faq a{color:var(--blue)}.back{margin-top:40px;padding-top:18px;border-top:1px solid #e3eae6}.back a{color:var(--g);font-weight:700;text-decoration:none}.ft{background:var(--gd);color:#cfe0d6;padding:30px 0;text-align:center;font-size:.84rem;margin-top:44px}.ft a{color:#fff;text-decoration:none;font-weight:600}.ft .fl{margin-bottom:10px}.ft .fl a{margin:0 9px}.dir-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0 26px}.dir-list a{background:var(--bg);border:1px solid #d7e2db;border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--blue);font-weight:600;font-size:.9rem}.dir-list a small{display:block;color:var(--mu);font-weight:400;font-size:.78rem}.dir-list a:hover{background:var(--g);color:#fff}.dir-list a:hover small{color:#dceee3}.photo{margin:24px 0}.photo img{width:100%;max-height:440px;object-fit:cover;border-radius:10px;background:var(--bg)}.photo figcaption,.src{font-size:.8rem;color:var(--mu);margin-top:6px}.src a{color:var(--mu)}.prose p{margin:0 0 14px}.tbl{width:100%;border-collapse:collapse;margin:16px 0;font-size:.93rem}.tbl th{background:var(--gd);color:#fff;text-align:left;padding:9px}.tbl td{padding:9px;border-bottom:1px solid #e3eae6}.tbl tr:nth-child(even) td{background:var(--bg)}.alpha{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 20px}.alpha a{background:var(--gd);color:#fff;text-decoration:none;font-weight:700;padding:6px 11px;border-radius:5px}.alpha a:hover{background:var(--gold)}h3.letter{font-size:1.3rem;color:var(--gd);margin-top:22px;scroll-margin-top:80px}#q{width:100%;padding:12px 14px;font-size:1rem;border:2px solid #d7e2db;border-radius:8px}"
+CSS = ":root{--gd:#14382a;--g:#1a5632;--gold:#c8a24b;--blue:#1f4e79;--bg:#f6f8f7;--tx:#22302b;--mu:#5c6b64}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',system-ui,sans-serif;color:var(--tx);line-height:1.6;background:#fff}h1,h2,h3{font-family:Georgia,serif;line-height:1.25}.wrap{max-width:1000px;margin:0 auto;padding:0 24px}.hd{background:var(--gd);color:#fff;padding:14px 0;position:sticky;top:0;z-index:50}.hd nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}.badge{width:30px;height:30px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}.nl{list-style:none;display:flex;gap:16px;flex-wrap:wrap}.nl a{color:#dbe7e0;text-decoration:none;font-weight:600;font-size:.9rem}.nl a:hover{color:var(--gold)}.hero{background:linear-gradient(160deg,var(--gd),var(--g));color:#fff;padding:52px 0 44px;margin-bottom:36px}.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);max-width:760px}.hero p{color:#dceee3;margin-top:12px;max-width:640px}.crumbs{font-size:.88rem;color:var(--mu);padding:14px 0 0}.crumbs a{color:var(--blue);text-decoration:none}h2.st{font-size:1.45rem;color:var(--gd);margin:36px 0 16px;border-bottom:3px solid var(--g);padding-bottom:8px}.facts{background:var(--bg);border:1px solid #e3eae6;border-radius:10px;padding:20px;margin:24px 0}.facts table{width:100%;border-collapse:collapse}.facts th{text-align:left;padding:9px;color:var(--gd);border-bottom:2px solid var(--g);width:35%;vertical-align:top}.facts td{padding:9px;border-bottom:1px solid #e3eae6}.facts a,.prose a,.tbl a{color:var(--blue)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0}.card{background:#fff;border:1px solid #e3eae6;border-top:4px solid var(--g);border-radius:10px;padding:20px}.card h3{font-size:1rem;color:var(--gd);margin-bottom:10px}.card ul{list-style:none}.card li{padding:6px 0;border-bottom:1px dashed #e3eae6;font-size:.92rem}.card a{color:var(--blue);text-decoration:none;font-weight:600}.faq details{background:#fff;border:1px solid #e3eae6;border-radius:8px;margin:9px 0;padding:0 16px}.faq summary{cursor:pointer;font-weight:600;padding:13px 0;color:var(--gd)}.faq p{padding:0 0 14px;font-size:.94rem}.faq ul{padding-left:20px}.faq li{padding:3px 0}.faq a{color:var(--blue)}.back{margin-top:40px;padding-top:18px;border-top:1px solid #e3eae6}.back a{color:var(--g);font-weight:700;text-decoration:none}.ft{background:var(--gd);color:#cfe0d6;padding:30px 0;text-align:center;font-size:.84rem;margin-top:44px}.ft a{color:#fff;text-decoration:none;font-weight:600}.ft .fl{margin-bottom:10px}.ft .fl a{margin:0 9px}.dir-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0 26px}.dir-list a{background:var(--bg);border:1px solid #d7e2db;border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--blue);font-weight:600;font-size:.9rem}.dir-list a small{display:block;color:var(--mu);font-weight:400;font-size:.78rem}.dir-list a:hover{background:var(--g);color:#fff}.dir-list a:hover small{color:#dceee3}.photo{margin:24px 0}.photo img{width:100%;max-height:440px;object-fit:cover;border-radius:10px;background:var(--bg)}.photo figcaption,.src{font-size:.8rem;color:var(--mu);margin-top:6px}.src a{color:var(--mu)}.prose p{margin:0 0 14px}.tbl{width:100%;border-collapse:collapse;margin:16px 0;font-size:.93rem}.tbl th{background:var(--gd);color:#fff;text-align:left;padding:9px}.tbl td{padding:9px;border-bottom:1px solid #e3eae6}.tbl tr:nth-child(even) td{background:var(--bg)}.alpha{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 20px}.alpha a{background:var(--gd);color:#fff;text-decoration:none;font-weight:700;padding:6px 11px;border-radius:5px}.alpha a:hover{background:var(--gold)}h3.letter{font-size:1.3rem;color:var(--gd);margin-top:22px;scroll-margin-top:80px}#q{width:100%;padding:12px 14px;font-size:1rem;border:2px solid #d7e2db;border-radius:8px}.gallery{display:grid;gap:14px;margin:20px 0 10px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.gallery.g1{grid-template-columns:1fr}.gallery figure{background:var(--bg);border:1px solid #e3eae6;border-radius:10px;overflow:hidden}.gallery img{width:100%;height:210px;object-fit:cover;display:block}.gallery.g1 img{height:380px}.gallery figcaption{font-size:.82rem;color:var(--tx);padding:8px 10px;line-height:1.35}.gallery figcaption small{color:var(--mu);font-size:.74rem}.gallery figcaption a{color:var(--mu)}"
 
 CSS += (
  # cards, headings, tables, hero
@@ -667,13 +667,64 @@ def ld(obj):
     return f'<script type="application/ld+json">{json.dumps(obj, ensure_ascii=False)}</script>'
 
 
+def file_page(item):
+    f = item.get('image_file', '')
+    if not f: return ''
+    base = 'https://en.wikipedia.org' if '/wikipedia/en/' in (item.get('image') or '') else 'https://commons.wikimedia.org'
+    return f'{base}/wiki/File:{f}'
+
+
 def photo(item, alt):
     if not item.get('image'): return ''
     f = item.get('image_file', '')
-    credit = f'<a href="https://commons.wikimedia.org/wiki/File:{e(f)}" target="_blank" rel="noopener">Wikimedia Commons</a>' if f else 'Wikimedia Commons'
+    credit = f'<a href="{e(file_page(item))}" target="_blank" rel="noopener">Wikimedia</a>' if f else 'Wikimedia Commons'
     fit = ' style="object-fit:contain"' if f.lower().endswith(('.svg', '.png')) else ''
     return (f'<figure class="photo"><img src="{e(item["image"])}"{fit} alt="{e(alt)}" loading="lazy">'
             f'<figcaption>Image: {credit} (see file page for author and license)</figcaption></figure>')
+
+
+CITY_IMAGES = json.load(open('data/city_images.json', encoding='utf-8')) if os.path.exists('data/city_images.json') else {}
+LINK_FIXES = json.load(open('data/link_fixes.json', encoding='utf-8')) if os.path.exists('data/link_fixes.json') else {}
+DEAD_LINKS = set(json.load(open('data/dead_links.json', encoding='utf-8'))) if os.path.exists('data/dead_links.json') else set()
+
+
+def fix_url(u):
+    return LINK_FIXES.get(u, u) if u else u
+
+
+CITY_SCHOOLS = json.load(open('data/city_schools.json', encoding='utf-8')) if os.path.exists('data/city_schools.json') else {}
+
+
+JUNK_WORDS = ('cemetery', 'greyhound', 'crucible', 'corbett hill', 'national forest historic photo', 'grave', '500px provided', 'photo by', 'odfw')
+
+
+def clean_cap(s, name):
+    s = re.sub(r'<[^>]+>', '', s or '').split('\n')[0]
+    s = re.sub(r'\b(w|en|wikipedia):', '', s)
+    s = re.sub(r'\s+', ' ', s).strip(' .-')
+    return s if 3 <= len(s) else f'{name}, Oregon'
+
+
+def gallery(c, name):
+    imgs = [i for i in CITY_IMAGES.get(name, []) if i.get('src')
+            and not any(w in (i.get('file', '') + ' ' + (i.get('caption') or '')).lower() for w in JUNK_WORDS)]
+    main_file = (c.get('image_file') or '').lower()
+    main_ok = c.get('image') and not any(w in main_file for w in ('map', 'locator', 'area', '.svg', '.png', 'seal', 'flag', 'logo'))
+    figs = []
+    if main_ok:
+        figs.append((c['image'], f'{name}, Oregon', file_page(c), 'Wikipedia' if '/wikipedia/en/' in c['image'] else 'Wikimedia Commons', ''))
+    for i in imgs:
+        if main_ok and i.get('file', '').lower() == main_file: continue
+        figs.append((i['src'], clean_cap(i.get('caption'), name), i.get('page') or '', i.get('artist') or 'Wikimedia Commons', i.get('license') or ''))
+    figs = figs[:6]
+    if not figs:
+        return photo(c, f'{name}, Oregon')
+    out = []
+    for src, cap, page, artist, lic in figs:
+        credit = f'{e(artist)}' + (f', {e(lic)}' if lic else '')
+        link = f' &middot; <a href="{e(page)}" target="_blank" rel="noopener">source</a>' if page else ''
+        out.append(f'<figure><img src="{e(src)}" alt="{e(cap)}" loading="lazy"><figcaption>{e(cap if len(cap) <= 90 else cap[:88].rsplit(" ", 1)[0].rstrip(",;:") + "…")}<br><small>Photo: {credit}{link}</small></figcaption></figure>')
+    return f'<h2 class="st">{e(name)} in Pictures</h2><section class="gallery g{min(len(figs),3)}">{"".join(out)}</section>'
 
 
 def wiki_credit(item):
@@ -708,21 +759,35 @@ def city_page(c, all_cities, custom):
     if isinstance(employers, list): employers = ', '.join(employers)
     or_map = oregon_svg_map(c['lat'], c['lon'], f'{name}, Oregon') if c.get('lat') is not None else ''
     ext = ' target="_blank" rel="noopener"'
-    schools = [s for s in (x.get('schools') or []) if s.get('name')]
-    district, district_url = x.get('school_district'), x.get('school_district_url')
+    district, district_url = x.get('school_district'), fix_url(x.get('school_district_url'))
+    ccd = CITY_SCHOOLS.get(name, [])
+    schools = []
+    for s in (x.get('schools') or []):
+        if not s.get('name'): continue
+        url = fix_url(s.get('url'))
+        if url in DEAD_LINKS:
+            key = re.sub(r'[^a-z]', '', s['name'].lower().replace('high school', 'hs'))
+            m = next((r for r in ccd if re.sub(r'[^a-z]', '', r['name'].lower().replace('high school', 'hs')) == key), None)
+            url = m['url'] if m else None
+        schools.append({'name': s['name'], 'url': url})
+    if not schools and ccd:
+        schools = [{'name': s['name'] + (f" ({s['level']}, grades {s['grades']})" if s.get('grades') else (f" ({s['level']})" if s.get('level') else '')), 'url': s['url']} for s in ccd]
+        if not district:
+            ds = sorted({s['district'] for s in ccd if s.get('district') and not s.get('charter')})
+            district = ', '.join(ds[:2]) if ds else None
     if schools or district:
         items = []
         if district:
             dn = f'<a href="{e(district_url)}"{ext}>{e(district)}</a>' if district_url else e(district)
             items.append(f'<li><strong>District:</strong> {dn}</li>')
-        for s in schools[:5]:
+        for s in schools[:8]:
             items.append(f'<li><a href="{e(s["url"])}"{ext}>{e(s["name"])}</a></li>' if s.get('url') else f'<li>{e(s["name"])}</li>')
-        if len(schools) > 5:
+        if len(schools) > 8:
             more = district_url or 'https://www.oregon.gov/ode/pages/default.aspx'
             items.append(f'<li><a href="{e(more)}"{ext}>See all schools &rarr;</a></li>')
         schools_card = f'<div class="card"><h3>&#127891; Schools</h3><ul>{"".join(items)}</ul></div>'
     else:
-        schools_card = f'<div class="card"><h3>&#127891; Schools</h3><ul><li>Districts vary by address &mdash; verify before renting/buying</li><li><a href="https://www.oregon.gov/ode/pages/default.aspx"{ext}>Oregon Dept. of Education</a></li><li>Contact the {e(county)} County district office</li></ul></div>'
+        schools_card = f'<div class="card"><h3>&#127891; Schools</h3><ul><li>No public schools are located inside {e(name)} city limits &mdash; students attend schools in the surrounding {e(county)} County district</li><li><a href="https://nces.ed.gov/ccd/schoolsearch/"{ext}>Find the schools serving an address (NCES)</a></li><li><a href="https://www.oregon.gov/ode/pages/default.aspx"{ext}>Oregon Dept. of Education</a></li></ul></div>'
     attr = [a for a in (x.get('top_attractions') or []) if a.get('name')][:5]
     attractions_card = ''
     if attr:
@@ -792,7 +857,7 @@ def city_page(c, all_cities, custom):
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Cities</a> &rsaquo; {e(name)}</nav>'
             + f'<h2 class="st">Quick Facts</h2><div class="qf"><section class="facts"><table>{facts}</table></section>{or_map}</div>'
             + f'<h2 class="st">About {e(name)}</h2><section class="prose"><p>{lead}</p>{summary_html(c["summary"])}{wiki_credit(c) if c.get("wiki_url") else ""}</section>'
-            + photo(c, f'{name}, Oregon')
+            + gallery(c, name)
             + f'<h2 class="st">Moving to {e(name)}</h2><div class="cards"><div class="card"><h3>&#9889; Utilities Checklist</h3><ul><li><strong>Electricity:</strong> {utility_links_html(electric)} (confirm by address)</li><li><strong>Natural gas:</strong> NW Natural, Avista or Cascade Natural Gas (where available)</li><li><strong>Water &amp; sewer:</strong> City of {e(name)}</li><li><strong>Trash:</strong> Franchised hauler &mdash; verify by service address</li><li><strong>Internet:</strong> Compare providers at the <a href="https://broadbandmap.fcc.gov/" target="_blank" rel="noopener">FCC broadband map</a></li></ul></div>'
             + f'<div class="card"><h3>&#128188; Jobs &amp; Economy</h3><ul><li><strong>Notable employers:</strong> {e(employers)}</li><li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon (free)</a></li><li><a href="https://www.imatchskills.org/" target="_blank" rel="noopener">iMatchSkills job board</a></li></ul></div>'
             + '<div class="card"><h3>&#127968; Housing</h3><ul><li><a href="https://www.zillow.com/or/" target="_blank" rel="noopener">Zillow Oregon</a></li><li><a href="https://www.apartments.com/oregon/" target="_blank" rel="noopener">Apartments.com</a></li><li><a href="https://www.oregon.gov/ohcs/" target="_blank" rel="noopener">OHCS buyer/renter programs</a></li></ul></div>'
@@ -839,7 +904,7 @@ def county_page(k, cities):
     links += ['<li><a href="https://www.211info.org/" target="_blank" rel="noopener">211info &mdash; local assistance</a></li>',
               '<li><a href="https://www.oregon.gov/odot/dmv/pages/offices/index.aspx" target="_blank" rel="noopener">Find a DMV office</a></li>',
               '<li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon</a></li>',
-              '<li><a href="https://aocweb.org/" target="_blank" rel="noopener">Association of Oregon Counties</a></li>']
+              '<li><a href="https://oregoncounties.org/" target="_blank" rel="noopener">Association of Oregon Counties</a></li>']
     if k.get('wiki_url'): links.append(f'<li><a href="{e(k["wiki_url"])}" target="_blank" rel="noopener">{e(name)} County on Wikipedia</a></li>')
     return (head(f'{name} County, Oregon | Cities, Population, Facts & Links', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread), '../../')
             + header('../../') + ticker_html() + alert_banner()
@@ -1050,6 +1115,8 @@ def oregon_page():
 
 
 def write(path, content):
+    for bad, good in LINK_FIXES.items():
+        content = content.replace(f'href="{bad}"', f'href="{good}"').replace(f'href="{e(bad)}"', f'href="{e(good)}"')
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f: f.write(content)
 
@@ -1059,6 +1126,8 @@ def main():
     counties = json.load(open('data/counties.json', encoding='utf-8'))
     custom = json.load(open('custom_city_content.json', encoding='utf-8')) if os.path.exists('custom_city_content.json') else {}
     for c in cities: c['counties'] = [x.strip() for x in c['county'].split(',')]
+    for c in cities + counties:
+        if c.get('website'): c['website'] = fix_url(c['website'])
     for k in counties: COUNTY_SITES[k['name']] = k.get('website', '')
     for c in cities:
         write(f'{OUT}/cities/{slug(c["name"])}/index.html', city_page(c, cities, custom))

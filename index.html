@@ -71,6 +71,17 @@
     .footer-cols ul { list-style: none; }
     .footer-cols li { padding: 4px 0; font-size: .92rem; }
     .legal { border-top: 1px solid rgba(255,255,255,.15); padding-top: 22px; font-size: .85rem; }
+    .or-hero{position:relative;overflow:hidden;min-height:460px;display:flex;align-items:center;color:#fff;padding:80px 0 72px;background:radial-gradient(ellipse at 75% 30%,rgba(200,162,75,.35),transparent 55%),linear-gradient(135deg,#0b2418 0%,#14382a 40%,#1f4e79 100%)}
+    .or-hero .wrap{position:relative;z-index:2;width:100%}
+    .or-sil{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:460px;max-width:42%;height:auto;opacity:.6;z-index:1;pointer-events:none}
+    .or-hero h1{font-size:clamp(2rem,5.5vw,3.4rem);max-width:720px;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+    .or-eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;font-weight:700;color:#c8a24b;margin-bottom:14px}
+    .or-sub{color:#dceee3;font-size:clamp(1rem,2vw,1.18rem);margin-top:16px;max-width:620px}
+    .or-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .btn-cta,.btn-ghost{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;transition:all .2s}
+    .btn-cta{background:#c8a24b;color:#14382a}.btn-cta:hover{background:#e0bb5e;transform:translateY(-2px)}
+    .btn-ghost{border:2px solid rgba(255,255,255,.7);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+    @media(max-width:700px){.or-sil{opacity:.2;max-width:80%;right:-20px}.or-hero{min-height:380px}}
   </style>
   <meta property="og:image" content="https://oregoninformation.com/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -83,6 +94,7 @@
       <ul class="nav-links">
         <li><a href="./moving-to-oregon/">Moving</a></li>
         <li><a href="./visit-oregon/">Visiting</a></li>
+        <li><a href="./regions/">Regions</a></li>
         <li><a href="./counties/">Counties</a></li>
         <li><a href="./cities/">Cities A–Z</a></li>
       </ul>
@@ -91,11 +103,13 @@
 </header>
 
 <main>
-  <section class="hero">
+  <section class="or-hero">
+    <svg class="or-sil" viewBox="0 0 500 400" aria-hidden="true" focusable="false"><polygon points="44.4,16.9 72.3,16.9 92.7,24.6 110.2,30.6 116.0,51.3 117.8,69.3 139.3,75.3 168.4,68.5 191.7,63.3 209.2,72.8 226.7,69.3 250.0,65.0 279.1,54.7 302.4,46.1 322.8,45.2 338.5,39.2 458.5,39.2 466.7,52.1 480.1,82.2 485.3,108.0 471.4,125.2 462.6,146.7 445.1,169.9 441.1,185.4 455.6,194.0 459.7,215.5 452.1,228.4 452.1,383.1 279.1,383.1 133.5,383.1 33.9,383.1 25.1,361.6 21.7,326.4 15.8,308.3 23.4,271.4 31.6,258.5 39.1,232.7 40.3,194.0 42.6,159.6 45.0,125.2 47.9,82.2 50.2,47.8 47.3,22.0 44.4,16.9" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.6)" stroke-width="2.5" stroke-linejoin="round"/></svg>
     <div class="wrap">
+      <p class="or-eyebrow">&#10022; The Beaver State &middot; Est. 1859 &#10022;</p>
       <h1>Your Complete Guide to the State of Oregon</h1>
-      <p>Facts, figures, and official links for the State of Oregon and every city within it — one website for residents, visitors, and everyone moving to Oregon.</p>
-      <a class="btn" href="./cities/">Explore Oregon Cities →</a>
+      <p class="or-sub">Facts, figures, and official links for the State of Oregon and all 241 cities, 36 counties and 7 regions — one website for residents, visitors, and everyone moving to Oregon.</p>
+      <p class="or-cta"><a class="btn-cta" href="/cities/">Explore Oregon Cities &rarr;</a><a class="btn-ghost" href="/regions/">Browse the 7 regions</a></p>
     </div>
   </section>
 

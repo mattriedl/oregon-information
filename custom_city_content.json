@@ -2500,7 +2500,7 @@
     "top_attractions": [
       {
         "name": "Villebois Village",
-        "url": "https://www.villeboisliving.com",
+        "url": null,
         "desc": "A beautiful planned community with parks, pathways, and a town center — great for a walk"
       },
       {
@@ -2622,9 +2622,9 @@
         "desc": "The largest park in Albany with a boat ramp, disc golf, off-leash dog area, and playground"
       },
       {
-        "name": "Albany World Timber Championships",
-        "url": "https://www.timberworld.com/",
-        "desc": "Annual summer festival celebrating Oregon's timber heritage with log-rolling, speed climbing, and more"
+        "name": "Albany Timber Carnival (history)",
+        "url": "https://www.oregonencyclopedia.org/articles/albany_timber_carnival/",
+        "desc": "Albany hosted the famous World Championship Timber Carnival logging-sports festival from 1941 to 2000"
       },
       {
         "name": "Linn County Historical Museum",
@@ -4272,7 +4272,7 @@
       },
       {
         "name": "Pony Village Mall",
-        "url": "https://www.ponyvillagemall.com",
+        "url": null,
         "desc": "Main shopping center serving the Coos Bay-North Bend community"
       },
       {
@@ -4603,9 +4603,9 @@
         "desc": "Colorful community murals throughout downtown Madras celebrating local history and culture"
       },
       {
-        "name": "Solar Eclipse Viewing (2017 Ground Zero)",
-        "url": "https://www.jeffco.k12.or.us/",
-        "desc": "Madras was at the center of totality for the 2024 and 2017 total solar eclipses — next eclipse viewing in 2045"
+        "name": "2017 Solar Eclipse Ground Zero",
+        "url": "https://en.wikipedia.org/wiki/Solar_eclipse_of_August_21,_2017",
+        "desc": "Madras was in the path of totality for the August 21, 2017 total solar eclipse and drew huge crowds of eclipse watchers"
       }
     ]
   },
@@ -4719,7 +4719,7 @@
       },
       {
         "name": "Redmond Air Center",
-        "url": "https://www.fs.usda.gov/detail/centraloregon/about-forest/offices/?cid=fswdev3_008446",
+        "url": null,
         "desc": "Home base for airtanker fire suppression — one of the largest aerial firefighting bases in the USA"
       },
       {
@@ -4809,7 +4809,7 @@
     ],
     "nearest_hospital": "Providence Hood River Memorial Hospital (about 18 miles east)",
     "transit": "Columbia Gorge Express bus links Cascade Locks to Portland on weekends; no local fixed-route service",
-    "school_district": "Cascade Locks School District",
+    "school_district": "Hood River County School District",
     "school_district_url": "https://www.clocks.k12.or.us",
     "schools": [
       {
