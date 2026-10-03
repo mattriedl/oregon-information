@@ -468,6 +468,9 @@ CSS += (
  ".vote-card h3{font-size:1rem;color:var(--gd);margin-bottom:10px}"
  ".vote-card ul{list-style:none}.vote-card li{padding:6px 0;border-bottom:1px dashed #e3eae6;font-size:.92rem}"
  ".vote-card li:last-child{border-bottom:none}.vote-card a{color:var(--blue);text-decoration:none;font-weight:600}"
+ # region link (city pages) + did-you-know (county pages)
+ "a.pill{text-decoration:none}a.pill:hover{background:rgba(255,255,255,.25)}.region-link{margin:6px 0 0;font-size:.92rem}.region-link a{color:var(--g);font-weight:700;text-decoration:none}"
+ ".did-you-know{background:var(--bg);border-left:4px solid var(--gold);border-radius:6px;padding:12px 16px;margin:18px 0 0}.did-you-know a{color:var(--blue);font-weight:600}"
  # blog (index cards + article body)
  ".post-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.post{max-width:760px;font-size:1.04rem;margin-top:20px}.post p{margin:0 0 16px}"
  ".post h2{font-size:1.45rem;color:var(--gd);margin:38px 0 14px;border-bottom:3px solid var(--g);padding-bottom:8px}"
@@ -962,8 +965,11 @@ def city_page(c, all_cities, custom):
                 f'{name} schools, {name} utilities, Oregon cities')
     tagline = city_tagline(name, county, breg)
     badges = ''.join(f'<span class="pill">{b}</span>' for b in (
-        [f'&#128101; Pop. {pop}'] if pop else []) + [f'&#127963; {e(county)} County', f'&#128205; {e(breg)}']
+        [f'&#128101; Pop. {pop}'] if pop else []) + [f'&#127963; {e(county)} County']
         + (['&#11088; State capital'] if c['capital'] else ['&#127963; County seat'] if c['seat'] else []))
+    rslug = REGION_SLUGS.get(breg)
+    badges += (f'<a href="../../regions/{rslug}/index.html" class="pill">&#128205; {e(breg)} Region</a>' if rslug
+               else f'<span class="pill">&#128205; {e(breg)}</span>')
     city_ld = {'@context': 'https://schema.org', '@type': 'City', 'name': f'{name}, Oregon', 'url': f'{BASE_URL}{path}',
                'containedInPlace': {'@type': 'AdministrativeArea', 'name': f'{county} County, Oregon'}}
     if c.get('lat') is not None: city_ld['geo'] = {'@type': 'GeoCoordinates', 'latitude': c['lat'], 'longitude': c['lon']}
@@ -973,7 +979,8 @@ def city_page(c, all_cities, custom):
     bread = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{BASE_URL}/'},
         {'@type': 'ListItem', 'position': 2, 'name': 'Oregon Cities', 'item': f'{BASE_URL}/cities/'},
-        {'@type': 'ListItem', 'position': 3, 'name': name, 'item': f'{BASE_URL}{path}'}]}
+        {'@type': 'ListItem', 'position': 3, 'name': f'{county} County', 'item': f'{BASE_URL}/counties/{slug(county)}/'},
+        {'@type': 'ListItem', 'position': 4, 'name': name, 'item': f'{BASE_URL}{path}'}]}
     faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in fq[:5]]}
     sl = '\n'.join(f'<li><a href="{u}" target="_blank" rel="noopener">{t}</a></li>' for t, u in STATE_LINKS)
@@ -987,12 +994,13 @@ def city_page(c, all_cities, custom):
     lead = f'{e(name)} is an incorporated city in {county_links(counties, "../../")}, in Oregon&rsquo;s {e(region)} region' + (f', with a 2020 Census population of {pop}.' if pop else '.')
     wx = weather_widget(name, c.get('lat'), c.get('lon'))
     vote = voter_card(county, name)
-    return (head(f'{name}, Oregon (2025 Population, Schools & Local Guide) | Oregon Information', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
+    return (head(f'{name}, Oregon \u2013 Population, Schools, Weather & Moving Guide 2025 | Oregon Information', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
             + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero city-hero"{hero_style(breg)}><div class="wrap"><h1>{e(name)}, Oregon</h1><p class="city-tagline">{e(tagline)}</p>'
             + f'<div class="pills">{badges}</div>'
             + f'<p class="hero-sub">{e(name)}, OR guide: population, schools, utilities, weather, attractions, nearby cities and a moving checklist for {e(county)} County, {e(reg_phrase)}.</p></div></div>'
-            + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Cities</a> &rsaquo; {e(name)}</nav>'
+            + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Cities</a> &rsaquo; <a href="../../counties/{slug(county)}/index.html">{e(county)} County</a> &rsaquo; {e(name)}</nav>'
+            + (f'<p class="region-link"><a href="../../regions/{rslug}/index.html">Explore the {e(breg)} region &rarr;</a></p>' if rslug else '')
             + f'<h2 class="st">Quick Facts</h2><div class="qf"><section class="facts"><table>{facts}</table></section>{or_map}</div>'
             + wx
             + f'<h2 class="st">About {e(name)}</h2><section class="prose"><p>{lead}</p>{summary_html(c["summary"])}{wiki_credit(c) if c.get("wiki_url") else ""}</section>'
@@ -1012,6 +1020,21 @@ def city_page(c, all_cities, custom):
 
 
 COUNTY_SITES = {}
+
+
+def county_region_note(name, sub_region, members):
+    """'Did you know?' line linking a county page to its 7-region page and its largest cities."""
+    breg = BIG_REGION_MAP.get(sub_region, '')
+    rslug = REGION_SLUGS.get(breg)
+    if not rslug: return ''
+    top = members[:3]
+    cities = ''
+    if top:
+        links = [f'<a href="../../cities/{slug(c["name"])}/index.html">{e(c["name"])}</a>' for c in top]
+        joined = links[0] if len(links) == 1 else ', '.join(links[:-1]) + ' and ' + links[-1]
+        cities = f' Its largest {"city is" if len(top) == 1 else "cities are"} {joined}.'
+    return (f'<p class="did-you-know"><strong>Did you know?</strong> {e(name)} County is part of the '
+            f'<a href="../../regions/{rslug}/index.html">{e(breg)} region</a> of Oregon.{cities}</p>')
 
 
 def county_page(k, cities):
@@ -1046,10 +1069,11 @@ def county_page(k, cities):
               '<li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon</a></li>',
               '<li><a href="https://oregoncounties.org/" target="_blank" rel="noopener">Association of Oregon Counties</a></li>']
     if k.get('wiki_url'): links.append(f'<li><a href="{e(k["wiki_url"])}" target="_blank" rel="noopener">{e(name)} County on Wikipedia</a></li>')
-    return (head(f'{name} County, Oregon | Cities, Population, Facts & Links', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread), '../../')
+    return (head(f'{name} County, Oregon \u2013 Cities, Population, Facts & Living Guide 2025 | Oregon Information', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread), '../../')
             + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{e(name)} County, Oregon</h1><p>County seat: {e(k["seat"])} &middot; {e(region)} region &middot; {len(members)} incorporated cities</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Counties</a> &rsaquo; {e(name)} County</nav>'
+            + county_region_note(name, region, members)
             + f'<h2 class="st">Quick Facts</h2><section class="facts"><table>{facts}</table></section>'
             + f'<h2 class="st">About {e(name)} County</h2><section class="prose">{summary_html(k["summary"], 1400)}{wiki_credit(k) if k.get("wiki_url") else ""}</section>'
             + photo(k, f'{name} County, Oregon')
