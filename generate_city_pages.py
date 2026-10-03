@@ -43,6 +43,45 @@ COUNTY_INFO = {
  'Malheur':('Southeast Oregon','Idaho Power'),'Wheeler':('North Central Oregon','Columbia Power Cooperative'),
 }
 
+COUNTY_ELECTIONS = {
+ 'Baker':     'https://bakercounty.org/departments/elections',
+ 'Benton':    'https://www.bentoncountyor.gov/elections/',
+ 'Clackamas': 'https://www.clackamas.us/elections',
+ 'Clatsop':   'https://www.clatsopcounty.gov/237/Elections-Filing',
+ 'Columbia':  'https://www.columbiacountyor.gov/departments/elections',
+ 'Coos':      'https://www.co.coos.or.us/departments/elections',
+ 'Crook':     'https://www.co.crook.or.us/departments/elections',
+ 'Curry':     'https://www.co.curry.or.us/departments/elections',
+ 'Deschutes': 'https://www.deschutes.org/elections',
+ 'Douglas':   'https://www.co.douglas.or.us/elections/index.asp',
+ 'Gilliam':   'https://www.co.gilliam.or.us/county_services/elections',
+ 'Grant':     'https://www.grantcountyor.gov/departments/elections',
+ 'Harney':    'https://www.co.harney.or.us/departments/elections',
+ 'Hood River':'https://hoodriver.or.gov/departments/elections',
+ 'Jackson':   'https://jcgov.us/elections',
+ 'Jefferson': 'https://jeffersoncountyor.gov/government/departments/elections/',
+ 'Josephine': 'https://www.co.josephine.or.us/elections',
+ 'Klamath':   'https://www.klamathcounty.org/divisions/county-clerk/elections',
+ 'Lake':      'https://www.co.lake.or.us/departments/elections',
+ 'Lane':      'https://www.lanecounty.org/departments/electionsvital_records',
+ 'Lincoln':   'https://www.co.lincoln.or.us/departments/elections',
+ 'Linn':      'https://www.co.linn.or.us/elections',
+ 'Malheur':   'https://malheurco.org/elections/',
+ 'Marion':    'https://www.co.marion.or.us/CO/elections/',
+ 'Morrow':    'https://www.co.morrow.or.us/departments/elections',
+ 'Multnomah': 'https://multco.us/elections',
+ 'Polk':      'https://www.co.polk.or.us/elections',
+ 'Sherman':   'https://www.co.sherman.or.us/county-departments/elections',
+ 'Tillamook': 'https://www.co.tillamook.or.us/elections',
+ 'Umatilla':  'https://www.umatillacounty.net/county-services/elections',
+ 'Union':     'https://www.union-county.org/departments/elections',
+ 'Wallowa':   'https://co.wallowa.or.us/departments/elections',
+ 'Wasco':     'https://www.co.wasco.or.us/elections',
+ 'Washington':'https://www.washingtoncountyoregon.gov/elections',
+ 'Wheeler':   'https://www.co.wheeler.or.us/departments/elections',
+ 'Yamhill':   'https://www.co.yamhill.or.us/elections',
+}
+
 UTILITY_URLS = {
  'Portland General Electric': 'https://www.portlandgeneral.com/',
  'Pacific Power': 'https://www.pacificpower.net/',
@@ -411,6 +450,24 @@ CSS += (
  "@media(max-width:600px){.cards{grid-template-columns:1fr}.hero{padding:40px 0 32px}.qf{flex-direction:column}.ormap{align-self:center}"
  ".wrap{padding:0 16px}.nl{gap:10px}.facts{padding:12px}.facts th{width:auto}.facts th,.facts td{display:block;border-bottom:none;padding:4px 6px}.facts td{border-bottom:1px solid #e3eae6;padding-bottom:9px}"
  "#alerts-bar summary,#alerts-bar .ab{padding-left:16px;padding-right:16px}}"
+ # weather widget
+ ".wx-card{background:#fff;border:1px solid #e3eae6;border-top:4px solid #1f4e79;border-radius:10px;padding:20px;margin:24px 0}"
+ ".wx-card h3{font-size:1rem;color:var(--gd);margin-bottom:12px}"
+ ".wx-loading{color:var(--mu);font-size:.9rem}"
+ ".wx-cur{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #e3eae6}"
+ ".wx-icon{font-size:2.6rem;line-height:1}.wx-temp{font-size:2rem;font-weight:700;color:var(--gd)}"
+ ".wx-cond{font-size:1rem;color:var(--tx)}.wx-wind,.wx-humid{font-size:.88rem;color:var(--mu)}"
+ ".wx-forecast{display:flex;gap:8px;flex-wrap:wrap}"
+ ".wx-day{background:var(--bg);border:1px solid #e3eae6;border-radius:8px;padding:8px 10px;text-align:center;min-width:54px;flex:1}"
+ ".wx-day-name{font-size:.78rem;font-weight:700;color:var(--gd)}.wx-day-icon{font-size:1.4rem;margin:4px 0}"
+ ".wx-day-hi{font-size:.9rem;font-weight:700;color:var(--tx)}.wx-day-lo{font-size:.82rem;color:var(--mu)}"
+ ".wx-attr{font-size:.74rem;color:var(--mu);margin-top:10px}"
+ ".wx-attr a{color:var(--mu)}"
+ # voter registration card
+ ".vote-card{background:#fff;border:1px solid #e3eae6;border-top:4px solid var(--gold);border-radius:10px;padding:20px}"
+ ".vote-card h3{font-size:1rem;color:var(--gd);margin-bottom:10px}"
+ ".vote-card ul{list-style:none}.vote-card li{padding:6px 0;border-bottom:1px dashed #e3eae6;font-size:.92rem}"
+ ".vote-card li:last-child{border-bottom:none}.vote-card a{color:var(--blue);text-decoration:none;font-weight:600}"
 )
 
 OREGON_TICKER_FACTS = [
@@ -751,6 +808,73 @@ def county_links(counties_str, up):
     return ', '.join(f'<a href="{up}counties/{slug(c)}/index.html">{e(c)} County</a>' for c in counties_str)
 
 
+def voter_card(county, city_name):
+    """Voter registration card with county election office link and Oregon SOS online registration."""
+    clerk_url = COUNTY_ELECTIONS.get(county, 'https://sos.oregon.gov/voting/pages/registration.aspx')
+    ext = ' target="_blank" rel="noopener"'
+    items = [
+        f'<li><strong>Oregon is a vote-by-mail state</strong> &mdash; ballots are mailed automatically to all registered voters</li>',
+        f'<li><a href="https://secure.sos.state.or.us/orestar/guestLogin.do"{ext}>&#9989; Register or update your registration online (Oregon SOS)</a></li>',
+        f'<li><a href="{e(clerk_url)}"{ext}>&#127970; {e(county)} County Elections Office</a> &mdash; local voter info, drop boxes &amp; ballot status</li>',
+        f'<li><a href="https://sos.oregon.gov/voting/pages/registration.aspx"{ext}>Oregon Secretary of State &mdash; Voting &amp; Elections</a></li>',
+        f'<li><a href="https://www.vote411.org/"{ext}>Vote411 &mdash; nonpartisan voter guide for {e(city_name)} area candidates</a></li>',
+    ]
+    return f'<div class="vote-card"><h3>&#127963; Register to Vote in {e(city_name)}</h3><ul>{"".join(items)}</ul></div>'
+
+
+WMO_ICONS = {
+    0:'☀️|Clear sky', 1:'🌤|Mainly clear', 2:'⛅|Partly cloudy', 3:'☁️|Overcast',
+    45:'🌫|Fog', 48:'🌫|Icy fog',
+    51:'🌦|Light drizzle', 53:'🌦|Drizzle', 55:'🌧|Heavy drizzle',
+    61:'🌧|Light rain', 63:'🌧|Rain', 65:'🌧|Heavy rain',
+    71:'🌨|Light snow', 73:'🌨|Snow', 75:'❄️|Heavy snow', 77:'🌨|Snow grains',
+    80:'🌦|Rain showers', 81:'🌧|Heavy showers', 82:'⛈|Violent showers',
+    85:'🌨|Snow showers', 86:'❄️|Heavy snow showers',
+    95:'⛈|Thunderstorm', 96:'⛈|T-storm + hail', 99:'⛈|Heavy T-storm + hail',
+}
+
+def weather_widget(city_name, lat, lon):
+    """Live weather card powered by Open-Meteo (free, no API key required)."""
+    if lat is None or lon is None:
+        return ''
+    city_id = re.sub(r'[^a-z0-9]', '', city_name.lower())
+    icons_js = '{' + ','.join(f'{k}:["{v.split("|")[0]}","{v.split("|")[1]}"]' for k, v in WMO_ICONS.items()) + '}'
+    js = f"""<script>(function(){{
+var lat={lat:.5f},lon={lon:.5f},WI={icons_js};
+var days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+fetch('https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon
+ +'&current=temperature_2m,weather_code,wind_speed_10m,relative_humidity_2m'
+ +'&daily=temperature_2m_max,temperature_2m_min,weather_code'
+ +'&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FLos_Angeles&forecast_days=7')
+.then(function(r){{return r.json();}})
+.then(function(d){{
+ var c=d.current,dl=d.daily,wi=WI[c.weather_code]||['🌡','Unknown'];
+ var h='<div class="wx-cur"><span class="wx-icon">'+wi[0]+'</span>'
+  +'<span class="wx-temp">'+Math.round(c.temperature_2m)+'&deg;F</span>'
+  +'<span class="wx-cond">'+wi[1]+'</span>'
+  +'<span class="wx-wind">&#128168; '+Math.round(c.wind_speed_10m)+' mph</span>'
+  +'<span class="wx-humid">&#128167; '+Math.round(c.relative_humidity_2m)+'% humidity</span></div>';
+ h+='<div class="wx-forecast">';
+ for(var i=1;i<Math.min(7,dl.time.length);i++){{
+  var dt=new Date(dl.time[i]+'T12:00:00'),fi=WI[dl.weather_code[i]]||['🌡',''];
+  h+='<div class="wx-day"><div class="wx-day-name">'+days[dt.getDay()]+'</div>'
+   +'<div class="wx-day-icon">'+fi[0]+'</div>'
+   +'<div class="wx-day-hi">'+Math.round(dl.temperature_2m_max[i])+'&deg;</div>'
+   +'<div class="wx-day-lo">'+Math.round(dl.temperature_2m_min[i])+'&deg;</div></div>';
+ }}
+ h+='</div><p class="wx-attr">Source: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (real-time, NWS/NOAA data). Updated on page load.</p>';
+ var el=document.getElementById('wx-{city_id}');if(el)el.innerHTML=h;
+}})
+.catch(function(){{
+ var el=document.getElementById('wx-{city_id}');
+ if(el)el.innerHTML='<p class="wx-loading">Weather data unavailable &mdash; visit <a href="https://forecast.weather.gov/" target="_blank" rel="noopener">weather.gov</a> for current conditions.</p>';
+}});
+}})();</script>"""
+    return (f'<div class="wx-card"><h3>&#127782; Current Weather in {e(city_name)}, Oregon</h3>'
+            f'<div id="wx-{city_id}" class="wx-loading">Loading weather&hellip;</div></div>'
+            + js)
+
+
 def city_page(c, all_cities, custom):
     name = c['name']; counties = c['counties']; county = counties[0]
     region, electric = COUNTY_INFO.get(county, ('Oregon', 'Local utility'))
@@ -849,13 +973,16 @@ def city_page(c, all_cities, custom):
     local.append(f'<li><a href="../../counties/{slug(county)}/index.html">{e(county)} County guide on Oregon Information</a></li>')
     if c.get('wiki_url'): local.append(f'<li><a href="{e(c["wiki_url"])}" target="_blank" rel="noopener">{e(name)} on Wikipedia</a></li>')
     lead = f'{e(name)} is an incorporated city in {county_links(counties, "../../")}, in Oregon&rsquo;s {e(region)} region' + (f', with a 2020 Census population of {pop}.' if pop else '.')
+    wx = weather_widget(name, c.get('lat'), c.get('lon'))
+    vote = voter_card(county, name)
     return (head(f'{name}, Oregon (2025 Population, Schools & Local Guide) | Oregon Information', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
             + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero city-hero"{hero_style(breg)}><div class="wrap"><h1>{e(name)}, Oregon</h1><p class="city-tagline">{e(tagline)}</p>'
             + f'<div class="pills">{badges}</div>'
-            + f'<p class="hero-sub">{e(name)}, OR guide: population, schools, utilities, attractions, nearby cities and a moving checklist for {e(county)} County, {e(reg_phrase)}.</p></div></div>'
+            + f'<p class="hero-sub">{e(name)}, OR guide: population, schools, utilities, weather, attractions, nearby cities and a moving checklist for {e(county)} County, {e(reg_phrase)}.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Cities</a> &rsaquo; {e(name)}</nav>'
             + f'<h2 class="st">Quick Facts</h2><div class="qf"><section class="facts"><table>{facts}</table></section>{or_map}</div>'
+            + wx
             + f'<h2 class="st">About {e(name)}</h2><section class="prose"><p>{lead}</p>{summary_html(c["summary"])}{wiki_credit(c) if c.get("wiki_url") else ""}</section>'
             + gallery(c, name)
             + f'<h2 class="st">Moving to {e(name)}</h2><div class="cards"><div class="card"><h3>&#9889; Utilities Checklist</h3><ul><li><strong>Electricity:</strong> {utility_links_html(electric)} (confirm by address)</li><li><strong>Natural gas:</strong> NW Natural, Avista or Cascade Natural Gas (where available)</li><li><strong>Water &amp; sewer:</strong> City of {e(name)}</li><li><strong>Trash:</strong> Franchised hauler &mdash; verify by service address</li><li><strong>Internet:</strong> Compare providers at the <a href="https://broadbandmap.fcc.gov/" target="_blank" rel="noopener">FCC broadband map</a></li></ul></div>'
@@ -863,6 +990,7 @@ def city_page(c, all_cities, custom):
             + '<div class="card"><h3>&#127968; Housing</h3><ul><li><a href="https://www.zillow.com/or/" target="_blank" rel="noopener">Zillow Oregon</a></li><li><a href="https://www.apartments.com/oregon/" target="_blank" rel="noopener">Apartments.com</a></li><li><a href="https://www.oregon.gov/ohcs/" target="_blank" rel="noopener">OHCS buyer/renter programs</a></li></ul></div>'
             + '<div class="card"><h3>&#128663; DMV Steps</h3><ul><li>Vehicle registration &amp; Oregon license within <strong>30 days</strong></li><li><a href="https://www.oregon.gov/odot/dmv/" target="_blank" rel="noopener">New resident guide</a></li><li><a href="https://www.oregon.gov/odot/dmv/pages/offices/index.aspx" target="_blank" rel="noopener">Find a DMV office</a></li></ul></div>'
             + schools_card + attractions_card
+            + vote
             + '<div class="card"><h3>&#127973; Healthcare &amp; Assistance</h3><ul><li><a href="https://one.oregon.gov/" target="_blank" rel="noopener">ONE portal (OHP/SNAP)</a></li><li><a href="https://www.oregonfoodbank.org/" target="_blank" rel="noopener">Oregon Food Bank</a></li><li><a href="https://www.211info.org/" target="_blank" rel="noopener">Dial 211 for local help</a></li></ul></div></div>'
             + (f'<h2 class="st">Nearby Cities</h2><nav class="dir-list">{near_html}</nav>' if near_html else '')
             + f'<h2 class="st">Frequently Asked Questions</h2><section class="faq">{faq_details}</section>'
