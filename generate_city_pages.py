@@ -468,6 +468,18 @@ CSS += (
  ".vote-card h3{font-size:1rem;color:var(--gd);margin-bottom:10px}"
  ".vote-card ul{list-style:none}.vote-card li{padding:6px 0;border-bottom:1px dashed #e3eae6;font-size:.92rem}"
  ".vote-card li:last-child{border-bottom:none}.vote-card a{color:var(--blue);text-decoration:none;font-weight:600}"
+ # blog (index cards + article body)
+ ".post-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.post{max-width:760px;font-size:1.04rem;margin-top:20px}.post p{margin:0 0 16px}"
+ ".post h2{font-size:1.45rem;color:var(--gd);margin:38px 0 14px;border-bottom:3px solid var(--g);padding-bottom:8px}"
+ ".post h3{font-size:1.15rem;color:var(--gd);margin:26px 0 10px}.post ul,.post ol{padding-left:22px;margin:0 0 16px}.post li{padding:3px 0}"
+ ".post a{color:var(--blue)}.post .lede{font-size:1.14rem;color:var(--tx)}.post .tbl{font-size:.92rem}"
+ ".callout{background:var(--bg);border:1px solid #e3eae6;border-left:5px solid var(--gold);border-radius:8px;padding:16px 18px;margin:22px 0}.callout p:last-child{margin:0}"
+ ".town-facts{font-size:.88rem;color:var(--mu);margin:-4px 0 12px}"
+ ".cta-box{background:linear-gradient(135deg,#0b2418 0%,#14382a 45%,#1f4e79 100%);color:#fff;border-radius:12px;padding:28px;margin:36px 0 10px}"
+ ".cta-box h2{color:#fff;border:none;margin:0 0 10px;padding:0}.cta-box p{color:#dceee3}.cta-box .btn-cta{margin-top:6px}.cta-box .btn-ghost{margin:6px 0 0 8px}"
+ ".post-card{display:flex;flex-direction:column;text-decoration:none;color:inherit}.post-card .pc-cat{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:700;color:#9a7a2c}"
+ ".post-card h3{font-size:1.15rem;margin:8px 0}.post-card p{font-size:.93rem;color:var(--tx);flex:1}.post-card .pc-date{font-size:.82rem;color:var(--mu);margin-top:12px}"
+ ".post-card .pc-more{color:var(--blue);font-weight:700;font-size:.9rem;margin-top:6px}"
 )
 
 OREGON_TICKER_FACTS = [
@@ -710,13 +722,13 @@ def header(up):
     return (f'<header class="hd"><div class="wrap"><nav><a class="logo" href="{up}index.html"><span class="badge">&#127795;</span> Oregon Information</a>'
             f'<ul class="nl"><li><a href="{up}moving-to-oregon/index.html">Moving</a></li><li><a href="{up}visit-oregon/index.html">Visiting</a></li>'
             f'<li><a href="{up}regions/index.html">Regions</a></li>'
-            f'<li><a href="{up}counties/index.html">Counties</a></li><li><a href="{up}cities/index.html">Cities A&ndash;Z</a></li></ul></nav></div></header>')
+            f'<li><a href="{up}counties/index.html">Counties</a></li><li><a href="{up}cities/index.html">Cities A&ndash;Z</a></li><li><a href="{up}blog/index.html">Blog</a></li></ul></nav></div></header>')
 
 
 def footer(up, note=''):
     return (f'<footer class="ft"><div class="wrap"><p class="fl"><a href="{up}about/index.html">About</a><a href="{up}contact/index.html">Contact</a>'
             f'<a href="{up}privacy/index.html">Privacy Policy</a><a href="{up}regions/index.html">Regions</a>'
-            f'<a href="{up}cities/index.html">Cities</a><a href="{up}counties/index.html">Counties</a></p>'
+            f'<a href="{up}cities/index.html">Cities</a><a href="{up}counties/index.html">Counties</a><a href="{up}blog/index.html">Blog</a></p>'
             f'<p>&copy; 2026 Oregon Information &mdash; independent resource, not affiliated with the State of Oregon.{note}</p></div></footer></body></html>')
 
 
@@ -1281,6 +1293,8 @@ def main():
     urls = ['/', '/oregon/', '/regions/', '/cities/', '/counties/', '/moving-to-oregon/', '/visit-oregon/', '/about/', '/contact/', '/privacy/']
     urls += [f'/regions/{REGION_SLUGS[r]}/' for r in REGION_SLUGS]
     urls += [f'/counties/{slug(k["name"])}/' for k in counties] + [f'/cities/{slug(c["name"])}/' for c in cities]
+    if os.path.exists('data/blog_articles.json'):   # statewide blog (built by build_blog_index.py)
+        urls += ['/blog/'] + [f'/blog/{a["slug"]}/' for a in json.load(open('data/blog_articles.json', encoding='utf-8'))]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sm += '\n'.join(f'  <url><loc>{BASE_URL}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '\n</urlset>\n'
     write(f'{OUT}/sitemap.xml', sm)
