@@ -994,7 +994,7 @@ def city_page(c, all_cities, custom):
     lead = f'{e(name)} is an incorporated city in {county_links(counties, "../../")}, in Oregon&rsquo;s {e(region)} region' + (f', with a 2020 Census population of {pop}.' if pop else '.')
     wx = weather_widget(name, c.get('lat'), c.get('lon'))
     vote = voter_card(county, name)
-    return (head(f'{name}, Oregon \u2013 Population, Schools, Weather & Moving Guide 2025 | Oregon Information', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
+    return (head(f'{name}, Oregon: Population, Schools, Weather & Moving Guide', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
             + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero city-hero"{hero_style(breg)}><div class="wrap"><h1>{e(name)}, Oregon</h1><p class="city-tagline">{e(tagline)}</p>'
             + f'<div class="pills">{badges}</div>'
@@ -1069,7 +1069,7 @@ def county_page(k, cities):
               '<li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon</a></li>',
               '<li><a href="https://oregoncounties.org/" target="_blank" rel="noopener">Association of Oregon Counties</a></li>']
     if k.get('wiki_url'): links.append(f'<li><a href="{e(k["wiki_url"])}" target="_blank" rel="noopener">{e(name)} County on Wikipedia</a></li>')
-    return (head(f'{name} County, Oregon \u2013 Cities, Population, Facts & Living Guide 2025 | Oregon Information', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread), '../../')
+    return (head(f'{name} County, Oregon: Cities, Population & Living Guide', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread), '../../')
             + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{e(name)} County, Oregon</h1><p>County seat: {e(k["seat"])} &middot; {e(region)} region &middot; {len(members)} incorporated cities</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Counties</a> &rsaquo; {e(name)} County</nav>'
@@ -1184,7 +1184,7 @@ def region_page(rname, rcities):
         {'@type':'ListItem','position':1,'name':'Home','item':f'{BASE_URL}/'},
         {'@type':'ListItem','position':2,'name':'Oregon Regions','item':f'{BASE_URL}/regions/'},
         {'@type':'ListItem','position':3,'name':rname,'item':f'{BASE_URL}{path}'}]}
-    return (head(f'{rname}, Oregon (2025 Guide): {len(rcities)} Cities, Counties, Living & Travel | Oregon Information', meta_desc, path, 'article', None, ld(ld_obj)+ld(bread), '../../', r_kw)
+    return (head(f'{rname}: {len(rcities)} Cities, Living & Travel Guide', meta_desc, path, 'article', None, ld(ld_obj)+ld(bread), '../../', r_kw)
             + header('../../') + ticker_html() + alert_banner()
             + f'<div class="hero region-hero"{hero_style(rname)}>{oregon_silhouette()}<div class="wrap"><h1>{e(rname)}, Oregon</h1>'
             + f'<p class="city-tagline">{e(evoke)}</p><p class="hero-sub">{e(rc["hero_sub"])}</p>'
@@ -1219,7 +1219,7 @@ def regions_index(all_cities):
                          f'</a>')
     ld_obj = {'@context':'https://schema.org','@type':'ItemList','name':'Oregon Regions',
               'url':f'{BASE_URL}{path}','numberOfItems':7}
-    return (head("Oregon's 7 Regions (2025 Guide): Coast, Valley, Gorge, Central, Eastern & Southern | Oregon Information", desc, path, 'website', None, ld(ld_obj), '../',
+    return (head("Oregon's 7 Regions: Coast, Valley, Gorge, Central & More", desc, path, 'website', None, ld(ld_obj), '../',
                  'Oregon regions, Portland Metro, Willamette Valley, Oregon Coast, Columbia River Gorge, Central Oregon, Eastern Oregon, Southern Oregon, Oregon cities by region')
             + header('../') + ticker_html() + alert_banner()
             + f'<div class="hero region-hero">{oregon_silhouette()}<div class="wrap"><h1>Oregon&rsquo;s Seven Regions</h1>'
@@ -1231,7 +1231,7 @@ def regions_index(all_cities):
 
 def oregon_page():
     path = '/oregon/'
-    title = 'Oregon State Guide (2025): Facts, Population, 241 Cities, 36 Counties & 7 Regions | Oregon Information'
+    title = 'Oregon State Guide: Facts, Population, Cities & Counties'
     desc = ('Your complete guide to the State of Oregon: population, capital, state symbols, geography, history and economy, '
             'plus guides to all 241 cities, 36 counties and 7 regions.')
     kw = ('Oregon, State of Oregon, Oregon facts, Oregon population, Oregon cities, Oregon counties, Oregon regions, '
