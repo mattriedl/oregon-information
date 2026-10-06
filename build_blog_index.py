@@ -68,7 +68,25 @@ def card(a, up):
             f'<span class="pc-date"><time datetime="{a["date"]}">{nice_date(a["date"])}</time></span><span class="pc-more">Read article &rarr;</span></a>')
 
 
+def auto_image(a, body):
+    """If an article has no photo, use the first gallery photo of the first city page it links to."""
+    if a.get('image'):
+        return
+    try:
+        imgs = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'city_images.json')))
+    except Exception:
+        return
+    by_slug = {re.sub(r'[^a-z0-9]+', '-', k.lower()).strip('-'): v for k, v in imgs.items()}
+    for sl in re.findall(r'cities/([a-z0-9-]+)/', body):
+        for v in by_slug.get(sl, []):
+            if v.get('src', '').lower().split('?')[0].endswith(('.jpg', '.jpeg', '.png')):
+                a.update(image=v['src'], image_page=v.get('page', ''), image_alt=(v.get('caption') or a['title'])[:120],
+                         image_credit=f"{(v.get('artist') or 'Wikimedia Commons')[:60]} / {v.get('license', '')}")
+                return
+
+
 def article_page(a, body, all_arts):
+    auto_image(a, body)
     up = '../../'
     path = f'/blog/{a["slug"]}/'
     url = f'{BASE_URL}{path}'
@@ -94,6 +112,13 @@ def article_page(a, body, all_arts):
     rel_html = (f'<h2 class="st">More from the Oregon Information Blog</h2><div class="cards">{"".join(card(x, "../") for x in related)}</div>'
                 if related else '')
     title_tag = a.get('seo_title') or f'{a["title"]} | {SITE_NAME}'
+    fig = ''
+    if a.get('image'):
+        credit = (f'<small>Photo: <a href="{e(a["image_page"])}" target="_blank" rel="noopener">{e(a.get("image_credit", "Wikimedia Commons"))}</a></small>'
+                  if a.get('image_page') else '')
+        fig = (f'<figure class="post-hero"><img src="{e(a["image"])}" alt="{e(a.get("image_alt") or a["title"])}" width="960" height="540" '
+               f'fetchpriority="high" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:10px">'
+               f'<figcaption style="font-size:.8rem;color:#5b6b64;margin-top:4px">{credit}</figcaption></figure>')
     return (head(title_tag, a['description'], path, 'article', img, extra, up, ', '.join(a.get('keywords', [])))
             + header(up) + ticker_html() + alert_banner()
             + f'<div class="hero region-hero">{oregon_silhouette()}<div class="wrap"><p class="or-eyebrow">{e(a.get("category", "Oregon"))}</p>'
@@ -103,7 +128,7 @@ def article_page(a, body, all_arts):
             + f'<span class="pill">&#9201; {minutes} min read</span></div></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="{up}index.html">Home</a> &rsaquo; '
             + f'<a href="../index.html">Blog</a> &rsaquo; {e(a["title"])}</nav>'
-            + f'<article class="post prose">{body}{cta}</article>{rel_html}'
+            + f'<article class="post prose">{fig}{body}{cta}</article>{rel_html}'
             + '<p class="back"><a href="../index.html">&larr; All blog articles</a></p></div></main>'
             + footer(up, '<br>Information is provided for general guidance; confirm details with the official agency.'))
 

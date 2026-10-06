@@ -1,13 +1,13 @@
 [
   {
     "slug": "moving-to-oregon-from-california",
-    "title": "Moving to Oregon from California: The Complete 2025 Guide",
-    "seo_title": "Moving to Oregon from California: The Complete 2025 Guide",
+    "title": "Moving to Oregon from California: The Complete Guide",
+    "seo_title": "Moving to Oregon from California: Complete Guide",
     "description": "Moving to Oregon from California? Compare taxes and cost of living, learn the 30-day DMV rule, and find the best Oregon cities for California transplants.",
-    "excerpt": "Taxes, housing costs, the 30-day DMV deadline, climate and jobs \u2014 plus the Oregon cities where Californians feel most at home.",
-    "hero_sub": "Taxes, housing, the 30-day DMV rule, climate, jobs and the best cities for California transplants \u2014 everything to know before you load the truck.",
+    "excerpt": "Taxes, housing costs, the 30-day DMV deadline, climate and jobs — plus the Oregon cities where Californians feel most at home.",
+    "hero_sub": "Taxes, housing, the 30-day DMV rule, climate, jobs and the best cities for California transplants — everything to know before you load the truck.",
     "date": "2026-10-02",
-    "dateModified": "2026-10-02",
+    "dateModified": "2026-10-06",
     "category": "Moving to Oregon",
     "cta": "moving",
     "keywords": [
@@ -17,17 +17,21 @@
       "Oregon vs California cost of living",
       "relocating to Oregon",
       "Oregon no sales tax"
-    ]
+    ],
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Farewell_Bend_Park%2C_Bend%2C_Oregon.jpg/960px-Farewell_Bend_Park%2C_Bend%2C_Oregon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_alt": "Farewell Bend Park on the Deschutes River in Bend, Oregon",
+    "image_credit": "Amoore5000 / CC0",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Farewell_Bend_Park,_Bend,_Oregon.jpg"
   },
   {
     "slug": "best-small-towns-oregon",
-    "title": "Best Small Towns in Oregon to Live In (2025)",
-    "seo_title": "Best Small Towns in Oregon to Live In (2025) | Oregon Information",
+    "title": "Best Small Towns in Oregon to Live In",
+    "seo_title": "Best Small Towns in Oregon to Live In | Oregon Information",
     "description": "The best small towns in Oregon to live in, from coastal Cannon Beach to wine-country McMinnville: population, cost, vibe and drive times for 10 top towns.",
-    "excerpt": "Ten charming, livable Oregon small towns \u2014 coastal, valley, mountain and wine country \u2014 with population, cost and drive-time details for each.",
-    "hero_sub": "Ten charming, livable towns across the coast, the Willamette Valley, the Cascades and Eastern Oregon \u2014 with population, cost and drive times for each.",
+    "excerpt": "Ten charming, livable Oregon small towns — coastal, valley, mountain and wine country — with population, cost and drive-time details for each.",
+    "hero_sub": "Ten charming, livable towns across the coast, the Willamette Valley, the Cascades and Eastern Oregon — with population, cost and drive times for each.",
     "date": "2026-10-02",
-    "dateModified": "2026-10-02",
+    "dateModified": "2026-10-06",
     "category": "Living in Oregon",
     "cta": "moving",
     "keywords": [
@@ -36,26 +40,34 @@
       "affordable small towns Oregon",
       "Oregon small towns near Portland",
       "best places to live in Oregon"
-    ]
+    ],
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Cannon_Beach%2C_Oregon_%28looking_northwest%29.jpg/960px-Cannon_Beach%2C_Oregon_%28looking_northwest%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_alt": "Cannon Beach, Oregon, looking northwest along the beach",
+    "image_credit": "Dima Sergiyenko; Please attribute this image as the work of  / CC BY-SA 4.0",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Cannon_Beach,_Oregon_(looking_northwest).jpg"
   },
   {
     "slug": "oregon-cost-of-living",
-    "title": "Oregon Cost of Living 2025: A Complete Breakdown for Movers",
-    "seo_title": "Oregon Cost of Living 2025: A Complete Guide | Oregon Information",
-    "description": "Moving to Oregon in 2025? Get the full breakdown of housing, taxes, utilities, and groceries. See why Oregon\u2019s cost of living is 10% above the national average.",
-    "excerpt": "Everything you need to know about Oregon's cost of living in 2025, from the 9.9% income tax and lack of sales tax to the most affordable cities to call home.",
-    "hero_sub": "From the hidden 'Sunshine Tax' in Bend to the 9.9% income tax, discover exactly what it costs to live in the Beaver State in 2025.",
+    "title": "Oregon Cost of Living: A Complete Breakdown for Movers",
+    "seo_title": "Oregon Cost of Living: Complete Guide for Movers",
+    "description": "Is Oregon expensive to live in? See a full breakdown of housing, taxes, utilities and groceries, and why Oregon costs about 10% more than the US average.",
+    "excerpt": "Everything you need to know about Oregon's cost of living, from the 9.9% income tax and lack of sales tax to the most affordable cities to call home.",
+    "hero_sub": "From the 'Sunshine Tax' in Bend to the 9.9% top income tax rate, here's what it really costs to live in the Beaver State.",
     "date": "2026-10-03",
-    "dateModified": "2026-10-03",
+    "dateModified": "2026-10-06",
     "category": "Living in Oregon",
     "cta": "moving",
     "keywords": [
       "is Oregon expensive to live in",
       "Oregon cost of living vs national average",
-      "cheapest places to live in Oregon 2025",
+      "cheapest places to live in Oregon",
       "how much money to live comfortably in Oregon",
       "average monthly utility bills in Portland Oregon",
       "Oregon income tax vs no sales tax"
-    ]
+    ],
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pearl_District_and_Broadway_Bridge.jpg/960px-Pearl_District_and_Broadway_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_alt": "Pearl District and Broadway Bridge in Portland, Oregon",
+    "image_credit": "Alfred Twu / CC0",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Pearl_District_and_Broadway_Bridge.jpg"
   }
 ]

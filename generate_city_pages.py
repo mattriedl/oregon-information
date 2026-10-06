@@ -444,7 +444,7 @@ CSS += (
  "#alerts-bar{background:#fff8e6;border-bottom:1px solid #e8c873}#alerts-bar summary{max-width:1000px;margin:0 auto;padding:7px 24px;cursor:pointer;font-weight:700;font-size:.88rem;color:#7a4b00;list-style-position:inside}"
  "#alerts-bar summary:hover{color:#4f3100}#alerts-bar[open]{background:#fffbf0}#alerts-bar .ab{max-width:1000px;margin:0 auto;padding:4px 24px 16px;font-size:.9rem}"
  "#alerts-bar .ab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}#alerts-bar .ab-grid div{background:#fff;border:1px solid #f0dca6;border-left:4px solid var(--g);border-radius:6px;padding:10px 12px}"
- "#alerts-bar h4{color:var(--gd);font-size:.92rem;margin-bottom:4px}#alerts-bar a{color:var(--blue);font-weight:600}#alerts-bar ul{list-style:none}#alerts-bar li{padding:2px 0}"
+ "#alerts-bar .abh{display:block;color:var(--gd);font-size:.92rem;margin-bottom:4px}#alerts-bar a{color:var(--blue);font-weight:600}#alerts-bar ul{list-style:none}#alerts-bar li{padding:2px 0}"
  "#ab-live{margin-top:12px}#ab-live:empty{display:none}#ab-live p{margin:4px 0}#ab-live .ab-note{font-size:.78rem;color:var(--mu)}"
  # mobile
  "@media(max-width:600px){.cards{grid-template-columns:1fr}.hero{padding:40px 0 32px}.qf{flex-direction:column}.ormap{align-self:center}"
@@ -615,9 +615,9 @@ def alert_banner():
     """Collapsed travel-alert bar on every page; live Travel Oregon text is fetched on first expand (silent fail)."""
     ext = 'target="_blank" rel="noopener"'
     return ('<details id="alerts-bar"><summary>&#9888;&#65039; Oregon Travel Alerts &mdash; Road Closures &amp; Wildfire Safety</summary><div class="ab"><div class="ab-grid">'
-            f'<div><h4>&#128679; Road Conditions</h4><ul><li><a href="https://www.tripcheck.com/" {ext}>TripCheck.com</a> &mdash; ODOT closures, cameras &amp; chain rules</li><li>Dial <strong>511</strong> for road info by phone</li></ul></div>'
-            f'<div><h4>&#128293; Wildfire Safety</h4><ul><li><a href="https://wildfire.oregon.gov/" {ext}>Oregon Wildfire Response &amp; Recovery</a></li><li><a href="https://fire.airnow.gov/" {ext}>AirNow Fire &amp; Smoke Map</a></li></ul></div>'
-            f'<div><h4>&#128226; Alerts &amp; Updates</h4><ul><li><a href="https://traveloregon.com/travel-alerts/" {ext}>Travel Oregon travel alerts</a></li><li><a href="https://www.oralert.gov/" {ext}>ORAlert.gov</a> &mdash; sign up for emergency alerts</li></ul></div>'
+            f'<div><strong class="abh">&#128679; Road Conditions</strong><ul><li><a href="https://www.tripcheck.com/" {ext}>TripCheck.com</a> &mdash; ODOT closures, cameras &amp; chain rules</li><li>Dial <strong>511</strong> for road info by phone</li></ul></div>'
+            f'<div><strong class="abh">&#128293; Wildfire Safety</strong><ul><li><a href="https://wildfire.oregon.gov/" {ext}>Oregon Wildfire Response &amp; Recovery</a></li><li><a href="https://fire.airnow.gov/" {ext}>AirNow Fire &amp; Smoke Map</a></li></ul></div>'
+            f'<div><strong class="abh">&#128226; Alerts &amp; Updates</strong><ul><li><a href="https://traveloregon.com/travel-alerts/" {ext}>Travel Oregon travel alerts</a></li><li><a href="https://www.oralert.gov/" {ext}>ORAlert.gov</a> &mdash; sign up for emergency alerts</li></ul></div>'
             '</div><div id="ab-live" aria-live="polite"></div></div></details>' + ALERTS_JS)
 
 
@@ -959,8 +959,8 @@ def city_page(c, all_cities, custom):
     path = f'/cities/{slug(name)}/'
     breg = big_region(c)
     reg_phrase = breg if breg.endswith('Oregon') else f'{breg} Oregon'
-    desc = (f'{name} is a city in {county} County, {reg_phrase}' + (f' with a population of {pop}' if pop else '')
-            + f'. Explore local schools, utilities, parks, and moving resources for {name}, OR.')
+    desc = (f'{name}, Oregon: a {county} County city' + (f' of {pop} people' if pop else '')
+            + f'. Schools, utilities, weather, parks and moving resources for {name}, OR.')
     keywords = (f'{name}, {name} Oregon, {name} OR, {county} County Oregon, {reg_phrase}, moving to {name}, '
                 f'{name} schools, {name} utilities, Oregon cities')
     tagline = city_tagline(name, county, breg)
@@ -1092,14 +1092,18 @@ def cities_index(cities):
         f'<a href="{slug(c["name"])}/index.html" data-n="{e(c["name"].lower())} {e(" ".join(c["counties"]).lower())}">{e(c["name"])}<small>{e(", ".join(c["counties"]))} Co. &middot; pop. {n(c["pop2020"])}</small></a>' for c in cs) + '</nav>' for L, cs in groups.items())
     js = "<script>document.getElementById('q').addEventListener('input',function(){var v=this.value.toLowerCase();document.querySelectorAll('.dir-list a').forEach(function(a){a.style.display=a.dataset.n.indexOf(v)>-1?'':'none'});});</script>"
     desc = f'Directory of all {len(cities)} incorporated cities in Oregon with county, 2020 Census population, history, and moving guides.'
-    return (head('Oregon Cities A–Z | All 241 Incorporated Cities', desc, '/cities/', up='../') + header('../') + ticker_html() + alert_banner()
+    cities_ld = ld({'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Oregon Cities A-Z', 'description': desc,
+                    'url': f'{BASE_URL}/cities/', 'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(cities)}})
+    return (head('Oregon Cities A–Z | All 241 Incorporated Cities', desc, '/cities/', extra=cities_ld, up='../') + header('../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>Oregon Cities A&ndash;Z</h1><p>Every incorporated city in Oregon ({len(cities)} total), with county and 2020 Census population.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Cities</nav><p style="margin:18px 0 8px"><input id="q" type="search" placeholder="Filter by city or county name..." aria-label="Filter cities"></p>'
             + f'<nav class="alpha">{alpha}</nav>{body}</div></main>' + js + footer('../', '<br>Population: U.S. Census Bureau 2020.'))
 
 
-def simple_page(path, title, desc, h1, sub, body):
-    return (head(title, desc, path, up='../') + header('../') + ticker_html() + alert_banner()
+def simple_page(path, title, desc, h1, sub, body, page_type='WebPage'):
+    page_ld = ld({'@context': 'https://schema.org', '@type': page_type, 'name': title, 'description': desc, 'url': f'{BASE_URL}{path}',
+                  'isPartOf': {'@type': 'WebSite', 'name': 'Oregon Information', 'url': f'{BASE_URL}/'}})
+    return (head(title, desc, path, extra=page_ld, up='../') + header('../') + ticker_html() + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{h1}</h1><p>{sub}</p></div></div>'
             + f'<main><div class="wrap prose"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; {h1}</nav>{body}</div></main>' + footer('../'))
 
@@ -1162,8 +1166,8 @@ def region_page(rname, rcities):
     rslug = REGION_SLUGS[rname]
     path = f'/regions/{rslug}/'
     desc = rc['desc']
-    meta_desc = (f"{rname}, Oregon guide: {len(rcities)} cities across {len(REGION_COUNTIES[rname])} counties. "
-                 f"{rc['hero_sub']} Living, visiting, population and city links.")
+    meta_desc = (f"{rname} guide: {len(rcities)} cities across {len(REGION_COUNTIES[rname])} counties. "
+                 f"Population, living, visiting and travel information for every {rname} city.")
     counties_list = REGION_COUNTIES[rname]
     evoke = REGION_THEME.get(rname, ('', '', ''))[2]
     total_pop = sum(int(float(c['pop2020'] or 0)) for c in rcities)
@@ -1205,8 +1209,8 @@ def region_page(rname, rcities):
 
 def regions_index(all_cities):
     path = '/regions/'
-    desc = ("Oregon's seven geographic regions: Portland Metro, Willamette Valley, Oregon Coast, Columbia River Gorge, "
-            "Central Oregon, Eastern Oregon, and Southern Oregon. Find cities, counties, and living and travel guides for each region.")
+    desc = ("Explore Oregon's 7 regions: Portland Metro, Willamette Valley, the Coast, the Gorge, and Central, Eastern and "
+            "Southern Oregon, with city and travel guides.")
     region_cards = ''
     for rname, rslug2 in REGION_SLUGS.items():
         rc = REGION_CONTENT[rname]
@@ -1232,8 +1236,8 @@ def regions_index(all_cities):
 def oregon_page():
     path = '/oregon/'
     title = 'Oregon State Guide: Facts, Population, Cities & Counties'
-    desc = ('Your complete guide to the State of Oregon: population, capital, state symbols, geography, history and economy, '
-            'plus guides to all 241 cities, 36 counties and 7 regions.')
+    desc = ('Guide to the State of Oregon: population, capital, state symbols, geography, history and economy, '
+            'plus all 241 cities, 36 counties and 7 regions.')
     kw = ('Oregon, State of Oregon, Oregon facts, Oregon population, Oregon cities, Oregon counties, Oregon regions, '
           'moving to Oregon, visiting Oregon, Oregon state symbols, Oregon history')
     facts_rows = ''.join(f'<tr><th>{k}</th><td>{v}</td></tr>' for k, v in OREGON_FACTS)
@@ -1298,9 +1302,9 @@ def main():
     for k in counties:
         write(f'{OUT}/counties/{slug(k["name"])}/index.html', county_page(k, cities))
     write(f'{OUT}/cities/index.html', cities_index(cities))
-    write(f'{OUT}/about/index.html', simple_page('/about/', 'About Oregon Information', 'About Oregon Information: an independent, free guide to every Oregon city and county, with moving and visiting guides.', 'About Oregon Information', 'An independent, plain-language guide to the State of Oregon.', ABOUT))
-    write(f'{OUT}/contact/index.html', simple_page('/contact/', 'Contact Oregon Information', 'Contact Oregon Information with questions, corrections, or suggestions.', 'Contact Us', 'Questions, corrections and suggestions are always welcome.', CONTACT))
-    write(f'{OUT}/privacy/index.html', simple_page('/privacy/', 'Privacy Policy | Oregon Information', 'Privacy policy for oregoninformation.com.', 'Privacy Policy', 'How oregoninformation.com handles information.', PRIVACY))
+    write(f'{OUT}/about/index.html', simple_page('/about/', 'About Oregon Information | Independent Oregon Guide', 'About Oregon Information: an independent, free guide to every Oregon city and county, with moving and visiting guides.', 'About Oregon Information', 'An independent, plain-language guide to the State of Oregon.', ABOUT, 'AboutPage'))
+    write(f'{OUT}/contact/index.html', simple_page('/contact/', 'Contact Oregon Information', 'Contact Oregon Information with questions, corrections, or suggestions.', 'Contact Us', 'Questions, corrections and suggestions are always welcome.', CONTACT, 'ContactPage'))
+    write(f'{OUT}/privacy/index.html', simple_page('/privacy/', 'Privacy Policy | Oregon Information', 'Privacy policy for oregoninformation.com: what information we collect, how cookies and analytics are used, and your choices.', 'Privacy Policy', 'How oregoninformation.com handles information.', PRIVACY))
     # Build 7 region pages + regions index
     for c in cities: c['counties'] = [x.strip() for x in c['county'].split(',')]  # ensure counties set (idempotent)
     by_region = {}
