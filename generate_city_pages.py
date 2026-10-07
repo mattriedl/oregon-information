@@ -478,6 +478,8 @@ CSS += (
  ".post a{color:var(--blue)}.post .lede{font-size:1.14rem;color:var(--tx)}.post .tbl{font-size:.92rem}"
  ".callout{background:var(--bg);border:1px solid #e3eae6;border-left:5px solid var(--gold);border-radius:8px;padding:16px 18px;margin:22px 0}.callout p:last-child{margin:0}"
  ".town-facts{font-size:.88rem;color:var(--mu);margin:-4px 0 12px}"
+ ".visit-card{background:var(--bg);border:1px solid #e3eae6;border-left:5px solid var(--g);border-radius:8px;padding:12px 16px;margin:-4px 0 18px;font-size:.93rem;display:flex;flex-wrap:wrap;gap:4px 18px}"
+ ".visit-card strong{flex-basis:100%;color:var(--gd)}.visit-card span{white-space:normal}.visit-card a{color:var(--blue);font-weight:600;text-decoration:none}.visit-card a:hover{text-decoration:underline}"
  ".cta-box{background:linear-gradient(135deg,#0b2418 0%,#14382a 45%,#1f4e79 100%);color:#fff;border-radius:12px;padding:28px;margin:36px 0 10px}"
  ".cta-box h2{color:#fff;border:none;margin:0 0 10px;padding:0}.cta-box p{color:#dceee3}.cta-box .btn-cta{margin-top:6px}.cta-box .btn-ghost{margin:6px 0 0 8px}"
  ".post-card{display:flex;flex-direction:column;text-decoration:none;color:inherit}.post-card .pc-cat{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:700;color:#9a7a2c}"
