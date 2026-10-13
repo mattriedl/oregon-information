@@ -85,6 +85,17 @@ def auto_image(a, body):
                 return
 
 
+def faq_schema(body):
+    """FAQPage JSON-LD from the article's <div class="faq"><details><summary>Q</summary><p>A</p></details> blocks."""
+    txt = lambda h: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', h)).replace('&amp;', '&').replace('&nbsp;', ' ').strip()
+    qa = [(txt(q), txt(a)) for q, a in re.findall(r'<details>\s*<summary>(.*?)</summary>(.*?)</details>', body, re.S)]
+    qa = [(q, a) for q, a in qa if q and a]
+    if not qa:
+        return None
+    return {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in qa]}
+
+
 def article_page(a, body, all_arts):
     auto_image(a, body)
     up = '../../'
@@ -94,8 +105,9 @@ def article_page(a, body, all_arts):
     words = word_count(body)
     minutes = max(1, round(words / 230))
     img = a.get('image') or DEFAULT_IMG
+    body_imgs = [u for u in re.findall(r'<img[^>]+src="(https?://[^"]+)"', body) if u != img]
     art_ld = {'@context': 'https://schema.org', '@type': 'Article', 'headline': a['title'], 'description': a['description'],
-              'datePublished': a['date'], 'dateModified': modified, 'image': img, 'wordCount': words,
+              'datePublished': a['date'], 'dateModified': modified, 'image': [img] + body_imgs if body_imgs else img, 'wordCount': words,
               'articleSection': a.get('category', ''), 'keywords': ', '.join(a.get('keywords', [])), 'inLanguage': 'en-US',
               'author': {'@type': 'Organization', 'name': f'{SITE_NAME} Editorial Team', 'url': f'{BASE_URL}/about/'},
               'publisher': PUBLISHER, 'mainEntityOfPage': {'@type': 'WebPage', '@id': url}}
@@ -103,7 +115,8 @@ def article_page(a, body, all_arts):
         {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{BASE_URL}/'},
         {'@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': f'{BASE_URL}/blog/'},
         {'@type': 'ListItem', 'position': 3, 'name': a['title'], 'item': url}]}
-    extra = (ld(art_ld) + ld(bread) + f'<meta property="article:published_time" content="{a["date"]}">'
+    faq_ld = faq_schema(body)
+    extra = (ld(art_ld) + ld(bread) + (ld(faq_ld) if faq_ld else '') + f'<meta property="article:published_time" content="{a["date"]}">'
              f'<meta property="article:modified_time" content="{modified}"><meta property="article:section" content="{e(a.get("category", ""))}">')
     h, p, href, btn, href2, btn2 = CTAS.get(a.get('cta', 'moving'), CTAS['moving'])
     cta = (f'<aside class="cta-box"><h2>{h}</h2><p>{p}</p><a class="btn-cta" href="{up}{href}">{btn}</a>'
