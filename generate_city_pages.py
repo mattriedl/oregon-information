@@ -16,7 +16,7 @@ from datetime import date
 BASE_URL     = 'https://oregoninformation.com'
 SITE_NAME    = 'Oregon Information'
 CONTACT_EMAIL = 'contact@oregoninformation.com'
-ANALYTICS_ID = ''
+ANALYTICS_ID = 'G-2XK1NN5E06'
 OUT          = '.'
 TODAY        = date.today().isoformat()
 DEFAULT_IMG  = f'{BASE_URL}/assets/og-image.png'
@@ -1165,7 +1165,8 @@ PRIVACY = f'''<p><em>Last updated: {date.today().strftime("%B %-d, %Y")}</em></p
 <h2 class="st">Information you send us</h2>
 <p>If you email us, we receive your email address and whatever you include in your message. We use it only to reply and to improve the site, and we do not share it.</p>
 <h2 class="st">Analytics</h2>
-<p>If we add a privacy-respecting analytics tool in the future (for example, Google Analytics), it will be used only to measure aggregate traffic, and this policy will be updated to say so.</p>
+<p>We use Google Analytics 4, a web analytics service provided by Google LLC, to understand how visitors use the site (for example, which pages are viewed, how long visits last, approximate location at the city/region level, device and browser type, and how visitors arrived). Google Analytics uses cookies and similar technologies, and the information it collects is processed by Google under its own privacy policy. We use this data only in aggregate to improve the site; we do not use it to identify individual visitors, and we do not use Google Analytics advertising features.</p>
+<p>You can learn how Google uses this data at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>, and you can opt out of Google Analytics on all websites by installing the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics Opt-out Browser Add-on</a>. You can also block or delete cookies in your browser settings.</p>
 <h2 class="st">Third-party links and images</h2>
 <p>Pages link to government agencies and other external websites, and some photos are loaded from Wikimedia Commons. Those sites have their own privacy policies, which we do not control.</p>
 <h2 class="st">Children</h2>
