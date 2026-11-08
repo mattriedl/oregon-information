@@ -18,6 +18,15 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^\.git - [F,L]
+
+    # SEO: one canonical host (www -> non-www, always HTTPS)
+    RewriteCond %{HTTP_HOST} ^www\.oregoninformation\.com$ [NC]
+    RewriteRule ^(.*)$ https://oregoninformation.com/$1 [R=301,L]
+
+    # SEO: /path/index.html -> /path/ (matches canonical tags and sitemap).
+    # THE_REQUEST only matches what the browser asked for, so DirectoryIndex lookups don't loop.
+    RewriteCond %{THE_REQUEST} \s/+((?:[^\s?]*/)?)index\.html[\s?]
+    RewriteRule ^ /%1 [R=301,L]
 </IfModule>
 
 # Enable compression for faster loading

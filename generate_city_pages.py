@@ -10,7 +10,7 @@ Contact / Privacy pages, sitemap.xml and robots.txt from:
 Data refresh: python3 data/gather.py   |   Build: python3 generate_city_pages.py
 """
 
-import html, json, math, os, re, shutil
+import hashlib, html, json, math, os, posixpath, re, shutil, subprocess
 from datetime import date
 
 BASE_URL     = 'https://oregoninformation.com'
@@ -594,10 +594,21 @@ OREGON_TICKER_FACTS = [
 ]
 
 
-def ticker_html():
-    """Infinite horizontal fact ticker — CSS animation only; facts duplicated so translateX(-50%) loops seamlessly."""
-    spans = ''.join(f'<span>{e(f)}</span>' for f in OREGON_TICKER_FACTS)
-    return f'<div class="ticker" role="region" aria-label="Oregon fun facts"><div class="ticker-track">{spans}{spans}</div></div>'
+TICKER_PER_PAGE = 16   # facts shown per page; the set rotates by page so every fact appears somewhere on the site
+
+
+def ticker_html(seed=''):
+    """Infinite horizontal fact ticker — CSS animation only; facts duplicated so translateX(-50%) loops seamlessly.
+    Each page shows a different rotating window of TICKER_PER_PAGE facts (seeded by page name) instead of all
+    100+ facts, so the same ~1,500 words of boilerplate are not repeated ahead of the main content on every page."""
+    facts = OREGON_TICKER_FACTS
+    if seed:
+        start = sum(ord(ch) * (i + 1) for i, ch in enumerate(seed)) % len(facts)
+        facts = (facts[start:] + facts[:start])[:TICKER_PER_PAGE]
+    spans = ''.join(f'<span>{e(f)}</span>' for f in facts)
+    dur = max(60, round(1500 * len(facts) / len(OREGON_TICKER_FACTS)))
+    return (f'<div class="ticker" role="region" aria-label="Oregon fun facts"><div class="ticker-track" style="animation-duration:{dur}s">'
+            f'{spans}{spans}</div></div>')
 
 
 ALERTS_JS = ("<script>(function(){var d=document.getElementById('alerts-bar'),done=false;if(!d)return;"
@@ -716,7 +727,7 @@ def head(title, desc, path, og_type='website', image=None, extra='', up='', keyw
             f'<meta name="description" content="{e(desc)}">' + (f'<meta name="keywords" content="{e(keywords)}">' if keywords else '') + '<meta name="robots" content="index, follow">'
             f'<meta name="viewport" content="width=device-width, initial-scale=1.0">'
             f'<link rel="icon" href="{up}assets/favicon.ico"><link rel="apple-touch-icon" href="{up}assets/favicon-32.png"><link rel="canonical" href="{url}">'
-            f'<meta property="og:site_name" content="{SITE_NAME}"><meta property="og:type" content="{og_type}">'
+            f'<meta property="og:site_name" content="{SITE_NAME}"><meta property="og:locale" content="en_US"><meta property="og:type" content="{og_type}">'
             f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">'
             f'<meta property="og:url" content="{url}"><meta property="og:image" content="{e(img)}">'
             f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}">'
@@ -815,13 +826,87 @@ def gallery(c, name):
     for src, cap, page, artist, lic in figs:
         credit = f'{e(artist)}' + (f', {e(lic)}' if lic else '')
         link = f' &middot; <a href="{e(page)}" target="_blank" rel="noopener">source</a>' if page else ''
-        out.append(f'<figure><img src="{e(src)}" alt="{e(cap)}" loading="lazy"><figcaption>{e(cap if len(cap) <= 90 else cap[:88].rsplit(" ", 1)[0].rstrip(",;:") + "…")}<br><small>Photo: {credit}{link}</small></figcaption></figure>')
+        alt = cap if (name.lower() in cap.lower() and not re.match(r'^[\d_ .-]{6}', cap)) else f'{cap} in {name}, Oregon'
+        if re.match(r'^[\d_ .-]{6}', cap): alt = f'{name}, Oregon'
+        out.append(f'<figure><img src="{e(src)}" alt="{e(alt)}" loading="lazy"><figcaption>{e(cap if len(cap) <= 90 else cap[:88].rsplit(" ", 1)[0].rstrip(",;:") + "…")}<br><small>Photo: {credit}{link}</small></figcaption></figure>')
     return f'<h2 class="st">{e(name)} in Pictures</h2><section class="gallery g{min(len(figs),3)}">{"".join(out)}</section>'
 
 
 def wiki_credit(item):
     return (f'<p class="src">Source: adapted from <a href="{e(item["wiki_url"])}" target="_blank" rel="noopener">Wikipedia</a>, '
             f'available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>')
+
+
+def city_title(name):
+    """Keep the <title> within ~60 characters so Google shows it untruncated; city name + Oregon always lead."""
+    for t in (f'{name}, Oregon: Population, Schools, Weather & Moving Guide',
+              f'{name}, Oregon: Population, Schools & Moving Guide',
+              f'{name}, OR: Population, Schools & Moving Guide'):
+        if len(t) <= 60:
+            return t
+    return t
+
+
+def city_desc(name, county, pop, has_attractions):
+    """Meta description (<=160 chars): primary facts first, then what the page offers."""
+    todo = ' things to do,' if has_attractions else ''
+    lead = f'{name}, Oregon guide: ' + (f'population {pop} (2020 Census), ' if pop else '') + f'{county} County.'
+    for tail in (f' Schools, weather,{todo} nearby cities and moving tips for {name}, OR.',
+                 f' Schools, weather,{todo} nearby cities and moving tips.',
+                 f' Schools, weather, nearby cities and moving tips.'):
+        if len(lead + tail) <= 160:
+            return lead + tail
+    return (lead + tail)[:160]
+
+
+COUNTY_SEATS = {}
+COST_GUIDE = '/blog/oregon-cost-of-living/'
+
+
+def city_faq(c, all_cities, county, breg, electric, district):
+    """FAQ built from the city's own data, answering the specific questions people search for
+    ("what county is X in", "how far is X from Portland", "when was X founded"). Returns (question, text, html)."""
+    name = c['name']; fq = []
+    pop = n(c['pop2020'])
+    if pop:
+        a = (f"{name} had {pop} residents at the 2020 U.S. Census (up from {n(c['pop2010'])} in 2010)." if str(c['change']).startswith('+')
+             else f"{name} had {pop} residents at the 2020 U.S. Census ({n(c['pop2010'])} in 2010).")
+        fq.append((f"What is the population of {name}, Oregon?", a, None))
+    others = [x for x in c['counties'][1:]]
+    a = f"{name} is in {county} County" + (f" (the city also extends into {' and '.join(others)} County)" if others else '') + f", in the {breg} region of Oregon."
+    if c['capital']: a += f" It is Oregon's state capital and the county seat of {county} County."
+    elif c['seat']: a += f" It is the county seat of {county} County."
+    elif COUNTY_SEATS.get(county): a += f" The county seat is {COUNTY_SEATS[county]}."
+    fq.append((f"What county is {name}, Oregon in?", a, None))
+    hub_name = 'Salem' if name == 'Portland' else 'Portland'
+    hub = next((o for o in all_cities if o['name'] == hub_name), None)
+    if hub and c.get('lat') is not None:
+        d = miles(c, hub)
+        fq.append((f"How far is {name} from {hub_name}?",
+                   f"{name} is about {d:.0f} miles from {hub_name} in a straight line; the driving distance is longer and depends on your route.", None))
+    near = sorted((miles(c, o), o) for o in all_cities if o is not c and o.get('lat') is not None and c.get('lat') is not None)
+    if near:
+        d, o = near[0]
+        fq.append((f"What cities are near {name}, Oregon?",
+                   f"The closest incorporated city is {o['name']}, about {d:.0f} miles away. Other nearby cities include "
+                   + ', '.join(x['name'] for _, x in near[1:4]) + '.', None))
+    if c.get('incorporated'):
+        fq.append((f"When was {name}, Oregon incorporated?", f"{name} was incorporated as a city in {c['incorporated']}.", None))
+    a = ("Oregon has no statewide sales tax, but it does have a state income tax (4.75% to 9.9%), and housing is the biggest "
+         f"cost difference between communities. {name} is in the {breg} region.")
+    fq.append((f"What is the cost of living in {name}, Oregon?", a + " See our Oregon cost of living guide for typical housing, utility and grocery costs.",
+               e(a) + f' See our <a href="{COST_GUIDE}">Oregon cost of living guide</a> for typical housing, utility and grocery costs.'))
+    if district:
+        fq.append((f"What school district serves {name}, Oregon?",
+                   f"{name} is served by {district}. The exact school a student attends depends on the home address, so confirm with the district before you buy or rent.", None))
+    else:
+        fq.append((f"Which schools serve families in {name}?",
+                   f"School assignment depends on your exact address. Start with the Oregon Department of Education directory or the {county} County school district office.", None))
+    fq.append((f"How do I set up utilities when moving to {name}?",
+               f"Electricity in this area is generally provided by {electric} (confirm by address); natural gas, where available, by NW Natural, Avista or Cascade Natural Gas. Water, sewer and trash are typically arranged through the City of {name}.", None))
+    fq.append((f"How soon must I register my car after moving to {name}?",
+               "Within 30 days of becoming an Oregon resident, you need both Oregon vehicle registration and an Oregon driver's license.", None))
+    return fq
 
 
 def faq_for(city, county, region, electric):
@@ -973,14 +1058,18 @@ def city_page(c, all_cities, custom):
     facts = ''.join(f'<tr><th>{a}</th><td>{b}</td></tr>' for a, b in rows)
     near = sorted((miles(c, o), o) for o in all_cities if o is not c and o.get('lat') is not None and c.get('lat') is not None)[:6]
     near_html = ''.join(f'<a href="../{slug(o["name"])}/index.html">{e(o["name"])}<small>{d:.0f} mi &middot; pop. {n(o["pop2020"])}</small></a>' for d, o in near)
-    fq = faq_for(name, county, region, electric)
-    if pop: fq.insert(0, (f"What is the population of {name}, Oregon?", f"{name} had {pop} residents at the 2020 U.S. Census (up from {n(c['pop2010'])} in 2010)." if c['change'].startswith('+') else f"{name} had {pop} residents at the 2020 U.S. Census ({n(c['pop2010'])} in 2010)."))
-    faq_details = '\n'.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in fq)
     path = f'/cities/{slug(name)}/'
     breg = big_region(c)
     reg_phrase = breg if breg.endswith('Oregon') else f'{breg} Oregon'
-    desc = (f'{name}, Oregon: a {county} County city' + (f' of {pop} people' if pop else '')
-            + f'. Schools, utilities, weather, parks and moving resources for {name}, OR.')
+    fq = city_faq(c, all_cities, county, breg, electric, district)
+    faq_details = '\n'.join(f'<details><summary>{e(q)}</summary><p>{h or e(a)}</p></details>' for q, a, h in fq)
+    desc = city_desc(name, county, pop, bool(attr))
+    posts = CITY_POSTS.get(slug(name), [])[:4]
+    posts_html = ''
+    if posts:
+        posts_html = (f'<h2 class="st">{e(name)} in Our Oregon Guides</h2><nav class="dir-list">'
+                      + ''.join(f'<a href="/blog/{a["slug"]}/">{e(a["title"])}<small>{e(a.get("category", "Oregon"))}</small></a>' for a in posts)
+                      + '</nav>')
     keywords = (f'{name}, {name} Oregon, {name} OR, {county} County Oregon, {reg_phrase}, moving to {name}, '
                 f'{name} schools, {name} utilities, Oregon cities')
     tagline = city_tagline(name, county, breg)
@@ -1002,7 +1091,7 @@ def city_page(c, all_cities, custom):
         {'@type': 'ListItem', 'position': 3, 'name': f'{county} County', 'item': f'{BASE_URL}/counties/{slug(county)}/'},
         {'@type': 'ListItem', 'position': 4, 'name': name, 'item': f'{BASE_URL}{path}'}]}
     faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
-        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in fq[:5]]}
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a, _ in fq]}
     sl = '\n'.join(f'<li><a href="{u}" target="_blank" rel="noopener">{t}</a></li>' for t, u in STATE_LINKS)
     local = []
     if c.get('website'): local.append(f'<li><a href="{e(c["website"])}" target="_blank" rel="noopener">City of {e(name)} official website</a></li>')
@@ -1014,8 +1103,8 @@ def city_page(c, all_cities, custom):
     lead = f'{e(name)} is an incorporated city in {county_links(counties, "../../")}, in Oregon&rsquo;s {e(region)} region' + (f', with a 2020 Census population of {pop}.' if pop else '.')
     wx = weather_widget(name, c.get('lat'), c.get('lon'))
     vote = voter_card(county, name)
-    return (head(f'{name}, Oregon: Population, Schools, Weather & Moving Guide', desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
-            + header('../../') + ticker_html() + alert_banner()
+    return (head(city_title(name), desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
+            + header('../../') + ticker_html(name) + alert_banner()
             + f'<div class="hero city-hero"{hero_style(breg)}><div class="wrap"><h1>{e(name)}, Oregon</h1><p class="city-tagline">{e(tagline)}</p>'
             + f'<div class="pills">{badges}</div>'
             + f'<p class="hero-sub">{e(name)}, OR guide: population, schools, utilities, weather, attractions, nearby cities and a moving checklist for {e(county)} County, {e(reg_phrase)}.</p></div></div>'
@@ -1032,14 +1121,83 @@ def city_page(c, all_cities, custom):
             + schools_card + attractions_card
             + vote
             + '<div class="card"><h3>&#127973; Healthcare &amp; Assistance</h3><ul><li><a href="https://one.oregon.gov/" target="_blank" rel="noopener">ONE portal (OHP/SNAP)</a></li><li><a href="https://www.oregonfoodbank.org/" target="_blank" rel="noopener">Oregon Food Bank</a></li><li><a href="https://www.211info.org/" target="_blank" rel="noopener">Dial 211 for local help</a></li></ul></div></div>'
-            + (f'<h2 class="st">Nearby Cities</h2><nav class="dir-list">{near_html}</nav>' if near_html else '')
-            + f'<h2 class="st">Frequently Asked Questions</h2><section class="faq">{faq_details}</section>'
+            + posts_html
+            + (f'<h2 class="st">Cities Near {e(name)}</h2><nav class="dir-list">{near_html}</nav>' if near_html else '')
+            + f'<h2 class="st">{e(name)}, Oregon: Frequently Asked Questions</h2><section class="faq">{faq_details}</section>'
             + f'<h2 class="st">Local &amp; Official Links</h2><section class="faq"><ul>{"".join(local)}{sl}</ul></section>'
             + '<p class="back"><a href="../index.html">&larr; All Oregon Cities</a></p></div></main>'
             + footer('../../', '<br>Population: U.S. Census Bureau (2010, 2020). Background text: Wikipedia (CC BY-SA 4.0).'))
 
 
 COUNTY_SITES = {}
+CITY_POSTS = {}
+CITY_SLUGS = set()
+
+
+CENSUS_2020_OVERRIDES = {'Linn': '128610'}   # summary text only quotes a 2023 estimate
+
+
+def county_census_2020(k):
+    """data/counties.json 'pop2020' holds a later estimate; pages label the figure '2020 Census', so use the
+    official 2020 count quoted in the county's Wikipedia summary (falls back to the stored value)."""
+    if k['name'] in CENSUS_2020_OVERRIDES: return CENSUS_2020_OVERRIDES[k['name']]
+    t = k.get('summary') or ''
+    for pat in (r'2020 census,? (?:the |its |the county\'s )?population was ([\d,]+)', r'population was ([\d,]+) at the 2020 census',
+                r'2020 census recorded the population as ([\d,]+)', r'2020 population of ([\d,]+)'):
+        m = re.search(pat, t, re.I)
+        if m: return m.group(1).replace(',', '').rstrip(',')
+    return k['pop2020']
+
+
+def load_city_posts():
+    """Map city slug -> blog articles that link to that city page (for 'in our guides' links back from the city)."""
+    if not os.path.exists('data/blog_articles.json'): return
+    arts = sorted(json.load(open('data/blog_articles.json', encoding='utf-8')), key=lambda a: a.get('date', ''), reverse=True)
+    for a in arts:
+        f = f'data/blog_content/{a["slug"]}.html'
+        if not os.path.exists(f): continue
+        found = re.findall(r'cities/([a-z0-9-]+)/', open(f, encoding='utf-8').read())
+        found += [sl for sl in CITY_SLUGS if f'-{sl}-' in f'-{a["slug"]}-'] * 3   # article is about this city
+        for sl in dict.fromkeys(found):
+            CITY_POSTS.setdefault(sl, []).append((sl in a['slug'], found.count(sl), a))
+    for sl, lst in CITY_POSTS.items():   # posts about the city first, then by how often they link to it
+        CITY_POSTS[sl] = [a for _, _, a in sorted(lst, key=lambda t: (not t[0], -t[1]))]
+
+
+def replace_block(path, name, html_block):
+    """Replace <!--name-->...<!--/name--> in a hand-maintained page; returns True if the markers were found."""
+    if not os.path.exists(path): return False
+    s = open(path, encoding='utf-8').read()
+    pat = re.compile(r'<!--' + name + r'-->.*?<!--/' + name + r'-->', re.S)
+    if not pat.search(s): return False
+    s = pat.sub(lambda m: f'<!--{name}-->{html_block}<!--/{name}-->', s)
+    with open(path, 'w', encoding='utf-8') as f: f.write(s)
+    return True
+
+
+def update_counties_index(counties, cities):
+    """Fill the generated county table and ItemList schema inside the hand-designed counties/index.html."""
+    rows = []
+    for i, k in enumerate(sorted(counties, key=lambda k: -float(k['pop2020'] or 0)), 1):
+        members = [c for c in cities if k['name'] in c['counties']]
+        seat = next((c for c in cities if c['name'] == k['seat']), None)
+        seat_html = f'<a href="/cities/{slug(seat["name"])}/">{e(seat["name"])}</a>' if seat else e(k['seat'])
+        rows.append(f'<tr><td>{i}</td><td><a href="/counties/{slug(k["name"])}/">{e(k["name"])} County</a></td><td>{seat_html}</td>'
+                    f'<td>{n(k["pop2020"])}</td><td>{len(members)}</td><td>{e(k.get("est", ""))}</td></tr>')
+    table = ('<section><div class="wrap"><h2 class="section-title">List of Oregon Counties by Population</h2>'
+             '<p class="section-sub">All 36 Oregon counties ranked by 2020 Census population, with each county seat, the number of incorporated cities and the year the county was established.</p>'
+             '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.93rem" class="county-table">'
+             '<thead><tr style="background:#14382a;color:#fff;text-align:left"><th style="padding:9px">#</th><th style="padding:9px">County</th><th style="padding:9px">County seat</th>'
+             '<th style="padding:9px">Population (2020)</th><th style="padding:9px">Cities</th><th style="padding:9px">Established</th></tr></thead><tbody>'
+             + ''.join(rows) + '</tbody></table></div>'
+             '<style>.county-table td{padding:9px;border-bottom:1px solid #e3eae6}.county-table tr:nth-child(even) td{background:#f6f8f7}.county-table a{color:#1f4e79}</style>'
+             '<p style="font-size:.8rem;color:#5c6b64;margin-top:6px">Source: U.S. Census Bureau, 2020 Census.</p></div></section>')
+    replace_block(f'{OUT}/counties/index.html', 'county-table', table)
+    items = [{'@type': 'ListItem', 'position': i, 'name': f'{k["name"]} County, Oregon', 'url': f'{BASE_URL}/counties/{slug(k["name"])}/'}
+             for i, k in enumerate(sorted(counties, key=lambda k: k['name']), 1)]
+    schema = json.dumps({'@context': 'https://schema.org', '@type': 'ItemList', 'name': 'Oregon Counties', 'numberOfItems': len(items),
+                         'itemListElement': items}, ensure_ascii=False)
+    replace_block(f'{OUT}/counties/index.html', 'county-schema', f'<script type="application/ld+json">{schema}</script>')
 
 
 def county_region_note(name, sub_region, members):
@@ -1089,8 +1247,21 @@ def county_page(k, cities):
               '<li><a href="https://www.worksourceoregon.org/" target="_blank" rel="noopener">WorkSource Oregon</a></li>',
               '<li><a href="https://oregoncounties.org/" target="_blank" rel="noopener">Association of Oregon Counties</a></li>']
     if k.get('wiki_url'): links.append(f'<li><a href="{e(k["wiki_url"])}" target="_blank" rel="noopener">{e(name)} County on Wikipedia</a></li>')
-    return (head(f'{name} County, Oregon: Cities, Population & Living Guide', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread), '../../')
-            + header('../../') + ticker_html() + alert_banner()
+    names = [c['name'] for c in members]
+    cfq = [(f'What is the county seat of {name} County, Oregon?', f'{k["seat"]} is the county seat of {name} County.')]
+    if names:
+        listed = ', '.join(names[:12]) + (f' and {len(names) - 12} more' if len(names) > 12 else '')
+        cfq.append((f'What cities are in {name} County, Oregon?',
+                    f'{name} County has {len(names)} incorporated {"city" if len(names) == 1 else "cities"}: {listed}.'))
+    if pop: cfq.append((f'What is the population of {name} County, Oregon?', f'{name} County had {pop} residents at the 2020 U.S. Census.'
+                        + (f' The largest city is {names[0]}.' if names else '')))
+    if k.get('est'): cfq.append((f'When was {name} County established?', f'{name} County was established in {k["est"]}' + (f', formed from {k["origin"][0].lower() + k["origin"][1:] if k["origin"].split()[0] in ("Central", "Eastern", "Northeast", "Northern", "Northwest", "One", "Parts", "Portion", "Southern", "Southwestern", "Western") else k["origin"]}'.rstrip('.') + '.' if k.get('origin') else '.')))
+    if k.get('etymology'): cfq.append((f'How did {name} County get its name?', k['etymology'].rstrip('.') + '.'))
+    cfaq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in cfq]}
+    cfaq_html = ''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in cfq)
+    return (head(f'{name} County, Oregon: Cities, Population & Living Guide', desc, path, 'article', k.get('image'), ld(ld_obj) + ld(bread) + ld(cfaq_ld), '../../')
+            + header('../../') + ticker_html(name + ' County') + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{e(name)} County, Oregon</h1><p>County seat: {e(k["seat"])} &middot; {e(region)} region &middot; {len(members)} incorporated cities</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Counties</a> &rsaquo; {e(name)} County</nav>'
             + county_region_note(name, region, members)
@@ -1098,6 +1269,7 @@ def county_page(k, cities):
             + f'<h2 class="st">About {e(name)} County</h2><section class="prose">{summary_html(k["summary"], 1400)}{wiki_credit(k) if k.get("wiki_url") else ""}</section>'
             + photo(k, f'{name} County, Oregon')
             + f'<h2 class="st">Cities in {e(name)} County</h2><table class="tbl"><tr><th>City</th><th>Population (2020)</th><th>Incorporated</th></tr>{trs}</table><p class="src">&#9733; county seat. Cities that span more than one county are listed in each.</p>'
+            + f'<h2 class="st">{e(name)} County: Frequently Asked Questions</h2><section class="faq">{cfaq_html}</section>'
             + f'<h2 class="st">Official &amp; Helpful Links</h2><section class="faq"><ul>{"".join(links)}</ul></section>'
             + '<p class="back"><a href="../index.html">&larr; All Oregon Counties</a></p></div></main>'
             + footer('../../', '<br>Population: U.S. Census Bureau 2020. Background text: Wikipedia (CC BY-SA 4.0).'))
@@ -1111,19 +1283,40 @@ def cities_index(cities):
     body = ''.join(f'<h3 class="letter" id="letter-{L.lower()}">{L}</h3><nav class="dir-list">' + ''.join(
         f'<a href="{slug(c["name"])}/index.html" data-n="{e(c["name"].lower())} {e(" ".join(c["counties"]).lower())}">{e(c["name"])}<small>{e(", ".join(c["counties"]))} Co. &middot; pop. {n(c["pop2020"])}</small></a>' for c in cs) + '</nav>' for L, cs in groups.items())
     js = "<script>document.getElementById('q').addEventListener('input',function(){var v=this.value.toLowerCase();document.querySelectorAll('.dir-list a').forEach(function(a){a.style.display=a.dataset.n.indexOf(v)>-1?'':'none'});});</script>"
-    desc = f'Directory of all {len(cities)} incorporated cities in Oregon with county, 2020 Census population, history, and moving guides.'
-    cities_ld = ld({'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Oregon Cities A-Z', 'description': desc,
-                    'url': f'{BASE_URL}/cities/', 'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(cities)}})
-    return (head('Oregon Cities A–Z | All 241 Incorporated Cities', desc, '/cities/', extra=cities_ld, up='../') + header('../') + ticker_html() + alert_banner()
-            + f'<div class="hero"><div class="wrap"><h1>Oregon Cities A&ndash;Z</h1><p>Every incorporated city in Oregon ({len(cities)} total), with county and 2020 Census population.</p></div></div>'
-            + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Cities</nav><p style="margin:18px 0 8px"><input id="q" type="search" placeholder="Filter by city or county name..." aria-label="Filter cities"></p>'
+    N = len(cities)
+    desc = f'Complete list of all {N} incorporated cities in Oregon, A to Z, with county and 2020 Census population, plus the largest cities in Oregon ranked.'
+    ranked = sorted(cities, key=lambda c: -float(c['pop2020'] or 0))
+    top = ranked[:20]
+    top_rows = ''.join(f'<tr><td>{i}</td><td><a href="/cities/{slug(c["name"])}/">{e(c["name"])}</a></td><td>{e(", ".join(c["counties"]))}</td><td>{n(c["pop2020"])}</td></tr>'
+                       for i, c in enumerate(top, 1))
+    smallest = ranked[-1]
+    total = sum(float(c['pop2020'] or 0) for c in cities)
+    cities_ld = ld({'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': f'List of Cities in Oregon', 'description': desc,
+                    'url': f'{BASE_URL}/cities/', 'mainEntity': {'@type': 'ItemList', 'numberOfItems': N, 'itemListElement': [
+                        {'@type': 'ListItem', 'position': i, 'name': f'{c["name"]}, Oregon', 'url': f'{BASE_URL}/cities/{slug(c["name"])}/'}
+                        for i, c in enumerate(sorted(cities, key=lambda x: x['name'].lower()), 1)]}})
+    bread = ld({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{BASE_URL}/'},
+        {'@type': 'ListItem', 'position': 2, 'name': 'Oregon Cities', 'item': f'{BASE_URL}/cities/'}]})
+    intro = (f'<section class="prose" style="margin-top:18px"><p>Oregon has <strong>{N} incorporated cities</strong> spread across its 36 counties. '
+             f'Together they are home to about {total / 1e6:.1f} million people &mdash; about {round(total / 4237256 * 100)}% of the state&rsquo;s 4.24 million residents (2020 Census). '
+             f'<a href="/cities/portland/">Portland</a> is the largest city, <a href="/cities/salem/">Salem</a> is the state capital, and '
+             f'<a href="/cities/{slug(smallest["name"])}/">{e(smallest["name"])}</a> is the smallest, with {n(smallest["pop2020"])} residents at the 2020 Census. '
+             'Every city below links to its own guide with population history, schools, utilities, weather, nearby cities and official links. '
+             'You can also browse cities <a href="/counties/">by county</a> or <a href="/regions/">by region</a>.</p></section>')
+    top_html = (f'<h2 class="st">Largest Cities in Oregon by Population</h2><table class="tbl"><tr><th>Rank</th><th>City</th><th>County</th><th>Population (2020)</th></tr>{top_rows}</table>'
+                '<p class="src">Source: U.S. Census Bureau, 2020 Census.</p>')
+    return (head(f'List of Cities in Oregon: All {N} Cities A–Z by County', desc, '/cities/', extra=cities_ld + bread, up='../') + header('../') + ticker_html('cities') + alert_banner()
+            + f'<div class="hero"><div class="wrap"><h1>List of Cities in Oregon (A&ndash;Z)</h1><p>All {N} incorporated cities in Oregon, with county and 2020 Census population.</p></div></div>'
+            + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> &rsaquo; Oregon Cities</nav>' + intro + top_html
+            + f'<h2 class="st">All {N} Oregon Cities A&ndash;Z</h2><p style="margin:18px 0 8px"><input id="q" type="search" placeholder="Filter by city or county name..." aria-label="Filter cities"></p>'
             + f'<nav class="alpha">{alpha}</nav>{body}</div></main>' + js + footer('../', '<br>Population: U.S. Census Bureau 2020.'))
 
 
 def simple_page(path, title, desc, h1, sub, body, page_type='WebPage'):
     page_ld = ld({'@context': 'https://schema.org', '@type': page_type, 'name': title, 'description': desc, 'url': f'{BASE_URL}{path}',
                   'isPartOf': {'@type': 'WebSite', 'name': 'Oregon Information', 'url': f'{BASE_URL}/'}})
-    return (head(title, desc, path, extra=page_ld, up='../') + header('../') + ticker_html() + alert_banner()
+    return (head(title, desc, path, extra=page_ld, up='../') + header('../') + ticker_html(path) + alert_banner()
             + f'<div class="hero"><div class="wrap"><h1>{h1}</h1><p>{sub}</p></div></div>'
             + f'<main><div class="wrap prose"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; {h1}</nav>{body}</div></main>' + footer('../'))
 
@@ -1168,7 +1361,8 @@ ADVERTISE = f'''<h2 class="st">Reach people planning their Oregon move or trip</
 <p>Email <a href="mailto:{CONTACT_EMAIL}?subject=Advertising%20on%20Oregon%20Information">{CONTACT_EMAIL}</a> with your business, the pages or regions you want to reach, preferred sizes and dates. We reply within a few business days with availability and rates.</p>
 <p><small>Example banner photos: Oregon coast by King of Hearts (CC BY-SA 4.0); Crater Lake by Guywelch2000 (CC BY 4.0); Mount Hood by U.S. Forest Service (public domain), via Wikimedia Commons.</small></p>'''
 
-PRIVACY = f'''<p><em>Last updated: {date.today().strftime("%B %-d, %Y")}</em></p>
+PRIVACY_UPDATED = 'November 6, 2026'   # change only when the policy text changes
+PRIVACY = f'''<p><em>Last updated: {PRIVACY_UPDATED}</em></p>
 <h2 class="st">Summary</h2>
 <p>Oregon Information is a read-only informational website. We do not require accounts, we do not sell personal information, and we do not run advertising trackers.</p>
 <h2 class="st">Information collected automatically</h2>
@@ -1221,7 +1415,7 @@ def region_page(rname, rcities):
         {'@type':'ListItem','position':2,'name':'Oregon Regions','item':f'{BASE_URL}/regions/'},
         {'@type':'ListItem','position':3,'name':rname,'item':f'{BASE_URL}{path}'}]}
     return (head(f'{rname}: {len(rcities)} Cities, Living & Travel Guide', meta_desc, path, 'article', None, ld(ld_obj)+ld(bread), '../../', r_kw)
-            + header('../../') + ticker_html() + alert_banner()
+            + header('../../') + ticker_html(rname) + alert_banner()
             + f'<div class="hero region-hero"{hero_style(rname)}>{oregon_silhouette()}<div class="wrap"><h1>{e(rname)}, Oregon</h1>'
             + f'<p class="city-tagline">{e(evoke)}</p><p class="hero-sub">{e(rc["hero_sub"])}</p>'
             + f'<div class="pills"><span class="pill">&#127961; {len(rcities)} cities</span><span class="pill">&#127963; {len(counties_list)} counties</span>'
@@ -1257,7 +1451,7 @@ def regions_index(all_cities):
               'url':f'{BASE_URL}{path}','numberOfItems':7}
     return (head("Oregon's 7 Regions: Coast, Valley, Gorge, Central & More", desc, path, 'website', None, ld(ld_obj), '../',
                  'Oregon regions, Portland Metro, Willamette Valley, Oregon Coast, Columbia River Gorge, Central Oregon, Eastern Oregon, Southern Oregon, Oregon cities by region')
-            + header('../') + ticker_html() + alert_banner()
+            + header('../') + ticker_html('regions') + alert_banner()
             + f'<div class="hero region-hero">{oregon_silhouette()}<div class="wrap"><h1>Oregon&rsquo;s Seven Regions</h1>'
             + '<p>Explore Oregon by region &mdash; cities, counties, living guides, and things to do in each part of the state.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Regions</nav>'
@@ -1282,10 +1476,10 @@ def oregon_page():
         f'<h3>{e(r)}</h3><p style="font-size:.92rem;color:var(--tx);margin:4px 0">{e(REGION_CONTENT[r]["desc"][:120])}&hellip;</p></a>'
         for r in REGION_SLUGS)
     return (head(title, desc, path, 'article', None, ld(ld_obj)+ld(bread), '../', kw)
-            + header('../') + ticker_html() + alert_banner()
+            + header('../') + ticker_html('oregon') + alert_banner()
             + f'<div class="or-hero">{oregon_silhouette(cls="or-sil or-sil-lg")}<div class="wrap">'
             + '<p class="or-eyebrow">&#10022; The Beaver State &middot; Est. 1859 &#10022;</p>'
-            + '<h1>Your Complete Guide to the State of Oregon</h1>'
+            + '<h1>Oregon State Guide: Facts, Population &amp; Geography</h1>'
             + '<p class="or-sub">Explore 241 cities, 36 counties, 7 regions &mdash; population data, schools, utilities, attractions &amp; more</p>'
             + '<p class="or-cta"><a class="btn-cta" href="/cities/">Explore Oregon &rarr;</a><a class="btn-ghost" href="/regions/">Browse the 7 regions</a></p>'
             + '</div></div>'
@@ -1314,9 +1508,73 @@ def oregon_page():
             + footer('../'))
 
 
+_SCHEME = re.compile(r'^(?:[a-z][a-z0-9+.-]*:|//|#|\?)', re.I)
+
+
+def clean_links(content, page_file):
+    """Rewrite relative internal href/src values to root-relative canonical URLs.
+    '../../cities/bend/index.html' on /cities/sisters/ becomes '/cities/bend/' (the URL used in the canonical tag
+    and sitemap), so internal links never point at the duplicate .../index.html address."""
+    rel = os.path.relpath(os.path.dirname(os.path.abspath(page_file)), os.path.abspath(OUT)).replace(os.sep, '/')
+    base = posixpath.normpath('/' + ('' if rel == '.' else rel))
+
+    def fix(m):
+        attr, url = m.group(1), m.group(2)
+        if not url or _SCHEME.match(url):
+            return m.group(0)
+        frag = ''
+        for sep in ('#', '?'):
+            if sep in url:
+                url, rest = url.split(sep, 1); frag = sep + rest + frag; break
+        trailing = url.endswith('/')
+        path = url if url.startswith('/') else posixpath.normpath(posixpath.join(base + '/', url))
+        if path.endswith('/index.html'):
+            path = path[:-len('index.html')]
+        elif path == 'index.html':
+            path = '/'
+        elif trailing and not path.endswith('/'):
+            path += '/'
+        return f'{attr}="{path}{frag}"'
+    return re.sub(r'\b(href|src)="([^"]*)"', fix, content)
+
+
+LASTMOD_JSON = 'data/lastmod.json'
+
+
+def page_lastmod(urls):
+    """Real <lastmod> per URL: the date a page's HTML last changed (content hash tracked in data/lastmod.json),
+    not the build date. Search engines ignore lastmod when every URL claims to change on every build."""
+    store = json.load(open(LASTMOD_JSON, encoding='utf-8')) if os.path.exists(LASTMOD_JSON) else {}
+    out = {}
+    for u in urls:
+        f = f'{OUT}{u}index.html'
+        if not os.path.exists(f):
+            out[u] = store.get(u, [None, TODAY])[1]; continue
+        h = hashlib.sha1(open(f, 'rb').read()).hexdigest()
+        old = store.get(u)
+        if old and old[0] == h:
+            out[u] = old[1]
+        else:
+            if old is None:   # first run: seed from git history so unchanged pages keep their real date
+                try:
+                    d = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', f], capture_output=True, text=True).stdout.strip()
+                    status = subprocess.run(['git', 'status', '--porcelain', '--', f], capture_output=True, text=True).stdout.strip()
+                except Exception:
+                    d, status = '', 'x'
+                out[u] = d if d and not status else TODAY
+            else:
+                out[u] = TODAY
+            store[u] = [h, out[u]]
+    with open(LASTMOD_JSON, 'w', encoding='utf-8') as fh:
+        json.dump(store, fh, indent=0, sort_keys=True)
+    return out
+
+
 def write(path, content):
     for bad, good in LINK_FIXES.items():
         content = content.replace(f'href="{bad}"', f'href="{good}"').replace(f'href="{e(bad)}"', f'href="{e(good)}"')
+    if path.endswith('.html'):
+        content = clean_links(content, path)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f: f.write(content)
 
@@ -1328,16 +1586,22 @@ def main():
     for c in cities: c['counties'] = [x.strip() for x in c['county'].split(',')]
     for c in cities + counties:
         if c.get('website'): c['website'] = fix_url(c['website'])
-    for k in counties: COUNTY_SITES[k['name']] = k.get('website', '')
+    for k in counties:
+        k['pop2020'] = county_census_2020(k)
+        if k.get('seat') == 'Saint Helens': k['seat'] = 'St. Helens'   # match the city's name in cities.json
+    for k in counties: COUNTY_SITES[k['name']] = k.get('website', ''); COUNTY_SEATS[k['name']] = k.get('seat', '')
+    CITY_SLUGS.update(slug(c['name']) for c in cities)
+    load_city_posts()
     for c in cities:
         write(f'{OUT}/cities/{slug(c["name"])}/index.html', city_page(c, cities, custom))
     for k in counties:
         write(f'{OUT}/counties/{slug(k["name"])}/index.html', county_page(k, cities))
     write(f'{OUT}/cities/index.html', cities_index(cities))
+    update_counties_index(counties, cities)
     write(f'{OUT}/about/index.html', simple_page('/about/', 'About Oregon Information | Independent Oregon Guide', 'About Oregon Information: an independent, free guide to every Oregon city and county, with moving and visiting guides.', 'About Oregon Information', 'An independent, plain-language guide to the State of Oregon.', ABOUT, 'AboutPage'))
-    write(f'{OUT}/contact/index.html', simple_page('/contact/', 'Contact Oregon Information', 'Contact Oregon Information with questions, corrections, or suggestions.', 'Contact Us', 'Questions, corrections and suggestions are always welcome.', CONTACT, 'ContactPage'))
+    write(f'{OUT}/contact/index.html', simple_page('/contact/', 'Contact Oregon Information', 'Contact Oregon Information with questions, corrections or suggestions about any Oregon city, county, region or blog guide. We read every message we receive.', 'Contact Us', 'Questions, corrections and suggestions are always welcome.', CONTACT, 'ContactPage'))
     write(f'{OUT}/privacy/index.html', simple_page('/privacy/', 'Privacy Policy | Oregon Information', 'Privacy policy for oregoninformation.com: what information we collect, how cookies and analytics are used, and your choices.', 'Privacy Policy', 'How oregoninformation.com handles information.', PRIVACY))
-    write(f'{OUT}/advertise/index.html', simple_page('/advertise/', 'Advertise with Oregon Information | Banner Ads & Sponsorships', 'Advertise on Oregon Information and reach people moving to or visiting Oregon. Banner sizes, placement options and how to get started.', 'Advertise with Us', 'Reach people planning their Oregon move or trip.', ADVERTISE))
+    write(f'{OUT}/advertise/index.html', simple_page('/advertise/', 'Advertise on Oregon Information | Banner Ads & Sponsorships', 'Advertise on Oregon Information and reach people moving to or visiting Oregon. Banner sizes, placement options and how to get started.', 'Advertise with Us', 'Reach people planning their Oregon move or trip.', ADVERTISE))
     # Build 7 region pages + regions index
     for c in cities: c['counties'] = [x.strip() for x in c['county'].split(',')]  # ensure counties set (idempotent)
     by_region = {}
@@ -1348,6 +1612,12 @@ def main():
         rslug2 = REGION_SLUGS[rname]
         write(f'{OUT}/regions/{rslug2}/index.html', region_page(rname, by_region.get(rname, [])))
     write(f'{OUT}/regions/index.html', regions_index(cities))
+    home_regions = ('<section class="alt"><div class="wrap"><h2 class="section-title">Explore Oregon&rsquo;s 7 Regions</h2>'
+                    '<p class="section-sub">From the Pacific beaches to the high desert, every region has its own guide with cities, travel ideas and living information.</p><div class="city-grid">'
+                    + ''.join(f'<a class="city-card" href="/regions/{REGION_SLUGS[r]}/"><h3>{e(r)}</h3><p>{len(by_region.get(r, []))} cities &bull; '
+                              f'{e(REGION_CONTENT[r]["desc"][:110].rsplit(" ", 1)[0].rstrip(",;:"))}&hellip;</p></a>' for r in REGION_SLUGS)
+                    + '</div></div></section>')
+    replace_block(f'{OUT}/index.html', 'home-regions', home_regions)
     # Oregon state facts page
     write(f'{OUT}/oregon/index.html', oregon_page())
     # Sitemap
@@ -1357,7 +1627,8 @@ def main():
     if os.path.exists('data/blog_articles.json'):   # statewide blog (built by build_blog_index.py)
         urls += ['/blog/'] + [f'/blog/{a["slug"]}/' for a in json.load(open('data/blog_articles.json', encoding='utf-8'))]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sm += '\n'.join(f'  <url><loc>{BASE_URL}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '\n</urlset>\n'
+    lastmod = page_lastmod(urls)
+    sm += '\n'.join(f'  <url><loc>{BASE_URL}{u}</loc><lastmod>{lastmod[u]}</lastmod></url>' for u in urls) + '\n</urlset>\n'
     write(f'{OUT}/sitemap.xml', sm)
     write(f'{OUT}/robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n')
     print(f'Built {len(cities)} city pages, {len(counties)} county pages, {len(REGION_SLUGS)} region pages + index, Oregon page, cities index, about/contact/privacy, sitemap ({len(urls)} URLs).')

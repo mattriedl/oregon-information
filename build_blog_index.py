@@ -23,14 +23,14 @@ import json, os, re
 from datetime import date
 
 from generate_city_pages import (BASE_URL, SITE_NAME, DEFAULT_IMG, head, header, footer,
-                                 ticker_html, alert_banner, ld, e, oregon_silhouette)
+                                 ticker_html, alert_banner, ld, e, oregon_silhouette, clean_links, replace_block)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ARTICLES_JSON = os.path.join(ROOT, 'data', 'blog_articles.json')
 CONTENT_DIR = os.path.join(ROOT, 'data', 'blog_content')
 BLOG_DIR = os.path.join(ROOT, 'blog')
 PUBLISHER = {'@type': 'Organization', 'name': SITE_NAME, 'url': f'{BASE_URL}/',
-             'logo': {'@type': 'ImageObject', 'url': f'{BASE_URL}/assets/favicon-32.png'}}
+             'logo': {'@type': 'ImageObject', 'url': f'{BASE_URL}/assets/og-image.png', 'width': 1200, 'height': 630}}
 
 CTAS = {
     'moving': ('Planning your move to Oregon?',
@@ -57,6 +57,7 @@ def word_count(body):
 
 
 def write(path, content):
+    content = clean_links(content, os.path.relpath(path, ROOT))   # canonical /x/y/ internal URLs
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         f.write(content)
@@ -121,7 +122,8 @@ def article_page(a, body, all_arts):
     h, p, href, btn, href2, btn2 = CTAS.get(a.get('cta', 'moving'), CTAS['moving'])
     cta = (f'<aside class="cta-box"><h2>{h}</h2><p>{p}</p><a class="btn-cta" href="{up}{href}">{btn}</a>'
            f'<a class="btn-ghost" href="{up}{href2}">{btn2}</a></aside>')
-    related = [x for x in all_arts if x['slug'] != a['slug']][:3]
+    others = [x for x in all_arts if x['slug'] != a['slug']]   # newest first; same topic ranks first
+    related = sorted(others, key=lambda x: (x.get('category') != a.get('category'), x.get('cta') != a.get('cta')))[:3]
     rel_html = (f'<h2 class="st">More from the Oregon Information Blog</h2><div class="cards">{"".join(card(x, "../") for x in related)}</div>'
                 if related else '')
     title_tag = a.get('seo_title') or f'{a["title"]} | {SITE_NAME}'
@@ -133,7 +135,7 @@ def article_page(a, body, all_arts):
                f'fetchpriority="high" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:10px">'
                f'<figcaption style="font-size:.8rem;color:#5b6b64;margin-top:4px">{credit}</figcaption></figure>')
     return (head(title_tag, a['description'], path, 'article', img, extra, up, ', '.join(a.get('keywords', [])))
-            + header(up) + ticker_html() + alert_banner()
+            + header(up) + ticker_html(a['slug']) + alert_banner()
             + f'<div class="hero region-hero">{oregon_silhouette()}<div class="wrap"><p class="or-eyebrow">{e(a.get("category", "Oregon"))}</p>'
             + f'<h1>{e(a.get("h1") or a["title"])}</h1>' + (f'<p>{e(a["hero_sub"])}</p>' if a.get('hero_sub') else '')
             + f'<div class="post-meta"><span class="pill">&#128197; <time datetime="{a["date"]}">{nice_date(a["date"])}</time></span>'
@@ -165,7 +167,7 @@ def index_page(arts):
     cats = sorted({a.get('category', 'Oregon') for a in arts})
     cards = ''.join(card(a, '') for a in arts) or '<p>New articles are on the way &mdash; check back soon.</p>'
     return (head(title, desc, path, 'website', None, ld(blog_ld) + ld(list_ld) + ld(bread), up, kw)
-            + header(up) + ticker_html() + alert_banner()
+            + header(up) + ticker_html('blog') + alert_banner()
             + f'<div class="hero region-hero">{oregon_silhouette()}<div class="wrap"><p class="or-eyebrow">The Oregon Information Blog</p>'
             + '<h1>Moving, Living &amp; Visiting Oregon</h1>'
             + '<p>In-depth, plain-language guides for newcomers, house-hunters and travelers &mdash; built on Census data, official state sources and local knowledge.</p>'
@@ -180,6 +182,35 @@ def index_page(arts):
             + f'<a href="{up}cities/index.html">Cities A&ndash;Z<small>All 241 incorporated cities</small></a>'
             + f'<a href="{up}counties/index.html">Counties<small>All 36 Oregon counties</small></a></nav>'
             + '</div></main>' + footer(up))
+
+
+MINI_CSS = ('<style>.bm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin:28px 0}'
+            '.bm-card{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #e3eae6;border-top:4px solid #1a5632;border-radius:10px;'
+            'padding:22px;text-decoration:none;color:#22302b;transition:transform .15s ease,box-shadow .15s ease}'
+            '.bm-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(20,56,42,.12)}'
+            '.bm-cat{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:700;color:#9a7a2c}'
+            '.bm-card h3{font-size:1.12rem;color:#14382a;margin:0}.bm-card p{font-size:.92rem;color:#5c6b64;flex:1;margin:0}'
+            '.bm-more{color:#1f4e79;font-weight:700;font-size:.9rem}.bm-all a{color:#1f4e79;font-weight:700}</style>')
+
+
+def mini_cards(arts, title, sub):
+    if not arts: return ''
+    cards = ''.join(f'<a class="bm-card" href="/blog/{a["slug"]}/"><span class="bm-cat">{e(a.get("category", "Oregon"))}</span>'
+                    f'<h3>{e(a["title"])}</h3><p>{e(a.get("excerpt") or a["description"])}</p><span class="bm-more">Read the guide &rarr;</span></a>' for a in arts)
+    return (f'<section>{MINI_CSS}<div class="wrap"><h2 class="section-title">{title}</h2><p class="section-sub">{sub}</p>'
+            f'<div class="bm-grid">{cards}</div><p class="bm-all"><a href="/blog/">See all Oregon Information blog articles &rarr;</a></p></div></section>')
+
+
+def update_guide_blocks(arts):
+    """Link the newest articles from the homepage and the topic guides (hand-designed pages with marker comments)."""
+    replace_block(os.path.join(ROOT, 'index.html'), 'home-blog',
+                  mini_cards(arts[:6], 'Latest Oregon Guides from Our Blog', 'In-depth articles on moving to, living in and exploring Oregon.'))
+    replace_block(os.path.join(ROOT, 'moving-to-oregon', 'index.html'), 'blog-moving',
+                  mini_cards([a for a in arts if a.get('cta') == 'moving'][:6], 'More Guides for Moving to Oregon',
+                             'Detailed articles on costs, cities, neighborhoods and weather to help you plan your move.'))
+    replace_block(os.path.join(ROOT, 'visit-oregon', 'index.html'), 'blog-visiting',
+                  mini_cards([a for a in arts if a.get('cta') == 'visiting'][:6], 'Oregon Travel Guides from Our Blog',
+                             'Road trips, seasonal events and the best places to visit across Oregon.'))
 
 
 def update_sitemap(arts):
@@ -211,6 +242,7 @@ def main():
         elif not os.path.exists(os.path.join(BLOG_DIR, a['slug'], 'index.html')):
             print(f'WARNING: no body source or page for "{a["slug"]}"')
     write(os.path.join(BLOG_DIR, 'index.html'), index_page(arts))
+    update_guide_blocks(arts)
     n = update_sitemap(arts)
     print(f'Blog index: {len(arts)} articles. Article pages built: {", ".join(built) or "none"}. Sitemap blog URLs: {n}.')
 
