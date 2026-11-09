@@ -267,37 +267,31 @@
     ]
   },
   {
-    "primary_kw": "Christmas in Oregon",
-    "secondary_kws": [
-      "Oregon Christmas towns",
-      "holiday events Oregon",
-      "Oregon Christmas lights",
-      "Christmas getaways Oregon"
-    ],
-    "longtail_kws": [
-      "What are the best Christmas towns in Oregon?",
-      "Where are the best Christmas light displays in Oregon?",
-      "Are there holiday trains in Oregon?"
-    ],
     "slug": "christmas-in-oregon",
-    "title": "Christmas in Oregon: The Ultimate Guide to Towns and Holiday Events",
-    "seo_title": "Christmas in Oregon: Best Towns & Holiday Events",
-    "description": "Plan your Christmas in Oregon with our guide to the best festive towns, light displays, holiday markets, and winter getaways across the Beaver State.",
-    "excerpt": "From the million-light display at The Grotto to the German-style market in Silverton, discover why Oregon is the ultimate Pacific Northwest holiday destination.",
-    "hero_sub": "Discover the most festive towns, magical light displays, and winter traditions that make the holiday season in Oregon truly unique.",
-    "category": "Visiting Oregon",
-    "cta": "visiting",
+    "title": "Christmas in Oregon 2026: Best Towns, Lights, Trains & Events",
+    "seo_title": "Christmas in Oregon 2026: Towns, Lights, Trains & Events",
+    "h1": "Christmas in Oregon 2026: Best Towns, Lights, Trains & Holiday Events",
+    "description": "Christmas in Oregon 2026: Silverton Christmas Market, Grotto and ZooLights dates, the Christmas Ships, Polar Express and holiday trains, and the best towns.",
+    "excerpt": "Dates, prices and booking tips for the Silverton Christmas Market, Portland's Grotto and ZooLights, the Christmas Ships, Oregon's holiday trains and the best Christmas towns.",
+    "hero_sub": "2026 dates, prices and booking tips for Oregon's biggest holiday markets, light displays, boat parades and Santa trains, plus the towns worth a winter weekend.",
     "date": "2026-11-09",
     "dateModified": "2026-11-09",
+    "category": "Visiting Oregon",
+    "cta": "visiting",
     "keywords": [
-      "Christmas in Oregon",
-      "Oregon Christmas towns",
-      "holiday events Oregon",
-      "Oregon Christmas lights",
-      "Christmas getaways Oregon",
-      "What are the best Christmas towns in Oregon?",
-      "Where are the best Christmas light displays in Oregon?",
-      "Are there holiday trains in Oregon?"
-    ]
+      "christmas in oregon",
+      "christmas towns in oregon",
+      "silverton christmas market",
+      "zoolights portland",
+      "grotto festival of lights",
+      "christmas ships portland",
+      "polar express hood river",
+      "shore acres christmas lights",
+      "christmas train oregon"
+    ],
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/ChristmasTreeFarm.jpg/960px-ChristmasTreeFarm.jpg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:ChristmasTreeFarm.jpg",
+    "image_credit": "Cacophony / CC BY 2.5",
+    "image_alt": "Rows of young Christmas trees on a tree farm near Silverton, Oregon"
   }
 ]
