@@ -116,6 +116,7 @@ Rules:
 python3 generate_city_pages.py && python3 build_blog_index.py   # builds pages, city backlinks, sitemap, home/guide blocks
 python3 tools/blog_seo_check.py <slug>                           # must end with "Problems: 0"
 python3 tools/blog_seo_check.py --all | tail -1                  # no new problems in other articles
+python3 tools/check_links.py | tail -2                           # every internal link on the site must resolve: "Problems: 0"
 ```
 
 Then view it like a reader:

@@ -1271,6 +1271,9 @@ def update_counties_index(counties, cities):
              '<style>.county-table td{padding:9px;border-bottom:1px solid #e3eae6}.county-table tr:nth-child(even) td{background:#f6f8f7}.county-table a{color:#1f4e79}</style>'
              '<p style="font-size:.8rem;color:#5c6b64;margin-top:6px">Source: U.S. Census Bureau, 2020 Census.</p></div></section>')
     replace_block(f'{OUT}/counties/index.html', 'county-table', table)
+    az = ('<div class="alpha-nav">' + ''.join(f'<a href="/counties/{slug(k["name"])}/">{e(k["name"])}</a>'
+                                              for k in sorted(counties, key=lambda k: k['name'])) + '</div>')
+    replace_block(f'{OUT}/counties/index.html', 'county-az', az)
     items = [{'@type': 'ListItem', 'position': i, 'name': f'{k["name"]} County, Oregon', 'url': f'{BASE_URL}/counties/{slug(k["name"])}/'}
              for i, k in enumerate(sorted(counties, key=lambda k: k['name']), 1)]
     schema = json.dumps({'@context': 'https://schema.org', '@type': 'ItemList', 'name': 'Oregon Counties', 'numberOfItems': len(items),
@@ -1428,7 +1431,8 @@ def zip_page(cities):
         cname = f'<a href="/cities/{slug(c["name"])}/">{e(c["name"])}</a>' if c else e(z['city'].title())
         typ = {'STANDARD': 'Standard', 'PO BOX': 'PO Box', 'UNIQUE': 'Unique (single organization)'}.get(z['type'], z['type'].title())
         rows.append(f'<tr data-n="{z["zip"]} {e(z["city"].lower())} {e(z["county"].lower())}"><td>{z["zip"]}</td><td>{cname}</td>'
-                    f'<td><a href="/counties/{slug(z["county"])}/">{e(z["county"])}</a></td><td>{typ}</td></tr>')
+                    + (f'<td><a href="/counties/{slug(z["county"])}/">{e(z["county"])}</a></td>' if os.path.exists(f'{OUT}/counties/{slug(z["county"])}/index.html')
+                       else f'<td>{e(z["county"])} (CA)</td>' if z['county'] == 'Modoc' else f'<td>{e(z["county"])}</td>') + f'<td>{typ}</td></tr>')
     top = sorted(cities, key=lambda c: -float(c['pop2020'] or 0))[:12]
     top_rows = ''.join(f'<tr><td><a href="/cities/{slug(c["name"])}/">{e(c["name"])}</a></td><td>{", ".join((CITY_ZIPS.get(c["name"], {}).get("zips") or ["—"])[:14])}'
                        f'{" &hellip;" if len(CITY_ZIPS.get(c["name"], {}).get("zips") or []) > 14 else ""}</td></tr>' for c in top)
@@ -1510,7 +1514,7 @@ ABOUT = f'''<h2 class="st">What Oregon Information is</h2>
 <p>Spotted something out of date? Please <a href="../contact/index.html">contact us</a> &mdash; corrections are welcome and appreciated.</p>'''
 
 CONTACT = f'''<h2 class="st">Get in touch</h2>
-<p>Questions, corrections, or suggestions for a city or county page? Email us at <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>. We read every message and aim to reply within a few business days.</p>
+<p>Questions, corrections, or suggestions for a city or county page? Email us at <!--email_off--><a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a><!--/email_off-->. We read every message and aim to reply within a few business days.</p>
 <h2 class="st">Reporting a correction</h2>
 <p>To help us fix things quickly, please include the page address (URL), what is wrong, and a link to an official source if you have one.</p>
 <h2 class="st">Need government help?</h2>
@@ -1530,7 +1534,7 @@ ADVERTISE = f'''<h2 class="st">Reach people planning their Oregon move or trip</
 <p>The examples below show our house ads in every supported size. <a href="../assets/ads/oregoninformation_banners.zip">Download the media kit (ZIP)</a>.</p>
 <figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Leaderboard &mdash; 728x90 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/leaderboard_728x90.png" width="728" height="90" alt="Leaderboard 728x90 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/leaderboard_728x90.gif" width="728" height="90" alt="Leaderboard 728x90 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure><figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Medium Rectangle &mdash; 300x250 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/medium_rectangle_300x250.png" width="300" height="250" alt="Medium Rectangle 300x250 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/medium_rectangle_300x250.gif" width="300" height="250" alt="Medium Rectangle 300x250 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure><figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Large Rectangle &mdash; 336x280 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/large_rectangle_336x280.png" width="336" height="280" alt="Large Rectangle 336x280 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/large_rectangle_336x280.gif" width="336" height="280" alt="Large Rectangle 336x280 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure><figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Half Page &mdash; 300x600 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/half_page_300x600.png" width="300" height="600" alt="Half Page 300x600 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/half_page_300x600.gif" width="300" height="600" alt="Half Page 300x600 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure><figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Wide Skyscraper &mdash; 160x600 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/skyscraper_160x600.png" width="160" height="600" alt="Wide Skyscraper 160x600 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/skyscraper_160x600.gif" width="160" height="600" alt="Wide Skyscraper 160x600 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure><figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Square &mdash; 250x250 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/square_250x250.png" width="250" height="250" alt="Square 250x250 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/square_250x250.gif" width="250" height="250" alt="Square 250x250 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure><figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Full Banner &mdash; 468x60 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/full_banner_468x60.png" width="468" height="60" alt="Full Banner 468x60 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/full_banner_468x60.gif" width="468" height="60" alt="Full Banner 468x60 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure><figure style="margin:0 0 28px;padding:16px;border:1px solid #e3e0d6;border-radius:10px;background:#faf8f2"><figcaption style="font-weight:600;margin-bottom:10px">Mobile Banner &mdash; 320x50 px</figcaption><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start"><div><small>Static</small><br><img src="../assets/ads/mobile_banner_320x50.png" width="320" height="50" alt="Mobile Banner 320x50 static banner" loading="lazy" style="max-width:100%;height:auto"></div><div><small>Animated</small><br><img src="../assets/ads/mobile_banner_320x50.gif" width="320" height="50" alt="Mobile Banner 320x50 animated banner" loading="lazy" style="max-width:100%;height:auto"></div></div></figure>
 <h2 class="st">Get started</h2>
-<p>Email <a href="mailto:{CONTACT_EMAIL}?subject=Advertising%20on%20Oregon%20Information">{CONTACT_EMAIL}</a> with your business, the pages or regions you want to reach, preferred sizes and dates. We reply within a few business days with availability and rates.</p>
+<p>Email <!--email_off--><a href="mailto:{CONTACT_EMAIL}?subject=Advertising%20on%20Oregon%20Information">{CONTACT_EMAIL}</a><!--/email_off--> with your business, the pages or regions you want to reach, preferred sizes and dates. We reply within a few business days with availability and rates.</p>
 <p><small>Example banner photos: Oregon coast by King of Hearts (CC BY-SA 4.0); Crater Lake by Guywelch2000 (CC BY 4.0); Mount Hood by U.S. Forest Service (public domain), via Wikimedia Commons.</small></p>'''
 
 PRIVACY_UPDATED = 'November 6, 2026'   # change only when the policy text changes
@@ -1549,7 +1553,7 @@ PRIVACY = f'''<p><em>Last updated: {PRIVACY_UPDATED}</em></p>
 <h2 class="st">Children</h2>
 <p>This site is intended for a general audience and does not knowingly collect information from children under 13.</p>
 <h2 class="st">Changes and contact</h2>
-<p>We may update this policy; the date above shows the latest revision. Questions? Email <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>.</p>'''
+<p>We may update this policy; the date above shows the latest revision. Questions? Email <!--email_off--><a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a><!--/email_off-->.</p>'''
 
 
 def big_region(city):
@@ -1700,7 +1704,8 @@ def clean_links(content, page_file):
             if sep in url:
                 url, rest = url.split(sep, 1); frag = sep + rest + frag; break
         trailing = url.endswith('/')
-        path = url if url.startswith('/') else posixpath.normpath(posixpath.join(base + '/', url))
+        path = url if url.startswith('/') else posixpath.normpath(posixpath.join(base.rstrip('/') + '/', url))
+        path = '/' + path.lstrip('/')   # never emit '//x' (a protocol-relative URL pointing at another host)
         if path.endswith('/index.html'):
             path = path[:-len('index.html')]
         elif path == 'index.html':
