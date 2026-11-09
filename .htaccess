@@ -14,6 +14,12 @@
     Allow from all
 </Files>
 
+# IndexNow key (Bing/Yandex instant indexing via OpenSEO)
+<Files "ed59a92129104e68ad6a303d9ee3d47c.txt">
+    Order allow,deny
+    Allow from all
+</Files>
+
 # Block .git directory
 <IfModule mod_rewrite.c>
     RewriteEngine On
