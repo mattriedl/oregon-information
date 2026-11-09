@@ -19,14 +19,32 @@
     RewriteEngine On
     RewriteRule ^\.git - [F,L]
 
-    # SEO: one canonical host (www -> non-www, always HTTPS)
-    RewriteCond %{HTTP_HOST} ^www\.oregoninformation\.com$ [NC]
-    RewriteRule ^(.*)$ https://oregoninformation.com/$1 [R=301,L]
+    # SEO: every page has ONE address: https://oregoninformation.com/path/
+    # (no www, no http, no index.html). Each rule sends visitors and search
+    # engines straight to that address in a single 301 redirect.
 
-    # SEO: /path/index.html -> /path/ (matches canonical tags and sitemap).
+    # /path/index.html -> /path/ (matches the canonical tags and sitemap).
     # THE_REQUEST only matches what the browser asked for, so DirectoryIndex lookups don't loop.
     RewriteCond %{THE_REQUEST} \s/+((?:[^\s?]*/)?)index\.html[\s?]
-    RewriteRule ^ /%1 [R=301,L]
+    RewriteRule ^ https://oregoninformation.com/%1 [R=301,L]
+
+    # Folder without its trailing slash (/cities/bend) -> /cities/bend/ on the canonical
+    # address in one hop (Apache's own slash redirect would point at http:// first).
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^(.+[^/])$ https://oregoninformation.com/$1/ [R=301,L]
+
+    # www -> non-www, and http -> https.
+    # The site is behind Cloudflare, so %{HTTPS} only says how Cloudflare reached this
+    # server; X-Forwarded-Proto says what the visitor actually used. Checking the
+    # visitor's scheme avoids a redirect loop whatever Cloudflare's SSL mode is.
+    RewriteCond %{HTTP_HOST} ^www\. [NC,OR]
+    RewriteCond %{HTTP:X-Forwarded-Proto} =http [NC]
+    RewriteRule ^ https://oregoninformation.com%{REQUEST_URI} [R=301,L]
+
+    # Plain-http requests that reach this server without going through Cloudflare.
+    RewriteCond %{HTTP:X-Forwarded-Proto} ^$
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://oregoninformation.com%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 # Enable compression for faster loading

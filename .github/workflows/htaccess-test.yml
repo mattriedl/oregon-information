@@ -1,0 +1,82 @@
+# Starts a real Apache server with this repo's .htaccess and checks that every
+# variant of a page address redirects to its single canonical URL
+# (https://oregoninformation.com/path/) in one hop, without redirect loops,
+# including the headers Cloudflare sends. Runs when .htaccess changes.
+
+name: htaccess redirects
+
+on:
+  push:
+    paths: ['.htaccess', '.github/workflows/htaccess-test.yml']
+  pull_request:
+    paths: ['.htaccess', '.github/workflows/htaccess-test.yml']
+  workflow_dispatch:
+
+jobs:
+  redirects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Start Apache with the site and its .htaccess
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq apache2 >/dev/null
+          sudo a2enmod -q rewrite headers expires deflate access_compat >/dev/null
+          sudo mkdir -p /srv/site
+          sudo rsync -a --exclude .git ./ /srv/site/
+          sudo mkdir -p /srv/site/.git && echo secret | sudo tee /srv/site/.git/config >/dev/null
+          sudo tee /etc/apache2/sites-available/site.conf >/dev/null <<'CONF'
+          <VirtualHost *:80>
+            ServerName oregoninformation.com
+            ServerAlias www.oregoninformation.com
+            DocumentRoot /srv/site
+            <Directory /srv/site>
+              AllowOverride All
+              Require all granted
+            </Directory>
+          </VirtualHost>
+          CONF
+          sudo a2dissite -q 000-default >/dev/null; sudo a2ensite -q site >/dev/null
+          sudo apache2ctl configtest
+          sudo systemctl restart apache2
+
+      - name: Check redirects
+        shell: bash
+        run: |
+          fail=0
+          # check NAME HOST X-FORWARDED-PROTO PATH EXPECTED_STATUS [EXPECTED_LOCATION]
+          check() {
+            local name=$1 host=$2 proto=$3 path=$4 want=$5 loc=${6:-}
+            local hdr=(-H "Host: $host"); [ -n "$proto" ] && hdr+=(-H "X-Forwarded-Proto: $proto")
+            local out; out=$(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' "${hdr[@]}" "http://127.0.0.1$path")
+            local code=${out%% *} got=${out#* }
+            if [ "$code" = "$want" ] && { [ -z "$loc" ] || [ "$got" = "$loc" ]; }; then
+              echo "PASS  $name -> $code ${got}"
+            else
+              echo "FAIL  $name -> got $code ${got}, want $want ${loc}"; fail=1
+            fi
+          }
+          C=https://oregoninformation.com
+          check "canonical page via Cloudflare (https)"      oregoninformation.com     https /cities/coos-bay/            200
+          check "home page"                                   oregoninformation.com     https /                            200
+          check "http -> https"                               oregoninformation.com     http  /cities/coos-bay/            301 "$C/cities/coos-bay/"
+          check "www -> non-www"                              www.oregoninformation.com https /cities/coos-bay/            301 "$C/cities/coos-bay/"
+          check "www + http, one hop"                         www.oregoninformation.com http  /blog/                       301 "$C/blog/"
+          check "index.html -> folder"                        oregoninformation.com     https /cities/coos-bay/index.html  301 "$C/cities/coos-bay/"
+          check "www + http + index.html, one hop"            www.oregoninformation.com http  /blog/thanksgiving-in-oregon/index.html 301 "$C/blog/thanksgiving-in-oregon/"
+          check "/index.html -> /"                            oregoninformation.com     https /index.html                  301 "$C/"
+          check "missing trailing slash, one hop"             oregoninformation.com     https /cities/coos-bay             301 "$C/cities/coos-bay/"
+          check "missing slash over http, one hop"            oregoninformation.com     http  /cities/bend                 301 "$C/cities/bend/"
+          check "query string kept"                           oregoninformation.com     http  "/cities/?ref=x"             301 "$C/cities/?ref=x"
+          check "direct plain http (no Cloudflare)"           oregoninformation.com     ""    /cities/coos-bay/            301 "$C/cities/coos-bay/"
+          check "robots.txt served"                           oregoninformation.com     https /robots.txt                  200
+          check "sitemap.xml served"                          oregoninformation.com     https /sitemap.xml                 200
+          check "IndexNow key served"                         oregoninformation.com     https /2ced74f4ca784c298761151b79504b00.txt 200
+          check ".git blocked"                                oregoninformation.com     https /.git/config                 403
+          check "build scripts blocked"                       oregoninformation.com     https /generate_city_pages.py      403
+          check "data blocked"                                oregoninformation.com     https /custom_city_content.json    403
+          # No redirect may point back at itself (loop) for a canonical URL under either SSL mode.
+          for p in / /cities/ /counties/coos/ /blog/thanksgiving-in-oregon/; do
+            check "no loop $p" oregoninformation.com https "$p" 200
+          done
+          exit $fail
