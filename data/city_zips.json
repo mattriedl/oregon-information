@@ -1,0 +1,3274 @@
+{
+ "Adair Village": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97330"
+  ]
+ },
+ "Adams": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97810"
+  ]
+ },
+ "Adrian": {
+  "area_codes": [
+   "208",
+   "458",
+   "541",
+   "986"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Boise"
+  ],
+  "zips": [
+   "97901"
+  ]
+ },
+ "Albany": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97321",
+   "97322"
+  ]
+ },
+ "Amity": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97101"
+  ]
+ },
+ "Antelope": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [
+   "97001"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Arlington": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97812",
+   "97861"
+  ]
+ },
+ "Ashland": {
+  "area_codes": [
+   "458",
+   "530",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97520"
+  ]
+ },
+ "Astoria": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97103"
+  ]
+ },
+ "Athena": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97813"
+  ]
+ },
+ "Aumsville": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97325"
+  ]
+ },
+ "Aurora": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97002"
+  ]
+ },
+ "Baker City": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97814"
+  ]
+ },
+ "Bandon": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97411"
+  ]
+ },
+ "Banks": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97106",
+   "97109",
+   "97125"
+  ]
+ },
+ "Bay City": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97107"
+  ]
+ },
+ "Beaverton": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97075",
+   "97076",
+   "97077",
+   "97079"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97003",
+   "97005",
+   "97006",
+   "97007",
+   "97008",
+   "97078"
+  ]
+ },
+ "Bend": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [
+   "97708",
+   "97709"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97701",
+   "97702",
+   "97703",
+   "97707"
+  ]
+ },
+ "Boardman": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97818"
+  ]
+ },
+ "Bonanza": {
+  "area_codes": [
+   "458",
+   "530",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97623"
+  ]
+ },
+ "Brookings": {
+  "area_codes": [
+   "458",
+   "541",
+   "707"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97415"
+  ]
+ },
+ "Brownsville": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97327"
+  ]
+ },
+ "Burns": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97720"
+  ]
+ },
+ "Butte Falls": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97522"
+  ]
+ },
+ "Canby": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97013"
+  ]
+ },
+ "Cannon Beach": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97110"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Canyon City": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97820"
+  ]
+ },
+ "Canyonville": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97417"
+  ]
+ },
+ "Carlton": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97111"
+  ]
+ },
+ "Cascade Locks": {
+  "area_codes": [
+   "458",
+   "503",
+   "509",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97014"
+  ]
+ },
+ "Cave Junction": {
+  "area_codes": [
+   "458",
+   "530",
+   "541",
+   "707"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97523",
+   "97531"
+  ]
+ },
+ "Central Point": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97502"
+  ]
+ },
+ "Chiloquin": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97624",
+   "97639"
+  ]
+ },
+ "Clatskanie": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97016"
+  ]
+ },
+ "Coburg": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97408"
+  ]
+ },
+ "Columbia City": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97018"
+  ]
+ },
+ "Condon": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97823"
+  ]
+ },
+ "Coos Bay": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97420"
+  ]
+ },
+ "Coquille": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97423"
+  ]
+ },
+ "Cornelius": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97113",
+   "97123",
+   "97124"
+  ]
+ },
+ "Corvallis": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [
+   "97339"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97330",
+   "97331",
+   "97333"
+  ]
+ },
+ "Cottage Grove": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97424"
+  ]
+ },
+ "Cove": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97824"
+  ]
+ },
+ "Creswell": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97426"
+  ]
+ },
+ "Culver": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97734"
+  ]
+ },
+ "Dallas": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97338"
+  ]
+ },
+ "Dayton": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97114"
+  ]
+ },
+ "Dayville": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97825"
+  ]
+ },
+ "Depoe Bay": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97341"
+  ]
+ },
+ "Detroit": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [
+   "97342"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Donald": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97020"
+  ]
+ },
+ "Drain": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97435"
+  ]
+ },
+ "Dufur": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97021"
+  ]
+ },
+ "Dundee": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97115"
+  ]
+ },
+ "Dunes City": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97439"
+  ]
+ },
+ "Eagle Point": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97524"
+  ]
+ },
+ "Echo": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97826"
+  ]
+ },
+ "Elgin": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97827"
+  ]
+ },
+ "Elkton": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97436"
+  ]
+ },
+ "Enterprise": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97828"
+  ]
+ },
+ "Estacada": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97023"
+  ]
+ },
+ "Eugene": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [
+   "97440"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97401",
+   "97402",
+   "97403",
+   "97404",
+   "97405",
+   "97408",
+   "97412",
+   "97455"
+  ]
+ },
+ "Fairview": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97024"
+  ]
+ },
+ "Falls City": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97344"
+  ]
+ },
+ "Florence": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97439"
+  ]
+ },
+ "Forest Grove": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97116"
+  ]
+ },
+ "Fossil": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97830"
+  ]
+ },
+ "Garibaldi": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97118"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Gaston": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97119"
+  ]
+ },
+ "Gates": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97346"
+  ]
+ },
+ "Gearhart": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97138"
+  ]
+ },
+ "Gervais": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97026"
+  ]
+ },
+ "Gladstone": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97027"
+  ]
+ },
+ "Glendale": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97442"
+  ]
+ },
+ "Gold Beach": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97444"
+  ]
+ },
+ "Gold Hill": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97525"
+  ]
+ },
+ "Granite": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97877"
+  ]
+ },
+ "Grants Pass": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [
+   "97528"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97526",
+   "97527",
+   "97543"
+  ]
+ },
+ "Grass Valley": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97029"
+  ]
+ },
+ "Greenhorn": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97877"
+  ]
+ },
+ "Gresham": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97030",
+   "97080"
+  ]
+ },
+ "Haines": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97833"
+  ]
+ },
+ "Halfway": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97834"
+  ]
+ },
+ "Halsey": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97348"
+  ]
+ },
+ "Happy Valley": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97015",
+   "97086"
+  ]
+ },
+ "Harrisburg": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97446"
+  ]
+ },
+ "Helix": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97835"
+  ]
+ },
+ "Heppner": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97836"
+  ]
+ },
+ "Hermiston": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97838"
+  ]
+ },
+ "Hillsboro": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97129"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97003",
+   "97006",
+   "97123",
+   "97124"
+  ]
+ },
+ "Hines": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97738"
+  ]
+ },
+ "Hood River": {
+  "area_codes": [
+   "458",
+   "503",
+   "509",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97031"
+  ]
+ },
+ "Hubbard": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97032"
+  ]
+ },
+ "Huntington": {
+  "area_codes": [
+   "208",
+   "458",
+   "541",
+   "986"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97907"
+  ]
+ },
+ "Idanha": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97350"
+  ]
+ },
+ "Imbler": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97841"
+  ]
+ },
+ "Independence": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97351"
+  ]
+ },
+ "Ione": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97843"
+  ]
+ },
+ "Irrigon": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97844"
+  ]
+ },
+ "Island City": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97850"
+  ]
+ },
+ "Jacksonville": {
+  "area_codes": [
+   "458",
+   "530",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97530"
+  ]
+ },
+ "Jefferson": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97352"
+  ]
+ },
+ "John Day": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97845"
+  ]
+ },
+ "Jordan Valley": {
+  "area_codes": [
+   "208",
+   "458",
+   "541",
+   "986"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Boise"
+  ],
+  "zips": [
+   "97910"
+  ]
+ },
+ "Joseph": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97846"
+  ]
+ },
+ "Junction City": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97448"
+  ]
+ },
+ "Keizer": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97307"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97303"
+  ]
+ },
+ "King City": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97224"
+  ]
+ },
+ "Klamath Falls": {
+  "area_codes": [
+   "458",
+   "530",
+   "541"
+  ],
+  "po_box_zips": [
+   "97602"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97601",
+   "97603",
+   "97625"
+  ]
+ },
+ "La Grande": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97850"
+  ]
+ },
+ "La Pine": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97739"
+  ]
+ },
+ "Lafayette": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97127"
+  ]
+ },
+ "Lake Oswego": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97034",
+   "97035"
+  ]
+ },
+ "Lakeside": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97449"
+  ]
+ },
+ "Lakeview": {
+  "area_codes": [
+   "458",
+   "530",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97630"
+  ]
+ },
+ "Lebanon": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97355"
+  ]
+ },
+ "Lexington": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97839"
+  ]
+ },
+ "Lincoln City": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97367"
+  ]
+ },
+ "Lonerock": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97823"
+  ]
+ },
+ "Long Creek": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97856"
+  ]
+ },
+ "Lostine": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97857"
+  ]
+ },
+ "Lowell": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97452"
+  ]
+ },
+ "Lyons": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97358"
+  ]
+ },
+ "Madras": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97741"
+  ]
+ },
+ "Malin": {
+  "area_codes": [
+   "458",
+   "530",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97632"
+  ]
+ },
+ "Manzanita": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97130"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Maupin": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97037"
+  ]
+ },
+ "McMinnville": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97128"
+  ]
+ },
+ "Medford": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97501",
+   "97502",
+   "97503",
+   "97504"
+  ]
+ },
+ "Merrill": {
+  "area_codes": [
+   "458",
+   "530",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97633"
+  ]
+ },
+ "Metolius": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97741"
+  ]
+ },
+ "Mill City": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97360"
+  ]
+ },
+ "Millersburg": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97321"
+  ]
+ },
+ "Milton-Freewater": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97862"
+  ]
+ },
+ "Milwaukie": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97269"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97222",
+   "97267"
+  ]
+ },
+ "Mitchell": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97750"
+  ]
+ },
+ "Molalla": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97038"
+  ]
+ },
+ "Monmouth": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97361"
+  ]
+ },
+ "Monroe": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97456"
+  ]
+ },
+ "Monument": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97864"
+  ]
+ },
+ "Moro": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97039"
+  ]
+ },
+ "Mosier": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97040"
+  ]
+ },
+ "Mount Vernon": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97865"
+  ]
+ },
+ "Mt. Angel": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97362"
+  ]
+ },
+ "Myrtle Creek": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97457"
+  ]
+ },
+ "Myrtle Point": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97458"
+  ]
+ },
+ "Nehalem": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97131"
+  ]
+ },
+ "Newberg": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97132"
+  ]
+ },
+ "Newport": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97365",
+   "97366"
+  ]
+ },
+ "North Bend": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97459"
+  ]
+ },
+ "North Plains": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97133"
+  ]
+ },
+ "North Powder": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97867"
+  ]
+ },
+ "Nyssa": {
+  "area_codes": [
+   "208",
+   "458",
+   "541",
+   "986"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Boise"
+  ],
+  "zips": [
+   "97913"
+  ]
+ },
+ "Oakland": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97462"
+  ]
+ },
+ "Oakridge": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97463"
+  ]
+ },
+ "Ontario": {
+  "area_codes": [
+   "208",
+   "458",
+   "541",
+   "986"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Boise"
+  ],
+  "zips": [
+   "97914"
+  ]
+ },
+ "Oregon City": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97045"
+  ]
+ },
+ "Paisley": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97636"
+  ]
+ },
+ "Pendleton": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97801"
+  ]
+ },
+ "Philomath": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97370"
+  ]
+ },
+ "Phoenix": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97535"
+  ]
+ },
+ "Pilot Rock": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97868"
+  ]
+ },
+ "Port Orford": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97465"
+  ]
+ },
+ "Portland": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [
+   "97207",
+   "97208",
+   "97228",
+   "97238",
+   "97240",
+   "97242",
+   "97250",
+   "97251",
+   "97252",
+   "97253",
+   "97254",
+   "97256",
+   "97268",
+   "97269",
+   "97280",
+   "97281",
+   "97282",
+   "97283",
+   "97286",
+   "97290",
+   "97291",
+   "97292",
+   "97293",
+   "97294",
+   "97296",
+   "97298"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97086",
+   "97201",
+   "97202",
+   "97203",
+   "97204",
+   "97205",
+   "97206",
+   "97209",
+   "97210",
+   "97211",
+   "97212",
+   "97213",
+   "97214",
+   "97215",
+   "97216",
+   "97217",
+   "97218",
+   "97219",
+   "97220",
+   "97221",
+   "97222",
+   "97223",
+   "97224",
+   "97225",
+   "97227",
+   "97229",
+   "97230",
+   "97231",
+   "97232",
+   "97233",
+   "97236",
+   "97239",
+   "97266",
+   "97267"
+  ]
+ },
+ "Powers": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97466"
+  ]
+ },
+ "Prairie City": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97869"
+  ]
+ },
+ "Prescott": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97048"
+  ]
+ },
+ "Prineville": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97754"
+  ]
+ },
+ "Rainier": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97048"
+  ]
+ },
+ "Redmond": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97756"
+  ]
+ },
+ "Reedsport": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97467"
+  ]
+ },
+ "Richland": {
+  "area_codes": [
+   "208",
+   "458",
+   "541",
+   "986"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97870"
+  ]
+ },
+ "Riddle": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97469"
+  ]
+ },
+ "Rockaway Beach": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97136"
+  ]
+ },
+ "Rogue River": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97537"
+  ]
+ },
+ "Roseburg": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97470",
+   "97471"
+  ]
+ },
+ "Rufus": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [
+   "97050"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Salem": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97307",
+   "97308",
+   "97309",
+   "97310",
+   "97311",
+   "97312",
+   "97314"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97301",
+   "97302",
+   "97303",
+   "97304",
+   "97305",
+   "97306",
+   "97317"
+  ]
+ },
+ "Sandy": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97055"
+  ]
+ },
+ "Scappoose": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97056"
+  ]
+ },
+ "Scio": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97374"
+  ]
+ },
+ "Scotts Mills": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97375"
+  ]
+ },
+ "Seaside": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97138"
+  ]
+ },
+ "Seneca": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97873"
+  ]
+ },
+ "Shady Cove": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97539"
+  ]
+ },
+ "Shaniko": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [
+   "97057"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Sheridan": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97378"
+  ]
+ },
+ "Sherwood": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97140"
+  ]
+ },
+ "Siletz": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97380"
+  ]
+ },
+ "Silverton": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97381"
+  ]
+ },
+ "Sisters": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97759"
+  ]
+ },
+ "Spray": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97874"
+  ]
+ },
+ "Springfield": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [
+   "97475"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97477",
+   "97478"
+  ]
+ },
+ "St. Helens": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97051"
+  ]
+ },
+ "St. Paul": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97137"
+  ]
+ },
+ "Stanfield": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97875"
+  ]
+ },
+ "Stayton": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97383"
+  ]
+ },
+ "Sublimity": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97385"
+  ]
+ },
+ "Summerville": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97876"
+  ]
+ },
+ "Sumpter": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97877"
+  ]
+ },
+ "Sutherlin": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97479"
+  ]
+ },
+ "Sweet Home": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97386"
+  ]
+ },
+ "Talent": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97540"
+  ]
+ },
+ "Tangent": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97389"
+  ]
+ },
+ "The Dalles": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97058"
+  ]
+ },
+ "Tigard": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97281"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97223",
+   "97224"
+  ]
+ },
+ "Tillamook": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97141"
+  ]
+ },
+ "Toledo": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97391"
+  ]
+ },
+ "Troutdale": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97060"
+  ]
+ },
+ "Tualatin": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97062"
+  ]
+ },
+ "Turner": {
+  "area_codes": [
+   "458",
+   "503",
+   "541",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97392"
+  ]
+ },
+ "Ukiah": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [
+   "97880"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Umatilla": {
+  "area_codes": [
+   "458",
+   "509",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97882"
+  ]
+ },
+ "Union": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97883"
+  ]
+ },
+ "Unity": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97884"
+  ]
+ },
+ "Vale": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Boise"
+  ],
+  "zips": [
+   "97918"
+  ]
+ },
+ "Veneta": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97487"
+  ]
+ },
+ "Vernonia": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97064"
+  ]
+ },
+ "Waldport": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97394"
+  ]
+ },
+ "Wallowa": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97885"
+  ]
+ },
+ "Warrenton": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97146"
+  ]
+ },
+ "Wasco": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97065"
+  ]
+ },
+ "West Linn": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97068"
+  ]
+ },
+ "Westfir": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97492"
+  ]
+ },
+ "Weston": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97886"
+  ]
+ },
+ "Wheeler": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [
+   "97147"
+  ],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": []
+ },
+ "Willamina": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97396"
+  ]
+ },
+ "Wilsonville": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97070"
+  ]
+ },
+ "Winston": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97496"
+  ]
+ },
+ "Wood Village": {
+  "area_codes": [
+   "360",
+   "503",
+   "564",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97060"
+  ]
+ },
+ "Woodburn": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97071"
+  ]
+ },
+ "Yachats": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97498"
+  ]
+ },
+ "Yamhill": {
+  "area_codes": [
+   "503",
+   "971"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97148"
+  ]
+ },
+ "Yoncalla": {
+  "area_codes": [
+   "458",
+   "541"
+  ],
+  "po_box_zips": [],
+  "timezones": [
+   "America/Los_Angeles"
+  ],
+  "zips": [
+   "97499"
+  ]
+ }
+}

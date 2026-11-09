@@ -1,0 +1,3358 @@
+{
+"source": "USPS ZIP code data via the zipcodes Python package",
+"zips": [
+{
+"zip": "97001",
+"city": "Antelope",
+"county": "Wasco",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97002",
+"city": "Aurora",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97003",
+"city": "Beaverton",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97004",
+"city": "Beavercreek",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97005",
+"city": "Beaverton",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97006",
+"city": "Beaverton",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97007",
+"city": "Beaverton",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97008",
+"city": "Beaverton",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97009",
+"city": "Boring",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97010",
+"city": "Bridal Veil",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97011",
+"city": "Brightwood",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97013",
+"city": "Canby",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97014",
+"city": "Cascade Locks",
+"county": "Hood River",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97015",
+"city": "Clackamas",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97016",
+"city": "Clatskanie",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97017",
+"city": "Colton",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97018",
+"city": "Columbia City",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97019",
+"city": "Corbett",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97020",
+"city": "Donald",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97021",
+"city": "Dufur",
+"county": "Wasco",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97022",
+"city": "Eagle Creek",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97023",
+"city": "Estacada",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97024",
+"city": "Fairview",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97026",
+"city": "Gervais",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97027",
+"city": "Gladstone",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97028",
+"city": "Government Camp",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97029",
+"city": "Grass Valley",
+"county": "Sherman",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97030",
+"city": "Gresham",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97031",
+"city": "Hood River",
+"county": "Hood River",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97032",
+"city": "Hubbard",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97033",
+"city": "Kent",
+"county": "Sherman",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97034",
+"city": "Lake Oswego",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97035",
+"city": "Lake Oswego",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97036",
+"city": "Marylhurst",
+"county": "Clackamas",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97037",
+"city": "Maupin",
+"county": "Wasco",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97038",
+"city": "Molalla",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97039",
+"city": "Moro",
+"county": "Sherman",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97040",
+"city": "Mosier",
+"county": "Wasco",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97041",
+"city": "Mount Hood Parkdale",
+"county": "Hood River",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97042",
+"city": "Mulino",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97044",
+"city": "Odell",
+"county": "Hood River",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97045",
+"city": "Oregon City",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97048",
+"city": "Rainier",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97049",
+"city": "Rhododendron",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97050",
+"city": "Rufus",
+"county": "Sherman",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97051",
+"city": "Saint Helens",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97053",
+"city": "Warren",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97054",
+"city": "Deer Island",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97055",
+"city": "Sandy",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97056",
+"city": "Scappoose",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97057",
+"city": "Shaniko",
+"county": "Wasco",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97058",
+"city": "The Dalles",
+"county": "Wasco",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97060",
+"city": "Troutdale",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97062",
+"city": "Tualatin",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97063",
+"city": "Tygh Valley",
+"county": "Wasco",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97064",
+"city": "Vernonia",
+"county": "Columbia",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97065",
+"city": "Wasco",
+"county": "Sherman",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97067",
+"city": "Welches",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97068",
+"city": "West Linn",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97070",
+"city": "Wilsonville",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97071",
+"city": "Woodburn",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97075",
+"city": "Beaverton",
+"county": "Washington",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97076",
+"city": "Beaverton",
+"county": "Washington",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97077",
+"city": "Beaverton",
+"county": "Washington",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97078",
+"city": "Beaverton",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97079",
+"city": "Beaverton",
+"county": "",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97080",
+"city": "Gresham",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97086",
+"city": "Happy Valley",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97089",
+"city": "Damascus",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97101",
+"city": "Amity",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97102",
+"city": "Arch Cape",
+"county": "Clatsop",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97103",
+"city": "Astoria",
+"county": "Clatsop",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97106",
+"city": "Banks",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97107",
+"city": "Bay City",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97108",
+"city": "Beaver",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97109",
+"city": "Buxton",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97110",
+"city": "Cannon Beach",
+"county": "Clatsop",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97111",
+"city": "Carlton",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97112",
+"city": "Cloverdale",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97113",
+"city": "Cornelius",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97114",
+"city": "Dayton",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97115",
+"city": "Dundee",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97116",
+"city": "Forest Grove",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97117",
+"city": "Gales Creek",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97118",
+"city": "Garibaldi",
+"county": "Tillamook",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97119",
+"city": "Gaston",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97121",
+"city": "Hammond",
+"county": "Clatsop",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97122",
+"city": "Hebo",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97123",
+"city": "Hillsboro",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97124",
+"city": "Hillsboro",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97125",
+"city": "Manning",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97127",
+"city": "Lafayette",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97128",
+"city": "Mcminnville",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97129",
+"city": "Hillsboro",
+"county": "",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97130",
+"city": "Manzanita",
+"county": "Tillamook",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97131",
+"city": "Nehalem",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97132",
+"city": "Newberg",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97133",
+"city": "North Plains",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97134",
+"city": "Oceanside",
+"county": "Tillamook",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97135",
+"city": "Pacific City",
+"county": "Tillamook",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97136",
+"city": "Rockaway Beach",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97137",
+"city": "Saint Paul",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97138",
+"city": "Seaside",
+"county": "Clatsop",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97140",
+"city": "Sherwood",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97141",
+"city": "Tillamook",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97143",
+"city": "Netarts",
+"county": "Tillamook",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97144",
+"city": "Timber",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97145",
+"city": "Tolovana Park",
+"county": "Clatsop",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97146",
+"city": "Warrenton",
+"county": "Clatsop",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97147",
+"city": "Wheeler",
+"county": "Tillamook",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97148",
+"city": "Yamhill",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97149",
+"city": "Neskowin",
+"county": "Tillamook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97201",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97202",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97203",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97204",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97205",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97206",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97207",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97208",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97209",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97210",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97211",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97212",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97213",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97214",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97215",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97216",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97217",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97218",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97219",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97220",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97221",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97222",
+"city": "Portland",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97223",
+"city": "Portland",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97224",
+"city": "Portland",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97225",
+"city": "Portland",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97227",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97228",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97229",
+"city": "Portland",
+"county": "Washington",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97230",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97231",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97232",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97233",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97236",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97238",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97239",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97240",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97242",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97250",
+"city": "Portland",
+"county": "",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97251",
+"city": "Portland",
+"county": "Multnomah",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97252",
+"city": "Portland",
+"county": "",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97253",
+"city": "Portland",
+"county": "Multnomah",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97254",
+"city": "Portland",
+"county": "Multnomah",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97256",
+"city": "Portland",
+"county": "Multnomah",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97266",
+"city": "Portland",
+"county": "Multnomah",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97267",
+"city": "Portland",
+"county": "Clackamas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97268",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97269",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97280",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97281",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97282",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97283",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97286",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97290",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97291",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97292",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97293",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97294",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97296",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97298",
+"city": "Portland",
+"county": "Multnomah",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97301",
+"city": "Salem",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97302",
+"city": "Salem",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97303",
+"city": "Salem",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97304",
+"city": "Salem",
+"county": "Polk",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97305",
+"city": "Salem",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97306",
+"city": "Salem",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97307",
+"city": "Keizer",
+"county": "Marion",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97308",
+"city": "Salem",
+"county": "Marion",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97309",
+"city": "Salem",
+"county": "Marion",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97310",
+"city": "Salem",
+"county": "Marion",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97311",
+"city": "Salem",
+"county": "Marion",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97312",
+"city": "Salem",
+"county": "Marion",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97314",
+"city": "Salem",
+"county": "Marion",
+"type": "UNIQUE",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97317",
+"city": "Salem",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97321",
+"city": "Albany",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97322",
+"city": "Albany",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97324",
+"city": "Alsea",
+"county": "Benton",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97325",
+"city": "Aumsville",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97326",
+"city": "Blodgett",
+"county": "Benton",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97327",
+"city": "Brownsville",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97329",
+"city": "Cascadia",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97330",
+"city": "Corvallis",
+"county": "Benton",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97331",
+"city": "Corvallis",
+"county": "Benton",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97333",
+"city": "Corvallis",
+"county": "Benton",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97335",
+"city": "Crabtree",
+"county": "Linn",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97336",
+"city": "Crawfordsville",
+"county": "Linn",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97338",
+"city": "Dallas",
+"county": "Polk",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97339",
+"city": "Corvallis",
+"county": "Benton",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97341",
+"city": "Depoe Bay",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97342",
+"city": "Detroit",
+"county": "Marion",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97343",
+"city": "Eddyville",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97344",
+"city": "Falls City",
+"county": "Polk",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97345",
+"city": "Foster",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97346",
+"city": "Gates",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97347",
+"city": "Grand Ronde",
+"county": "Polk",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97348",
+"city": "Halsey",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97350",
+"city": "Idanha",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97351",
+"city": "Independence",
+"county": "Polk",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97352",
+"city": "Jefferson",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97355",
+"city": "Lebanon",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97357",
+"city": "Logsden",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97358",
+"city": "Lyons",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97360",
+"city": "Mill City",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97361",
+"city": "Monmouth",
+"county": "Polk",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97362",
+"city": "Mount Angel",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97364",
+"city": "Neotsu",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97365",
+"city": "Newport",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97366",
+"city": "South Beach",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97367",
+"city": "Lincoln City",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97368",
+"city": "Otis",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97369",
+"city": "Otter Rock",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97370",
+"city": "Philomath",
+"county": "Benton",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97371",
+"city": "Rickreall",
+"county": "Polk",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97373",
+"city": "Saint Benedict",
+"county": "Marion",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97374",
+"city": "Scio",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97375",
+"city": "Scotts Mills",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97376",
+"city": "Seal Rock",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97377",
+"city": "Shedd",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97378",
+"city": "Sheridan",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97380",
+"city": "Siletz",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97381",
+"city": "Silverton",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97383",
+"city": "Stayton",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97384",
+"city": "Mehama",
+"county": "Marion",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97385",
+"city": "Sublimity",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97386",
+"city": "Sweet Home",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97388",
+"city": "Gleneden Beach",
+"county": "Lincoln",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97389",
+"city": "Tangent",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97390",
+"city": "Tidewater",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97391",
+"city": "Toledo",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97392",
+"city": "Turner",
+"county": "Marion",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97394",
+"city": "Waldport",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97396",
+"city": "Willamina",
+"county": "Yamhill",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97401",
+"city": "Eugene",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97402",
+"city": "Eugene",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97403",
+"city": "Eugene",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97404",
+"city": "Eugene",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97405",
+"city": "Eugene",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97406",
+"city": "Agness",
+"county": "Curry",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97407",
+"city": "Allegany",
+"county": "Coos",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97408",
+"city": "Eugene",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97409",
+"city": "Alvadore",
+"county": "Lane",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97410",
+"city": "Azalea",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97411",
+"city": "Bandon",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97412",
+"city": "Blachly",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97413",
+"city": "Blue River",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97414",
+"city": "Broadbent",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97415",
+"city": "Brookings",
+"county": "Curry",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97416",
+"city": "Camas Valley",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97417",
+"city": "Canyonville",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97419",
+"city": "Cheshire",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97420",
+"city": "Coos Bay",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97423",
+"city": "Coquille",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97424",
+"city": "Cottage Grove",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97426",
+"city": "Creswell",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97429",
+"city": "Days Creek",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97430",
+"city": "Deadwood",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97431",
+"city": "Dexter",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97432",
+"city": "Dillard",
+"county": "Douglas",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97434",
+"city": "Dorena",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97435",
+"city": "Drain",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97436",
+"city": "Elkton",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97437",
+"city": "Elmira",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97438",
+"city": "Fall Creek",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97439",
+"city": "Florence",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97440",
+"city": "Eugene",
+"county": "Lane",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97441",
+"city": "Gardiner",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97442",
+"city": "Glendale",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97443",
+"city": "Glide",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97444",
+"city": "Gold Beach",
+"county": "Curry",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97446",
+"city": "Harrisburg",
+"county": "Linn",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97447",
+"city": "Idleyld Park",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97448",
+"city": "Junction City",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97449",
+"city": "Lakeside",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97450",
+"city": "Langlois",
+"county": "Curry",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97451",
+"city": "Lorane",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97452",
+"city": "Lowell",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97453",
+"city": "Mapleton",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97454",
+"city": "Marcola",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97455",
+"city": "Pleasant Hill",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97456",
+"city": "Monroe",
+"county": "Benton",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97457",
+"city": "Myrtle Creek",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97458",
+"city": "Myrtle Point",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97459",
+"city": "North Bend",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97461",
+"city": "Noti",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97462",
+"city": "Oakland",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97463",
+"city": "Oakridge",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97464",
+"city": "Ophir",
+"county": "Curry",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97465",
+"city": "Port Orford",
+"county": "Curry",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97466",
+"city": "Powers",
+"county": "Coos",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97467",
+"city": "Reedsport",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97469",
+"city": "Riddle",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97470",
+"city": "Roseburg",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97471",
+"city": "Roseburg",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97473",
+"city": "Scottsburg",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97475",
+"city": "Springfield",
+"county": "",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97476",
+"city": "Sixes",
+"county": "Curry",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97477",
+"city": "Springfield",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97478",
+"city": "Springfield",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97479",
+"city": "Sutherlin",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97480",
+"city": "Swisshome",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97481",
+"city": "Tenmile",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97484",
+"city": "Tiller",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97486",
+"city": "Umpqua",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97487",
+"city": "Veneta",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97488",
+"city": "Vida",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97489",
+"city": "Walterville",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97490",
+"city": "Walton",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97491",
+"city": "Wedderburn",
+"county": "Curry",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97492",
+"city": "Westfir",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97493",
+"city": "Westlake",
+"county": "Lane",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97494",
+"city": "Wilbur",
+"county": "Douglas",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97495",
+"city": "Winchester",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97496",
+"city": "Winston",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97497",
+"city": "Wolf Creek",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97498",
+"city": "Yachats",
+"county": "Lincoln",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97499",
+"city": "Yoncalla",
+"county": "Douglas",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97501",
+"city": "Medford",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97502",
+"city": "Central Point",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97503",
+"city": "White City",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97504",
+"city": "Medford",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97520",
+"city": "Ashland",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97522",
+"city": "Butte Falls",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97523",
+"city": "Cave Junction",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97524",
+"city": "Eagle Point",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97525",
+"city": "Gold Hill",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97526",
+"city": "Grants Pass",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97527",
+"city": "Grants Pass",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97528",
+"city": "Grants Pass",
+"county": "Josephine",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97530",
+"city": "Jacksonville",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97531",
+"city": "Kerby",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97532",
+"city": "Merlin",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97533",
+"city": "Murphy",
+"county": "Josephine",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97534",
+"city": "O Brien",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97535",
+"city": "Phoenix",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97536",
+"city": "Prospect",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97537",
+"city": "Rogue River",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97538",
+"city": "Selma",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97539",
+"city": "Shady Cove",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97540",
+"city": "Talent",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97541",
+"city": "Trail",
+"county": "Jackson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97543",
+"city": "Wilderville",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97544",
+"city": "Williams",
+"county": "Josephine",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97601",
+"city": "Klamath Falls",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97602",
+"city": "Klamath Falls",
+"county": "Klamath",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97603",
+"city": "Klamath Falls",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97604",
+"city": "Crater Lake",
+"county": "Klamath",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97620",
+"city": "Adel",
+"county": "Lake",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97621",
+"city": "Beatty",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97622",
+"city": "Bly",
+"county": "Klamath",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97623",
+"city": "Bonanza",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97624",
+"city": "Chiloquin",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97625",
+"city": "Dairy",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97626",
+"city": "Fort Klamath",
+"county": "Klamath",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97627",
+"city": "Keno",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97630",
+"city": "Lakeview",
+"county": "Lake",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97632",
+"city": "Malin",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97633",
+"city": "Merrill",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97634",
+"city": "Midland",
+"county": "Klamath",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97635",
+"city": "New Pine Creek",
+"county": "Modoc",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97636",
+"city": "Paisley",
+"county": "Lake",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97637",
+"city": "Plush",
+"county": "Lake",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97638",
+"city": "Silver Lake",
+"county": "Lake",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97639",
+"city": "Sprague River",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97640",
+"city": "Summer Lake",
+"county": "Lake",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97641",
+"city": "Christmas Valley",
+"county": "Lake",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97701",
+"city": "Bend",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97702",
+"city": "Bend",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97703",
+"city": "Bend",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97707",
+"city": "Bend",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97708",
+"city": "Bend",
+"county": "Deschutes",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97709",
+"city": "Bend",
+"county": "Deschutes",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97710",
+"city": "Fields",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97711",
+"city": "Ashwood",
+"county": "Jefferson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97712",
+"city": "Brothers",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97720",
+"city": "Burns",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97721",
+"city": "Princeton",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97722",
+"city": "Diamond",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97730",
+"city": "Camp Sherman",
+"county": "Jefferson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97731",
+"city": "Chemult",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97732",
+"city": "Crane",
+"county": "Harney",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97733",
+"city": "Crescent",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97734",
+"city": "Culver",
+"county": "Jefferson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97735",
+"city": "Fort Rock",
+"county": "Lake",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97736",
+"city": "Frenchglen",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97737",
+"city": "Gilchrist",
+"county": "Klamath",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97738",
+"city": "Hines",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97739",
+"city": "La Pine",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97741",
+"city": "Madras",
+"county": "Jefferson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97750",
+"city": "Mitchell",
+"county": "Wheeler",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97751",
+"city": "Paulina",
+"county": "Crook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97752",
+"city": "Post",
+"county": "Crook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97753",
+"city": "Powell Butte",
+"county": "Crook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97754",
+"city": "Prineville",
+"county": "Crook",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97756",
+"city": "Redmond",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97758",
+"city": "Riley",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97759",
+"city": "Sisters",
+"county": "Deschutes",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97760",
+"city": "Terrebonne",
+"county": "Jefferson",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97761",
+"city": "Warm Springs",
+"county": "Jefferson",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97801",
+"city": "Pendleton",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97810",
+"city": "Adams",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97812",
+"city": "Arlington",
+"county": "Gilliam",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97813",
+"city": "Athena",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97814",
+"city": "Baker City",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97817",
+"city": "Bates",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97818",
+"city": "Boardman",
+"county": "Morrow",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97819",
+"city": "Bridgeport",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97820",
+"city": "Canyon City",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97823",
+"city": "Condon",
+"county": "Gilliam",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97824",
+"city": "Cove",
+"county": "Union",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97825",
+"city": "Dayville",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97826",
+"city": "Echo",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97827",
+"city": "Elgin",
+"county": "Union",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97828",
+"city": "Enterprise",
+"county": "Wallowa",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97830",
+"city": "Fossil",
+"county": "Wheeler",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97833",
+"city": "Haines",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97834",
+"city": "Halfway",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97835",
+"city": "Helix",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97836",
+"city": "Heppner",
+"county": "Morrow",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97837",
+"city": "Hereford",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97838",
+"city": "Hermiston",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97839",
+"city": "Lexington",
+"county": "Morrow",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97840",
+"city": "Oxbow",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97841",
+"city": "Imbler",
+"county": "Union",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97842",
+"city": "Imnaha",
+"county": "Wallowa",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97843",
+"city": "Ione",
+"county": "Morrow",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97844",
+"city": "Irrigon",
+"county": "Morrow",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97845",
+"city": "John Day",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97846",
+"city": "Joseph",
+"county": "Wallowa",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97848",
+"city": "Kimberly",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97850",
+"city": "La Grande",
+"county": "Union",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97856",
+"city": "Long Creek",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97857",
+"city": "Lostine",
+"county": "Wallowa",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97859",
+"city": "Meacham",
+"county": "Umatilla",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97861",
+"city": "Mikkalo",
+"county": "Gilliam",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97862",
+"city": "Milton Freewater",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97864",
+"city": "Monument",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97865",
+"city": "Mount Vernon",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97867",
+"city": "North Powder",
+"county": "Union",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97868",
+"city": "Pilot Rock",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97869",
+"city": "Prairie City",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97870",
+"city": "Richland",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97873",
+"city": "Seneca",
+"county": "Grant",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97874",
+"city": "Spray",
+"county": "Wheeler",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97875",
+"city": "Stanfield",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97876",
+"city": "Summerville",
+"county": "Union",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97877",
+"city": "Sumpter",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97880",
+"city": "Ukiah",
+"county": "Umatilla",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97882",
+"city": "Umatilla",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97883",
+"city": "Union",
+"county": "Union",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97884",
+"city": "Unity",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97885",
+"city": "Wallowa",
+"county": "Wallowa",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97886",
+"city": "Weston",
+"county": "Umatilla",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97901",
+"city": "Adrian",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97902",
+"city": "Arock",
+"county": "Malheur",
+"type": "PO BOX",
+"tz": "America/Boise"
+},
+{
+"zip": "97903",
+"city": "Brogan",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97904",
+"city": "Drewsey",
+"county": "Harney",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97905",
+"city": "Durkee",
+"county": "Baker",
+"type": "PO BOX",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97906",
+"city": "Harper",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97907",
+"city": "Huntington",
+"county": "Baker",
+"type": "STANDARD",
+"tz": "America/Los_Angeles"
+},
+{
+"zip": "97908",
+"city": "Ironside",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97909",
+"city": "Jamieson",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97910",
+"city": "Jordan Valley",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97911",
+"city": "Juntura",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97913",
+"city": "Nyssa",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97914",
+"city": "Ontario",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97917",
+"city": "Riverside",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97918",
+"city": "Vale",
+"county": "Malheur",
+"type": "STANDARD",
+"tz": "America/Boise"
+},
+{
+"zip": "97920",
+"city": "Westfall",
+"county": "Malheur",
+"type": "PO BOX",
+"tz": "America/Boise"
+}
+]
+}

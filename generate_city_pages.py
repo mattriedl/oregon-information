@@ -745,7 +745,8 @@ def header(up):
 def footer(up, note=''):
     return (f'<footer class="ft"><div class="wrap"><p class="fl"><a href="{up}about/index.html">About</a><a href="{up}contact/index.html">Contact</a>'
             f'<a href="{up}privacy/index.html">Privacy Policy</a><a href="{up}advertise/index.html">Advertise</a><a href="{up}regions/index.html">Regions</a>'
-            f'<a href="{up}cities/index.html">Cities</a><a href="{up}counties/index.html">Counties</a><a href="{up}blog/index.html">Blog</a></p>'
+            f'<a href="{up}cities/index.html">Cities</a><a href="{up}counties/index.html">Counties</a><a href="/oregon-zip-codes/">ZIP Codes</a>'
+            f'<a href="/oregon-area-codes/">Area Codes</a><a href="{up}blog/index.html">Blog</a></p>'
             f'<p>&copy; 2026 Oregon Information &mdash; independent resource, not affiliated with the State of Oregon.{note}</p></div></footer></body></html>')
 
 
@@ -770,6 +771,8 @@ def photo(item, alt):
 
 
 CITY_IMAGES = json.load(open('data/city_images.json', encoding='utf-8')) if os.path.exists('data/city_images.json') else {}
+CITY_ZIPS = json.load(open('data/city_zips.json', encoding='utf-8')) if os.path.exists('data/city_zips.json') else {}   # USPS ZIPs per city (from the 'zipcodes' package)
+TZ_NAMES = {'America/Los_Angeles': 'Pacific Time (PT)', 'America/Boise': 'Mountain Time (MT)'}
 LINK_FIXES = json.load(open('data/link_fixes.json', encoding='utf-8')) if os.path.exists('data/link_fixes.json') else {}
 DEAD_LINKS = set(json.load(open('data/dead_links.json', encoding='utf-8'))) if os.path.exists('data/dead_links.json') else set()
 
@@ -837,9 +840,18 @@ def wiki_credit(item):
             f'available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>')
 
 
-def city_title(name):
-    """Keep the <title> within ~60 characters so Google shows it untruncated; city name + Oregon always lead."""
-    for t in (f'{name}, Oregon: Population, Schools, Weather & Moving Guide',
+def ordinal(k):
+    return f"{k}{'th' if 10 <= k % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(k % 10, 'th')}"
+
+
+def city_title(name, nzips=0):
+    """Keep the <title> within ~60 characters so Google shows it untruncated; city name + Oregon always lead.
+    Population and ZIP code searches ('bend oregon zip code', 'medford oregon population') are the highest-demand,
+    lowest-difficulty city queries, so they lead the title."""
+    z = 'ZIP Code' if nzips == 1 else 'ZIP Codes'
+    opts = ((f'{name}, Oregon: Population, {z}, Weather & Schools', f'{name}, Oregon: Population, {z} & Weather',
+             f'{name}, OR: Population, {z} & Weather', f'{name}, OR: Population & {z}') if nzips else ())
+    for t in opts + (f'{name}, Oregon: Population, Schools, Weather & Moving Guide',
               f'{name}, Oregon: Population, Schools & Moving Guide',
               f'{name}, OR: Population, Schools & Moving Guide'):
         if len(t) <= 60:
@@ -847,11 +859,14 @@ def city_title(name):
     return t
 
 
-def city_desc(name, county, pop, has_attractions):
+def city_desc(name, county, pop, has_attractions, nzips=0):
     """Meta description (<=160 chars): primary facts first, then what the page offers."""
     todo = ' things to do,' if has_attractions else ''
     lead = f'{name}, Oregon guide: ' + (f'population {pop} (2020 Census), ' if pop else '') + f'{county} County.'
-    for tail in (f' Schools, weather,{todo} nearby cities and moving tips for {name}, OR.',
+    first = 'ZIP code, schools' if nzips == 1 else 'ZIP codes, schools' if nzips else 'Schools'
+    for tail in (f' {first}, weather,{todo} nearby cities and moving tips for {name}, OR.',
+                 f' {first}, weather,{todo} nearby cities and moving tips.',
+                 f' Schools, weather,{todo} nearby cities and moving tips for {name}, OR.',
                  f' Schools, weather,{todo} nearby cities and moving tips.',
                  f' Schools, weather, nearby cities and moving tips.'):
         if len(lead + tail) <= 160:
@@ -872,6 +887,14 @@ def city_faq(c, all_cities, county, breg, electric, district):
         a = (f"{name} had {pop} residents at the 2020 U.S. Census (up from {n(c['pop2010'])} in 2010)." if str(c['change']).startswith('+')
              else f"{name} had {pop} residents at the 2020 U.S. Census ({n(c['pop2010'])} in 2010).")
         fq.append((f"What is the population of {name}, Oregon?", a, None))
+    area = c.get('area_sqmi')
+    if area and float(area) > 0:
+        a = f"{name} covers about {float(area):g} square miles of land"
+        if pop: a += f" and had {pop} residents at the 2020 Census, a density of about {float(c['pop2020']) / float(area):,.0f} people per square mile"
+        ranked = sorted(all_cities, key=lambda x: -float(x['pop2020'] or 0))
+        rank = next((i for i, x in enumerate(ranked, 1) if x is c), None)
+        a += '.' + (" It is the largest city in Oregon by population." if rank == 1 else f" By population it is Oregon's {ordinal(rank)}-largest city out of {len(all_cities)}." if rank and rank <= 60 else '')
+        fq.append((f"How big is {name}, Oregon?", a, None))
     others = [x for x in c['counties'][1:]]
     a = f"{name} is in {county} County" + (f" (the city also extends into {' and '.join(others)} County)" if others else '') + f", in the {breg} region of Oregon."
     if c['capital']: a += f" It is Oregon's state capital and the county seat of {county} County."
@@ -890,6 +913,14 @@ def city_faq(c, all_cities, county, breg, electric, district):
         fq.append((f"What cities are near {name}, Oregon?",
                    f"The closest incorporated city is {o['name']}, about {d:.0f} miles away. Other nearby cities include "
                    + ', '.join(x['name'] for _, x in near[1:4]) + '.', None))
+    zinfo = CITY_ZIPS.get(name, {})
+    zl = zinfo.get('zips') or zinfo.get('po_box_zips') or []
+    if zl:
+        listed = ', '.join(zl[:10]) + (f' and {len(zl) - 10} others' if len(zl) > 10 else '')
+        a = (f"{name}'s ZIP code is {zl[0]}." if len(zl) == 1 else f"ZIP codes with a {name} mailing address include {listed}.")
+        if zinfo.get('zips') and zinfo.get('po_box_zips'): a += f" PO boxes use {', '.join(zinfo['po_box_zips'][:5])}."
+        a += " Some addresses near the city limits use a neighboring town's ZIP code, so check a specific address with USPS."
+        fq.append((f"What is the ZIP code for {name}, Oregon?", a, None))
     if c.get('incorporated'):
         fq.append((f"When was {name}, Oregon incorporated?", f"{name} was incorporated as a city in {c['incorporated']}.", None))
     a = ("Oregon has no statewide sales tax, but it does have a state income tax (4.75% to 9.9%), and housing is the biggest "
@@ -1052,6 +1083,14 @@ def city_page(c, all_cities, custom):
     if c.get('incorporated'): rows.append(('Incorporated', e(c['incorporated'])))
     rows.append(('Status', status))
     if c.get('website'): rows.append(('Official city website', f'<a href="{e(c["website"])}" target="_blank" rel="noopener">{e(host(c["website"]))}</a>'))
+    zinfo = CITY_ZIPS.get(name, {})
+    if zinfo.get('zips') or zinfo.get('po_box_zips'):
+        zl = zinfo.get('zips') or zinfo.get('po_box_zips')
+        rows.append(('ZIP code' if len(zl) == 1 else 'ZIP codes', ', '.join(zl[:12]) + (f' and {len(zl) - 12} more' if len(zl) > 12 else '')
+                     + (f' (PO boxes: {", ".join(zinfo["po_box_zips"][:6])})' if zinfo.get('zips') and zinfo.get('po_box_zips') else '')))
+    rows.append(('Area codes', ' / '.join(area_codes_for(county)) + ' (<a href="/oregon-area-codes/">Oregon area codes</a>)'))
+    if zinfo.get('timezones'):
+        rows.append(('Time zone', ' / '.join(TZ_NAMES.get(t, t) for t in zinfo['timezones'])))
     if c.get('lat') is not None: rows.append(('Coordinates', f'{c["lat"]:.4f}&deg; N, {abs(c["lon"]):.4f}&deg; W'))
     for k, label in (('nearest_hospital', 'Nearest major hospital'), ('transit', 'Public transit')):
         if x.get(k): rows.append((label, e(x[k])))
@@ -1063,7 +1102,7 @@ def city_page(c, all_cities, custom):
     reg_phrase = breg if breg.endswith('Oregon') else f'{breg} Oregon'
     fq = city_faq(c, all_cities, county, breg, electric, district)
     faq_details = '\n'.join(f'<details><summary>{e(q)}</summary><p>{h or e(a)}</p></details>' for q, a, h in fq)
-    desc = city_desc(name, county, pop, bool(attr))
+    desc = city_desc(name, county, pop, bool(attr), len(CITY_ZIPS.get(name, {}).get('zips') or CITY_ZIPS.get(name, {}).get('po_box_zips') or []))
     posts = CITY_POSTS.get(slug(name), [])[:4]
     posts_html = ''
     if posts:
@@ -1103,7 +1142,7 @@ def city_page(c, all_cities, custom):
     lead = f'{e(name)} is an incorporated city in {county_links(counties, "../../")}, in Oregon&rsquo;s {e(region)} region' + (f', with a 2020 Census population of {pop}.' if pop else '.')
     wx = weather_widget(name, c.get('lat'), c.get('lon'))
     vote = voter_card(county, name)
-    return (head(city_title(name), desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
+    return (head(city_title(name, len(CITY_ZIPS.get(name, {}).get('zips') or CITY_ZIPS.get(name, {}).get('po_box_zips') or [])), desc, path, 'article', c.get('image'), ld(city_ld) + ld(bread) + ld(faq_ld), '../../', keywords)
             + header('../../') + ticker_html(name) + alert_banner()
             + f'<div class="hero city-hero"{hero_style(breg)}><div class="wrap"><h1>{e(name)}, Oregon</h1><p class="city-tagline">{e(tagline)}</p>'
             + f'<div class="pills">{badges}</div>'
@@ -1127,6 +1166,41 @@ def city_page(c, all_cities, custom):
             + f'<h2 class="st">Local &amp; Official Links</h2><section class="faq"><ul>{"".join(local)}{sl}</ul></section>'
             + '<p class="back"><a href="../index.html">&larr; All Oregon Cities</a></p></div></main>'
             + footer('../../', '<br>Population: U.S. Census Bureau (2010, 2020). Background text: Wikipedia (CC BY-SA 4.0).'))
+
+
+COUNTY_GEO = json.load(open('data/oregon_counties_geo.json', encoding='utf-8'))['counties'] if os.path.exists('data/oregon_counties_geo.json') else []
+
+
+def oregon_county_map(highlight=None, labels=True, width=800):
+    """Inline SVG map of Oregon's 36 counties; each county links to its page. highlight = county name to emphasize."""
+    if not COUNTY_GEO: return ''
+    kx = math.cos(math.radians(44.0))
+    rings = []
+    for f in COUNTY_GEO:
+        polys = f['coordinates'] if f['type'] == 'MultiPolygon' else [f['coordinates']]
+        rings.append((f['name'], [p[0] for p in polys]))
+    xs = [pt[0] * kx for _, rs in rings for r in rs for pt in r]; ys = [pt[1] for _, rs in rings for r in rs for pt in r]
+    x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
+    sc = (width - 20) / (x1 - x0); height = round((y1 - y0) * sc + 20)
+    P = lambda pt: ((pt[0] * kx - x0) * sc + 10, (y1 - pt[1]) * sc + 10)
+    paths, texts = [], []
+    for name, rs in rings:
+        d = ' '.join('M' + ' L'.join(f'{x:.1f},{y:.1f}' for x, y in map(P, r)) + 'Z' for r in rs)
+        big = max(rs, key=len); pts = list(map(P, big))
+        a2 = cx = cy = 0.0
+        for (xa, ya), (xb, yb) in zip(pts, pts[1:] + pts[:1]):
+            cr = xa * yb - xb * ya; a2 += cr; cx += (xa + xb) * cr; cy += (ya + yb) * cr
+        cx, cy = (cx / (3 * a2), cy / (3 * a2)) if a2 else pts[0]
+        on = name == highlight
+        fill = '#c8a24b' if on else '#e3efe7'
+        paths.append(f'<a href="/counties/{slug(name)}/" aria-label="{e(name)} County"><path d="{d}" fill="{fill}" stroke="#1a5632" stroke-width="1.2">'
+                     f'<title>{e(name)} County</title></path></a>')
+        if labels:
+            fs = 9 if name in ('Multnomah', 'Hood River', 'Sherman', 'Gilliam', 'Washington', 'Columbia', 'Benton', 'Polk', 'Yamhill', 'Clatsop') else 11
+            texts.append(f'<text x="{cx:.0f}" y="{cy:.0f}" font-size="{fs}" text-anchor="middle" dominant-baseline="middle" fill="#14382a" '
+                         f'font-family="system-ui,sans-serif" font-weight="{700 if on else 600}" pointer-events="none">{e(name)}</text>')
+    return (f'<svg viewBox="0 0 {width} {height}" role="img" aria-label="Map of Oregon counties" style="width:100%;height:auto;display:block">'
+            f'<style>svg a path:hover{{fill:#c8a24b}}</style>{"".join(paths)}{"".join(texts)}</svg>')
 
 
 COUNTY_SITES = {}
@@ -1184,7 +1258,11 @@ def update_counties_index(counties, cities):
         seat_html = f'<a href="/cities/{slug(seat["name"])}/">{e(seat["name"])}</a>' if seat else e(k['seat'])
         rows.append(f'<tr><td>{i}</td><td><a href="/counties/{slug(k["name"])}/">{e(k["name"])} County</a></td><td>{seat_html}</td>'
                     f'<td>{n(k["pop2020"])}</td><td>{len(members)}</td><td>{e(k.get("est", ""))}</td></tr>')
-    table = ('<section><div class="wrap"><h2 class="section-title">List of Oregon Counties by Population</h2>'
+    table = ('<section><div class="wrap"><h2 class="section-title">Oregon Counties Map</h2>'
+             '<p class="section-sub">Oregon&rsquo;s 36 counties, from Multnomah, the smallest by land area, to Harney, larger than several U.S. states. Select any county on the map to open its guide.</p>'
+             f'<figure style="max-width:900px;margin:0 auto">{oregon_county_map()}<figcaption style="font-size:.8rem;color:#5c6b64;margin-top:6px">'
+             'Boundaries: U.S. Census Bureau. Click a county for its seat, population, cities and history.</figcaption></figure></div></section>'
+             '<section><div class="wrap"><h2 class="section-title">List of Oregon Counties by Population</h2>'
              '<p class="section-sub">All 36 Oregon counties ranked by 2020 Census population, with each county seat, the number of incorporated cities and the year the county was established.</p>'
              '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.93rem" class="county-table">'
              '<thead><tr style="background:#14382a;color:#fff;text-align:left"><th style="padding:9px">#</th><th style="padding:9px">County</th><th style="padding:9px">County seat</th>'
@@ -1266,6 +1344,9 @@ def county_page(k, cities):
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Oregon Counties</a> &rsaquo; {e(name)} County</nav>'
             + county_region_note(name, region, members)
             + f'<h2 class="st">Quick Facts</h2><section class="facts"><table>{facts}</table></section>'
+            + (f'<h2 class="st">{e(name)} County Map</h2><figure style="max-width:640px">{oregon_county_map(name, labels=False, width=640)}'
+               f'<figcaption class="src">{e(name)} County (highlighted) among Oregon&rsquo;s 36 counties. Select another county to explore it. '
+               'Boundaries: U.S. Census Bureau.</figcaption></figure>' if COUNTY_GEO else '')
             + f'<h2 class="st">About {e(name)} County</h2><section class="prose">{summary_html(k["summary"], 1400)}{wiki_credit(k) if k.get("wiki_url") else ""}</section>'
             + photo(k, f'{name} County, Oregon')
             + f'<h2 class="st">Cities in {e(name)} County</h2><table class="tbl"><tr><th>City</th><th>Population (2020)</th><th>Incorporated</th></tr>{trs}</table><p class="src">&#9733; county seat. Cities that span more than one county are listed in each.</p>'
@@ -1311,6 +1392,97 @@ def cities_index(cities):
             + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> &rsaquo; Oregon Cities</nav>' + intro + top_html
             + f'<h2 class="st">All {N} Oregon Cities A&ndash;Z</h2><p style="margin:18px 0 8px"><input id="q" type="search" placeholder="Filter by city or county name..." aria-label="Filter cities"></p>'
             + f'<nav class="alpha">{alpha}</nav>{body}</div></main>' + js + footer('../', '<br>Population: U.S. Census Bureau 2020.'))
+
+
+AREA_503_COUNTIES = {'Multnomah', 'Washington', 'Clackamas', 'Columbia', 'Clatsop', 'Tillamook', 'Yamhill', 'Marion', 'Polk'}
+
+
+def area_codes_for(county):
+    return ('503', '971') if county in AREA_503_COUNTIES else ('541', '458')
+
+
+def guide_page(path, title, desc, h1, sub, body, faq, crumb, page_type='WebPage'):
+    """Standalone reference page (ZIP codes, area codes) with breadcrumb + FAQ schema and a visible FAQ."""
+    page_ld = {'@context': 'https://schema.org', '@type': page_type, 'name': title, 'description': desc, 'url': f'{BASE_URL}{path}',
+               'isPartOf': {'@type': 'WebSite', 'name': SITE_NAME, 'url': f'{BASE_URL}/'}, 'dateModified': TODAY}
+    bread = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{BASE_URL}/'},
+        {'@type': 'ListItem', 'position': 2, 'name': crumb, 'item': f'{BASE_URL}{path}'}]}
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': re.sub(r'<[^>]+>', '', a)}} for q, a in faq]}
+    faq_html = ''.join(f'<details><summary>{e(q)}</summary><p>{a}</p></details>' for q, a in faq)
+    return (head(title, desc, path, extra=ld(page_ld) + ld(bread) + ld(faq_ld), up='../') + header('../') + ticker_html(path) + alert_banner()
+            + f'<div class="hero"><div class="wrap"><h1>{h1}</h1><p>{sub}</p></div></div>'
+            + f'<main><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; {e(crumb)}</nav>{body}'
+            + f'<h2 class="st">Frequently Asked Questions</h2><section class="faq">{faq_html}</section></div></main>' + footer('../'))
+
+
+def zip_page(cities):
+    data = json.load(open('data/oregon_zips.json', encoding='utf-8'))['zips']
+    norm = lambda t: re.sub(r'[^a-z]', '', t.lower().replace('saint ', 'st ').replace('mount ', 'mt '))
+    city_by = {norm(c['name']): c for c in cities}
+    N = len(data); std = sum(1 for z in data if z['type'] == 'STANDARD')
+    rows = []
+    for z in data:
+        c = city_by.get(norm(z['city']))
+        cname = f'<a href="/cities/{slug(c["name"])}/">{e(c["name"])}</a>' if c else e(z['city'].title())
+        typ = {'STANDARD': 'Standard', 'PO BOX': 'PO Box', 'UNIQUE': 'Unique (single organization)'}.get(z['type'], z['type'].title())
+        rows.append(f'<tr data-n="{z["zip"]} {e(z["city"].lower())} {e(z["county"].lower())}"><td>{z["zip"]}</td><td>{cname}</td>'
+                    f'<td><a href="/counties/{slug(z["county"])}/">{e(z["county"])}</a></td><td>{typ}</td></tr>')
+    top = sorted(cities, key=lambda c: -float(c['pop2020'] or 0))[:12]
+    top_rows = ''.join(f'<tr><td><a href="/cities/{slug(c["name"])}/">{e(c["name"])}</a></td><td>{", ".join((CITY_ZIPS.get(c["name"], {}).get("zips") or ["—"])[:14])}'
+                       f'{" &hellip;" if len(CITY_ZIPS.get(c["name"], {}).get("zips") or []) > 14 else ""}</td></tr>' for c in top)
+    js = ("<script>document.getElementById('zq').addEventListener('input',function(){var v=this.value.toLowerCase().trim();"
+          "document.querySelectorAll('#ziptbl tbody tr').forEach(function(r){r.style.display=r.dataset.n.indexOf(v)>-1?'':'none'});});</script>")
+    pdx = ', '.join((CITY_ZIPS.get('Portland', {}).get('zips') or [])[:8])
+    body = (f'<section class="prose" style="margin-top:18px"><p>Oregon has <strong>{N} active ZIP codes</strong>, and every one of them begins with <strong>97</strong>. '
+            f'{std} are standard delivery ZIP codes, and the rest are PO box or single-organization ZIP codes. The 970&ndash;973 prefixes cover Portland, the north coast and the '
+            'northern Willamette Valley; 974 covers Eugene and the southern valley; 975 covers southern Oregon; 976 covers Klamath and Lake counties; 977 covers Central Oregon; '
+            'and 978&ndash;979 cover Eastern Oregon. Search the full list below by ZIP code, city or county, or open any city for its population, schools and moving guide.</p>'
+            '<p>Looking for phone numbers instead? See <a href="/oregon-area-codes/">Oregon area codes</a>.</p></section>'
+            f'<h2 class="st">ZIP Codes for Oregon&rsquo;s Largest Cities</h2><table class="tbl"><tr><th>City</th><th>Standard ZIP codes</th></tr>{top_rows}</table>'
+            f'<h2 class="st">All {N} Oregon ZIP Codes</h2><p style="margin:12px 0 8px"><input id="zq" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #d7e2db;border-radius:8px" type="search" placeholder="Search by ZIP code, city or county..." aria-label="Search Oregon ZIP codes"></p>'
+            f'<div style="overflow-x:auto"><table class="tbl" id="ziptbl"><thead><tr><th>ZIP code</th><th>City</th><th>County</th><th>Type</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+            '<p class="src">Source: USPS ZIP code data. ZIP codes follow postal routes, not city limits, so an address can carry a city name in its mailing address without being inside that city.</p>' + js)
+    faq = [('How many ZIP codes are in Oregon?', f'Oregon has {N} active ZIP codes: {std} standard delivery ZIP codes plus PO box and single-organization ZIP codes.'),
+           ('What do Oregon ZIP codes start with?', 'Every Oregon ZIP code starts with 97, running from 97001 (Antelope) to 97920 (Westfall).'),
+           ('What is the ZIP code for Portland, Oregon?', f'Portland has many ZIP codes, including {pdx}. Downtown Portland is 97204 and 97205.'),
+           ('What is the ZIP code for Salem, Oregon?', 'Salem ZIP codes include ' + ', '.join((CITY_ZIPS.get('Salem', {}).get('zips') or [])[:8]) + '.'),
+           ('What is the ZIP code for Eugene, Oregon?', 'Eugene ZIP codes include ' + ', '.join((CITY_ZIPS.get('Eugene', {}).get('zips') or [])[:8]) + '.'),
+           ('Does a ZIP code tell me which city I live in?', 'Not always. ZIP codes are drawn for mail delivery, so many homes outside city limits use a nearby city&rsquo;s name and ZIP code. Check your county&rsquo;s property records to confirm which city, if any, you are in.')]
+    return guide_page('/oregon-zip-codes/', f'Oregon ZIP Codes: All {N} ZIP Codes by City & County', f'Complete list of all {N} Oregon ZIP codes with city, county and type. Search any ZIP code, find ZIP codes for Portland, Salem, Eugene, Bend and every Oregon city.',
+                      'Oregon ZIP Codes', f'All {N} Oregon ZIP codes, searchable by ZIP code, city or county.', body, faq, 'Oregon ZIP Codes', 'CollectionPage')
+
+
+def area_code_page(cities):
+    def city_links(names):
+        return ', '.join(f'<a href="/cities/{slug(n)}/">{e(n)}</a>' for n in names)
+    n503 = ['Portland', 'Salem', 'Gresham', 'Hillsboro', 'Beaverton', 'Tigard', 'Lake Oswego', 'Keizer', 'Oregon City', 'McMinnville', 'Woodburn', 'Astoria', 'Tillamook', 'Seaside', 'St. Helens']
+    n541 = ['Eugene', 'Bend', 'Medford', 'Springfield', 'Corvallis', 'Albany', 'Redmond', 'Grants Pass', 'Roseburg', 'Klamath Falls', 'Pendleton', 'Hermiston', 'Coos Bay', 'Newport', 'Hood River', 'The Dalles', 'Ontario', 'Ashland']
+    c503 = ', '.join(f'<a href="/counties/{slug(c)}/">{c}</a>' for c in sorted(AREA_503_COUNTIES))
+    rest = sorted({k for c in cities for k in c['counties']} - AREA_503_COUNTIES)
+    c541 = ', '.join(f'<a href="/counties/{slug(c)}/">{c}</a>' for c in rest)
+    body = ('<section class="prose" style="margin-top:18px"><p>Oregon has <strong>four area codes</strong> serving two regions. <strong>503</strong> and its overlay <strong>971</strong> '
+            'cover the Portland metro area, Salem, the north coast and the northern Willamette Valley. <strong>541</strong> and its overlay <strong>458</strong> cover the rest of the state, '
+            'including Eugene, Corvallis, the central and south coast, Southern Oregon, Central Oregon and Eastern Oregon. Because both regions have overlays, '
+            'all local calls in Oregon require ten-digit dialing (area code plus number).</p></section>'
+            '<h2 class="st">Oregon Area Codes at a Glance</h2><table class="tbl"><tr><th>Area code</th><th>Region</th><th>In service</th></tr>'
+            '<tr><td><strong>503</strong></td><td>Portland metro, Salem, north coast, northern Willamette Valley</td><td>1947 (originally the whole state)</td></tr>'
+            '<tr><td><strong>971</strong></td><td>Overlay on the 503 area</td><td>2000</td></tr>'
+            '<tr><td><strong>541</strong></td><td>Rest of Oregon: southern valley, central and south coast, Southern, Central and Eastern Oregon</td><td>1995 (split from 503)</td></tr>'
+            '<tr><td><strong>458</strong></td><td>Overlay on the 541 area</td><td>2010</td></tr></table>'
+            f'<h2 class="st">Area Codes 503 and 971</h2><p><strong>Counties:</strong> {c503}.</p><p><strong>Major cities:</strong> {city_links(n503)}.</p>'
+            f'<h2 class="st">Area Codes 541 and 458</h2><p><strong>Counties:</strong> {c541}.</p><p><strong>Major cities:</strong> {city_links(n541)}.</p>'
+            '<p class="src">Area code boundaries follow telephone exchanges, not county lines, so a few communities near the edges are exceptions. Cell phone numbers keep the area code where they were issued.</p>'
+            '<p>Looking for mailing addresses instead? See all <a href="/oregon-zip-codes/">Oregon ZIP codes</a>.</p>')
+    faq = [('What are the area codes in Oregon?', 'Oregon has four area codes: 503 and 971 (Portland, Salem and northwest Oregon) and 541 and 458 (the rest of the state).'),
+           ('What area code is Portland, Oregon?', 'Portland uses area codes 503 and 971.'),
+           ('What area code is Bend, Oregon?', 'Bend uses area codes 541 and 458, like the rest of Central Oregon.'),
+           ('What area code is Eugene, Oregon?', 'Eugene uses area codes 541 and 458.'),
+           ('What area code is Salem, Oregon?', 'Salem uses area codes 503 and 971.'),
+           ('Do I need to dial the area code for local calls in Oregon?', 'Yes. Because 971 overlays 503 and 458 overlays 541, every local call in Oregon requires ten-digit dialing.')]
+    return guide_page('/oregon-area-codes/', 'Oregon Area Codes: 503, 971, 541 & 458 Map and Cities', 'All four Oregon area codes explained: 503 and 971 for Portland, Salem and northwest Oregon; 541 and 458 for Eugene, Bend, Medford and the rest of the state.',
+                      'Oregon Area Codes', 'Which area code covers which part of Oregon: 503, 971, 541 and 458.', body, faq, 'Oregon Area Codes')
 
 
 def simple_page(path, title, desc, h1, sub, body, page_type='WebPage'):
@@ -1455,6 +1627,7 @@ def regions_index(all_cities):
             + f'<div class="hero region-hero">{oregon_silhouette()}<div class="wrap"><h1>Oregon&rsquo;s Seven Regions</h1>'
             + '<p>Explore Oregon by region &mdash; cities, counties, living guides, and things to do in each part of the state.</p></div></div>'
             + f'<main><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> &rsaquo; Oregon Regions</nav>'
+            + '<h2 class="st">Explore Oregon by Region</h2>'
             + f'<div class="cards" style="margin-top:24px">{region_cards}</div>'
             + '</div></main>' + footer('../'))
 
@@ -1598,6 +1771,8 @@ def main():
         write(f'{OUT}/counties/{slug(k["name"])}/index.html', county_page(k, cities))
     write(f'{OUT}/cities/index.html', cities_index(cities))
     update_counties_index(counties, cities)
+    write(f'{OUT}/oregon-zip-codes/index.html', zip_page(cities))
+    write(f'{OUT}/oregon-area-codes/index.html', area_code_page(cities))
     write(f'{OUT}/about/index.html', simple_page('/about/', 'About Oregon Information | Independent Oregon Guide', 'About Oregon Information: an independent, free guide to every Oregon city and county, with moving and visiting guides.', 'About Oregon Information', 'An independent, plain-language guide to the State of Oregon.', ABOUT, 'AboutPage'))
     write(f'{OUT}/contact/index.html', simple_page('/contact/', 'Contact Oregon Information', 'Contact Oregon Information with questions, corrections or suggestions about any Oregon city, county, region or blog guide. We read every message we receive.', 'Contact Us', 'Questions, corrections and suggestions are always welcome.', CONTACT, 'ContactPage'))
     write(f'{OUT}/privacy/index.html', simple_page('/privacy/', 'Privacy Policy | Oregon Information', 'Privacy policy for oregoninformation.com: what information we collect, how cookies and analytics are used, and your choices.', 'Privacy Policy', 'How oregoninformation.com handles information.', PRIVACY))
@@ -1621,7 +1796,7 @@ def main():
     # Oregon state facts page
     write(f'{OUT}/oregon/index.html', oregon_page())
     # Sitemap
-    urls = ['/', '/oregon/', '/regions/', '/cities/', '/counties/', '/moving-to-oregon/', '/visit-oregon/', '/about/', '/contact/', '/privacy/', '/advertise/']
+    urls = ['/', '/oregon/', '/regions/', '/cities/', '/counties/', '/oregon-zip-codes/', '/oregon-area-codes/', '/moving-to-oregon/', '/visit-oregon/', '/about/', '/contact/', '/privacy/', '/advertise/']
     urls += [f'/regions/{REGION_SLUGS[r]}/' for r in REGION_SLUGS]
     urls += [f'/counties/{slug(k["name"])}/' for k in counties] + [f'/cities/{slug(c["name"])}/' for c in cities]
     if os.path.exists('data/blog_articles.json'):   # statewide blog (built by build_blog_index.py)
