@@ -75,6 +75,11 @@ jobs:
           check ".git blocked"                                oregoninformation.com     https /.git/config                 403
           check "build scripts blocked"                       oregoninformation.com     https /generate_city_pages.py      403
           check "data blocked"                                oregoninformation.com     https /custom_city_content.json    403
+          # Pages must tell Cloudflare not to inject scripts (Cache-Control: no-transform).
+          for p in / /cities/coos-bay/; do
+            cc=$(curl -s -D - -o /dev/null -H "Host: oregoninformation.com" -H "X-Forwarded-Proto: https" "http://127.0.0.1$p" | grep -i '^cache-control' | tr -d '\r')
+            if echo "$cc" | grep -qi no-transform; then echo "PASS  no-transform on $p ($cc)"; else echo "FAIL  no-transform missing on $p ($cc)"; fail=1; fi
+          done
           # No redirect may point back at itself (loop) for a canonical URL under either SSL mode.
           for p in / /cities/ /counties/coos/ /blog/thanksgiving-in-oregon/; do
             check "no loop $p" oregoninformation.com https "$p" 200
