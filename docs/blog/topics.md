@@ -21,12 +21,12 @@ Re-check metrics and the live SERP before writing (WRITING-GUIDE.md section 1). 
 | 2026-11-03 | thanksgiving-in-oregon | Thanksgiving in Oregon |
 | 2026-11-09 | christmas-in-oregon | christmas in oregon (390 / 4); also targets silverton christmas market (9,900 / 0), zoolights portland (6,600 / 0), grotto festival of lights (4,400 / 0), christmas ships portland (1,900 / 9), shore acres christmas lights (1,600 / 3), polar express hood river (1,300 / 4) |
 | 2026-11-10 | christmas-lights-portland | portland christmas lights (1,900 / 6) + christmas lights portland oregon (1,900 / 3); also targets peacock lane (5,400 / 9), peacock lane portland (4,400 / 5), oregon garden christmas lights (880 / 13), christmas lights salem oregon (390 / 1) |
+| 2026-11-13 | oregon-christmas-tree-farms | oregon christmas tree farms (390 / 0); also targets christmas tree farms oregon (320 / 2), oregon christmas tree permit (880 / 7), christmas tree farm portland (390 / 0), portland christmas tree farms (320 / 0), christmas tree farms eugene oregon (110 / 0), mt hood christmas tree permit (110 / 0), noble fir vs douglas fir christmas tree (260 / 0), how to keep christmas tree fresh (260 / 9) |
 
 ## Backlog (top = next; seasonal items first while their window is open)
 
 | Window | Working slug | Primary keyword (vol / KD) | Long tails to cover (vol / KD) |
 |---|---|---|---|
-| Publish by Nov 25 | oregon-christmas-tree-farms | portland oregon christmas tree (2,900 / 5) | oregon christmas tree permit (880 / 7), oregon christmas tree farms (390 / 0), portland christmas tree farms (320 / 0), cut your own christmas tree oregon |
 | Nov-Feb | best-hot-springs-in-oregon | oregon hot springs (9,900 / 3) | umpqua hot springs (14,800 / 3), crystal crane hot springs (18,100 / 3), breitenbush (12,100 / 9), cougar / terwilliger (6,600 / 7), summer lake (6,600 / 0), bagby (1,900 / 0), hot springs near portland (1,600 / 0), near bend (1,000 / 0), near eugene (590 / 0), best hot springs in oregon (720 / 0) |
 | Nov-Jan | oregon-ski-resorts | skiing near bend oregon (6,600 / 0) | snow skiing in oregon (6,600 / 30), mt hood snow report (2,900 / 13), mt hood snow tubing (1,000 / 0), mt ashland snow report (590 / 20), best ski resorts in oregon |
 | Late Nov-Dec | christmas-in-portland-oregon | christmas events portland oregon (880 / 0) | christmas market portland oregon (1,000 / 13), christmas activities portland (880 / 4), christmas train portland (480 / 3), restaurants open christmas day portland (480 / 0), portland christmas tree lighting (590 / 3) |
@@ -54,7 +54,7 @@ Re-check metrics and the live SERP before writing (WRITING-GUIDE.md section 1). 
 
 ## Ideas parked (need research first)
 - Lake Oswego / Tigard / Gladstone neighborhood light streets could become a 'free Christmas lights near Portland' update each December; Keizer Miracle of Christmas + GLOW (Roto-Rooter Park) for a Salem-area lights post
-- u cut christmas trees near me (1,900 / 1) and recreation.gov christmas tree permit (1,300 / 24) support the oregon-christmas-tree-farms backlog item
+- Christmas tree follow-ups: 'portland oregon christmas tree' (2,900 / 5) is Pioneer Courthouse Square tree-lighting intent (42nd lighting Nov 27, 2026), not farms: cover in christmas-in-portland-oregon; noble fir christmas tree (6,600 / 6) could be a species explainer; national forest permit guide by forest (recreation gov christmas tree permit 1,300 / 24, us forest service christmas tree permit 590 / 14) could be a stand-alone update each November
 - Oregon Caves National Monument (oregon caves 8,100 / 9), Wildlife Safari (5,400 / 7)
 - Christmas Valley, Oregon (6,600 / 0): sand dunes, cheap land
 - Retiring in Oregon; Oregon vs Washington taxes; Oregon DMV for new residents
