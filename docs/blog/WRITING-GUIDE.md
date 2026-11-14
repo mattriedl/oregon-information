@@ -138,4 +138,7 @@ Then view it like a reader:
   (pushing deploys the live site; it takes about 5-15 minutes).
 - Poll `https://oregoninformation.com/blog/<slug>/` (add `?v=N` to bypass caches) until it returns 200 with the new title.
 - Notify search engines: OpenSEO `submit_indexnow_urls` with the article URL, `/blog/`, and the city pages it links to.
+- Save the article's keywords for rank tracking: OpenSEO `save_keywords` (free, no credits) with every entry in the
+  article's `keywords` list (primary + secondaries), lowercased, no trailing "?", no tags. Pass `metrics`
+  (searchVolume, keywordDifficulty) copied from the research you already ran; never make an extra paid call for them.
 - Never push an article that fails the checks. If you can't finish, leave it unpushed and report why.
