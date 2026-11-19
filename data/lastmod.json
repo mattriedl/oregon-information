@@ -1,7 +1,7 @@
 {
 "/": [
-"7765bb52bff8e853b9e7ca9754d93e76b2896d86",
-"2026-11-16"
+"217918164cd55822bf0339736374c1be6a8a10fc",
+"2026-11-19"
 ],
 "/about/": [
 "d7f23910f135a1b527a90b6162300f2249677c41",
@@ -12,32 +12,32 @@
 "2026-11-09"
 ],
 "/blog/": [
-"70c2a22cf86f36680fe092317e1b290b86b9b43e",
-"2026-11-16"
+"a605f7e8356651e536c64face8d09809443d25ef",
+"2026-11-19"
 ],
 "/blog/best-pumpkin-patches-oregon/": [
-"a7ab5d8671169a8a67692ec74847fd84ee8fd4a8",
-"2026-11-16"
+"5c175dc43289bf1343481d6b45677aedeb25d160",
+"2026-11-19"
 ],
 "/blog/best-small-towns-oregon/": [
 "7e5503ce4d5c4f4baeb436dd8ce4609262355828",
 "2026-11-16"
 ],
 "/blog/christmas-in-oregon/": [
-"38ff679cf96d2b0788615a3d2b82d63a89307e0a",
-"2026-11-16"
+"908b34a88a4a3af83821080efe2631567a0f9b8a",
+"2026-11-19"
 ],
 "/blog/christmas-lights-portland/": [
-"0d6377f3b2d725b544fe84aaa7e0fc793720634d",
-"2026-11-16"
+"d4e6773b55dcc4eb299530bfe318b0db68a86485",
+"2026-11-19"
 ],
 "/blog/does-it-snow-in-oregon/": [
-"1b7f72efe3d9da1acadc56a975956986ec0d0b3f",
-"2026-11-16"
+"db15684736a880e9ca3c88a5259c64c53a041a71",
+"2026-11-19"
 ],
 "/blog/halloweentown-st-helens-oregon/": [
-"bff1855206642b76cf02c5bd47ad77bb2f4604b0",
-"2026-11-16"
+"5302acdbb78ce31adc8dc211918702da32560138",
+"2026-11-19"
 ],
 "/blog/moving-to-bend-oregon/": [
 "f4f253359ecc56a0eb95616cbfe938e60f3d9d0d",
@@ -48,28 +48,28 @@
 "2026-11-16"
 ],
 "/blog/oregon-christmas-tree-farms/": [
-"57c88e02fb073f5557c6b5a3604a571265d1ff31",
-"2026-11-16"
+"7d2236936a84fe7c4713d76ec2cbada70aeba1e1",
+"2026-11-19"
 ],
 "/blog/oregon-coast-road-trip/": [
-"d4c3507f8dcb99e5e37fdc6bdce6797d1b86fd4e",
-"2026-11-16"
+"33d2e6c4aab1b108cbdefa8a4b0da9f4d8c96563",
+"2026-11-19"
 ],
 "/blog/oregon-coast-storm-watching/": [
-"e3f7153bdaed1aa429116efe7782d39ac7332a3c",
-"2026-11-16"
+"601c44b9cf324d7b374c2ac9cc5038cceb1e4c8e",
+"2026-11-19"
 ],
 "/blog/oregon-cost-of-living/": [
 "5aebb94cc8f53f5b9923ef32d3de1c1630e270df",
 "2026-11-16"
 ],
 "/blog/oregon-hot-springs/": [
-"d10fe5392c18398cf0ca5084f7d0fe73c63a3cf4",
-"2026-11-16"
+"da9ecf2758110d4c5bd6dad1607e35dab59a9f49",
+"2026-11-19"
 ],
 "/blog/oregon-ski-resorts/": [
-"c650e2a26087fef1828afa3553d14f08f10f8ccf",
-"2026-11-16"
+"d685ef1acfb3ce4e93a3e95095b9894e6b8c71de",
+"2026-11-19"
 ],
 "/blog/oregon-weather-seasons/": [
 "d8a95ec36ec03334ca252912da40a75b09f4f24a",
@@ -80,8 +80,12 @@
 "2026-11-16"
 ],
 "/blog/thanksgiving-in-oregon/": [
-"30f101adf65335b90b83b175454a15d05b9d4f6c",
-"2026-11-16"
+"5664f004932f99c7275f7158d5f82aefcb42ef97",
+"2026-11-19"
+],
+"/blog/whale-watching-oregon-coast/": [
+"15061762b9b2bd243fd9096fb18e34835a5fc3f3",
+"2026-11-19"
 ],
 "/cities/": [
 "4be70ab665ac9f72e1cade6aa3dcec2e43bde539",
@@ -140,8 +144,8 @@
 "2026-11-16"
 ],
 "/cities/bandon/": [
-"d6f15e7d8d1f7f6236999a9f49bcede1b21b27c5",
-"2026-11-13"
+"06f6bd5e4c15cd9ba12e0685fadbc119f8df2226",
+"2026-11-19"
 ],
 "/cities/banks/": [
 "0a2ddb66147c220965e62733a6ddc2bdd5cb5e45",
@@ -172,8 +176,8 @@
 "2026-11-09"
 ],
 "/cities/brookings/": [
-"2883721119b1f0bc7ef9f6c49f6cd246f4f98496",
-"2026-11-09"
+"f4d26cc221ded991796fbf4bcc92586109959302",
+"2026-11-19"
 ],
 "/cities/brownsville/": [
 "08c6bfd6d12b564660965bf25da25f2968e73d6a",
@@ -192,8 +196,8 @@
 "2026-11-09"
 ],
 "/cities/cannon-beach/": [
-"749acdaa73cdcecfdef3db285d896c8b587b101d",
-"2026-11-09"
+"33e4910b29ce43c508e9d1e8dc810afb246fd575",
+"2026-11-19"
 ],
 "/cities/canyon-city/": [
 "1253b4710fded5e5873c68b1ee5bec6395a3b565",
@@ -240,8 +244,8 @@
 "2026-11-09"
 ],
 "/cities/coos-bay/": [
-"c5fc4cb10fc7a6181706c2ff7bd870debe83225a",
-"2026-11-09"
+"1b0599128cf26c40eaf27201cdc0e4de79d247be",
+"2026-11-19"
 ],
 "/cities/coquille/": [
 "296c26dff5a36cae7f37dde7ff774d6466197628",
@@ -284,8 +288,8 @@
 "2026-11-09"
 ],
 "/cities/depoe-bay/": [
-"10afa44306d6d73a820853b064681cbe5812c34f",
-"2026-11-09"
+"b7e6d5243b203b940b5f7d863fc06627545e47fc",
+"2026-11-19"
 ],
 "/cities/detroit/": [
 "2453fb012934fbdb5012e903444a4bb694723cb1",
@@ -352,8 +356,8 @@
 "2026-11-09"
 ],
 "/cities/florence/": [
-"96ad6a5482f728562ead17d71c9d2fcac9836766",
-"2026-11-09"
+"1766c9f1589b7e1e15e0336d2509e117b5c5a015",
+"2026-11-19"
 ],
 "/cities/forest-grove/": [
 "fd0d6e7993cec5b418ca9f7a0e8f8b0c97922924",
@@ -568,8 +572,8 @@
 "2026-11-09"
 ],
 "/cities/lincoln-city/": [
-"1744ebe6dfbee4b1e37e9b38d4fd37edca712537",
-"2026-11-09"
+"3f00786d0b8f31bb835ebf6def8aecfc33fb7f0b",
+"2026-11-19"
 ],
 "/cities/lonerock/": [
 "0c54b42a6ce872873e7d7fb1fce013cb9e124822",
@@ -600,8 +604,8 @@
 "2026-11-09"
 ],
 "/cities/manzanita/": [
-"c5d995b5814a5a3f20082ef48f79eedcd176f9f5",
-"2026-11-09"
+"7867b0da99ff0d9e218dd378098c473a6b240448",
+"2026-11-19"
 ],
 "/cities/maupin/": [
 "8ef61a19922db84b8a0b42f90d53d1cdd9ef3c93",
@@ -696,8 +700,8 @@
 "2026-11-09"
 ],
 "/cities/newport/": [
-"5d4874ba3e1f58ce4ce8776a23c8d7eefc7db2e5",
-"2026-11-09"
+"d4f6336c15bdc0f8a2d0a340f27c26e9a3cbeb9b",
+"2026-11-19"
 ],
 "/cities/north-bend/": [
 "0ac7961914291e8ab99370e707e612647554d4e8",
@@ -752,12 +756,12 @@
 "2026-11-09"
 ],
 "/cities/port-orford/": [
-"65e1e469d40720e7287c0b7010b2380c267ed430",
-"2026-11-09"
+"b717383889b903969fc3b11ffbe825a3d5e58481",
+"2026-11-19"
 ],
 "/cities/portland/": [
-"2d43f394e498e64b6a3d59c0d70fbf9ff35d7e66",
-"2026-11-16"
+"36a77b632c75291511c73b5192694a3d937b5398",
+"2026-11-19"
 ],
 "/cities/powers/": [
 "965ecbdb679cdf5b1d93d7a2f8f6ce0dc5edfe78",
@@ -936,8 +940,8 @@
 "2026-11-10"
 ],
 "/cities/tillamook/": [
-"5e229833a8dbedddac96eaea7111893a0c707ee3",
-"2026-11-16"
+"d1200dcda2a88865230d6d35cd8a176ebddb33dc",
+"2026-11-19"
 ],
 "/cities/toledo/": [
 "486bbd71618a3792c2e82e2e6ab6f9d68d95c2fa",
@@ -1040,8 +1044,8 @@
 "2026-11-09"
 ],
 "/cities/yachats/": [
-"56bb9025f065fd589333c052c491c17fea88358c",
-"2026-11-16"
+"e63c893691be92507842644248e1ed40e36b7feb",
+"2026-11-19"
 ],
 "/cities/yamhill/": [
 "8c6eace263c41d2a9b7552d8ab2abe962171c7d5",
@@ -1208,12 +1212,12 @@
 "2026-11-16"
 ],
 "/oregon-area-codes/": [
-"e368a8fe7e73a7ff3bdf1e0b822dab0c64933ad5",
-"2026-11-16"
+"71f471b2dab59d381a72f9c1688ac59c60a6219b",
+"2026-11-19"
 ],
 "/oregon-zip-codes/": [
-"e406e97ff403ce9f2bcec9d07922833732655b54",
-"2026-11-16"
+"0aa2825077fd76e47448bb346bb728c8ccc04743",
+"2026-11-19"
 ],
 "/oregon/": [
 "37d679db5b16007f897f2131700a6cf0ffae23aa",
@@ -1256,7 +1260,7 @@
 "2026-11-09"
 ],
 "/visit-oregon/": [
-"26faf8e0a0ff8c937a72544bc7130088deac26b2",
-"2026-11-16"
+"574807264abb4cbdcce8081f9258f959b088a0cb",
+"2026-11-19"
 ]
 }
